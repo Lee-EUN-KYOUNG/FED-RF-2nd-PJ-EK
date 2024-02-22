@@ -1,6 +1,6 @@
 [치즈퀸 원본 사이트]
 https://cheesequeen.co.kr/main/index
-[벤치마킹한 고기판매 사이트]
+[벤치마킹한 고기판매 사이트-미스터 미트 마스터]
 https://mrmeatmaster.webflow.io/
 [벤치마킹한 UI 참고 사이트]
 https://www.eluocnc.com/ko/works.asp?searchType=&searchCate=&searchOrd=1&searchGb=1
