@@ -1,0 +1,17 @@
+Shop
+[Mr. Meat Master]
+[Premium Cuts]
+-All cuts
+-American Wagyu
+-Black Angus Beef Collection
+-Shef's Selection
+(상품명) / (가격)
+<마우스 오버시>
+(Add to Cart) / (View more)
+(상품 설명 요약)
+장바구니
+Your Cart
+(상품명)
+(상품 가격)
+Total $ (가격)
+Checkout now
