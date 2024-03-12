@@ -16,7 +16,7 @@ body * {
 
 /* 1. 상단영역 */
 .top-area{
-    height: 1680px;
+    height: 200px;
 }
 
 /* 2. 배너영역 */
@@ -41,7 +41,7 @@ body * {
 }
 /* 7. 제품후기영역 */
 .review-goods-area{
-    height: 548px;
+    height: 600px;
 }
 /* 8. 하단영역 */
 .footer-area{
