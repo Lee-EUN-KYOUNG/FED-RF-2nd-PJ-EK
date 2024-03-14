@@ -49,7 +49,7 @@
 
 
 /* 가상 요소로 아래쪽 화살표 넣기 */
-.gnb ul > li:nth-child(1) ~ li:nth-child(-n+3) a::after{
+.gnb ul > li:nth-child(-n+3) > a::after{
     content: '∨';
     display: inline-block;
     /* 트랜스폼은 인라인에서는 적용안됨 */
@@ -63,19 +63,20 @@
 .smenu{
     position: absolute;
     z-index: 999999;
-    left: 0;
-    width: 100%;
     /* 부모는? 보이는 화면*/
     max-height: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     transition: .4s;
     background-color: #fff;
+}
+.smenu ol{
+    display: flex;
 }
 
 
 /*상위메뉴 오버시 서브메뉴 보이기 */
-#top-menu .gnb>ul>li:hover .smenu {
-    max-height: 50vh;
+#top-area .gnb>ul>li:hover .smenu {
+    max-height: 100px;
 }
 
 
