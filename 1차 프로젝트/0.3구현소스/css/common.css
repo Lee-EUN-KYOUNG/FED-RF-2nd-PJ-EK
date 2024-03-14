@@ -54,8 +54,8 @@
     display: inline-block;
     /* 트랜스폼은 인라인에서는 적용안됨 */
     font-size: 7px;
-    margin-left: 5px;
-    vertical-align: 3px;
+    margin-left: 2px;
+    vertical-align: 2px;
     transform: scaleX(2);
 }
 
@@ -63,7 +63,6 @@
 .smenu{
     position: absolute;
     z-index: 999999;
-    /* 부모는? 보이는 화면*/
     max-height: 0;
     overflow: hidden;
     transition: .4s;
@@ -73,11 +72,28 @@
     display: flex;
 }
 
-
 /*상위메뉴 오버시 서브메뉴 보이기 */
 #top-area .gnb>ul>li:hover .smenu {
-    max-height: 100px;
+    max-height: 100%;
 }
+
+/* 상위메뉴 오버시 밑줄애니 */
+.uline ul>li>a::after{
+    content: '';
+    display: block;
+    margin-left: 100%;
+    margin-top: 3px;
+    width: 0;
+    height: 3px;
+    background-color: #ffb300;
+}
+/* 오버시 밑줄박스 애니 */
+.uline ul>li:hover>a::after{
+    margin-left: 0;
+    width: 100%;
+    transition: width .3s;
+}
+
 
 
 
