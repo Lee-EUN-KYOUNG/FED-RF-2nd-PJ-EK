@@ -27,6 +27,7 @@
 /* GNB 메뉴 */
 .gnb ul {
     display: flex;
+    gap: 0 20px;
     justify-content: flex-end;
 }
 
@@ -65,7 +66,7 @@
     z-index: 999999;
     max-height: 0;
     overflow: hidden;
-    transition: .4s;
+    transition: .3s;
     background-color: #fff;
 }
 .smenu ol{
@@ -78,7 +79,7 @@
 }
 
 /* 상위메뉴 오버시 밑줄애니 */
-.uline ul>li>a::after{
+.gnb>ul>li>a::after{
     content: '';
     display: block;
     margin-left: 100%;
@@ -88,10 +89,10 @@
     background-color: #ffb300;
 }
 /* 오버시 밑줄박스 애니 */
-.uline ul>li:hover>a::after{
+.gnb>ul>li:hover>a::after{
     margin-left: 0;
     width: 100%;
-    transition: width .3s;
+    transition: width .5s;
 }
 
 
