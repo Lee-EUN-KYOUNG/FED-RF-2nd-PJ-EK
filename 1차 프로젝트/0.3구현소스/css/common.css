@@ -78,6 +78,8 @@
     max-height: 100%;
 }
 
+/*  */
+
 /* 상위메뉴 오버시 밑줄애니 */
 .gnb>ul>li>a::after{
     content: '';
