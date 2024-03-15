@@ -50,7 +50,7 @@
 
 
 /* 가상 요소로 아래쪽 화살표 넣기 */
-.gnb ul > li:nth-child(-n+3) > a::after{
+.gnb ul > li:nth-child(-n+3) > a span::after{
     content: '∨';
     display: inline-block;
     /* 트랜스폼은 인라인에서는 적용안됨 */
@@ -85,7 +85,7 @@
     content: '';
     display: block;
     margin-left: 100%;
-    margin-top: 3px;
+    margin-top: -13px;
     width: 0;
     height: 3px;
     background-color: #ffb300;
