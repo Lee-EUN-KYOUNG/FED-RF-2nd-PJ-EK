@@ -4,112 +4,121 @@
 
 /* 공유기능 요소 셋팅 */
 /* 메인로고 */
-.mlogo img{
-    margin-top: 18px;
+.mlogo img {
+  margin-top: 18px;
 }
 
 /* Top 메뉴 아이콘 사이즈 */
-.top-menu ul>li>a{
-    font-size: 2.5rem;
+.top-menu ul > li > a {
+  font-size: 2.5rem;
 }
 
 /* Top 메뉴 아이콘 오버시 색상 변경 */
-.top-menu ul>li>a:hover{
-    color: darkgreen;
-    
+.top-menu ul > li > a:hover {
+  color: darkgreen;
 }
+
+/* 검색 아이콘 클릭시 서치박스 등장 */
+.search-box {
+    position: relative;
+    top: 0;
+    left: -15vw;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: darkgreen;
+    border: 5px solid darkgreen;
+    box-sizing: border-box;
+}
+
 
 /* Top 메뉴 */
 .top-menu ul {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 /* Top 리스트 */
 .top-menu ul li {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 /* Top a링크 */
 .top-menu ul a {
-    font-size: 1.4rem;
-    line-height: 40px;
-    font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 40px;
+  font-weight: bold;
 }
 
 /* GNB 메뉴 */
 .gnb ul {
-    display: flex;
-    gap: 0 20px;
-    justify-content: flex-end;
+  display: flex;
+  gap: 0 20px;
+  justify-content: flex-end;
 }
 
 /* GNB a링크 */
 .gnb ul a {
-    display: block;
-    padding: 0 13px;
+  display: block;
+  padding: 0 13px;
 
-    font-size: 1.7rem;
-    line-height: 60px;
-    font-weight: bold;
+  font-size: 1.7rem;
+  line-height: 60px;
+  font-weight: bold;
 }
 /* GNB a링크 오버시 */
 .gnb ul a:hover {
-    color: darkgreen;
-    font-weight: bold;
+  color: darkgreen;
+  font-weight: bold;
 }
 
 /************* 1. 상단영역 *************/
 
-
 /* 가상 요소로 아래쪽 화살표 넣기 */
-.gnb ul > li:nth-child(-n+3) > a span::after{
-    content: '∨';
-    display: inline-block;
-    /* 트랜스폼은 인라인에서는 적용안됨 */
-    font-size: 7px;
-    margin-left: 2px;
-    vertical-align: 2px;
-    transform: scaleX(2);
+.gnb ul > li:nth-child(-n + 3) > a span::after {
+  content: "∨";
+  display: inline-block;
+  /* 트랜스폼은 인라인에서는 적용안됨 */
+  font-size: 7px;
+  margin-left: 2px;
+  vertical-align: 2px;
+  transform: scaleX(2);
 }
 
 /* 서브메뉴 */
-.smenu{
-    position: absolute;
-    z-index: 999999;
-    max-height: 0;
-    overflow: hidden;
-    transition: .3s;
-    background-color: #fff;
+.smenu {
+  position: absolute;
+  z-index: 999999;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  background-color: #fff;
 }
-.smenu ol{
-    display: flex;
+.smenu ol {
+  display: flex;
 }
 
 /*상위메뉴 오버시 서브메뉴 보이기 */
-#top-area .gnb>ul>li:hover .smenu {
-    max-height: 100%;
+#top-area .gnb > ul > li:hover .smenu {
+  max-height: 100%;
 }
 
 /* 상위메뉴 오버시 밑줄애니 */
-.gnb>ul>li>a::after{
-    content: '';
-    display: block;
-    margin-left: 100%;
-    margin-top: -15px;
-    width: 0;
-    height: 3px;
-    background-color: #ffb300;
+.gnb > ul > li > a::after {
+  content: "";
+  display: block;
+  margin-left: 100%;
+  margin-top: -15px;
+  width: 0;
+  height: 3px;
+  background-color: #ffb300;
 }
 /* 오버시 밑줄박스 애니 */
-.gnb>ul>li:hover>a::after{
-    margin-left: 0;
-    width: 100%;
-    transition: width .3s;
+.gnb > ul > li:hover > a::after {
+  margin-left: 0;
+  width: 100%;
+  transition: width 0.3s;
 }
 
-
-
 /************ 2. 메인영역 ************/
-
-
 
 /************* 3. 하단영역 *************/
