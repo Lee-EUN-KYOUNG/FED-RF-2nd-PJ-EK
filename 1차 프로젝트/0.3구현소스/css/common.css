@@ -121,23 +121,55 @@
 /************ 2. 메인영역 ************/
 
 .ban-area{
+  padding: 0;
+  margin: 0 auto;
   width: 100%;
-  height: 100%;
   overflow: hidden;
+  background: url(../images/ban-area_cheese.jpg) no-repeat center/cover;
 }
 
-.ibaner-box{
-  width: 100%;
-  height: 100%;
-  left:0;
-  flex-basis: 100%;
-  flex-shrink: 0;
-  background-image: url(../images/ban-area_cheese.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.itxt-box{
+  position: relative;
 }
 
+.itxt-box1{
+  padding: 0;
+  margin: 0 auto;
+  height: 8vh;
+  text-align: left;
+  font-size: 2.8vh;
+
+}
+.itxt-box2{
+  padding: 0;
+  margin: 0 auto;
+  top: 8vh;
+  height: 8vh;
+  text-align: left;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: fantasy;
+  font-style: oblique;
+  color: darkgreen;
+}
+.itxt-box3{
+  padding: 0;
+  margin: 0 auto;
+  height: 8vh;
+  text-align: left;
+  font-size: 2.8vh;
+}
+.itxt-box4{
+  padding: 0;
+  height: 4vh;
+  margin-right: 129vh;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: darkgreen;
+  border: 2px double rgb(255, 242, 1);
+  border-radius: 10px;
+}
 
 
 
