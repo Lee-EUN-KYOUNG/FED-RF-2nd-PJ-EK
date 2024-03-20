@@ -129,7 +129,7 @@
 }
 
 .itxt-box{
-  position: relative;
+  position: static;
 }
 
 .itxt-box1{
