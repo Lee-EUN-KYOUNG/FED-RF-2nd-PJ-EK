@@ -1,16 +1,12 @@
 @charset "utf-8";
-/* 도깨비 PJ : 공통 클래스 CSS - core.css */
+/* 1차 PJ : 공통 클래스 CSS - core.css */
 /* 공통 셋팅을 위한 클래스 + 웹폰트 */
 
 /* 웹폰트 CDN */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap'), url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff&noonfonts_2304-2@1.0/SUITE-Regular.woff2');
 
-@font-face {
-    font-family: 'S-CoreDream-3Light';
-    src:  format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 /* 
     0. 메뉴 등 일반체
     font-family: 'Noto Sans KR', sans-serif;
@@ -23,7 +19,7 @@
     4. 전체 공통체(메뉴 등)
     font-family: 'Nanum Gothic', sans-serif;
     5. 배너영역 내용
-    font-family: 'S-CoreDream-3Light';
+    font-family: 'S-CoreDream-3Light','SUITE-Regular';
 */
 /*************************************** 공통 클래스 ***************************************/
 /* 전체 글자크기 */
@@ -33,9 +29,9 @@ html{
 }
 
 /* 글자체 */
-body{
+/* body{
     font-family: 'Nanum Gothic', sans-serif;
-}
+} */
 
 /* 임시표시타이틀 */
 .temp-tit{
