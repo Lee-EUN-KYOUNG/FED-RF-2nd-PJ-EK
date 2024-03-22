@@ -21,13 +21,21 @@
 /* 검색 아이콘 클릭시 서치박스 등장 */
 
 .search-box{
-  position: relative;
-  top: 0;
-  left: -15vw;
-  margin: 15px 0px 0px 0px;
+  position: absolute;
+  margin-top: 7px;
   border: 6px solid darkgreen;
   background-color: darkgreen;
-  border-radius: 50%;
+  border-radius: 20px;
+  width: 0;
+  opacity: 0;
+  color: #fff;
+  transition: .4s;
+}
+
+.search-box.on{
+  transform: translateX(-300px);  
+  width: 200px;
+  opacity: 1;
 }
 
 
@@ -119,13 +127,15 @@
 }
 
 /************ 2. 메인영역 ************/
+#ban-area{
+  background: url(../images/ban-area_cheese.jpg) no-repeat center/cover;
 
+}
 .ban-area{
   padding: 0;
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
-  background: url(../images/ban-area_cheese.jpg) no-repeat center/cover;
 }
 
 .itxt-box{
@@ -150,7 +160,6 @@
   color: darkgreen;
 }
 .itxt-box3{
-  margin-top: 28vh;
   height: 4vh;
   text-align: left;
   font-family: 'S-CoreDream-3Light';
@@ -158,8 +167,8 @@
 }
 .itxt-box4{
   margin-top: 5vh;
-  height: 3vh;
-  margin-right: 127vh;
+  line-height: 2;
+  width: 150px;
   text-align: center;
   font-family: 'SUITE-Regular';
   font-size: 22px;
