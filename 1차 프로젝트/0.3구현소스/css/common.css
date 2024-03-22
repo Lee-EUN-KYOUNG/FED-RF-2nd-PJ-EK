@@ -34,7 +34,7 @@
 
 .search-box.on{
   transform: translateX(-300px);  
-  width: 200px;
+  width: 235px;
   opacity: 1;
 }
 
@@ -140,6 +140,7 @@
 
 .itxt-box{
   padding: 0;
+  display: block;
 }
 
 .itxt-box1{
@@ -147,23 +148,24 @@
   height: 6vh;
   text-align: left;
   font-family: 'S-CoreDream-3Light';
-  font-size: 2.6vh;
+  font-size: 26px;
 }
 .itxt-box2{
   margin-top: -2vh;
   height: 25vh;
   text-align: left;
-  font-size: 10vh;
+  font-size: 195px;
   font-weight: bold;
   font-family: fantasy;
   font-style: oblique;
   color: darkgreen;
 }
 .itxt-box3{
+  margin-top: 22vh;
   height: 4vh;
   text-align: left;
   font-family: 'S-CoreDream-3Light';
-  font-size: 2.4vh;
+  font-size: 24px;
 }
 .itxt-box4{
   margin-top: 5vh;
