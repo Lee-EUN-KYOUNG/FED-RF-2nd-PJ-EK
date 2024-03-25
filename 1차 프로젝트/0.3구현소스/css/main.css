@@ -10,9 +10,9 @@
 @import url(./grid_12_flex.css);
 
 /* 공사중 표시 */
-/* body * {
+body * {
     outline: 2px dashed #ccc;
-} */
+}
 
 /* 1. 상단영역 */
 .top-area{
@@ -25,7 +25,7 @@
 }
 /* 3. 컨텐츠영역 */
 .content-area{
-    height: 575px;
+    height: 600px;
 }
 /* 4. 상품판매영역 */
 .goods-area{

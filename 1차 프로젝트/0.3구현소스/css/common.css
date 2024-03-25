@@ -30,6 +30,7 @@
   opacity: 0;
   color: #fff;
   transition: .4s;
+  cursor: text;
 }
 
 .search-box.on{
@@ -193,6 +194,159 @@
   border: 2px solid #ffffff7e;
   border-radius: 10px;
 }
+
+/************************************************************************************************************************ 
+                                                컨텐츠 영역 시작
+************************************************************************************************************************/
+
+.header-info{
+display: flex;
+gap: 0 100px;
+justify-content: center;
+list-style: none;
+font-size: 20px;
+cursor: pointer;
+}
+
+.content-area img {
+  border: none;
+}
+
+.content-area ul, ol{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+
+#container {
+  /*최상위부모*/
+  position: relative;
+  width: 1391px;
+  margin: 0px auto;
+}
+
+#container>header {
+  position: relative;
+  width: 100%;
+  height: 165px;
+}
+
+#container>section {
+  /*슬라이드부모*/
+  position: relative;
+  width: 1000px;
+  height: 444px;
+  float: left;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#slide-box {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-wrap: nowrap;
+}
+
+#slide-box li {
+  flex-shrink: 0;
+  /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+  flex-basis: 100%;
+}
+
+#slide-box img {
+  /*이미지는 박스에 맞춤!*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 이미지 비율유지 채우기! */
+}
+
+/*이동버튼*/
+.abtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /*Y축 중앙이동*/
+}
+
+/*왼쪽버튼*/
+.ab1 {
+  left: 50px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+  right: 50px;
+}
+
+/*블릿버튼*/
+.indic {
+  display: flex;
+  /* 플렉스박스 */
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+}
+
+.indic li {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.indic li img {
+  position: absolute;
+  /*이미지 겹치게*/
+}
+
+.indic li img:last-child {
+  /*회색이미지만 투명하게*/
+  opacity: 0;
+}
+
+/*회색블릿이미지가 보이게하는 class*/
+.indic li.on img:last-child {
+  /*회색이미지만 투명하게*/
+  opacity: 1;
+  /*우선적용!*/
+}
+
+#container>aside {
+  position: relative;
+  width: 467px;
+  height: 564px;
+  float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /************* 3. 하단영역 *************/

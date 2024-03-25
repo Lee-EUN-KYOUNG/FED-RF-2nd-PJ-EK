@@ -17,6 +17,8 @@
     />
     <!-- 외부 CSS -->
     <link rel="stylesheet" href="/1차 프로젝트/0.3구현소스/css/main.css" />
+    <!-- 외부JS 삽입 -->
+    <script src="/1차 프로젝트/0.3구현소스/js/cont-box.js"></script>
   </head>
   <body>
     <!-- 1. 상단영역 -->
@@ -44,7 +46,7 @@
                   ></a>
                 </li>
                 <li>
-                  <input type="text" class="search-box">
+                  <input type="text" class="search-box" />
                 </li>
                 <li>
                   <a
@@ -130,7 +132,7 @@
               <div class="itxt-box2">CheeseQueen</div>
               <div class="itxt-box3">
                 기분좋은 가격♡맛좋은 먹을거리 <br />
-                새로운 제안♡행복한 식탁
+                새로운 제안♡행복한 식탁, 치즈퀸의 기쁨입니다!
               </div>
               <div class="itxt-box4">치즈 구매</div>
             </div>
@@ -141,11 +143,74 @@
 
     <!-- 3. 컨텐츠영역 -->
     <div id="content-area">
-      <section class="content-area inbox">
-        <h2 class="temp-tit">3. 컨텐츠영역</h2>
+      <section class="content-area-inbox">
+        <h2 class="temp-tit"></h2>
         <div class="cont-box">
-          <div class="col-6"></div>
-          <div class="col-6"></div>
+          <div class="col-12">
+            <section id="container">
+                <!--탑영역-->
+                <header class="header-info">
+                  <li>
+                  <img src="./images/cont_area_00.png"alt="공지">
+                  <p>
+                  [공지] [배송]2024 삼일절 배송 안내
+                  <br>
+                  [공지] [배송] 2024 설 명절 배송 안내
+                  <br>
+                  [공지] [배송] 2023-2024 연말연시 배송 안내
+                  <br>
+                  [공지] [배송] 2023 크리스마스 배송 안내
+                  </p>
+                  </li>
+                  <li>
+                    <img src="./images/cont_area_01.png"alt="질문">
+                    <p>
+                      [결제] 로그인하면 네이버(N)페이 버튼이 안...
+                      <br>
+                      [배송] 당일발송 마감 시각은 언제인가요?
+                      <br>
+                      [배송] 치즈퀸은 로젠택배와 한진택배를 이용...
+                      <br>
+                      [배송] 제주도 사는데, 금요일날 주문해도...
+                    </p>
+                  </li>
+                </header>
+                <!--슬라이드 배너 영역-->
+              <section>
+                <!--슬라이드-->
+                <ul id="slide-box">
+                  <li><img src="./images/cont_01.jpeg" alt="slide1" /></li>
+                  <li><img src="./images/cont_02.jpeg" alt="slide2" /></li>
+                  <li><img src="./images/cont_03.jpg" alt="slide3" /></li>
+                  <li><img src="./images/cont_04.jpeg" alt="slide4" /></li>
+                  <li><img src="./images/cont_05.jpeg" alt="slide5" /></li>
+                </ul>
+                <!--블릿버튼-->
+                <ol class="indic">
+                  <li class="on">
+                    <a href="#" class="abtn ab1"><img src="images/dot1.png" alt="흰색" /></a>
+                    <a href="#" class="abtn ab2"><img src="images/dot2.png" alt="회색" /></a>
+                  </li>
+                  <li>
+                    <a href="#" class="abtn ab1"><img src="images/dot1.png" alt="흰색" /></a>
+                    <a href="#" class="abtn ab2"><img src="images/dot2.png" alt="회색" /></a>
+                  </li>
+                  <li>
+                    <a href="#" class="abtn ab1"><img src="images/dot1.png" alt="흰색" /></a>
+                    <a href="#" class="abtn ab2"><img src="images/dot2.png" alt="회색" /></a>
+                  </li>
+                  <li>
+                    <a href="#" class="abtn ab1"></a><img src="images/dot1.png" alt="흰색" /></a>
+                    <a href="#" class="abtn ab2"><img src="images/dot2.png" alt="회색" /></a>
+                  </li>
+                  <li>
+                    <a href="#" class="abtn ab1"><img src="images/dot1.png" alt="흰색" /></a>
+                    <a href="#" class="abtn ab2"><img src="images/dot2.png" alt="회색" /></a>
+                  </li>
+                </ol>
+              </section>
+            </section>            
+          </div>
         </div>
       </section>
     </div>
