@@ -14,7 +14,7 @@ addEvt(window, "DOMContentLoaded", loadFn);
 /***************************************************** 
     [ 슬라이드 이동 기능정의 ]
     1. 이벤트 종류: click
-    2. 이벤트 대상: 이동버튼(.abtn)
+    2. 이벤트 대상: 이동버튼(.indic)
     3. 변경 대상: 슬라이드 박스(#slide)
     4. 기능 설계:
 
@@ -54,29 +54,19 @@ addEvt(window, "DOMContentLoaded", loadFn);
 ******************************************/
 function loadFn() {
   console.log("로딩완료!");
-  // 이동 버튼 대상 : .abtn
-  const abtn = qsa(".abtn");
+  // 이동 버튼 대상 : .indic
+  const indic = qsa(".indic");
   // 변경 대상 : #slide
   const slide = qs("#slide-box");
-  //console.log(abtn,slide);
+  //console.log(indic,slide);
 
   // slide 순번 전역 변수
   let snum = 0;
 
   // 2. 버튼을 모두 이벤트 설정하기
-  for (let x of abtn) {
+  for (let x of indic) {
     x.onclick = goSlide;
   } //////////////// for문
-
-  /*   // 2. 오른쪽 버튼 클릭시 기능 구현
-    abtn[1].onclick = () => {
-  
-    };
-  
-    // 2. 왼쪽 버튼 클릭시 기능 구현
-    abtn[0].onclick = () => {
-  
-    }; */
 
 
    // 광클 금지 변수
@@ -97,11 +87,11 @@ function loadFn() {
     /////////////////////////////////////////////
 
     // 두번째 버튼인 .ab2인가?
-    let isRbtn = this.classList.contains("ab2");
+    let isRindic = this.classList.contains("ab2");
 
     ///// 2. 버튼별 분기하기 (나누기)
     // 오른쪽 버튼일 경우 //
-    if (isRbtn) {
+    if (isRindic) {
       // (1) 먼저 왼쪽으로 이동하기
       slide.style.left = "-100%";
       slide.style.transition = ".6s ease-in-out";
