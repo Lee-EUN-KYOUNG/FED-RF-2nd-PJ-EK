@@ -318,7 +318,20 @@ cursor: pointer;
                                                 4. 상품판매 영역 시작
 ************************************************************************************************************************/
 
+.search-tag-bar{
+  display: inline-block;
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  
+}
 
+.search-tag-bar li{
+  float: left;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
 
 
 
