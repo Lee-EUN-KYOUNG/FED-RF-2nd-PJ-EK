@@ -233,7 +233,7 @@ cursor: pointer;
   position: relative;
   width: 913px;
   height: 564px;
-  float: left;
+  margin: 0 auto;
   overflow: hidden;
   box-sizing: border-box;
 }

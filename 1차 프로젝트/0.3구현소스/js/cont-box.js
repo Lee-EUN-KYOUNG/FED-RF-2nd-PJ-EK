@@ -63,7 +63,9 @@ function loadFn() {
                                        기능 : 슬라이드 이동
   ***************************************************************************************************************/
 
-  function goSlide() {
+  function goSlide(e) {
+    // a요소 기본이동 막기
+    e.preventDefault();
     /////////// 광클 금지 설정하기
     if (prot) return;
     prot = true;
