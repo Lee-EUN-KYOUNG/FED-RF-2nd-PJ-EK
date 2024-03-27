@@ -20,7 +20,7 @@
 
 /* 검색 아이콘 클릭시 서치박스 등장 */
 
-.search-box{
+.search-box {
   position: absolute;
   margin-top: 7px;
   border: 6px solid darkgreen;
@@ -29,16 +29,15 @@
   width: 0;
   opacity: 0;
   color: #fff;
-  transition: .4s;
+  transition: 0.4s;
   cursor: text;
 }
 
-.search-box.on{
-  transform: translateX(-300px);  
+.search-box.on {
+  transform: translateX(-300px);
   width: 235px;
   opacity: 1;
 }
-
 
 /* Top 메뉴 */
 .top-menu ul {
@@ -133,30 +132,29 @@
                                                 2. 메인 영역 시작
 ************************************************************************************************************************/
 
-#ban-area{
+#ban-area {
   background: url(../images/ban-area_cheese.jpg) no-repeat center/cover;
-
 }
-.ban-area{
+.ban-area {
   padding: 0;
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
 }
 
-.itxt-box{
+.itxt-box {
   padding: 0;
   display: block;
 }
 
-.itxt-box1{
+.itxt-box1 {
   margin-top: 1.5vh;
   height: 6vh;
   text-align: left;
-  font-family: 'S-CoreDream-3Light';
+  font-family: "S-CoreDream-3Light";
   font-size: 26px;
 }
-.itxt-box2{
+.itxt-box2 {
   margin-top: -2vh;
   height: 25vh;
   text-align: left;
@@ -166,19 +164,19 @@
   font-style: oblique;
   color: darkgreen;
 }
-.itxt-box3{
+.itxt-box3 {
   margin-top: 22vh;
   height: 4vh;
   text-align: left;
-  font-family: 'S-CoreDream-3Light';
+  font-family: "S-CoreDream-3Light";
   font-size: 24px;
 }
-.itxt-box4{
+.itxt-box4 {
   margin-top: 5vh;
   line-height: 2;
   width: 150px;
   text-align: center;
-  font-family: 'SUITE-Regular';
+  font-family: "SUITE-Regular";
   font-size: 22px;
   font-weight: bold;
   color: darkgreen;
@@ -188,11 +186,11 @@
   cursor: pointer;
 }
 
-.itxt-box2:hover{
+.itxt-box2:hover {
   color: rgb(255, 115, 0);
 }
 
-.itxt-box4:hover{
+.itxt-box4:hover {
   color: darkgreen;
   background-color: #ffffff7e;
   border: 2px solid #ffffff7e;
@@ -203,37 +201,37 @@
                                                 3. 컨텐츠 영역 시작
 ************************************************************************************************************************/
 
-.header-info{
-display: flex;
-margin: -1px;
-gap: 0 100px;
-justify-content: center;
-list-style: none;
-font-size: 20px;
-cursor: pointer;
+.header-info {
+  display: flex;
+  margin: -1px;
+  gap: 0 100px;
+  justify-content: center;
+  list-style: none;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.header-info h3{
+.header-info h3 {
   color: red;
-
 }
 .content-area img {
   border: none;
 }
 
-.content-area ul, ol{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+.content-area ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
 
-.container>.header-info{
+.container > .header-info {
   position: relative;
   width: 100%;
   height: 222px;
 }
 
-#container>section {
+#container > section {
   /*슬라이드부모*/
   position: relative;
   top: 7.5px;
@@ -270,7 +268,7 @@ cursor: pointer;
 }
 
 /*이동버튼*/
-.abtn{
+.abtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -278,7 +276,7 @@ cursor: pointer;
 
 /*왼쪽버튼*/
 .ab1 {
-  left:-1px;
+  left: -1px;
 }
 
 /*오른쪽버튼*/
@@ -318,42 +316,60 @@ cursor: pointer;
                                                 4. 상품판매 영역 시작
 ************************************************************************************************************************/
 
-.search-tag-bar{
-  display: inline-block;
-  margin: 0;
-  padding: 0 10px;
-  list-style: none;
-  
-}
-
-.search-tag-bar li{
+.search-tag-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
   float: left;
-  width: 50px;
-  height: 50px;
-  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
 }
 
+.search-tag-bar li {
+  margin: 0 auto;
+  float: left;
+  border-radius: 20px;
+  font-family: "S-CoreDream-3Light";
+  font-size: 20px;
+  font-style: bold;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+  background: #f7f7f7;
+  color: darkgreen;
+  list-style: none;
+}
 
+.search-tag-bar li:hover {
+  color: darkgreen;
+  font-family: "S-CoreDream-3Light";
+  font-weight: bolder;
+  background-color: yellow;
+  border: 2px solid yellow;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
+.goods-bar {
+  display: grid;
+  position: relative;
+  justify-items: center;
+  padding: 0 10px;
+  margin-top: 3vw;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.goods-box {
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
+  width: 100%;
+  float: left;
+  font-size: 20px;
+}
 
 
 /************* 3. 하단영역 *************/
