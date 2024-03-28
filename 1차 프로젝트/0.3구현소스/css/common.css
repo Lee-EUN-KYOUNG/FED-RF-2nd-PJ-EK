@@ -351,24 +351,77 @@ ol {
   cursor: pointer;
 }
 
+
+
 .goods-bar {
   display: grid;
   position: relative;
   justify-items: center;
   padding: 0 10px;
-  margin-top: 3vw;
-  margin-bottom: 0;
+  margin-top: 2.5vw;
+  
+/*   margin-bottom: 0;
   margin-left: 0;
-  margin-right: 0;
+  margin-right: 0; */
 
 }
 
+
+.minfo {
+  display: flex;
+  /* 자식요소 박스 옆으로 흐르게! */
+  /* outline: 1px solid red; */
+  width: 500px;
+  margin: 0 auto;
+}
+
+.wrap {
+  /* 플렉스박스 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2px;
+}
 .goods-box {
-  grid-column-gap: 2vw;
-  grid-row-gap: 2vw;
-  width: 100%;
-  float: left;
-  font-size: 20px;
+  margin: 14px;
+  padding: 14px;
+  border: 4px double gray;
+  border-radius: 10px;
+}
+
+.photo img {
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+/* 상품 후기 */
+.goods-review {
+  text-align: center;
+}
+
+.good-cont{
+  font-size: 14px;
+  font-family: "S-CoreDream-3Light";
+}
+
+.good-cont h2{
+ font-size: 18px;
+ font-weight: bold;
+ color: darkgreen;
+}
+
+.goods-review, .show{
+  font-size: 15px;
+  font-family: "S-CoreDream-3Light";
+ font-weight: bold;
+ text-align: right;
+}
+
+.reviewb{
+font-family: "S-CoreDream-3Light";
+ font-weight: bold;
+ text-align: center;
 }
 
 
