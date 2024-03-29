@@ -351,21 +351,17 @@ ol {
   cursor: pointer;
 }
 
-
-
 .goods-bar {
   display: grid;
   position: relative;
   justify-items: center;
   padding: 0 10px;
   margin-top: 2.5vw;
-  
-/*   margin-bottom: 0;
+
+  /*   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0; */
-
 }
-
 
 .minfo {
   display: flex;
@@ -385,7 +381,7 @@ ol {
 .goods-box {
   margin: 14px;
   padding: 14px;
-  border: 4px double gray;
+  border: 4px double #ccc;
   border-radius: 10px;
 }
 
@@ -396,32 +392,49 @@ ol {
 }
 
 /* 상품 후기 */
-.goods-review {
-  text-align: center;
-}
 
-.good-cont{
+.good-cont {
+  display: inline-grid;
+  gap: 0.5px;
   font-size: 14px;
   font-family: "S-CoreDream-3Light";
 }
 
-.good-cont h2{
- font-size: 18px;
- font-weight: bold;
- color: darkgreen;
+.good-cont h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: darkgreen;
 }
 
-.goods-review, .show{
+.goods-review,
+.show {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 15px;
   font-family: "S-CoreDream-3Light";
- font-weight: bold;
- text-align: right;
+  font-weight: bold;
+  text-align: right;
+  color: rgb(255, 115, 0);
 }
 
-.reviewb{
-font-family: "S-CoreDream-3Light";
- font-weight: bold;
- text-align: center;
+.reviewb {
+  position: absolute;
+  font-family: "S-CoreDream-3Light";
+  text-align: center;
+  margin-top: -45px;
+  margin-left: 310px;
+  background: url(../images/review_icon.png) no-repeat center/cover;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.reviewb:hover {
+  cursor: pointer;
+  background: #ccc;
+  color: red;
+  font-weight: bold;
 }
 
 
