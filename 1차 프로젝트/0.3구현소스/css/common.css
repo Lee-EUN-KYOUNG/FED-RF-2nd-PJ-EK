@@ -395,7 +395,7 @@ ol {
 
 .good-cont {
   display: inline-grid;
-  gap: 0.5px;
+  grid-gap: 20px 0;
   font-size: 14px;
   font-family: "S-CoreDream-3Light";
 }
@@ -420,6 +420,8 @@ ol {
 
 .reviewb {
   position: absolute;
+  width: 58px;
+  aspect-ratio: 195 / 182;
   font-family: "S-CoreDream-3Light";
   text-align: center;
   margin-top: -45px;
