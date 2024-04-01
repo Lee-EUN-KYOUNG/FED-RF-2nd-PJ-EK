@@ -358,15 +358,11 @@ ol {
   padding: 0 10px;
   margin-top: 2.5vw;
 
-  /*   margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0; */
 }
 
 .minfo {
   display: flex;
   /* 자식요소 박스 옆으로 흐르게! */
-  /* outline: 1px solid red; */
   width: 500px;
   margin: 0 auto;
 }
@@ -390,6 +386,27 @@ ol {
   margin-right: 20px;
   border-radius: 10px;
 }
+
+.photo{
+  position: relative;
+}
+
+.photo:hover::after{
+  position: absolute;
+  content: '자세히 보기';
+  font-family: "S-CoreDream-3Light";
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(39, 39, 39);
+  background-color: #cccccc50;
+  border: 2px solid #cccccc24;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
 
 /* 상품 후기 */
 
@@ -429,7 +446,31 @@ ol {
   background: url(../images/review_icon.png) no-repeat center/cover;
   border: 2px solid #fff;
   border-radius: 5px;
+  opacity: 1;
 }
+
+.reviewb:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/************************************************************************************************************************ 
+                                                5. 테마별 치즈 영역 시작
+************************************************************************************************************************/
+
+.theme-cheese-area-inbox>h2{
+font-size: 50px;
+font-family: "S-CoreDream-3Light";
+text-align: left;
+color: #fff;
+background-color: darkgreen;
+border: 5px solid darkgreen;
+left: 10px;
+margin-top: 5px;
+height: 65px;
+width: 380px;
+}
+
 
 
 
