@@ -459,18 +459,50 @@ ol {
 ************************************************************************************************************************/
 
 .theme-cheese-area-inbox>h2{
+position: relative;
 font-size: 50px;
 font-family: "S-CoreDream-3Light";
-text-align: left;
+text-indent: 5%;
 color: #fff;
 background-color: darkgreen;
-border: 5px solid darkgreen;
-left: 10px;
+border-left: 2rem solid rgb(255, 187, 0);
+left: 30px;
 margin-top: 5px;
 height: 65px;
 width: 380px;
 }
 
+.cheese-box{
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+}
+
+.cheese-box::after{
+  position: absolute;
+  content: '카테고리';
+  text-indent: 2%;
+  font-size: 20px;
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
+  left: 20px;
+  margin-top: 5px;
+  height: 35vh;
+  width: 95.5vw;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.cheese-cate{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 58px;
+  left: 40px;
+  font-size: 15px;
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
+}
 
 
 
