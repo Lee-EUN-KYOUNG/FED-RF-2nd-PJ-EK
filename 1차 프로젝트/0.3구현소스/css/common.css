@@ -475,36 +475,38 @@ line-height: 65px;
 white-space: nowrap;
 }
 
+.cheese-box-wrap{
+  position: relative;
+  width: 95vw;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1vw;
+}
 .cheese-box{
   position: relative;
-  width: 100vw;
-  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  text-align: center;
 }
-
-.cheese-box::after{
-  position: absolute;
-  content: '카테고리';
+.theme-cheese-area-inbox .cont-box{
+  display: block;
+}
+.cheese-box-wrap h3{
   text-indent: 2%;
   font-size: 25px;
   font-family: "S-CoreDream-3Light";
   font-weight: bold;
   list-style: none;
-  left: 20px;
   margin-top: 5px;
-  padding: 10px;
-  height: 35vh;
-  width: 95.5vw;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
+  white-space: nowrap;
 }
 
 .cheese-cate{
-  position: absolute;
   list-style: none;
   overflow: hidden;
-  top: 58px;
-  left: 40px;
 }
 
 .cheese-cate img{
@@ -513,11 +515,11 @@ white-space: nowrap;
   margin: 10px 10px 10px 20px;
  }
 
-.cheese-cate>span{
+/* .cheese-cate>span{
   float: left;
   margin-right: 100px;
   margin-top: 35px;
-}
+} */
 
 .cheese-cate>span>a{
   display: block;
