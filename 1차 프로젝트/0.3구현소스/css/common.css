@@ -469,7 +469,10 @@ border-left: 2rem solid rgb(255, 187, 0);
 left: 30px;
 margin-top: 5px;
 height: 65px;
-width: 380px;
+max-width: 380px;
+width: auto;
+line-height: 65px;
+white-space: nowrap;
 }
 
 .cheese-box{
@@ -482,27 +485,48 @@ width: 380px;
   position: absolute;
   content: '카테고리';
   text-indent: 2%;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "S-CoreDream-3Light";
   font-weight: bold;
+  list-style: none;
   left: 20px;
   margin-top: 5px;
+  padding: 10px;
   height: 35vh;
   width: 95.5vw;
   border: 2px solid #ccc;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .cheese-cate{
-  display: flex;
-  flex-direction: column;
   position: absolute;
+  list-style: none;
+  overflow: hidden;
   top: 58px;
   left: 40px;
-  font-size: 15px;
+}
+
+.cheese-cate img{
+  width: 180px;
+  height: 180px;
+  margin: 10px 10px 10px 20px;
+ }
+
+.cheese-cate>span{
+  float: left;
+  margin-right: 100px;
+  margin-top: 35px;
+}
+
+.cheese-cate>span>a{
+  display: block;
+  text-align: center;
+  font-size: 18px;
   font-family: "S-CoreDream-3Light";
   font-weight: bold;
 }
+
 
 
 
