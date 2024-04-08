@@ -10,7 +10,7 @@ import * as dkbData from "./dkb_data.js";
 ///////////// 무료배송클럽 구현 코드 랩핑 구역 시작 /////
 (() => {
     // 대상 : .free-box
-    const freeBox = myFn.qsa(".free-box");
+    const freeBox = myFn.qs(".free-box");
     // 데이터 : dkb_data.js의 freeData 배열
     const fData = dkbData.freeData;
     
@@ -23,7 +23,7 @@ import * as dkbData from "./dkb_data.js";
     fData.forEach((v) => {
       hcode += `
       <li>
-       <img src="./images/free-cate${v.imgName}.jpg" alt="${v.title}">
+       <img src="./images/${v.imgName}.jpg" alt="${v.title}">
        <span>${v.won}</span>
       </li>
   `;
@@ -31,6 +31,7 @@ import * as dkbData from "./dkb_data.js";
   
     hcode += `</ul>`;
   
+    // console.log(hcode);
   
     // 화면 출력하기
     freeBox.innerHTML = hcode;

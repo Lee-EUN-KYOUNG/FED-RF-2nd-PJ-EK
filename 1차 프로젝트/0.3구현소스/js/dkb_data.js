@@ -22,7 +22,7 @@ const freeData = [
     {
       idx: "3",
       title: "치즈퀸 무배클럽 18",
-      imgName: "poster3",
+      imgName: "free-cate03",
       won: "180,000원",
     },
     {
