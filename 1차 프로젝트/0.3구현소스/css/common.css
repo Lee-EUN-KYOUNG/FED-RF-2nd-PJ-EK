@@ -538,13 +538,9 @@ ol {
 /************************************************************************************************************************ 
                                                 6. 보너스 클럽 영역 시작
 ************************************************************************************************************************/
-.club-area-inbox {
-  padding: 2.5vh;
-  padding-bottom: 100vh;
-}
 
-/* .free-club-wrap, .business-club-wrap, .club-info-wrap{ */
-.club-area-inbox h3,
+/* .free-club-wrap, .business-club-wrap, .club-info-wrap */
+/* .club-area-inbox h3,
 h4,
 h5 {
   position: relative;
@@ -578,7 +574,7 @@ h5 {
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
-  /* vertical-align: middle; */
+  vertical-align: middle;
 }
 
 .free-cate span{
@@ -588,6 +584,42 @@ h5 {
   color: #fff;
   background-color: #00000076;
   font-size: 12px;
+  } */
+
+
+  /* * 대표이미지 이미지 */
+
+  .free-box ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: min(20px,1.2vw);
   }
+
+  .free-box img {
+    border-radius: 6px;
+    width: 100%;
+  }
+  
+  .free-box span {
+    font-size: 2rem;
+    padding-top: 1.4rem;
+    text-align: center;
+  }
+  
+  .free-box li{
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /************* 3. 하단영역 *************/
