@@ -539,87 +539,28 @@ ol {
                                                 6. 보너스 클럽 영역 시작
 ************************************************************************************************************************/
 
-/* .free-club-wrap, .business-club-wrap, .club-info-wrap */
-/* .club-area-inbox h3,
-h4,
-h5 {
-  position: relative;
-  font-size: 50px;
-  font-family: "S-CoreDream-3Light";
-  text-indent: 5%;
-  color: #fff;
-  background-color: darkgreen;
-  border-left: 2rem solid rgb(255, 187, 0);
-  left: 10px;
-  max-width: 24vw;
-  line-height: 60px;
-  white-space: nowrap;
-}
+/* 무배클럽 이미지 */
 
-.free-box {
+.club-area-inbox .free-box{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: min(1.5vw, 15px) min(1.5vw, 15px);
-  padding: 15px 10px;
-  aspect-ratio: 1/1;
+  grid-template-columns: repeat(4, 1fr);
+  gap: min(20px, 1.2vw);
 }
 
-.free-cate{
- position: relative;
-}
 
-.free-cate img {
-  display: block;
-  width: auto;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  vertical-align: middle;
-}
-
-.free-cate span{
-  
+.free-box img {
+  border-radius: 6px;
   width: 100%;
+}
+
+.free-box span {
+  font-size: 2rem;
+  padding-top: 1.4rem;
   text-align: center;
-  color: #fff;
-  background-color: #00000076;
-  font-size: 12px;
-  } */
+}
 
-
-  /* * 대표이미지 이미지 */
-
-  .free-box ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: min(20px,1.2vw);
-  }
-
-  .free-box img {
-    border-radius: 6px;
-    width: 100%;
-  }
-  
-  .free-box span {
-    font-size: 2rem;
-    padding-top: 1.4rem;
-    text-align: center;
-  }
-  
-  .free-box li{
-    cursor: pointer;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
+.free-box li {
+  cursor: pointer;
+}
 
 /************* 3. 하단영역 *************/
