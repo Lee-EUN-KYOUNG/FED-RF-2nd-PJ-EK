@@ -541,26 +541,43 @@ ol {
 
 /* 무배클럽 이미지 */
 
-.club-area-inbox .free-box{
+.free-box ul{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: min(20px, 1.2vw);
+  grid-template-columns: repeat(2, 1fr);
+  gap: min(15px, 1.3vw);
+  justify-items: center;
 }
 
+.business-box ul{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: min(25px, 1.5vw);
+  justify-items: center;
+}
+
+.free-box li {
+  cursor: pointer;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 1.2rem;
+}
+
+.business-box li {
+  cursor: pointer;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2rem;
+  margin-left: 25px;
+}
 
 .free-box img {
   border-radius: 6px;
   width: 100%;
 }
 
-.free-box span {
-  font-size: 2rem;
-  padding-top: 1.4rem;
-  text-align: center;
-}
-
-.free-box li {
-  cursor: pointer;
+.business-box img {
+  border-radius: 6px;
+  width: auto;
 }
 
 /************* 3. 하단영역 *************/

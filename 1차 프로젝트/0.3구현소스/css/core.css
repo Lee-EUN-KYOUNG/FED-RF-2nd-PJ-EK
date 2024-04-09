@@ -61,8 +61,10 @@ html{
 }
 
 .stit{
-    padding-bottom: 32px;
-    font-size: 3.8rem;
+    padding-top: 25px;
+    margin-left: 35px;
+    font-family: "S-CoreDream-3Light";
     font-weight: normal;
+    font-size: 3.8rem;
     white-space: nowrap;
 }
