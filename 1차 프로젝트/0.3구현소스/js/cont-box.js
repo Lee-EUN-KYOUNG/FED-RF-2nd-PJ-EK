@@ -211,4 +211,34 @@ function loadFn() {
 })(); /////////////// 비즈니스 배송 코드 랩핑 구역 종료
 
 
+///////////// 유의 사항 구현 코드 랩핑 구역 시작 /////
+(() => {
+// 대상 : .cinfo-box
+const cinfoBox = myFn.qs(".cinfo-box");
+// 데이터 : dkb_data.js의 nData 배열
+const iData = dkbData.nData;
+
+let hcode = '<ul class="cInfo-box">';
+
+// li 구성을 hcode 변수에 대입 연산자로 할당함
+for (let i = 0; i < 5; i++) {
+  hcode += `
+  <li>
+   <h4>${iData[i].title}</h4>
+   <p>${iData[i].scont}</p>
+   <p>${iData[i].acq}</p>
+  </li>
+
+`;
+} //////////////////// for문//////////////////////////////////
+
+hcode += `</ul>`;
+
+// 화면 출력하기
+cinfoBox.innerHTML = hcode;
+
+
+})(); /////////////// 유의 사항 구현 코드 랩핑 구역 종료
+
+
 

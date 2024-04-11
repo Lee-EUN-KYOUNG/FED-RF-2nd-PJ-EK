@@ -562,6 +562,8 @@ ol {
   padding-top: 1.2rem;
 }
 
+/* 비즈니스 클럽 영역 */
+
 .business-box li {
   cursor: pointer;
   text-align: center;
@@ -579,5 +581,55 @@ ol {
   border-radius: 6px;
   width: auto;
 }
+
+
+/* 유의사항 영역 */
+.cInfo-box{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-left: 25px;
+}
+
+/* 리스트 박스 */
+.cinfo-box li {
+  padding: 25px 30px;
+  color: #000;
+  font-family: "S-CoreDream-3Light";
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #22222240;
+  box-sizing: border-box;
+}
+
+.cinfo-box ul {
+  gap: 25px;
+}
+
+/* 리스트박스 타이틀 */
+.cinfo-box li h4 {
+  font-size: 1.5rem;
+}
+
+/* 리스트 내용 */
+.cinfo-box li p {
+  font-size: 1.5rem;
+  margin-top: 1.4rem;
+  color: #00000099;
+  line-height: 1.7;
+  /* 여러줄 말줄임표하기 */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+/* 리스트 박스 오버시 내용 글자색  */
+.cinfo-box li:hover p {
+  color: #000;
+}
+
+
 
 /************* 3. 하단영역 *************/
