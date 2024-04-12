@@ -541,10 +541,14 @@ ol {
 
 .club-area-inbox{
   display: flex;
-  flex-wrap: wrap;
-  
+  flex-wrap: wrap;  
 }
-
+.club-area-inbox>.club-each{
+  flex-basis: 50%;
+}
+.club-each .cont-box{
+  justify-content: center;
+}
 /* 무배클럽 이미지 */
 
 .free-box ul{
@@ -598,6 +602,7 @@ ol {
 
 /* 리스트 박스 */
 .cinfo-box li {
+  width: 300px;
   padding: 25px 30px;
   color: #000;
   font-family: "S-CoreDream-3Light";
