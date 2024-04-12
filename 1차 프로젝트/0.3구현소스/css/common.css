@@ -352,30 +352,30 @@ ol {
 }
 
 .goods-bar {
-  display: grid;
+  /* display: grid; */
   position: relative;
-  justify-items: center;
-  padding: 0 10px;
-  margin-top: 2.5vw;
+  /* padding: 0 10px; */
+  margin-top: 2.2vw;
 }
 
 .minfo {
   display: flex;
   /* 자식요소 박스 옆으로 흐르게! */
   width: 500px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .wrap {
   /* 플렉스박스 */
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /* flex-wrap: wrap; */
   justify-content: center;
-  padding: 2px;
+  padding: 12px;
 }
 .goods-box {
-  margin: 14px;
-  padding: 14px;
+  margin: 20px;
+  padding: 20px;
   border: 4px double #ccc;
   border-radius: 10px;
 }
@@ -411,7 +411,7 @@ ol {
 .good-cont {
   display: inline-grid;
   grid-gap: 1.5px 0;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "S-CoreDream-3Light";
 }
 
@@ -440,7 +440,7 @@ ol {
   font-family: "S-CoreDream-3Light";
   text-align: center;
   margin-top: -45px;
-  margin-left: 360px;
+  margin-left: 570px;
   background: url(../images/review_icon.png) no-repeat center/cover;
   border: 2px solid #fff;
   border-radius: 5px;
@@ -541,7 +541,8 @@ ol {
 
 .club-area-inbox{
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap; 
+  padding-top: 2vh;
 }
 .club-area-inbox>.club-each{
   flex-basis: 50%;
@@ -551,17 +552,10 @@ ol {
 }
 /* 무배클럽 이미지 */
 
-.free-box ul{
+.free-box ul, .business-box ul{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: min(15px, 1.3vw);
-  justify-items: center;
-}
-
-.business-box ul{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: min(25px, 1.5vw);
+  gap: min(30px, 1vw);
   justify-items: center;
 }
 
@@ -579,7 +573,7 @@ ol {
   text-align: center;
   font-size: 2rem;
   padding-top: 2rem;
-  margin-left: 25px;
+  margin-left: 10px;
 }
 
 .free-box img {
@@ -602,6 +596,7 @@ ol {
 
 /* 리스트 박스 */
 .cinfo-box li {
+  margin-top: 20px;
   width: 300px;
   padding: 25px 30px;
   color: #000;
@@ -619,12 +614,12 @@ ol {
 
 /* 리스트박스 타이틀 */
 .cinfo-box li h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 /* 리스트 내용 */
 .cinfo-box li p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-top: 1.4rem;
   color: #00000099;
   line-height: 1.7;
