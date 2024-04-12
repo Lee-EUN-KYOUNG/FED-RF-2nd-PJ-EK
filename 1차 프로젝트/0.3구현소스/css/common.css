@@ -165,7 +165,9 @@
   color: darkgreen;
 }
 .itxt-box3 {
-  margin-top: 22vh;
+  margin-top: 25vh;
+  color: #fff;
+  font-weight: bold;
   height: 4vh;
   text-align: left;
   font-family: "S-CoreDream-3Light";
@@ -352,9 +354,9 @@ ol {
 }
 
 .goods-bar {
-  /* display: grid; */
+  display: grid;
   position: relative;
-  /* padding: 0 10px; */
+  padding: 0 10px;
   margin-top: 2.2vw;
 }
 
@@ -362,7 +364,7 @@ ol {
   display: flex;
   /* 자식요소 박스 옆으로 흐르게! */
   width: 500px;
-  /* margin: 0 auto; */
+  margin: 5px;
 }
 
 .wrap {
@@ -374,8 +376,8 @@ ol {
   padding: 12px;
 }
 .goods-box {
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   border: 4px double #ccc;
   border-radius: 10px;
 }
@@ -411,7 +413,7 @@ ol {
 .good-cont {
   display: inline-grid;
   grid-gap: 1.5px 0;
-  font-size: 16px;
+  font-size: 15px;
   font-family: "S-CoreDream-3Light";
 }
 
@@ -440,7 +442,7 @@ ol {
   font-family: "S-CoreDream-3Light";
   text-align: center;
   margin-top: -45px;
-  margin-left: 570px;
+  margin-left: 410px;
   background: url(../images/review_icon.png) no-repeat center/cover;
   border: 2px solid #fff;
   border-radius: 5px;
