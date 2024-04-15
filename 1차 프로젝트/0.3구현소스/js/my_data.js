@@ -139,5 +139,81 @@ const nData = [
   },
 ]; /////////// nData 배열 /////////
 
+// 4. 제품후기 데이터
+/************************************* 
+    [ 데이터항목 : ]
+    1.순번(기본키) : idx
+    2.제목 : title
+    3.제품후기 : reviewer
+    3.이미지 : rephoto
+    4.날짜 : date
+*************************************/
+const rData = [
+  {
+    idx: "1",
+    title: "해피카우 오스트리안 스모크드 치즈",
+    reviewer: "짭짤하고 고소해서 맛있어요. 훈제향도 나서 좋아요.",
+    rephoto: "../images/good_image01.jpg",
+    date: "2024-04-15",
+  },
+  {
+    idx: "2",
+    title: "해피카우 오스트리안 스모크드 치즈",
+    reviewer: "짭짤하고 고소해서 맛있어요. 훈제향도 나서 좋아요.",
+    rephoto: "../images/good_image02.jpg",
+    date: "2024-04-15",
+  },
+  {
+    idx: "3",
+    title: "플랜터스 허니 로스티드 피넛 미니팩",
+    reviewer: "요건 정말 한 봉지 순삭이예요. 짭짤하고 고소해서 맥주안주로 딱이죠 ㅎㅎ",
+    rephoto: "../images/good_image03.jpg",
+    date: "2024-04-15",
+  },
+  {
+    idx: "4",
+    title: "티네 얄스버그 오리지널 슬라이스(스윗 앤 너티)",
+    reviewer: "쉽게 간편하게 먹을 수 있어 좋아요. 맛은 마일드.",
+    rephoto: "../images/good_image04.jpg",
+    date: "2024-04-15",
+  },
+  {
+    idx: "5",
+    title: "플랜터스 핫 치폴레 피넛",
+    reviewer: "저번에 샀는데 맛에 중독돼서 바로 또 시켰습니다. 자극적이고 맛있어요.",
+    rephoto: "../images/good_image05.jpg",
+    date: "2024-04-15",
+  },
+  {
+    idx: "6",
+    title: "MyJool(마이줄) 메드줄 대추야자",
+    reviewer: "대추야자 좋아하는데 맛있었어요. 큼직한 열매로 세개 들었어요.",
+    rephoto: "../images/good_image06.jpg",
+    date: "2024-04-15",
+  },
+  {
+    idx: "7",
+    title: "데니쉬크라운 살라미 스틱",
+    reviewer: "살짝 딱딱하긴한데 술안주로 먹기 편하고 좋아요.",
+    rephoto: "../images/good_image07.jpg",
+    date: "2024-04-15",
+  },
+  {
+    idx: "8",
+    title: "스톡 크노퍼스",
+    reviewer: "바삭바삭하고 달달하니 넘넘 맛잇어요~~♡",
+    rephoto: "../images/good_image08.jpg",
+    date: "2024-04-15",
+  },
+  {
+    idx: "9",
+    title: "데쎄오 크런치 레몬버터 비스킷",
+    reviewer: "너무 달지 않고 레몬 상큼한 맛이 좋아요.",
+    rephoto: "../images/good_image09.jpg",
+    date: "2024-04-15",
+  },
+];
+
+
 // 데이터 공개하기
-export { freeData, bData, nData };
+export { freeData, bData, nData, rData };

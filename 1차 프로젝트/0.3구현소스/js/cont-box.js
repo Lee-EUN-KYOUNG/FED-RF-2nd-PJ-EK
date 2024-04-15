@@ -241,4 +241,37 @@ cinfoBox.innerHTML = hcode;
 })(); /////////////// 유의 사항 구현 코드 랩핑 구역 종료
 
 
+///////////// 제품 후기 구현 코드 랩핑 구역 시작 /////
+(() => {
+  // 대상 : .re-box
+  const reviewBox = myFn.qs(".review-box");
+
+  let hcode = '<ul>';
+  
+  dkbData.rData.forEach(v=>{
+    hcode += `
+    <li>
+    <div class="good-review-box">
+    <img src="../images/${v.rephoto}.jpg"/>
+    </div>
+    <h4>
+    ${v.reviewer}</h4>
+    </h4>
+    <h3>${v.title}</h3>
+    </li>
+
+  `;
+  }); ///////// forEach
+  
+  hcode += `</ul>`;
+  
+  // 화면 출력하기
+  reviewBox.innerHTML = hcode;
+  
+  console.lgoe("리뷰박스",rData);
+
+  })(); /////////////// 제품 후기 구현 코드 랩핑 구역 종료
+
+
+
 
