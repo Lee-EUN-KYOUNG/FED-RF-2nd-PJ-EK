@@ -77,6 +77,9 @@
   font-weight: bold;
 }
 
+
+
+
 /************************************************************************************************************************ 
                                                 1. 상단 영역 시작
 ************************************************************************************************************************/
@@ -205,7 +208,7 @@
 
 .header-info {
   display: flex;
-  margin: -1px;
+  margin: 10px;
   gap: 0 100px;
   justify-content: center;
   list-style: none;
@@ -622,7 +625,7 @@ ol {
 
 /* 리스트 내용 */
 .cinfo-box li p {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin-top: 1.4rem;
   color: #00000099;
   line-height: 1.7;
@@ -668,6 +671,23 @@ ol {
   flex-shrink: 0;
 }
 
+.review-goods-area-inbox>h2 {
+  position: relative;
+    font-size: 50px;
+    font-family: "S-CoreDream-3Light";
+    text-indent: 5%;
+    color: #fff;
+    background-color: darkgreen;
+    border-left: 2rem solid rgb(255, 187, 0);
+    left: 10px;
+    margin-top: 30px;
+    height: 47px;
+    max-width: 259px;
+    line-height: 25px;
+    white-space: nowrap;
+}
+
+
 .review-box h4 {
   padding-top: 15px;
   font-size: 18px;
@@ -693,6 +713,7 @@ ol {
   position: relative;
   left: 0;
   display: flex;
+  cursor: pointer;
 }
 
 .review-box ul{
@@ -701,29 +722,35 @@ ol {
 }
 
 /* 양쪽버튼만들기 */
+
 .reveiw-btn-box{
   display: flex;
-  z-index: 999;
-  margin-top: -10px;
-  width: 30px;
-  height: 30px;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.reveiw-btn-box>ul{
+  margin-top: 2px;
+  width: 35px;
+  height: 35px;
   padding-bottom: 20px;
 }
 
-.fa-chevron-left{
+.rbtn-rb1{
 margin-left: 20px;
 }
 
-.fa-chevron-rigth{
-  margin-left: -20px;
+.rbtn-rb2{
+  margin-left: 1780px;
 }
+
 
 /************* 3. 하단영역 *************/
 
 #footer-area {
   border-top: 1px solid #ccc;
   padding-top: 10px;
-  padding-bottom: 70px;
+  padding-bottom: 10px;
 }
 
 
@@ -732,8 +759,10 @@ margin-left: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 0 50px;
-  margin-left: 100px;
+  margin-left: 400px;
   text-align: center;
+  padding-bottom: 5px;
+  
 }
 
 .info-link a{
@@ -763,7 +792,7 @@ margin-left: 20px;
 .sns-box ul{
   display: flex;
   gap: 0 5px;
-  padding-top: 20px;
+  padding-top: 10px;
   margin-left: 35px;
 }
 .sns-box li{
@@ -786,5 +815,5 @@ margin-left: 20px;
 }
 
 .pay-brand{
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }

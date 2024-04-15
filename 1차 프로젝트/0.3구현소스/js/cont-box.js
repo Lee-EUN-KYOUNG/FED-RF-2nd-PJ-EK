@@ -1,11 +1,8 @@
-
-
 // 나의 함수 불러오기
 import myFn from "./my_function.js";
 
 // 데이터 셋팅 불러오기
 import * as dkbData from "./my_data.js";
-
 
 // 슬라이드 함수호출!
 loadFn();
@@ -31,23 +28,21 @@ function loadFn() {
     // 슬라이드 넣기
     slide.innerHTML += `
     <li data-seq="${i}">
-      <img src="images/cont_0${i+1}.jpeg" alt="slide">
+      <img src="images/cont_0${i + 1}.jpeg" alt="slide">
     </li>
     `;
 
     // 블릿 넣기
     indic.innerHTML += `
-    <li ${i===0?'class="on"':''}>
+    <li ${i === 0 ? 'class="on"' : ""}>
     <img src="images/dot1.png" alt="흰색">
     <img src="images/dot2.png" alt="회색">
     </li>
     `;
   } ////////// for문 ///////
 
-
   // 블릿의 li까지 수집! indic 변수
-  indic = myFn.qsa('.indic li');
-
+  indic = myFn.qsa(".indic li");
 
   // 버튼을 모두 이벤트 설정하기
   for (let x of abtn) {
@@ -57,7 +52,6 @@ function loadFn() {
   // 광클 금지 변수
   let prot = false;
 
-  
   /***************************************************************************************************************
                                         함수명 : goSlide
                                        기능 : 슬라이드 이동
@@ -114,95 +108,97 @@ function loadFn() {
       }, 0);
     } ////// else문
 
-
-
     // 3. 블릿을 위해 읽어올 슬라이드 순번 구하기
-    let seq = slide.querySelectorAll('li')[isRbtn?1:0]
-      .getAttribute('data-seq');
-
+    let seq = slide
+      .querySelectorAll("li")
+      [isRbtn ? 1 : 0].getAttribute("data-seq");
 
     // 4. 블릿 변경하기
     // 모든 클래스 on 지우기 + 현재 순번 클래스 넣기
-    indic.forEach((ele,idx)=>{
-
+    indic.forEach((ele, idx) => {
       // ele - 각각의 li , idx - 각각의 순번
-     if(idx==seq){
-       ele.classList.add('on');
-     } /// if ////
-
-     else {
-       // 나머지는 on 빼기
-       ele.classList.remove('on');
-     } //// else ////
-
-   }); /// forEach ///
+      if (idx == seq) {
+        ele.classList.add("on");
+      } /// if ////
+      else {
+        // 나머지는 on 빼기
+        ele.classList.remove("on");
+      } //// else ////
+    }); /// forEach ///
   } /////////////////// goSlide 함수
-
 } //////////////// loadFn 함수 ///////////////
-/////////////////////////////////////////////
+
+
+
+///////////// 제품 후기 영역 코드 랩핑 구역 시작 /////
+
+
+
+///////////// 제품 후기 영역 코드 랩핑 구역 종료 /////
+
+
+
 
 
 ///////////// 베스트 상품 이미지 구현 코드 랩핑 구역 시작 /////
 
-  // 1. 대상 : .wrap
-        const wrap = document.querySelector(".wrap");
-        console.log(wrap);
+// 1. 대상 : .wrap
+const wrap = document.querySelector(".wrap");
+//console.log(wrap);
 
-        // 2. 이벤트 설정 : 로딩 후 바로 실행
-        makeList();
+// 2. 이벤트 설정 : 로딩 후 바로 실행
+makeList();
 
-        /****************************************************************************************************** 
+/****************************************************************************************************** 
                 함수명 : makeList
                 기능 : 구조화된 html 코드에 객체 데이터를 매칭하여 반복 코드를 생성한 후 화면에 보여준다!
         ******************************************************************************************************/
-        function makeList() {
-          console.log("리스트만들어");
+function makeList() {
+  console.log("리스트만들어");
 
-          // 1. 문구 처리 함수 만들기
-          const wrapping = (x) => {
-            // 전달받은 문자(x)를 for of로 잘라서 span태그로 싼 후 리턴한다
-            // 결과값 변수 res;
-            let res = "";
-            for (let y of x) {
-              // 스페이스바일 경우 공백특수문자 넣기
-              if (y === " ") {
-                res += "&nbsp;&nbsp;";
-              } ////////////// if ////////
-              else {
-                res += `<span>${y}</span>`;
-              } //////////// else
-            } //////////////// for of 함수 //////////////////////
+  // 1. 문구 처리 함수 만들기
+  const wrapping = (x) => {
+    // 전달받은 문자(x)를 for of로 잘라서 span태그로 싼 후 리턴한다
+    // 결과값 변수 res;
+    let res = "";
+    for (let y of x) {
+      // 스페이스바일 경우 공백특수문자 넣기
+      if (y === " ") {
+        res += "&nbsp;&nbsp;";
+      } ////////////// if ////////
+      else {
+        res += `<span>${y}</span>`;
+      } //////////// else
+    } //////////////// for of 함수 //////////////////////
 
-            // &nbsp; -> 줄바꿈없는 공백 특수문자처리 (no break space의 줄임말)
+    // &nbsp; -> 줄바꿈없는 공백 특수문자처리 (no break space의 줄임말)
 
-            return res;
-          }; /////////////////////// wrapping 함수 (할당형) ///////////////////////////////
+    return res;
+  }; /////////////////////// wrapping 함수 (할당형) ///////////////////////////////
 
-          // 2. 객체 데이터 순회하기
-          // for in문 사용!!
-          // for(변수 in 객체){코드}
-          // for of문이나 for Each메서드는 배열/유사배열만 사용 가능하기 때문에
-          // 객체의 순회는 for in문을 사용함
+  // 2. 객체 데이터 순회하기
+  // for in문 사용!!
+  // for(변수 in 객체){코드}
+  // for of문이나 for Each메서드는 배열/유사배열만 사용 가능하기 때문에
+  // 객체의 순회는 for in문을 사용함
 
-          // 대상 객체 : mgoods
-          // 코드를 담을 변수 : hcode
-          let hcode = ""; // string 리터럴
+  // 대상 객체 : mgoods
+  // 코드를 담을 변수 : hcode
+  let hcode = ""; // string 리터럴
 
-          for (let x in dkbData.mgoods) {
-            // x는 객체의 속성명. 객체의 값은 객체[속성명]으로 가져옴!
+  for (let x in dkbData.mgoods) {
+    // x는 객체의 속성명. 객체의 값은 객체[속성명]으로 가져옴!
 
-            // 선택 객체값 변수에 담기
-            let data = dkbData.mgoods[x];
+    // 선택 객체값 변수에 담기
+    let data = dkbData.mgoods[x];
 
-            // 변수에 데이터 대입 연산자로 템플릿 리터럴을 사용하여 코드를 구성한다
-            hcode += `
+    // 변수에 데이터 대입 연산자로 템플릿 리터럴을 사용하여 코드를 구성한다
+    hcode += `
             <section class="goods-box">
               <div class="minfo">
                   <!-- 1. 상품이미지 -->
                   <div class="photo">
-                      <img src="${data.상품이미지}" alt="${
-              data.상품명
-            }의 상품이미지">  
+                      <img src="${data.상품이미지}" alt="${data.상품명}의 상품이미지">  
                   </div>
                   <div class="good-cont">
                       <!-- 2. 상품명 --> 
@@ -231,28 +227,13 @@ function loadFn() {
               <button class="reviewb"></button>
             </section>
             `;
-          } /////// for in 문
+  } /////// for in 문
 
-          // .wrap에 출력하기
-          wrap.innerHTML = hcode;
-        } //////////////////////// makeList 함수 /////////////
-
+  // .wrap에 출력하기
+  wrap.innerHTML = hcode;
+} //////////////////////// makeList 함수 /////////////
 
 /////////////// 베스트 상품 이미지 코드 랩핑 구역 종료
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ///////////// 무료배송클럽 구현 코드 랩핑 구역 시작 /////
 (() => {
@@ -260,7 +241,7 @@ function loadFn() {
   const freeBox = myFn.qs(".free-box");
   // 데이터 : my_data.js의 freeData 배열
   const fData = dkbData.freeData;
-  
+
   // html 변수
   let hcode = "<ul>";
 
@@ -282,9 +263,7 @@ function loadFn() {
 
   // 화면 출력하기
   freeBox.innerHTML = hcode;
-
 })(); /////////////// 무료배송클럽 코드 랩핑 구역 종료
-
 
 ///////////// 비즈니스 배송클럽 구현 코드 랩핑 구역 시작 /////
 (() => {
@@ -292,7 +271,7 @@ function loadFn() {
   const bouBox = myFn.qs(".business-box");
   // 데이터 : my_data.js의 bData 배열
   const boData = dkbData.bData;
-  
+
   // html 변수
   let hcode = "<ul>";
 
@@ -314,22 +293,20 @@ function loadFn() {
 
   // 화면 출력하기
   bouBox.innerHTML = hcode;
-
 })(); /////////////// 비즈니스 배송 코드 랩핑 구역 종료
-
 
 ///////////// 유의 사항 구현 코드 랩핑 구역 시작 /////
 (() => {
-// 대상 : .cinfo-box
-const cinfoBox = myFn.qs(".cinfo-box");
-// 데이터 : dkb_data.js의 nData 배열
-const iData = dkbData.nData;
+  // 대상 : .cinfo-box
+  const cinfoBox = myFn.qs(".cinfo-box");
+  // 데이터 : dkb_data.js의 nData 배열
+  const iData = dkbData.nData;
 
-let hcode = '<ul class="cInfo-box">';
+  let hcode = '<ul class="cInfo-box">';
 
-// li 구성을 hcode 변수에 대입 연산자로 할당함
-for (let i = 0; i < 5; i++) {
-  hcode += `
+  // li 구성을 hcode 변수에 대입 연산자로 할당함
+  for (let i = 0; i < 5; i++) {
+    hcode += `
   <li>
    <h4>${iData[i].title}</h4>
    <p>${iData[i].scont}</p>
@@ -337,28 +314,24 @@ for (let i = 0; i < 5; i++) {
   </li>
 
 `;
-} //////////////////// for문//////////////////////////////////
+  } //////////////////// for문//////////////////////////////////
 
-hcode += `</ul>`;
+  hcode += `</ul>`;
 
-// 화면 출력하기
-cinfoBox.innerHTML = hcode;
-
-
+  // 화면 출력하기
+  cinfoBox.innerHTML = hcode;
 })(); /////////////// 유의 사항 구현 코드 랩핑 구역 종료
-
 
 ///////////// 제품 후기 구현 코드 랩핑 구역 시작 /////
 (() => {
   // 대상 : .re-box
   const reviewBox = myFn.qs(".review-box");
 
-  let hcode = '';
-  
-  dkbData.rData.forEach((v,i)=>{
-    
-    if(i===0||i===4) hcode += '<ul>';
-    
+  let hcode = "";
+
+  dkbData.rData.forEach((v, i) => {
+    if (i === 0 || i === 4) hcode += "<ul>";
+
     hcode += `
     <li>
     <div class="good-review-box">
@@ -371,20 +344,16 @@ cinfoBox.innerHTML = hcode;
     </li>
     
     `;
-    if(i===3||i===7) hcode += '</ul>';
+    if (i === 3 || i === 7) hcode += "</ul>";
   }); ///////// forEach
-  
+
   // 화면 출력하기
   reviewBox.innerHTML = hcode;
-  
+})(); /////////////// 제품 후기 구현 코드 랩핑 구역 종료
 
-  })(); /////////////// 제품 후기 구현 코드 랩핑 구역 종료
-
- /*  ///////////// 하단 영역 구현 코드 랩핑 구역 시작 /////
+/*  ///////////// 하단 영역 구현 코드 랩핑 구역 시작 /////
   export default function setElement() {
     const footerArea = myFn.qs("#footer-area");
      footerArea.innerHTML = comData.footerArea;
     
     }   ///////////// 하단 영역 구현 코드 랩핑 구역 시작 ///// */
-
- 

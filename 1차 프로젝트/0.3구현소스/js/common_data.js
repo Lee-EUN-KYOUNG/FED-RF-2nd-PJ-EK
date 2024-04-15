@@ -1,7 +1,7 @@
 
 const comData = {
     
-    /* 상품판매영역 */
+    /* 고정바 영역 */
 
     /* 하단 영역 */
     footerArea: `
