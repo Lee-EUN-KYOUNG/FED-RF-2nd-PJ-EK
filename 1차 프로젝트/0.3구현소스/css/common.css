@@ -685,9 +685,19 @@ ol {
   font-weight: bold;
   color: darkgreen;
 }
-
-.review-box {
+.review-goods-area-inbox .cont-box{
   overflow: hidden;
+
+}
+.review-box {
+  position: relative;
+  left: 0;
+  display: flex;
+}
+
+.review-box ul{
+  width: 100%;
+  flex-shrink: 0;
 }
 
 /* 양쪽버튼만들기 */
