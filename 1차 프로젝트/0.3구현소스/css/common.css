@@ -718,39 +718,43 @@ margin-left: 20px;
   margin-left: -20px;
 }
 
-
-
-
-
 /************* 3. 하단영역 *************/
 
 #footer-area {
   border-top: 1px solid #ccc;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 70px;
 }
+
 
 /* 하단링크박스 */
 .info-link ul{
   display: flex;
   flex-wrap: wrap;
-  gap: 0 15px;
-  margin-left: 20px;
-}
-.info-link a{
-  font-size: 1.4rem;
-  line-height: 2.5;
-  white-space: nowrap;
+  gap: 0 50px;
+  margin-left: 100px;
+  text-align: center;
 }
 
+.info-link a{
+  font-size: 1.5rem;
+  line-height: 2.5;
+  white-space: nowrap;
+  font-family: "S-CoreDream-3Light";
+  font-weight: normal;
+}
+
+
 /* 하단로고박스 */
-.footer-logo{
-  margin-left: 20px;
+.footer_logo{
+  margin-left: 35px;
   padding: 20px 0;
 }
+
 /* 회사주소박스 */
 .corp-info{
-  margin-left: 20px;
+  margin-left: 35px;
+  font-family: "S-CoreDream-3Light";
   font-style: normal;
   font-size: 1.5rem;
   line-height: 1.6;
@@ -759,6 +763,8 @@ margin-left: 20px;
 .sns-box ul{
   display: flex;
   gap: 0 5px;
+  padding-top: 20px;
+  margin-left: 35px;
 }
 .sns-box li{
   width: 30px;
@@ -771,7 +777,14 @@ margin-left: 20px;
   border: 1px solid gray;
 }
 
-.pay-brand, .pay-co{
-    width: 100px;
-    height: 50px;
+/* 결제 이미지 영역 */
+.pay-area{
+  margin-top: -30px;
+  margin-left: 630px;
+  width: 103px;
+  height: 56px;
+}
+
+.pay-brand{
+  padding-bottom: 10px;
 }
