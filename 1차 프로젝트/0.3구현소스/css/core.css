@@ -37,14 +37,10 @@
 /* 전체 글자크기 */
 html{
     font-size: 10px;
-    /* rem 단위 계산 편의를 위함 */
+
     cursor: default;
 }
 
-/* 글자체 */
-/* body{
-    font-family: 'Nanum Gothic', sans-serif;
-} */
 
 /* 임시표시타이틀 */
 .temp-tit{
@@ -52,11 +48,12 @@ html{
     font-size: 2vw;
     color: #ccc;
 }
+
 /* 중앙 속박스 */
 .inbox{
     /* 최대 가로크기 */
     max-width: 1360px;
-    /* 블록박스 중앙정렬 -> 마.영.오. */
+    /* 블록박스 중앙정렬 */
     margin: 0 auto;
 }
 

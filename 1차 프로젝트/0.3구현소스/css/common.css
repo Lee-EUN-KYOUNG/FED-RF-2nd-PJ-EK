@@ -19,7 +19,6 @@
 }
 
 /* 검색 아이콘 클릭시 서치박스 등장 */
-
 .search-box {
   position: absolute;
   margin-top: 7px;
@@ -88,7 +87,6 @@
 .gnb ul > li:nth-child(-n + 3) > a span::after {
   content: "∨";
   display: inline-block;
-  /* 트랜스폼은 인라인에서는 적용안됨 */
   font-size: 7px;
   margin-left: 2px;
   vertical-align: 2px;
@@ -365,16 +363,13 @@ ol {
 
 .minfo {
   display: flex;
-  /* 자식요소 박스 옆으로 흐르게! */
   width: 500px;
   margin: 5px;
 }
 
 .wrap {
-  /* 플렉스박스 */
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  /* flex-wrap: wrap; */
   justify-content: center;
   padding: 12px;
 }
