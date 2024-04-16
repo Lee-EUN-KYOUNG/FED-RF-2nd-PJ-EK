@@ -132,13 +132,13 @@ const bData = [
   {
     idx: "1",
     title: "비즈니스 보너스 클럽 100",
-    imgName: "B-cate01",
+    imgName: "b-cate01",
     bwon: "1,000,000원",
   },
   {
     idx: "2",
     title: "비즈니스 클럽 주의사항",
-    imgName: "B-cate02",
+    imgName: "b-cate02",
     bwon: "사업자용 보너스 클럽",
   },
 ]; /////////// bData 배열 /////////
