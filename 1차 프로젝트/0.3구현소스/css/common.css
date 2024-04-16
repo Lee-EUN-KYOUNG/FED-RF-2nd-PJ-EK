@@ -754,10 +754,10 @@ margin-left: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 0 50px;
-  margin-left: 400px;
+  /* margin-left: 400px; */
   text-align: center;
   padding-bottom: 5px;
-  
+  justify-content: center;
 }
 
 .info-link a{
@@ -802,11 +802,16 @@ margin-left: 20px;
 }
 
 /* 결제 이미지 영역 */
+.pay-wrap{
+  float: right;
+  box-sizing: border-box;
+  padding-right: 50px;
+}
 .pay-area{
-  margin-top: -30px;
-  margin-left: 630px;
+  margin-top: -100px;
   width: 103px;
   height: 56px;
+  text-align: right;
 }
 
 .pay-brand{
