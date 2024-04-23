@@ -821,3 +821,10 @@ margin-left: 20px;
 .pay-brand{
   padding-bottom: 30px;
 }
+
+
+/* 
+    드래그 선택영역 안접히게 하기
+    -webkit-user-drag: none;
+    user-select: none;
+*/
