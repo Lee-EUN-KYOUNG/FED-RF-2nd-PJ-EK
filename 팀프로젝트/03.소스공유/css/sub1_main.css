@@ -260,9 +260,7 @@ margin-left: 40px;
     grid-column: 1/3;
     grid-row: 1/3;
   }
-.first::after{
-    content: "[Andy's House]"
-    " Andy’s room was a world of its own, home to most of Toy Story’s characters and a place that immediately conveyed comfort and safety. That sense of safety provided the conflict as the characters faced new anxieties like leaving the house and welcoming a new toy.";
+.beingTxt span{
     position: absolute;
     top: 20px;
     left: 1px;
@@ -278,7 +276,7 @@ margin-left: 40px;
     opacity: 0;
     transition: .2s;
   }
-  .first:hover::after{
+  .beingTxt:hover span{
     opacity: 1;
   }
 
@@ -287,9 +285,8 @@ margin-left: 40px;
     grid-row: 3/5;
 }
 
-.second::after{
-    content: "[Sid's House]"
-    " Movie villains are often more fun than the straight guy, and many on the Pixar team found they related to the mutant impulses of Sid, the bad boy next door. “I think Sid is normal,” says Andrew Stanton. “I think Andy is the weird one, this boy who takes care of his toys.” Coming up with disturbing new creations to populate Sid’s room became one of the most popular tasks in Toy Story.";
+/* .second::after{
+    content: "[Sid's House]<br>Movie villains are often more fun than the straight guy, and many on the Pixar team found they related to the mutant impulses of Sid, the bad boy next door. “I think Sid is normal,” says Andrew Stanton. “I think Andy is the weird one, this boy who takes care of his toys.” Coming up with disturbing new creations to populate Sid’s room became one of the most popular tasks in Toy Story.";
     position: absolute;
     top: 20px;
     left: 1px;
@@ -307,10 +304,10 @@ margin-left: 40px;
   }
   .second:hover::after{
     opacity: 1;
-  }
+  } */
 
 
-.third::after{
+/* .third::after{
     content: "Dinoco Station";
     position: absolute;
     margin: 0 auto;
@@ -328,9 +325,9 @@ margin-left: 40px;
   }
   .third:hover::after{
     opacity: 1;
-  }
+  } */
 
-  .fourth::after{
+  /* .fourth::after{
     content: "Pizza Planet";
     position: absolute;
     margin: 0 auto;
@@ -345,11 +342,11 @@ margin-left: 40px;
     padding : 100px 0;
     opacity: 0;
     transition: .2s;
-  }
+  } 
 
   .fourth:hover::after{
     opacity: 1;
-  }
+  }*/
 
 
 
