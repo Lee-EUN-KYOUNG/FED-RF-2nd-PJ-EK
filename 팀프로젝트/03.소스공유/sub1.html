@@ -18,138 +18,172 @@
     <!-- 3.리액트 바벨 라이브러리 -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <!-- 서브1 메인 JS 불러오기 : 모듈로 불러오기 -->
-    <script type="module" src="./js/sub1_main.js"></script>
+    <script type="module" src="./js/sub1_main.js" type="module"></script>
     <link rel="stylesheet" href="./css/sub1_main.css" />
     <!-- 폰트어썸 아이콘CSS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
   <body class="subbx">
     <!-- 상단영역 -->
-    <div id="top-area">
-      <header class="page-bx">
-        <nav class="top-menu">
-          <ul>
-            <li class="toy01">
-              <a href="#">TOY STORY 01 / </a>
-            </li>
-            <li class="toy02">
-              <a href="#">04</a>
-            </li>
-          </ul>
-        </nav>
+    <header id="top-area">
+      <nav class="top-menu">
+        <ul>
+          <li class="toy01">
+            <a href="#">TOY STORY 01 / </a>
+          </li>
+          <li class="toy02">
+            <a href="#">04</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-bx">
         <div class="logobx-area">
           <h1 class="mlogo">
             <img src="./IMG/PIXAR_LOGO black.png" alt="메인로고" />
           </h1>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
     <!-- 메인 영역 -->
     <div id="main-area">
       <main class="main-bx">
         <!-- 메인 이미지 -->
         <section class="intro-area">
-          <h2 class="maintit">
+          <h2 class="main-title">
             To infinity <br />
             And beyond
           </h2>
         </section>
-        <!-- top 이동 버튼 -->
-        <section class="bar-area">
-          <button class="gomain-btn"></button>
-        </section>
         <!-- 트레일러 파트 -->
         <section>
-          <div class="trmovie-box">
-          </div>
+          <div class="trmovie-box"></div>
         </section>
-        <!-- 캐릭터 파트 -->
+        <!-- 캐릭터 디자인 파트 -->
         <section>
           <div class="cha-box"></div>
         </section>
-        <!-- 디자인파트 -->
+        <!-- 배경 디자인 파트 -->
         <section>
           <div class="design-box"></div>
         </section>
-        <!-- 디자인 캐릭터 파트 -->
+        <!-- 캐릭터 컨셉 파트 -->
+        <section id="container">
+          <h2>Character Concept Design</h2>
+          <div class="de-chpart">
+            <!--슬라이드-->
+            <ul id="slide"></ul>
+            <!--이동버튼-->
+            <a href="###" class="abtn ab1"
+              ><img src="./IMG/img1/left_btn.png" alt="왼쪽이동버튼"
+            /></a>
+            <a href="##" class="abtn ab2"
+              ><img src="./IMG/img1/right_btn.png" alt="오른쪽이동버튼"
+            /></a>
+            <!--블릿버튼-->
+            <ol class="indic"></ol>
+          </div>
+        </section>
+        <!-- 배경 컨셉 파트 -->
         <section>
-          <div class="de-chpart"></div>
+          <div class="de-bgpart"><h2>Background Concept Design</h2></div>
+          <div class="grid"></div>
         </section>
       </main>
     </div>
     <!-- 하단 영역 -->
-    <div class="footer-area">
+    <div id="footer-area">
       <footer class="footer-bx">
-        <!-- SNS 영역 -->
-        <div class="sns-part">
-          <aside class="sns-box">
-            <ul>
-              <li>
-                <a href="#" class="fa-brands fa-instagram">
-                  <span class="ir"> 인스타그램 </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="fa-brands fa-facebook">
-                  <span class="ir"> 페이스북 </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="fa-brands fa-twitter">
-                  <span class="ir"> 트위터 </span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="fa-brands fa-youtube">
-                  <span class="ir"> 유튜브 </span>
-                </a>
-              </li>
-            </ul>
-          </aside>
-        </div>
-        <!-- 정책약관 영역 -->
-        <div class="fcont-part">
-          <aside class="info-link">
-            <ul>
-              <li>
-                <a href="#"></a>
-              </li>
-              <li>
-                <a href="#"></a>
-              </li>
-              <li>
-                <a href="#"></a>
-              </li>
-              <li>
-                <a href="#"></a>
-              </li>
-              <li>
-                <a href="#"></a>
-              </li>
-            </ul>
-          </aside>
-        </div>
-        <!-- 다른 서브파트가기 영역 -->
-        <div class="gosub-part">
-          <select name="subp" id="another">
-            <option value="gomain">메인</option>
-            <option value="gosub">서브</option>
-          </select>
-          <select name="corp" id="corp">
-            <option value="어쩌구">TOY STORY 01</option>
-            <option value="어쩌구">TOY STORY 02</option>
-            <option value="어쩌구">TOY STORY 03</option>
-            <option value="어쩌구">TOY STORY 04</option>
-          </select>
-        </div>
-        <!-- 저작권 표시 영역 -->
-        <div class="corp-part">
-          <address class="corp-info">
-            © 1986-2024 DISNEY / PIXAR
-          </address>
+        <div class="col-12">
+          <!-- SNS 영역 -->
+          <div class="sns-part">
+            <aside class="sns-box">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/pixar/"
+                    target="_blank"
+                    class="fa-brands fa-instagram"
+                  >
+                    <span class="ir"></span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/Pixar/"
+                    target="_blank"
+                    class="fa-brands fa-facebook"
+                  >
+                    <span class="ir"> </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/pixar"
+                    target="_blank"
+                    class="fa-brands fa-x-twitter"
+                  >
+                    <span class="ir"></span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/pixar"
+                    target="_blank"
+                    class="fa-brands fa-youtube"
+                  >
+                    <span class="ir"></span>
+                  </a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <!-- 정책약관 영역 -->
+          <div class="fcont-part">
+            <aside class="info-link">
+              <ul>
+                <li>
+                  <a
+                    href="https://privacy.thewaltdisneycompany.com/en/"
+                    target="_blank"
+                    >PRIVACY POLICY</a
+                  >
+                </li>
+                <li>
+                  <a href="https://disneytermsofuse.com/" target="_blank"
+                    >TERMS OF USE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-us-state-privacy-rights/"
+                    target="_blank"
+                    >YOUR US STATE PRIVACY RIGHTS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/"
+                    target="_blank"
+                    >CHILDREN’S ONLINE PRIVACY POLICY</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://preferences-mgr.truste.com/?affiliateId=115&type=disneycolor"
+                    target="_blank"
+                    >INTEREST-BASED ADS</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <!-- 저작권 표시 영역 -->
+          <div class="corp-part">
+            <address class="corp-info">© 1986-2024 DISNEY / PIXAR</address>
+          </div>
         </div>
       </footer>
     </div>
