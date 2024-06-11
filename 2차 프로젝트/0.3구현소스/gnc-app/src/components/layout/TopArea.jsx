@@ -5,9 +5,13 @@ import { Link } from "react-router-dom";
 // import { menu } from "../data/gnb";
 
 import Logo from "../modules/Logo";
+import TextBanner from "../modules/HeadLine";
+
 
 // 상단 영역 CSS 불러오기
 import "../../css/pivot/top_area.scss";
+
+
 
 /// 컴포넌트 코딩구역
 export default function TopArea() {
@@ -29,11 +33,7 @@ export default function TopArea() {
           </ul>
         </nav>
         {/* 헤드라인 영역 */}
-        <nav className="headline">
-          <ul>
-            <li></li>
-          </ul>
-        </nav>
+        <TextBanner />
       </header>
     </>
   );
