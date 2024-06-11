@@ -1,33 +1,22 @@
 // 재귀호출 컴포넌트
 import React from "react";
 
-// 재귀호출 JS  불러오기
-import mytextFn from "../func/call_myself";
+
+// css 불러오기
+import "../../css/pivot/_headline.scss";
 
 
-
-function TextBanner(props) {
-  // 기능 생성자 함수 인스턴스 생성하기
-  const mytFn = new mytextFn();
-
+export default function TextBanner( props ) {
+  
   //// 코드 리턴 구역
   return (
     <>
-      <section className="sec-intro">
-        <h1 className="headbox">
-          {mytFn.map((i) => (
-            <div key={i}>
-              <ul className="linetit">
-                <li>
-                  <h2>재귀호출테스트</h2>
-                </li>
-              </ul>
-            </div>
-          ))}
-        </h1>
-      </section>
+      <div className="headbox">
+        <ul className="text-track">
+          <h2 className="content">화면출력테스트</h2>
+        </ul>
+      </div>
     </>
   );
 } //////////// HeadLine
 
-export default TextBanner;

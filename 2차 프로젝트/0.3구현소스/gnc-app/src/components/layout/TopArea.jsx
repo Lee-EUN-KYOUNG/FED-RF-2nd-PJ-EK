@@ -7,11 +7,8 @@ import { Link } from "react-router-dom";
 import Logo from "../modules/Logo";
 import TextBanner from "../modules/HeadLine";
 
-
 // 상단 영역 CSS 불러오기
 import "../../css/pivot/top_area.scss";
-
-
 
 /// 컴포넌트 코딩구역
 export default function TopArea() {
@@ -22,18 +19,19 @@ export default function TopArea() {
       <header className="top-area">
         {/* 네비게이션 GNB파트 */}
         <nav className="gnb01">
-          <ul>
+          <ul className="logo-part">
             {/* 1. 로고 컴포넌트 */}
             <li>
               <Link to="/">
                 <Logo logoStyle="top" />
               </Link>
             </li>
-            {/* 2. GNB메뉴 데이터 배열로 만들기 */}
+          </ul>
+          <ul className="hline-part">
+            {/* 2. 헤드라인 영역 */}
+            <TextBanner />
           </ul>
         </nav>
-        {/* 헤드라인 영역 */}
-        <TextBanner />
       </header>
     </>
   );
