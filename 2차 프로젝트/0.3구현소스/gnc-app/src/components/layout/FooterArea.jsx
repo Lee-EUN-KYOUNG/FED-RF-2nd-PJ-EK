@@ -2,7 +2,7 @@
 //import { bmData } from "../data/bmenu";
 
 // 하단 영역 CSS 불러오기
-//import "../../css/footer_area.scss";
+import "../../css/pivot/footer_area.scss";
 
 export default function FooterArea() {
   //// 코드 리턴구역 //////////////
@@ -16,7 +16,7 @@ export default function FooterArea() {
           <ol className="bmenu">
           </ol>
         </li>
-        <li>© & ™ </li>
+        <li></li>
       </ul>
     </footer>
   );

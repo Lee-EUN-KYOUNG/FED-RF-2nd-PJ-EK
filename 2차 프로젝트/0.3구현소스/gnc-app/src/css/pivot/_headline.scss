@@ -3,31 +3,37 @@
 /* 움직이는 텍스트 */
 .headbox {
   position: relative;
-  font-size: 50px;
-  //font-family: "Raleway", Sans-serif;
-  //font-weight: 300;
-  width: 100%;
-  max-width: 100%;
-  //height: auto;
-  padding: 50px 50px;
-  //overflow-x: hidden;
-  //overflow-y: hidden;
+  background-color: #d4d4d471;
+  border: thick double #000000a3;
+  width: 50vw;
+  height: 1.2vh;
+  padding: 30px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .headbox .text-track {
   position: absolute;
   white-space: nowrap;
-  //will-change: transform;
-  //animation: marquee 6s linear infinite;
+  will-change: transform;
+  animation: marquee 20s ease-in infinite;
+}
+.content{
+  font-size: 1.5rem;
+  color: #000;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  margin: -10px 0;
+  text-align: center;
 }
 
-/* @keyframes marquee {
+@keyframes marquee {
   from {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
-} */
+}
 
 //////// 미디어쿼리
 /* @media (hover: hover) and (min-width: 700px) {

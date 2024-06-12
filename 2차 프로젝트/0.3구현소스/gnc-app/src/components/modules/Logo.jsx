@@ -25,8 +25,8 @@ export default function Logo({ logoStyle }) {
 
   // 로고 이미지 스타일
   const imgStyle = {
-    top: { width: "70px" },
-    bottom: { width: "80px" },
+    top: { width: "70px", margin: "0 auto" },
+    bottom: { width: "80px", margin: "0 auto" },
   };
 
   // 코드 리턴 구역

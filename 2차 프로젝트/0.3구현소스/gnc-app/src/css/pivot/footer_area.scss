@@ -1,0 +1,41 @@
+/* 하단영역 */
+.footer-area{
+  overflow: hidden;
+}
+
+.info {
+    text-align: center;
+    padding: 30px;
+    background-color:#fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .info > ul > li {
+    font-weight: bold;
+    overflow: hidden;
+  }
+  /* 하단 ol>li>a 링크박스 */
+  ol.bmenu {
+    font-family: "Ubuntu Condensed", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    overflow: hidden;
+  }
+  .bmenu li {
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  .bmenu li + li {
+    border-left: 2px solid #fff;
+    overflow: hidden;
+  }
+  .bmenu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    overflow: hidden;
+  }

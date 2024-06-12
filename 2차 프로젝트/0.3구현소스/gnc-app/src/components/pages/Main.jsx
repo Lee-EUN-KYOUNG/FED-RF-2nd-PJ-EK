@@ -6,7 +6,7 @@ export default function Main(){
     //// 코드 리턴구역 //////////////
     return(
         <>
-        <h1>메인페이지</h1>
+        <h1></h1>
         </>
     );
 

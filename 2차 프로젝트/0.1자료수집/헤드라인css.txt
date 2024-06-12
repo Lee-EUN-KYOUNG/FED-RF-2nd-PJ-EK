@@ -1,0 +1,36 @@
+/* =========================================================================== headerPickup */
+.headerPickup {
+  position: relative;
+  width: calc(100% - 350px);
+  height: calc(100% - 28px);
+  top: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  text-align: left;
+  background-image: url(../img/common/bgDot--pc.gif);
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: 4px auto;
+  margin-right: 10px;
+}
+
+/* --------------------------------------- headerPickup list */
+.headerPickup__list {
+  position: relative;
+  z-index: 1;
+}
+
+/* --------------------------------------- headerPickup target */
+.headerPickup__target {
+  display: inline-block;
+}
+
+/* --------------------------------------- headerPickup text */
+.headerPickup__target--text {
+  font-size: 30px;
+  color: #000;
+  line-height: 49px;
+  padding: 0 10px;
+  letter-spacing: 0.06em;
+}

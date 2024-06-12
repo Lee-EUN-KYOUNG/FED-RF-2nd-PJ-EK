@@ -19,15 +19,13 @@ export default function TopArea() {
       <header className="top-area">
         {/* 네비게이션 GNB파트 */}
         <nav className="gnb01">
-          <ul className="logo-part">
+          <ul>
             {/* 1. 로고 컴포넌트 */}
             <li>
               <Link to="/">
                 <Logo logoStyle="top" />
               </Link>
             </li>
-          </ul>
-          <ul className="hline-part">
             {/* 2. 헤드라인 영역 */}
             <TextBanner />
           </ul>
