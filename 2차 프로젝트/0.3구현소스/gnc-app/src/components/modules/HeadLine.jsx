@@ -15,12 +15,12 @@ export default function TextBanner(props) {
   return (
     <>
       <div className="headbox">
-        <ul className="text-track">
+        <section className="text-track">
           <h2 className="content">
             현재 전시 중 : 헬로키티 50주년 특별전, DDP 동대문 디자인 플라자
             뮤지엄 전시1관 지하 2층, 2024년 4월 13일 ~ 8월 13일
           </h2>
-        </ul>
+        </section>
         <ul className="gnb02">
           <li>
           {/*  돋보기 검색버튼 */}

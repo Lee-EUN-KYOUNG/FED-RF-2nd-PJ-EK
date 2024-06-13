@@ -5,17 +5,21 @@
   position: relative;
   background-color: #d4d4d471;
   border: thick double #000000a3;
-  width: 50vw;
+  max-width: 1200px;
+  width: 80vw;
   height: 1.2vh;
   padding: 30px 0;
+  margin: 0 auto;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 .headbox .text-track {
   position: absolute;
+  top: 30%;
+  left: 100%;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 20s ease-in infinite;
+  animation: marquee 10s linear infinite;
 }
 .content {
   font-size: 1.5rem;
@@ -27,15 +31,17 @@
 }
 
 @keyframes marquee {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
+   to {
+    left: -200%;
   }
 }
 
-ul.gnb02 {
+.gnb02 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 9px;
+  background-color: #ececec;
   flex-direction: row;
   justify-content: flex-end;
   

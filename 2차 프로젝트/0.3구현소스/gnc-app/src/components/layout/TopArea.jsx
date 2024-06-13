@@ -27,7 +27,9 @@ export default function TopArea() {
               </Link>
             </li>
             {/* 2. 헤드라인 영역 */}
-            <TextBanner />
+            <li>
+              <TextBanner />
+            </li>
           </ul>
         </nav>
       </header>
