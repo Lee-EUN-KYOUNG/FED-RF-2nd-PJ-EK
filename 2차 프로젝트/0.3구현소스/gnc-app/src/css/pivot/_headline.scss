@@ -17,7 +17,7 @@
   will-change: transform;
   animation: marquee 20s ease-in infinite;
 }
-.content{
+.content {
   font-size: 1.5rem;
   color: #000;
   letter-spacing: 0.1em;
@@ -34,6 +34,24 @@
     transform: translateX(-100%);
   }
 }
+
+ul.gnb02 {
+  flex-direction: row;
+  justify-content: flex-end;
+  
+}
+
+
+
+
+/* .ir > li{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  //overflow: hidden;
+  font-style: normal;
+  
+} */
 
 //////// 미디어쿼리
 /* @media (hover: hover) and (min-width: 700px) {
