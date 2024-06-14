@@ -10,7 +10,7 @@ import Search from "../modules/Search";
 
 
 
-// 상단 영역 CSS 불러오기
+// 상단 영역 CSS 불러오기`
 import "../../css/pivot/top_area.scss";
 
 /// 컴포넌트 코딩구역
