@@ -1,16 +1,11 @@
 // 헤드라인 컴포넌트
 import React from "react";
 
-// 폰트 어썸 불러오기
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import {faBookmark} from "@fortawesome/free-regular-svg-icons";
-
 // css 불러오기
 import "../../css/pivot/_headline.scss";
 
-export default function TextBanner(props) {
+
+function TextBanner(props) {
   //// 코드 리턴 구역
   return (
     <>
@@ -21,20 +16,8 @@ export default function TextBanner(props) {
             뮤지엄 전시1관 지하 2층, 2024년 4월 13일 ~ 8월 13일
           </h2>
         </section>
-        <ul className="gnb02">
-          <li>
-          {/*  돋보기 검색버튼 */}
-          <FontAwesomeIcon
-          icon={faMagnifyingGlass} 
-          />
-          </li>
-          <li>
-          <FontAwesomeIcon
-          icon={faBookmark}
-           />
-          </li>
-        </ul>
       </div>
     </>
   );
 } //////////// HeadLine
+export default TextBanner;

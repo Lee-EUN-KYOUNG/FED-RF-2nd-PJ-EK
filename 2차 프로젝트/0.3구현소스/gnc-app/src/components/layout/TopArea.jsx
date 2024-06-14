@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 
 import Logo from "../modules/Logo";
 import TextBanner from "../modules/HeadLine";
+import Search from "../modules/Search";
+
+
 
 // 상단 영역 CSS 불러오기
 import "../../css/pivot/top_area.scss";
@@ -29,6 +32,10 @@ export default function TopArea() {
             {/* 2. 헤드라인 영역 */}
             <li>
               <TextBanner />
+            </li>
+            {/* 3. 서치 박스 및 북마크 영역 */}
+            <li>
+              <Search />
             </li>
           </ul>
         </nav>

@@ -1,0 +1,21 @@
+// 서치 박스 csss
+
+
+
+.searchbox {
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    white-space: nowrap;
+  }
+
+.gnb02 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 9px;
+    background-color: #ececec;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+  }
