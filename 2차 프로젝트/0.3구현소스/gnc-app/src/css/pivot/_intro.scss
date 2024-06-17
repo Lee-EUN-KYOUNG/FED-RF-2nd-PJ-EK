@@ -1,0 +1,15 @@
+// 인트로 영역 CSS
+
+.Intro-area{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+    & ::before{
+    top: auto;
+    bottom: 0;
+    }
+}
+
+

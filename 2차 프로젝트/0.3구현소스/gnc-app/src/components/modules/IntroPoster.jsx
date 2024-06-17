@@ -4,7 +4,7 @@ import React from 'react';
 function IntroPoster(props) {
     return (
         <>
-            <h1>KITTY</h1>
+            <h1>KITTY POSTER</h1>
         </>
     );
 }

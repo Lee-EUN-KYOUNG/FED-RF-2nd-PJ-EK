@@ -1,18 +1,21 @@
 // 인트로영역
 import React from 'react';
-import Notice from '../modules/notice';
-import IntroPage from '../modules/IntroPage';
-import IntroPoster from '../modules/IntroPoster';
-import GnbMenu from '../modules/GnbMenu';
+import Notice from '../modules/Notice';
+import IntroSide from '../modules/IntroSide';
+
+/// CSS 연결
+import "../../css/pivot/_intro.scss";
+import "../../css/pivot/notice.scss";
+import "../../css/pivot/intro_side.scss";
 
 
 function Intro(props) {
     return (
         <>
+        <div className="Intro-area">
             <Notice/>
-            <IntroPage />
-            <IntroPoster/>
-            <GnbMenu />
+            <IntroSide/>
+        </div>
         </>
     );
 }
