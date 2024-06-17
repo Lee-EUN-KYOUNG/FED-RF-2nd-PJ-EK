@@ -1,47 +1,88 @@
 /// 공지바 영역
 
-.notice-box{
-    position: relative;
-    width: 77%;
-    padding-top: 2.5vw;
+.notice-box {
+  position: relative;
+  width: 70%;
+  padding-top: 2.5vw;
+  list-style: none;
 }
 
-.notice-bar{
-    position: absolute;
-    width: 100%;
-    height: 2.5vw;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+.notice-bar {
+  display: flex;
+  position: absolute;
+  border: 2px solid red;
+  width: 100%;
+  height: 2.5vw;
+  top: 8.7px;
+  left: 0;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
 
-    & ::before{
-    height: 0.5px;
-    content: " ";
+.notice-bar > h1 > p {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  & ::before {
     position: absolute;
+    height: 0.5px;
     left: 0;
     width: 100%;
     background-color: #000;
-    z-index: 5;
-    }
+  }
 }
 
-.notice-bar > h1> p{
-    margin: 0;
-    padding: 0;
-    margin-left: 10px;
-    font-size: 1.5rem;
-}
-
-.intro-page{
-    display: block;
-    //position: absolute;
+.notice-main {
+  position: relative;
+  display: flex;
+  & ::after {
+    position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    left: auto;
+    right: 0;
+    background-color: #000;
+  }
+}
+
+.notice-main > h2 {
+  position: relative;
+  width: 5.5vw;
+  font-size: 1.5rem;
+  line-height: 0.9vw;
+  text-align: center;
+}
+
+.notice-text {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  height: 3.5vh;
+  
+}
+
+.notice-text > li > p {
+  max-width: 63.3vw;
+  width: 28vw;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+///////////////// 인트로 이미지 영역 //////////////////////
+.intro-page {
+  display: block;
+  //position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
