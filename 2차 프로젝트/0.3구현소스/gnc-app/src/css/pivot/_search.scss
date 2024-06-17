@@ -2,28 +2,26 @@
 
 .searchbox {
   position: relative;
-  max-width: 100%;
-  min-width: 50px;
-  width: 10vw;
-  height: 8vh;
-  margin: 0 auto;
+  max-width: 1000px;
+  width: 5vw;
+  //margin: 0 auto;
+  padding: 20px 0;
   white-space: nowrap;
 }
 
 .searchbox .search-track {
   position: absolute;
-  //gap: 0 20px;
-  top :15%;
+  top :10%;
+  left: 100%;
+  white-space: nowrap;
 }
 
 .gnb02 {
   //position: absolute;
-  width: 100%;
-  height: 70px;
-  //top: 4px;
+  width: 10vw;
+  height: 2vh;
   border: 2px solid red;
   background-color: #eef0f0;
-  //z-index: 10;
   border-width: 2px;
   border-style: solid;
 }
@@ -31,11 +29,9 @@
   //position: absolute;
   border: 2px solid blue;
   box-sizing: content-box;
-  //right : -300px;
-  width: 70px;
-  height: 70px;
-  //top: 4px;
-  //z-index: 10;
+  width: 7vw;
+  height: 2vh;
+
   border-width: 2px;
   border-style: solid;
 }
