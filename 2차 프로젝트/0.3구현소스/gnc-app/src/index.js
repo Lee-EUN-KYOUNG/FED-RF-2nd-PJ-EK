@@ -7,7 +7,7 @@ import Layout from "./components/layout/Layout";
 import Main from "./components/pages/Main";
 
 // 전체 공통 CSS 불러오기
-//import "../src/css/pivot/index.scss";
+import "./css/pivot/index.scss";
 
 /// 코드 구역
 export default function MainComponent() {

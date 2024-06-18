@@ -8,24 +8,19 @@
 
 //////////// 사이드 포스터 영역
 .side-poster {
-  position: absolute;
-  top: 9px;
-  height: 50%;
-  width: 50%;
+  width: 100%;
+  aspect-ratio: 1/1.4;
   font-size: 1rem;
   border: 2px solid blue;
   background-image: url("../../../public/img/now_poster.jpg");
-  background-position: 0 center;
+  background-position: 0 top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 //////////////////////////// GNB 메뉴 ///////////////////////
 .Gnb-Menu {
-  position: absolute;
   border: 2px solid green;
-  width: 100%;
-  top: 465px;
 }
 .GNB-CT{
     font-size: 1.5rem;
@@ -34,7 +29,7 @@
 }
 
 .GNB-BOX{
-    height: 3.5vw;
+    // height: 3.5vw;
 }
 
 .GNB-BAR{

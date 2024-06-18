@@ -11,20 +11,36 @@
   }
 
 .gnb01 {
-  max-width: 1320px;
+  // max-width: 1320px;
   //min-width: 800px;
 
 }
-.gnb01 ul {
+.gnb01>ul {
   display: flex;
+  width: 100%;
   align-items: center;
   list-style: none;
   gap: 0 20px;
+  box-sizing: border-box;
 }
 .gnb01 > ul > li {
-  /* 상위메뉴 부모자격 */
-  //position: relative;
-  line-height: 40px;
+  box-sizing: border-box;
+  padding: 10px;
+
+  &:nth-child(1) {
+    width: 5%;
+    img{
+      width: min(70px,max(4vw,40px));
+    }
+  }
+  &:nth-child(2) {
+    width: 80%;
+  }
+  &:nth-child(3) {
+    width: 15%;
+    font-size: min(20px,2vw);
+  }
+  
 }
 
 
