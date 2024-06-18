@@ -1,11 +1,14 @@
 /// 인트로 페이지
 import React from 'react';
 
+import "../../css/pivot/notice.scss";
+
+
 function IntroPage(props) {
     return (
-        <div>
-            <h1>키티페이지</h1>
-        </div>
+        <span className='intro-imgbox'>
+            <h1>자세히 보기</h1>
+        </span>
     );
 }
 

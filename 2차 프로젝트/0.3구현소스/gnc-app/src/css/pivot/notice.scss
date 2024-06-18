@@ -63,7 +63,6 @@
   list-style: none;
   align-items: center;
   height: 3.5vh;
-  
 }
 
 .notice-text > li > p {
@@ -75,14 +74,34 @@
 }
 
 ///////////////// 인트로 이미지 영역 //////////////////////
+
 .intro-page {
-  display: block;
-  //position: absolute;
-  top: 0;
+  position: relative;
+  padding-top: 65%;
+  aspect-ratio: auto;
+}
+
+.intro-imgbox {
+  position: absolute;
+  top: 10px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 87.5%;
+  background-image: url("../../../public/img/mainart.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.intro-imgbox > h1 {
+  position: absolute;
+  border: 2px dotted #ffff;
+  box-sizing: content-box;
+  border-width: 50%;
+  font-size: 1rem;
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  bottom: 0.8vw;
+  z-index: 2;
 }
