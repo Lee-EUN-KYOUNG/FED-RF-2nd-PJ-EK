@@ -12,9 +12,7 @@ function Notice(props) {
       <section className="notice-box">
         <div className="notice-bar">
           {/* 공지바 영역 */}
-          <h1>
-            <p>NOITCE</p>
-          </h1>
+          <h1>NOITCE</h1>
           <div className="notice-main">
             <h2>NEW!</h2>
             <div className="notice-text">

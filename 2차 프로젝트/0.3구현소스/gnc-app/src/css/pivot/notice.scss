@@ -3,17 +3,16 @@
 .notice-box {
   position: relative;
   width: 70%;
-  padding-top: 2.5vw;
+  padding-top: 1.4vw;
   list-style: none;
+  border: 0.1rem solid #000000;
 }
 
 .notice-bar {
   display: flex;
   position: absolute;
-  border: 2px solid red;
   width: 100%;
-  height: 2.5vw;
-  top: 8.7px;
+  top: 0;
   left: 0;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -22,39 +21,21 @@
   text-align: center;
 }
 
-.notice-bar > h1 > p {
+
+.notice-bar > h1 {
   display: flex;
-  margin: 0;
-  padding: 0;
   margin-left: 10px;
   font-size: 1.5rem;
-  & ::before {
-    position: absolute;
-    height: 0.5px;
-    left: 0;
-    width: 100%;
-    background-color: #000;
-  }
 }
 
 .notice-main {
-  position: relative;
+  //position: relative;
   display: flex;
-  & ::after {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    left: auto;
-    right: 0;
-    background-color: #000;
-  }
 }
 
 .notice-main > h2 {
-  position: relative;
   width: 5.5vw;
   font-size: 1.5rem;
-  // line-height: 0.9vw;
   text-align: center;
 }
 
@@ -62,12 +43,10 @@
   display: flex;
   list-style: none;
   align-items: center;
-  height: 3.5vh;
 }
 
-.notice-text > li > p {
-  max-width: 63.3vw;
-  width: 28vw;
+.notice-text > p {
+  //max-width: 63.3vw;
   font-size: 1.5rem;
   text-align: left;
   font-weight: bold;
@@ -86,7 +65,9 @@
   top: 10px;
   left: 0;
   width: 100%;
-  height: 87.5%;
+  height: 122%;
+  aspect-ratio: 1/1;
+  border: 0.1rem solid #000000;
   background-image: url("../../../public/img/mainart.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -95,13 +76,15 @@
 
 .intro-imgbox > h1 {
   position: absolute;
-  border: 2px dotted #ffff;
+  border: 0.2rem solid #ffffff7e;
+  border-radius: 100%;
   box-sizing: content-box;
-  border-width: 50%;
-  font-size: 1rem;
+  border-width: 100%;
+  font-size: 1.8rem;
+  color: #ffff;
   text-align: center;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  bottom: 0.8vw;
+  bottom: 1.5vw;
   z-index: 2;
 }
