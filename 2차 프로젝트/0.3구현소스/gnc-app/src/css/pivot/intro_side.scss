@@ -1,19 +1,45 @@
 // 인트로영역 사이드쪽
 
-.intro_side{
-    position: relative;
-    width: 15%;
+///////// 공통 ////////
+.intro_side {
+  position: relative;
+  width: 30%;
 }
 
-.side-poster{
-    //position: relative;
-    padding: 0 auto;
-    bottom: 10px;
-    //font-size: 1rem;
+//////////// 사이드 포스터 영역
+.side-poster {
+  position: absolute;
+  top: 9px;
+  height: 50%;
+  width: 50%;
+  font-size: 1rem;
+  border: 2px solid blue;
+  background-image: url("../../../public/img/now_poster.jpg");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.Gnb-Menu{
-    padding: 0 1.5vw;
+//////////////////////////// GNB 메뉴 ///////////////////////
+.Gnb-Menu {
+  position: absolute;
+  border: 2px solid green;
+  width: 100%;
+  top: 465px;
+}
+.GNB-CT{
     font-size: 1.5rem;
+    font-weight: bold;
     text-align: center;
+}
+
+.GNB-BOX{
+    height: 3.5vw;
+}
+
+.GNB-BAR{
+    font-size: 1.3rem;
+    line-height: 3.3vw;
+    text-align: left;
+    list-style: none;
 }

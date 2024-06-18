@@ -3,7 +3,17 @@ import React from 'react';
 function GnbMenu(props) {
     return (
         <>
-            <h1>CONTENT</h1>
+        <aside className="GNB-BOX">
+            <ul className="GNB-CT">
+            <p>CONTENT</p>
+            </ul>
+            <ul className="GNB-BAR">
+                <li>ABOUT</li>
+                <li>EXHIBITION</li>
+                <li>NOTICE</li>
+                <li>CONTACT</li>
+            </ul>
+        </aside>
         </>
     );
 }
