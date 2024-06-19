@@ -12,7 +12,7 @@ export default function Main(){
 
     //// 코드 리턴구역 //////////////
     return(
-        <div className="Intro-box" style={{backgroundColor:'lightblue'}}>
+        <div className="Intro-box">
         <Intro />
         </div>
 

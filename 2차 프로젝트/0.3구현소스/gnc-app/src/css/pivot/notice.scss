@@ -3,7 +3,8 @@
 .notice-box {
   position: relative;
   width: 70%;
-  padding-top: 1.4vw;
+  top: 0;
+  bottom: 20px;
   list-style: none;
   border: 0.1rem solid #000000;
 }
@@ -56,22 +57,23 @@
 
 .intro-page {
   position: relative;
-  padding-top: 65%;
-  aspect-ratio: auto;
+  top: 40px;
+  aspect-ratio: 1/1;
 }
 
 .intro-imgbox {
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 122%;
+  height: 100%;
   aspect-ratio: 1/1;
   border: 0.1rem solid #000000;
   background-image: url("../../../public/img/mainart.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: border-box;
 }
 
 .intro-imgbox > h1 {
@@ -79,12 +81,12 @@
   border: 0.2rem solid #ffffff7e;
   border-radius: 100%;
   box-sizing: content-box;
-  border-width: 100%;
+  //border-width: 100%;
   font-size: 1.8rem;
   color: #ffff;
   text-align: center;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  bottom: 1.5vw;
+  bottom: 3.5vw;
   z-index: 2;
 }

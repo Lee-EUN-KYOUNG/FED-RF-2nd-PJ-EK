@@ -5,29 +5,7 @@ import React from "react";
 import { isrc } from "../data/img_src";
 
 export default function Logo({ logoStyle }) {
-  // logoStyle : 상단, 하단 로고 구분
-  // 코드 값 : top(상단), bottom(하단)
-  //console.log(isrc.logo, logoStyle);
 
-  // 객체형 스타일 적용
-  // const myStyle = {
-  //   top: {
-  //     width: "45px",
-  //     height: "45px",
-  //     marginRight: "30px",
-  //     borderRadius: "50%",
-  //     cursor: "pointer",
-  //   },
-  //   bottom: {
-  //     height: "80px",
-  //   },
-  // };
-
-  // 로고 이미지 스타일
-  // const imgStyle = {
-  //   top: { width: "70px", margin: "0 auto" },
-  //   bottom: { width: "80px", margin: "0 auto" },
-  // };
 
   // 코드 리턴 구역
   return (

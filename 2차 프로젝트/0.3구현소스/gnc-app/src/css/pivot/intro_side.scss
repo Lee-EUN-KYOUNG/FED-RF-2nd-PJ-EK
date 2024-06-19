@@ -11,26 +11,25 @@
   width: 100%;
   aspect-ratio: 1/1.4;
   font-size: 1rem;
-  border: 0.1rem solid #000000;
+  border: 0.11rem solid #000000;
   background-image: url("../../../public/img/now_poster.jpg");
-  background-position: 0 top;
+  //background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  box-sizing: border-box;
 }
 
 //////////////////////////// GNB 메뉴 ///////////////////////
 
 
 
-/* .Gnb-Menu {
-  border: 0.11rem solid #000000;
-} */
-
-
+.Gnb-Menu {
+  line-height: 5.5vw;
+}
 
 .GNB-CT{
   border: 0.11rem solid #000000;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -41,10 +40,10 @@
 
 .GNB-BAR{
     font-size: 1.3rem;
-    line-height: 3.3vw;
+
     text-align: left;
     list-style: none;
 }
 .GNB-BAR > li{
-  border: 0.11rem solid #000000;
+  border: 0.1rem solid #000000;
 }

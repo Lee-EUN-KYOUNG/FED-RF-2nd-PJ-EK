@@ -1,6 +1,18 @@
-/* DC.com 핵심공통 CSS - core.css */
+/******** 웹폰트 **********/
 
-/* 
-font-family: 'Ubuntu', sans-serif;
-font-family: 'Ubuntu Condensed', sans-serif;
-*/
+
+/* PT Sans체 */
+@font-face {
+    font-family: PT Sans, sans-serif;
+    src: url(../../static/fonts/PTSans-Regular.ttf) format("ttf");
+    src: url(../../static/fonts/PTSans-Bold.ttf) format("ttf");
+    src: url(../../static/fonts/PTSans-BoldItalic.ttf) format("ttf");
+    src: url(../../static/fonts/PTSans-Italic.ttf) format("ttf");
+  }
+
+
+  /* Gowun Dodum체 */
+  @font-face {
+    font-family: Gowun Dodum, sans-serif;
+    src: url(../../static/fonts/GowunDodum-Regular.ttf) format("ttf");
+  }
