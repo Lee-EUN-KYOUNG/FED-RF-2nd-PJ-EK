@@ -5,7 +5,7 @@ import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faBookmark } from "@fortawesome/free-regular-svg-icons";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 //CSS 불러오기
 import "../../css/pivot/_search.scss";
@@ -19,13 +19,13 @@ function Search(props) {
           <ul className="gnb02">
             <li>
               {/*  돋보기 검색버튼 */}
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#545454",}} />
             </li>
           </ul>
           <ul className="gnb03">
             <li>
               {/* 북마크 버튼 */}
-              <FontAwesomeIcon icon={faBookmark} />
+              <FontAwesomeIcon icon={faBookmark} style={{color: "#023388",}} />
             </li>
           </ul>
         </section>

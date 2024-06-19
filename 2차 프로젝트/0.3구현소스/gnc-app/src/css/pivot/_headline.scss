@@ -3,15 +3,13 @@
 /* 움직이는 텍스트 */
 .headbox {
   position: relative;
-  background-color: #d4d4d471;
-  border: thick double #000000a3;
-  // max-width: 1200px;
-
+  background-image: url(../../../public/img/bgDot--pc.gif);
+  background-position: center center;
+  background-repeat: repeat;
+  box-sizing: border-box;
   width: 80vw;
   height: 1.2vh;
   padding: 22px 0;
-  // top: 8px;
-  // margin: 0 auto;
   overflow: hidden;
 }
 .headbox .text-track {
@@ -20,9 +18,11 @@
   left: 100%;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 10s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 .content {
+  font-family: "Gowun Dodum", sans-serif;
+  font-weight: bold;
   font-size: 1.5rem;
   color: #000;
   letter-spacing: 0.1em;
@@ -32,14 +32,10 @@
 }
 
 @keyframes marquee {
-   to {
+  to {
     left: -200%;
   }
 }
-
-
-
-
 
 //////// 미디어쿼리
 /* @media (hover: hover) and (min-width: 700px) {

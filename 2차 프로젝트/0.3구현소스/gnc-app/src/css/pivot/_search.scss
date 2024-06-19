@@ -2,12 +2,13 @@
 
 .searchbox {
   position: relative;
-  padding: 0 min(20px,1vw);
+  padding: 0 min(20px, 1vw);
   white-space: nowrap;
 }
 
 .searchbox .search-track {
   display: flex;
-  gap: 0 10px;
+  //gap: 0 10px;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
