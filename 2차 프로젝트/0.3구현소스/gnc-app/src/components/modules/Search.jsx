@@ -17,15 +17,26 @@ function Search(props) {
       <div className="searchbox">
         <section className="search-track">
           <ul className="gnb02">
-            <li>
+            <li className="searching">
               {/*  돋보기 검색버튼 */}
-              <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: "#545454",}} />
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                style={{ color: "#545454",}}
+                className="schbtn"
+                title="Open search"
+              />
+            {/* 입력창 */}
+            <input
+            id="schin"
+            type="text"
+            placeholder="Search for Exhibition"
+            />
             </li>
           </ul>
           <ul className="gnb03">
             <li>
               {/* 북마크 버튼 */}
-              <FontAwesomeIcon icon={faBookmark} style={{color: "#023388",}} />
+              <FontAwesomeIcon icon={faBookmark} style={{ color: "#023388" }} />
             </li>
           </ul>
         </section>

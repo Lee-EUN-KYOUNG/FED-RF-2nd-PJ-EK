@@ -3,19 +3,23 @@
 ///////// 공통 ////////
 .intro_side {
   position: relative;
-  width: 30%;
+  width: 25em;
 }
 
 //////////// 사이드 포스터 영역
 .side-poster {
-  width: 100%;
+  max-width: 16.7em;
   aspect-ratio: 1/1.4;
   border: 0.5rem solid #ffff;
   background-image: url("../../../public/img/now_poster.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   box-sizing: border-box;
+}
+
+.side-poster>img{
+  width: 150%;
 }
 
 //////////////////////////// GNB 메뉴 ///////////////////////
@@ -32,9 +36,9 @@
   text-align: center;
 }
 
-.GNB-CT > p {
-  padding: 10px;
-}
+/* .GNB-CT > p {
+  padding: 8px;
+} */
 
 .GNB-BAR {
   font-family: "PT Serif Caption", serif;
@@ -46,7 +50,7 @@
 }
 .GNB-BAR > li {
   border: 0.14rem solid #ffffff7e;
-  line-height: 5.7vw;
-  text-decoration: 0.5px underline dashed blue;
+  line-height: 1.7vw;
+  //text-decoration: 0.5px underline dashed blue;
 }
 

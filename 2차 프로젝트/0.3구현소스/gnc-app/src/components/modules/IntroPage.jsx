@@ -2,13 +2,17 @@
 import React from 'react';
 
 import "../../css/pivot/notice.scss";
+import MainSwiper from '../plugin/MainSwiper';
 
 
 function IntroPage(props) {
     return (
-        <span className='intro-imgbox'>
+        <>
+        <MainSwiper />
+        <span className='intro-imgtbox'>
             <h1>자세히 보기</h1>
         </span>
+        </>
     );
 }
 

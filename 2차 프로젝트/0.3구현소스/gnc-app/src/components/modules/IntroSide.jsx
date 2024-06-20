@@ -12,7 +12,9 @@ function IntroSide(props) {
     <>
     <div className="intro_side">
     {/* 사이드 포스터 */}
-    <section className="side-poster">
+    <section
+    className="side-poster"
+    >
       <IntroPoster />
     </section>
     {/* GNB 메뉴 */} 

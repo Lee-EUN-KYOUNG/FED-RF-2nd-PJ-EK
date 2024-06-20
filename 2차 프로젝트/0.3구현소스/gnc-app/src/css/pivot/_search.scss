@@ -2,13 +2,36 @@
 
 .searchbox {
   position: relative;
-  padding: 0 min(20px, 1vw);
+  padding: 0 min(8px, 2vw);
   white-space: nowrap;
 }
 
 .searchbox .search-track {
   display: flex;
-  //gap: 0 10px;
+  gap: 0 10px;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.gnb02{
+  background-color: #efefef;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 0 5.5px;
+  //display: none;
+}
+.searching>input{
+  font-family: "PT Serif Caption", serif;
+  font-weight: normal;
+  font-size: 0.74rem;
+  width: 78%;
+  /* margin-top: 5px; */
+  margin-left: 5px;
+  background-color: transparent;
+  border: none;
+}
+
+
+.input:focus {
+  outline: none;
 }
