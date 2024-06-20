@@ -10,10 +10,9 @@
 .side-poster {
   width: 100%;
   aspect-ratio: 1/1.4;
-  font-size: 1rem;
-  //border: 0.1111rem solid #000000;
+  border: 0.5rem solid #ffff;
   background-image: url("../../../public/img/now_poster.jpg");
-  //background-position: 0 0;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
@@ -46,7 +45,8 @@
   list-style: none;
 }
 .GNB-BAR > li {
-  line-height: 5.8vw;
+  border: 0.14rem solid #ffffff7e;
+  line-height: 5.7vw;
   text-decoration: 0.5px underline dashed blue;
 }
 
