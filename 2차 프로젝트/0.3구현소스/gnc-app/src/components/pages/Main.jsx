@@ -5,6 +5,7 @@
 import Intro from "./Intro";
 import Company from "./Company";
 
+
 // CSS 불러오기
 import "../../css/pivot/main.scss";
 
