@@ -32,6 +32,7 @@ function Search(props) {
               {/*  돋보기 검색버튼 */}
               <FontAwesomeIcon
                 icon={faMagnifyingGlass}
+                size = "2xs"
                 style={{ color: "#545454",}}
                 className="schbtn"
                 title="Open search"
@@ -50,7 +51,10 @@ function Search(props) {
           <ul className="gnb03">
             <li>
               {/* 북마크 버튼 */}
-              <FontAwesomeIcon icon={faBookmark} style={{ color: "#023388" }} />
+              <FontAwesomeIcon
+              icon={faBookmark}
+              size = "2xs"
+              style={{ color: "#023388" }} />
             </li>
           </ul>
         </section>

@@ -11,9 +11,9 @@
   aspect-ratio: 1/1.4;
   border: 0.5rem solid #ffff;
   background-image: url("../../../public/img/now_poster.jpg");
-  background-position: 0 0;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   box-sizing: border-box;
 }
 
@@ -25,13 +25,13 @@
 //////////////////////////// GNB 메뉴 ///////////////////////
 
 .Gnb-Menu {
-  line-height: 2vw;
+  line-height: 1.8vw;
 }
 
 .GNB-CT {
   border: 0.111rem solid #00000058;
   font-family: "PT Serif Caption", serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
 }
@@ -54,11 +54,13 @@
   line-height: 1.7vw;
   //text-decoration: 0.5px underline dashed blue;
   &.on::after {
-    content: 'New';
-    font-size: 9px;
+    content: 'NEW!';
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.5rem;
     font-weight: bold;
     float: right;
-    color: red;
+    color: rgb(212, 4, 59);
+    margin-right: 25px;
   }
 }
 

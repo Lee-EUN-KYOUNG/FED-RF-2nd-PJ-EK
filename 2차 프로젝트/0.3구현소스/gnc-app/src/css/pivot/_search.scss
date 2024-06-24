@@ -2,7 +2,7 @@
 
 .searchbox {
   position: relative;
-  padding: 0 min(8px, 2vw);
+  padding: 0 min(6px, 2vw);
   white-space: nowrap;
 }
 
@@ -15,39 +15,38 @@
 
 // 입력창 ul
 .gnb02 {
-  background-color: #efefef;
-  border-radius: 20px;
-  box-sizing: border-box;
-  padding: 0 5.5px;
+  padding: 0 0px;
   width: 50px;
   height: 50px;
   margin-left: 0px;
-  transition: .4s;
+  transition: 0.4s;
   //display: none;
 
   // 클래스 on줄 경우
-  &.on{
-    width: 250px;
-    margin-left: -110px;
-
+  &.on {
+    background-color: #efefef;
+    border-radius: 18px;
+    box-sizing: border-box;
+    width: 200px;
+    //margin-left: -50px;
   }
-  &.on .searching > input{
+  &.on .searching > input {
     display: block;
   }
 }
 // 입력창 li
-.searching{
+.searching {
   position: relative;
   // 입력창
   input {
     position: absolute;
     top: 10px;
-    left: 35px;
+    left: 30px;
     bottom: 5px;
     right: 5px;
     font-family: "PT Serif Caption", serif;
     font-weight: normal;
-    font-size: 1.13rem;
+    font-size: 1rem;
     line-height: 1.8;
     background-color: transparent;
     border: none;
