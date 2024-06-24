@@ -10,28 +10,51 @@
   display: flex;
   gap: 0 10px;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
-.gnb02{
+// 입력창 ul
+.gnb02 {
   background-color: #efefef;
   border-radius: 20px;
   box-sizing: border-box;
   padding: 0 5.5px;
+  width: 50px;
+  height: 50px;
+  margin-left: 0px;
+  transition: .4s;
   //display: none;
+
+  // 클래스 on줄 경우
+  &.on{
+    width: 250px;
+    margin-left: -110px;
+
+  }
+  &.on .searching > input{
+    display: block;
+  }
 }
-.searching>input{
-  font-family: "PT Serif Caption", serif;
-  font-weight: normal;
-  font-size: 0.74rem;
-  width: 78%;
-  /* margin-top: 5px; */
-  margin-left: 5px;
-  background-color: transparent;
-  border: none;
+// 입력창 li
+.searching{
+  position: relative;
+  // 입력창
+  input {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    bottom: 5px;
+    right: 5px;
+    font-family: "PT Serif Caption", serif;
+    font-weight: normal;
+    font-size: 1.13rem;
+    line-height: 1.8;
+    background-color: transparent;
+    border: none;
+    display: none;
+  }
 }
 
-
-.input:focus {
+input:focus {
   outline: none;
 }

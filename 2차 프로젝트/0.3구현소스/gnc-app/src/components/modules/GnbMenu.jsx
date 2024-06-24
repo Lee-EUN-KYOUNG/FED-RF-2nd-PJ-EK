@@ -10,7 +10,7 @@ function GnbMenu(props) {
             <ul className="GNB-BAR">
                 <li>ABOUT</li>
                 <li>EXHIBITION</li>
-                <li>NOTICE</li>
+                <li className='on'>NOTICE</li>
                 <li>CONTACT</li>
             </ul>
         </aside>

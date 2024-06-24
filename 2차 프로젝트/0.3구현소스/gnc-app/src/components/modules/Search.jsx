@@ -12,6 +12,17 @@ import "../../css/pivot/_search.scss";
 
 //////////////////////////// 컴포넌트 구역
 function Search(props) {
+
+  const addOn = (e) => {
+    document.querySelector(".gnb02").classList.add("on");
+    document.querySelector(".gnb02 input").focus();
+  }
+  const removeOn = (e) => {
+    document.querySelector(".gnb02").classList.remove("on");
+    document.querySelector(".gnb02 input").value = "";
+  }
+
+  // 코드리턴구역 //////////////
   return (
     <>
       <div className="searchbox">
@@ -24,12 +35,15 @@ function Search(props) {
                 style={{ color: "#545454",}}
                 className="schbtn"
                 title="Open search"
+                onClick={addOn}
               />
             {/* 입력창 */}
             <input
             id="schin"
             type="text"
             placeholder="Search for Exhibition"
+            autoComplete="off"
+            onBlur={removeOn}
             />
             </li>
           </ul>
