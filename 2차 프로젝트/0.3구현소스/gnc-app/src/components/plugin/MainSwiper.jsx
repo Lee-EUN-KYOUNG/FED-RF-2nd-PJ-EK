@@ -7,10 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 
-import "./css/styles.scss";
+import "./css/swiper_styles.scss";
 
 // import required modules
 import { Scrollbar } from "swiper/modules";
+
+
 
 export default function MainSwiper() {
   const imgArr = ["intro01", "intro02", "intro03"];
