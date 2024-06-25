@@ -1,29 +1,69 @@
+.myGrid {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-  .myGrid {
-    margin-left: 10px;
-    margin-right: 20px;
+.Grid-box {
+  text-align: center;
+  font-size: 1rem;
+  list-style: none;
+  background: #fff;
+  height: calc((100% - 30px) / 2);
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.gncom-box{
+  margin-left: 14px;
+  margin-right: 24px;
+}
+
+
+.gncom-box > .comp-tit1 > img {
+  border: 1px solid red;
+  //width: 100%;
+  height: 100%;
+  object-fit: cover;
+  &:nth-child(1) {
+    width: 50%;
+    img {
+      width: min(70px, max(4vw, 40px));
+    }
   }
-  
-  .Grid-box {
-    text-align: center;
-    font-size: 1rem;
-    list-style: none;
-    background: #fff;
-    height: calc((100% - 30px) / 2);
-
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &:nth-child(2) {
+    width: 20%;
   }
-
-
-
-  .comp-tit1>img{
-    border: 1px solid red;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  &:nth-child(3) {
+    width: 20%;
   }
+  &:nth-child(4) {
+    width: 20%;
+  }
+  &:nth-child(5) {
+    width: 20%;
+  }
+}
 
-  
+.comp-tit3{
+  margin-top: 10px;
+  margin-bottom: 10px;
+ font-size: 0.75rem;
+}
+
+.comp-tit4>p{
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.comp-tit5>h3{
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: Bold;
+  margin-top: 15px;
+}

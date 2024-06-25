@@ -2,7 +2,7 @@ import React from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,16 +18,20 @@ import gnData from "../data/gnc_data";
 
 
 
-
 export default function MainGrid() {
+  
+  function CompDetail() {
+    const loc = useLocation();
+    const comptext = loc.state.comptext;
+  }
 
-  //////////////////////////////////////
+  /////////////////////////////////////
   return (
     <>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={5}
         grid={{
-          column: 5,
+          rows: 1,
         }}
         spaceBetween={30}
         //pagination={{
@@ -40,33 +44,41 @@ export default function MainGrid() {
           (v, i) =>
             Number(v.idx) <= 5 && (
               <SwiperSlide key={i}>
-                <Link
-                  className="Grid-box"
-                  state={{
-                    cname: v.cname, // 캐릭터 이름
-                    ctext: v.ctext, // 캐릭터 이름
-                    comptel: v.comptel, // 캐릭터 설명
-                    compfax: v.compfax, // 캐릭터 상세
-                    compweb: v.compweb, // 캐릭터 상세
+                <div
+                className="Grid-box"
+                state={{
+                    cname: v.cname, // 회사명
+                    comptel: v.comptel, // 회사 대표 번호
+                    compfax: v.compfax, // 회사 대표 팩스
+                    compweb: v.compweb, // 회사 웹사이트
                   }}
-                >
-                <section className="gncom-box">
-                  <div className="comp-tit1">
-                  <img src={v.compimg} alt={v.cname} />
+                  >
                   </div>
-                  <div className="comp-tit2">
-                  <h1>{v.cname}</h1>
-                  </div>
-                  <div className="comp-tit3">
-                    <h2>{v.comptel}</h2>
-                    <h2>{v.compfax}</h2>
-                  </div>
-                  <div className="comp-tit4">
-                    <h3>{v.comptext}</h3>
-                    <h3>{v.compweb}</h3>
-                  </div>
-                </section>
-                </Link>
+                  <section className="gncom-box">
+                    <div className="comp-tit1">
+                      <img src={v.compimg} alt={v.cname} />
+                    </div>
+                    <div className="comp-tit2">
+                      <h1>{v.cname}</h1>
+                    </div>
+                    <div className="comp-tit3">
+                      <h2>
+                        Tel. {v.comptel} / Fax. {v.compfax}</h2>
+                    </div>
+                    <div className="comp-tit4">
+                      {
+                      v.comptext.split("^").map((v, i) => (
+                        <p key={i}>{v}</p>
+                      ))
+                      }
+                    </div>
+                    <Link 
+                    onClick={v.compweb}
+                    className="comp-tit5"
+                    >
+                      <h3>{v.compweb}</h3>
+                    </Link>
+                  </section>
               </SwiperSlide>
             )
         )}
