@@ -50,9 +50,8 @@
 }
 .GNB-BAR > li {
   padding-left: 30px;
-  border: 0.14rem solid #ffffff7e;
+  border: 0.13rem ridge #f7e3e3a9;
   line-height: 1.7vw;
-  //text-decoration: 0.5px underline dashed blue;
   &.on::after {
     content: 'NEW!';
     font-family: "PT Sans", sans-serif;
