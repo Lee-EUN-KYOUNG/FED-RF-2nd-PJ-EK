@@ -4,6 +4,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link, useLocation } from "react-router-dom";
 
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
+
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
@@ -28,6 +33,12 @@ export default function MainGrid() {
   /////////////////////////////////////
   return (
     <>
+    <FontAwesomeIcon
+    icon={faPaperclip}
+    rotation={180}
+    size="2xs"
+    style={{color: "#877377",}}
+    />
       <Swiper
         slidesPerView={3}
         grid={{
