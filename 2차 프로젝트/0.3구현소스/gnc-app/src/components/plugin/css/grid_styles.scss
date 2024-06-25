@@ -15,63 +15,72 @@
   align-items: center;
 }
 
-
-.gncom-box{
-  margin-left: 14px;
-  margin-right: 24px;
-}
-
-
-.gncom-box > .comp-tit1 > img {
-  border: 1px solid red;
-  //width: 100%;
-  height: 100%;
-  object-fit: cover;
+.swiper-slide {
+  
   &:nth-child(1) {
-    width: 50%;
-    img {
-      width: min(70px, max(4vw, 40px));
+    .gncom-box img {
+      width: 70%;
     }
   }
   &:nth-child(2) {
-    width: 20%;
+    .gncom-box img {
+      width: 50%;
+    }
   }
   &:nth-child(3) {
-    width: 20%;
+    .gncom-box img {
+      width: 30%;
+    }
   }
   &:nth-child(4) {
-    width: 20%;
+    .gncom-box img {
+      width: 90%;
+    }
   }
   &:nth-child(5) {
-    width: 20%;
+    .gncom-box img {
+      width: 10%;
+    }
+  }
+
+}
+
+.gncom-box {
+  margin-left: 14px;
+  margin-right: 24px;
+  > .comp-tit1 > img {
+    border: 1px solid red;
+    //width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    
   }
 }
 
-.comp-tit2{
+.comp-tit2 {
   font-family: "Gowun Dodum", sans-serif;
   font-size: 0.9rem;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.comp-tit3>p{
+.comp-tit3 > p {
   font-family: "Gowun Dodum", sans-serif;
   font-size: 1rem;
   text-align: justify;
   line-height: 1.5;
-  
 }
 
-.comp-tit4{
+.comp-tit4 {
   margin-top: 10px;
   margin-bottom: 10px;
- font-size: 0.75rem;
+  font-size: 0.75rem;
 }
-.comp-tit5>h3{
+.comp-tit5 > h3 {
   font-family: "PT Sans", sans-serif;
   font-size: 1rem;
   text-align: center;
   font-weight: Bold;
   margin-top: 15px;
 }
-
