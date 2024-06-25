@@ -45,7 +45,7 @@ export default function MainGrid() {
             Number(v.idx) <= 5 && (
               <SwiperSlide key={i}>
                 <div
-                // className="Grid-box"
+                //className="Grid-box"
                 // state={{
                 //     compname: v.compname, // 회사명
                 //     comptel: v.comptel, // 회사 대표 번호
