@@ -29,9 +29,9 @@ export default function MainGrid() {
   return (
     <>
       <Swiper
-        slidesPerView={5}
+        slidesPerView={3}
         grid={{
-          rows: 1,
+          rows: 2,
         }}
         spaceBetween={30}
         //pagination={{
@@ -45,15 +45,14 @@ export default function MainGrid() {
             Number(v.idx) <= 5 && (
               <SwiperSlide key={i}>
                 <div
-                className="Grid-box"
-                state={{
-                    compname: v.compname, // 회사명
-                    comptel: v.comptel, // 회사 대표 번호
-                    compfax: v.compfax, // 회사 대표 팩스
-                    compweb: v.compweb, // 회사 웹사이트
-                  }}
+                // className="Grid-box"
+                // state={{
+                //     compname: v.compname, // 회사명
+                //     comptel: v.comptel, // 회사 대표 번호
+                //     compfax: v.compfax, // 회사 대표 팩스
+                //     compweb: v.compweb, // 회사 웹사이트
+                //   }}
                   >
-                  </div>
                   <section className="gncom-box">
                     <div className="comp-tit1">
                       <img src={v.compimg} alt={v.compname} />
@@ -73,13 +72,14 @@ export default function MainGrid() {
                         Tel. {v.comptel} / Fax. {v.compfax}
                       </h2>
                     </div>
-                    <Link 
-                    onClick={v.compweb}
+                    <a href="#"
+                    onClick={()=>window.open(v.compweb)}
                     className="comp-tit5"
                     >
                       <h3>{v.compweb}</h3>
-                    </Link>
+                    </a>
                   </section>
+                  </div>
               </SwiperSlide>
             )
         )}
