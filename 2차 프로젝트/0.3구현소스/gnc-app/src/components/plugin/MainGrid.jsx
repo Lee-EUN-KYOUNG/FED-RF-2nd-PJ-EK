@@ -47,7 +47,7 @@ export default function MainGrid() {
                 <div
                 className="Grid-box"
                 state={{
-                    cname: v.cname, // 회사명
+                    compname: v.compname, // 회사명
                     comptel: v.comptel, // 회사 대표 번호
                     compfax: v.compfax, // 회사 대표 팩스
                     compweb: v.compweb, // 회사 웹사이트
@@ -56,21 +56,22 @@ export default function MainGrid() {
                   </div>
                   <section className="gncom-box">
                     <div className="comp-tit1">
-                      <img src={v.compimg} alt={v.cname} />
+                      <img src={v.compimg} alt={v.compname} />
                     </div>
                     <div className="comp-tit2">
-                      <h1>{v.cname}</h1>
+                      <h1>{v.compname}</h1>
                     </div>
                     <div className="comp-tit3">
-                      <h2>
-                        Tel. {v.comptel} / Fax. {v.compfax}</h2>
-                    </div>
-                    <div className="comp-tit4">
                       {
                       v.comptext.split("^").map((v, i) => (
                         <p key={i}>{v}</p>
                       ))
                       }
+                    </div>
+                    <div className="comp-tit4">
+                      <h2>
+                        Tel. {v.comptel} / Fax. {v.compfax}
+                      </h2>
                     </div>
                     <Link 
                     onClick={v.compweb}

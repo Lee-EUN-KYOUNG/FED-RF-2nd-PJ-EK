@@ -3,7 +3,7 @@
 const gnData = [
   {
     idx: "1",
-    compname: "지엔씨미디어(GNC Media)",
+    compname: "지엔씨미디어 (GNC Media)",
     compimg: "/img/gnc01.jpg",
     comptext:
       `GNC Media - Global Network of Culture
@@ -18,12 +18,12 @@ const gnData = [
   },
   {
     idx: "2",
-    compname: "한국미술저작권관리협회(SACK)",
+    compname: "한국미술 저작권관리 협회 (SACK)",
     compimg: "/img/gnc02.jpg",
     comptext: 
       `일상 속 수많은 장소에서 쓰이는 미술 저작물을 대중에게 효과적으로 소개하고, 저작권자의 권리를 보호하면서 배포될 수 있도록 조율합니다.
       ^
-      국내 미술 분야 협회 중 CISAC (국제저작권연맹)의 유일한 정회원으로서, 전 세계 95개국 180여 개의 저작권 관리 협회들과 국제적인 네트워크를 형성하고 있습니다.`,
+      국내 미술 분야 협회 중 CISAC (국제 저작권 연맹)의 유일한 정회원으로서, 전 세계 95개국 180여 개의 저작권 관리 협회들과 국제적인 네트워크를 형성하고 있습니다.`,
     email: "copyright@sack.or.kr",
     comptel: "02-325-3824",
     compfax: "02-325-2433",
@@ -31,7 +31,7 @@ const gnData = [
   },
   {
     idx: "3",
-    compname: "포토뱅크(PHOTO BANK)",
+    compname: "포토 뱅크 (PHOTO BANK)",
     compimg: "/img/gnc03.jpg",
     comptext: 
       `지엔씨 포토뱅크는 최고의 퀄리티를 자랑하는 국내 유일의 명화 이미지 전문 포토에이전시입니다.
@@ -44,7 +44,7 @@ const gnData = [
   },
   {
     idx: "4",
-    compname: "아트상품(MERCHANDISE)",
+    compname: "아트상품 (MERCHANDISE)",
     compimg: "/img/gnc04.jpg",
     comptext:
       `전시 연계 상품 및 에디션, 도록 등을 기획하여 제작•출판합니다.
@@ -57,7 +57,7 @@ const gnData = [
   },
   {
     idx: "5",
-    compname: "임프리마 코리아(IMPRIMA KOREA)",
+    compname: "임프리마 코리아 (IMPRIMA KOREA)",
     compimg: "/img/gnc05.jpg",
     comptext: 
       `임프리마 코리아 에이전시는 해외의 우수한 문화 예술 콘텐츠를 국내에 소개하는 전문회사입니다.
