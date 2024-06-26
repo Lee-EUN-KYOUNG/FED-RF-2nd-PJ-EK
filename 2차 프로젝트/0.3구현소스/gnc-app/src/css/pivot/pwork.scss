@@ -3,24 +3,23 @@
 }
 
 .art-box {
- height: 50vh;
+ height: 60vh;
 }
 
 .SwiperArt {
   width: 100%;
   height: 100%;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
+  min-width: 800px;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.p-art img {
-  display: block;
+.art-tit1 {
+    
+}
+.art-tit1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
