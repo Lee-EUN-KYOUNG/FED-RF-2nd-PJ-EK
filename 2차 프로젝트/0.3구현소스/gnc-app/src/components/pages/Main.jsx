@@ -5,6 +5,7 @@
 import Intro from "./Intro";
 import Company from "./Company";
 import NowWork from "./NowWork";
+import PastWork from "./PastWork";
 
 
 // CSS 불러오기
@@ -24,6 +25,9 @@ export default function Main(){
         </div>
         <div className="now-work">
         <NowWork/>
+        </div>
+        <div className="past-work">
+        <PastWork/>
         </div>
         </>
 
