@@ -4,6 +4,7 @@
 // 모듈 연결하기
 import Intro from "./Intro";
 import Company from "./Company";
+import NowWork from "./NowWork";
 
 
 // CSS 불러오기
@@ -20,6 +21,9 @@ export default function Main(){
         </div>
         <div className="compa-box">
         <Company />
+        </div>
+        <div className="now-work">
+        <NowWork/>
         </div>
         </>
 

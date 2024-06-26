@@ -1,6 +1,7 @@
 .myGrid {
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 0;
   //border: 1rem solid red;
 }
 
@@ -15,6 +16,7 @@
 
 
 .swiper-slide {
+  margin-top: 0;
   // 개별 박스
   &:nth-child(2) {
     .gncom-box {
@@ -23,7 +25,7 @@
     }
   &:nth-child(4) {
     .gncom-box {
-      margin-top: -100px;
+      margin-top: -175px;
     }
     }
   // 개별 박스내 이미지
@@ -61,6 +63,7 @@
 .gncom-box {
   margin-left: 10px;
   margin-right: 20px;
+  margin-top: 0;
   border: 0.13rem ridge #f7e3e3a9;
   > .comp-tit1 > img {
     margin: 0 auto;
