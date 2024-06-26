@@ -43,10 +43,6 @@ export default function PastArt() {
                 <div className="art-tit1">
                   <img src={v.subimg} alt={v.mexhibi} />
                 </div>
-                <aside className="comp-tit2">
-                  <h1> Art 과거 전시회</h1>
-                  <h2>{v.mexhibi}</h2>
-                </aside>
               </SwiperSlide>
             )
         )}

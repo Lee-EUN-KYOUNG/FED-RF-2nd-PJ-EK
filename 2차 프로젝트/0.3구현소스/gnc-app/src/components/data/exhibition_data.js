@@ -644,7 +644,7 @@ const exData = [
   {
     idx: "24",
     mexhibi: "영국 근대 회화전",
-    subexhibi: "터너에서 인상주의까지s",
+    subexhibi: "터너에서 인상주의까지",
     exdate: "2010년 6월 25일 ~ 9월 26일",
     exhall: "예술의전당 한가람미술관",
     exsubinfo: [
