@@ -13,8 +13,6 @@
   //display: flex;
 }
 
-
-
 .swiper-slide {
   margin-top: 0;
   // 개별 박스
@@ -22,12 +20,12 @@
     .gncom-box {
       margin-top: -100px;
     }
-    }
+  }
   &:nth-child(4) {
     .gncom-box {
       margin-top: -175px;
     }
-    }
+  }
   // 개별 박스내 이미지
   &:nth-child(1) {
     .gncom-box img {
@@ -113,3 +111,15 @@
   overflow: visible;
 }
 
+/////////////////////////// 미디어 쿼리 ////////////////////////
+
+@media screen and (max-width: 1250px) {
+  .gncom-box {
+    margin-top: 30px;
+  }
+
+  .swiper-slide:nth-child(2) .gncom-box {
+    margin-top: -60px;
+}
+
+}

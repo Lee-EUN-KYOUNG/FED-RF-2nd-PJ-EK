@@ -57,3 +57,35 @@
 input:focus {
   outline: none;
 }
+
+////////////////////////////// 미디어 쿼리 //////////////
+
+
+
+
+
+
+
+@media screen and (max-width: 930px) {
+  .searchbox {
+  padding: 0;
+  }
+  .searchbox .search-track {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -64,3 +64,14 @@
   }
 }
 
+@media screen and (max-width: 1250px) {
+
+  .GNB-BAR > li.on::after {
+    font-size: 1rem;
+    margin: 3.5px;
+}
+
+  .GNB-CT {
+    font-size: 1.3rem;
+}
+}

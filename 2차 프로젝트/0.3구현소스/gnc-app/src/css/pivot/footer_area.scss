@@ -104,3 +104,21 @@ footer address {
   left: 40%;
   padding-top: 50px;
 }
+
+//////////////////////// 미디어 쿼리
+
+@media screen and (max-width: 1250px) {
+  .c-tit > .ct-box {
+    height: 12vh;
+  }
+
+  .c-tit > li > h1 {
+    font-size: 4rem;
+    line-height: 1.4;
+  }
+}
+
+
+.copyright {
+  left: 38%;
+}
