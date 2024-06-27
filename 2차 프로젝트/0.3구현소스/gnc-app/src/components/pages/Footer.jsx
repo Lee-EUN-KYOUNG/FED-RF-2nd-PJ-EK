@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faPrint } from "@fortawesome/free-solid-svg-icons";
+import { faSquareFacebook, faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 
 // 하단 영역 CSS 불러오기
 import "../../css/pivot/footer_area.scss";
@@ -30,8 +31,12 @@ function Footer(props) {
         <ul className="c-tit">
           <h2>전시회 제안은?</h2>
           <h3>GNC Media</h3>
-          <li>
+          <li className="ct-box">
             <h1>프로젝트 의뢰</h1>
+          </li>
+          <li className="SNS-BOX">
+          <FontAwesomeIcon icon={faSquareFacebook} size="2xl" />
+          <FontAwesomeIcon icon={faSquareInstagram} size="2xl" />
           </li>
         </ul>
       </div>
