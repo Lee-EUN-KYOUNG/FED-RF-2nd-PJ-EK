@@ -1,41 +1,91 @@
 /* 하단영역 */
-.footer-area{
-  overflow: hidden;
-}
 
 .info {
-    text-align: center;
-    padding: 30px;
-    background-color:#fff;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  padding-top: 700px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.gnc-area {
+  width: 250px;
+  margin: 0 auto 16px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 550;
+}
+
+footer address {
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/////////////////////////////////////
+
+.footer-box > ul > li {
+  position: relative;
+  display: inline-block;
+  margin: 0 16px;
+  vertical-align: top;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.etc {
+  margin-top: 40px;
+  text-align: center;
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
   }
-  .info > ul > li {
-    font-weight: bold;
-    overflow: hidden;
-  }
-  /* 하단 ol>li>a 링크박스 */
-  ol.bmenu {
-    font-family: "Ubuntu Condensed", sans-serif;
-    display: flex;
-    justify-content: center;
-    margin: 15px 0;
-    overflow: hidden;
-  }
-  .bmenu li {
-    padding: 0 10px;
-    overflow: hidden;
-  }
-  .bmenu li + li {
-    border-left: 2px solid #fff;
-    overflow: hidden;
-  }
-  .bmenu a {
+}
+
+///////////////////////////////////
+.contact-box > ul {
+  position: relative;
+  top: -250px;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.contact-box.show > ul {
+  top: 0;
+  opacity: 1;
+}
+
+.c-tit {
+  margin-bottom: 64px;
+}
+
+.c-tit > h2 {
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.c-tit > h3 {
+  font-size: 5rem;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+
+.c-tit > li > h1 {
+  font-size: 7rem;
+  line-height: 1.5;
+}
+
+.c-tit > li {
+  display: inline-block;
+  border: 2px solid #000;
+  width: 40vw;
+  height: 20vh;
+  border-radius: 10px 100px / 120px;
+  margin: 0 auto;
+  background-color: #fff;
+  &:hover{
+    border: 2px solid #fff;
+    background-color: #000;
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    overflow: hidden;
   }
+}
