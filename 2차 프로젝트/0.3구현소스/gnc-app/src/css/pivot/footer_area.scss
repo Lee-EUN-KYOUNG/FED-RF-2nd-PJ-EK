@@ -75,7 +75,7 @@ footer address {
   line-height: 1.5;
 }
 
-.c-tit > li {
+.c-tit > .ct-box {
   display: inline-block;
   border: 2px solid #000;
   width: 40vw;
@@ -83,9 +83,22 @@ footer address {
   border-radius: 10px 100px / 120px;
   margin: 0 auto;
   background-color: #fff;
-  &:hover{
+  &:hover {
     border: 2px solid #fff;
     background-color: #000;
     color: #fff;
   }
+}
+
+.SNS-BOX > .fa-2xl{
+  position: relative;
+  display: inline-block;
+  top: 45px;
+  font-size: 5rem;
+  margin-right: 30px;
+}
+
+.copyright{
+  position: absolute;
+  margin: 0 auto;
 }
