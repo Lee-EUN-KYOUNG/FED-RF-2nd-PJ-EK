@@ -4,10 +4,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link, useLocation } from "react-router-dom";
 
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
-
 
 // Import Swiper styles
 import "swiper/css";
@@ -20,11 +18,7 @@ import "./css/grid_styles.scss";
 import { Grid, Pagination } from "swiper/modules";
 import gnData from "../data/gnc_data";
 
-
-
-
 export default function MainGrid() {
-  
   function CompDetail() {
     const loc = useLocation();
     const comptext = loc.state.comptext;
@@ -33,12 +27,6 @@ export default function MainGrid() {
   /////////////////////////////////////
   return (
     <>
-    <FontAwesomeIcon
-    icon={faPaperclip}
-    rotation={180}
-    size="2xs"
-    style={{color: "#877377",}}
-    />
       <Swiper
         slidesPerView={3}
         grid={{
@@ -55,16 +43,22 @@ export default function MainGrid() {
           (v, i) =>
             Number(v.idx) <= 5 && (
               <SwiperSlide key={i}>
-                <div
-                //className="Grid-box"
-                // state={{
-                //     compname: v.compname, // 회사명
-                //     comptel: v.comptel, // 회사 대표 번호
-                //     compfax: v.compfax, // 회사 대표 팩스
-                //     compweb: v.compweb, // 회사 웹사이트
-                //   }}
-                  >
+                <div>
                   <section className="gncom-box">
+                    <FontAwesomeIcon
+                      icon={faPaperclip}
+                      rotation={180}
+                      size="2xs"
+                      style={{
+                        position: "absolute",
+                        left: "50%",
+                        translate: "-50%",
+                        top: "-50px",
+
+                        color: "#877377",
+                        fontSize: "70px",
+                      }}
+                    />
                     <div className="comp-tit1">
                       <img src={v.compimg} alt={v.compname} />
                     </div>
@@ -72,25 +66,24 @@ export default function MainGrid() {
                       <h1>{v.compname}</h1>
                     </div>
                     <div className="comp-tit3">
-                      {
-                      v.comptext.split("^").map((v, i) => (
+                      {v.comptext.split("^").map((v, i) => (
                         <p key={i}>{v}</p>
-                      ))
-                      }
+                      ))}
                     </div>
                     <div className="comp-tit4">
                       <h2>
                         Tel. {v.comptel} / Fax. {v.compfax}
                       </h2>
                     </div>
-                    <a href="#"
-                    onClick={()=>window.open(v.compweb)}
-                    className="comp-tit5"
+                    <a
+                      href="#"
+                      onClick={() => window.open(v.compweb)}
+                      className="comp-tit5"
                     >
                       <h3>{v.compweb}</h3>
                     </a>
                   </section>
-                  </div>
+                </div>
               </SwiperSlide>
             )
         )}

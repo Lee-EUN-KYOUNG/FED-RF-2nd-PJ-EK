@@ -7,11 +7,10 @@
 ///
 .SwiperArt {
   position: absolute;
-  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
   /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .art-tit1 {
@@ -20,18 +19,15 @@
   height: 100%;
   padding-bottom: 15px;
   & img {
-    width: 55vw;
+    width: 100%;
     box-sizing: border-box;
   }
 }
 
 ///////////////////////////////////////////// 리스트 영역
 
+
 .past-cont {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex: 1;
   border-right: 1px solid red;
   max-height: 940px;
   padding-bottom: 195px;
@@ -45,34 +41,81 @@
   margin-bottom: 1.04vw;
 }
 
-.list-area {
+// 아트박스 상단 메인박스 ////
+.art-main{
+  // 내부 3개의  박스 옆으로 흐르게
   display: flex;
-  padding-left: 12vw;
-  padding-top: 10px;
-  margin-bottom: 1.04vw;
-}
+  height: 40vw;
 
-.underline-area{
-    position: absolute;
-    max-width: 150px;
-}
+  // 첫번째 배너 영역
+  .banner-area{
+    position: relative;
+    width: 50%;
+  
+  }
+  // 두번째 리스트 영역
+  .list-area {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
 
-.underline-area>span{
-        padding-top: 30px;
-        padding-left: 30px;
-        max-width: 300px;
-        width: max-content;
-        opacity: 0;
-        transition: .5s;
-        color: #333;
-}
+    &>div{
+      // position: absolute;
+      width: 100%;
+      display: none;
+      line-height: 1.7;
+    }
+    &>div.on{
+      display: block;
+    }
+  }
+  // 세번째 오른쪽 포스터
+  .right-poster{
+    width: 25%;
+    outline: 1px dashed hotpink;
+    
+    img{
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
 
-.underline-area>span>li{
-    width: 100%;
-    max-width: 100%;
+      &.on{
+        display: block;
+      }
+    }
+  }
+} ///// 아트박스 상단메인 ////
+
+.underline-area {
+  position: relative;
+  ul {
     display: flex;
-    justify-content: space-between;
-}
 
+    // 내부박스
+    li {
+      position: relative;
+      flex: 1;
+      transition: 0.5s;
+      color: #333;
+      outline: 1px dashed red;
+      height: 100px;
+
+      // 하단 제목
+      h2 {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        white-space: nowrap;
+        display: none;
+        font-size: 20px;
+        font-weight: normal;
+      }
+      &:hover h2{
+        display: block;
+      }
+    }
+  }
+}
 
 /////////////////////////////////////// 오른쪽 포스터 영역
