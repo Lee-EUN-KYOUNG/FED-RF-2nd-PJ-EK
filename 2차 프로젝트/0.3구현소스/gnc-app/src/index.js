@@ -12,7 +12,7 @@ import "./css/pivot/index.scss";
 /// 코드 구역
 export default function MainComponent() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
