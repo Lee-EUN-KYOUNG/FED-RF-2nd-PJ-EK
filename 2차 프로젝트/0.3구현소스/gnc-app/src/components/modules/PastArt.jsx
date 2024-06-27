@@ -19,7 +19,8 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 //////////////////////////////////////
 
-export default function PastArt() {
+export default function PastArt({chgArtFn}) {
+  // chgArtFn - 순번으로 내용을 변경하는 부모컴포넌트 함수
   return (
     <>
       <Swiper
@@ -29,12 +30,17 @@ export default function PastArt() {
           delay: 2200,
           disableOnInteraction: false,
         }}
+        loop={true}
         pagination={{
           clickable: true,
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="SwiperArt"
+        onSlideChange={(swp)=>{
+          console.log("페이지넘김",swp.realIndex);
+          chgArtFn(swp.realIndex);
+        }}
       >
         {exData.map(
           (v, i) =>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // 폰트어썸 불러오기
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +11,28 @@ import { faSquareFacebook, faSquareInstagram } from "@fortawesome/free-brands-sv
 import "../../css/pivot/footer_area.scss";
 
 function Footer(props) {
+
+  useEffect(()=>{
+
+    // 기준위치
+    const winH = window.innerHeight/2;
+
+    // 대상: .footer-box
+    const footerBox = document.querySelector(".footer-box");
+    // 이벤트 설정
+    window.addEventListener("scroll",()=>{
+      let pos = footerBox.getBoundingClientRect().top;
+      if(pos<winH){
+        footerBox.classList.add("show");
+      }
+      else{
+        footerBox.classList.remove("show");
+      }
+    }); ////////// scroll ///////////////
+
+  },[]);
+
+  ///////// 코드리턴구역 ////////////
   return (
     <section className="footer-box">
       <ul className="etc">

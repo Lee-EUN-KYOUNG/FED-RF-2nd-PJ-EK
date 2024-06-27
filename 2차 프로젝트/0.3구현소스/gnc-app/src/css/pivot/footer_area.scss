@@ -48,7 +48,7 @@ footer address {
   opacity: 0;
   transition: all 0.5s ease-out;
 }
-.contact-box.show > ul {
+.footer-box.show .contact-box > ul {
   top: 0;
   opacity: 1;
 }

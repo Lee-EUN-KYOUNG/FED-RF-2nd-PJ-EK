@@ -10,8 +10,25 @@ import exData from "../data/exhibition_data";
 import "../../css/pivot/pwork.scss";
 import posData from "../data/poster_data";
 
+// 제이쿼리
+import $ from "jquery";
+
 function PastWork(props) {
   const eData = exData;
+
+  const rangeEle = [
+    ".list-area>div",
+    ".right-poster>img",
+    ".underline-area li",
+  ];
+
+  const chgArtFn = (seq) => {
+    console.log("아트변경!", seq);
+
+    rangeEle.forEach((v) => {
+      $(v).eq(seq).addClass("on").siblings().removeClass("on");
+    }); /////// forEach /////////
+  }; ///////// chgArtFn 함수 ////////
   //
   return (
     <section className="pwork">
@@ -22,13 +39,13 @@ function PastWork(props) {
           </aside> */}
           <section className="art-main">
             <aside className="banner-area">
-              <PastArt />
+              <PastArt chgArtFn={chgArtFn} />
             </aside>
             <aside className="list-area">
               {eData.map(
                 (v, i) =>
                   Number(v.idx) <= 26 && (
-                    <div key={i} class={i == 0 ? "on" : ""}>
+                    <div key={i} className={i == 0 ? "on" : ""}>
                       <h3>{v.subexhibi}</h3>
                       <ul>
                         <li>전시 기간 : {v.exdate}</li>
@@ -55,7 +72,7 @@ function PastWork(props) {
               {exData.map(
                 (v, i) =>
                   Number(v.idx) <= 26 && (
-                    <li key={i}>
+                    <li key={i} className={i == 0 ? "on" : ""}>
                       <h2>{v.mexhibi}</h2>
                     </li>
                   )
