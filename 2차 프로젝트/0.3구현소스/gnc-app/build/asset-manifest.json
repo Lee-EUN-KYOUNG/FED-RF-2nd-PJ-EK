@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f8cc1176.css",
+    "main.js": "/static/js/main.e8254b23.js",
+    "static/media/GowunDodum-Regular.ttf": "/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
+    "static/media/now_poster.jpg": "/static/media/now_poster.df89e9157233e3fd8503.jpg",
+    "static/media/PTSans-Bold.ttf": "/static/media/PTSans-Bold.610bc32a7e32c292ce59.ttf",
+    "static/media/PTSans-Regular.ttf": "/static/media/PTSans-Regular.77e92507394e2309d837.ttf",
+    "static/media/PTSans-Italic.ttf": "/static/media/PTSans-Italic.4faac24b7809d950b77e.ttf",
+    "static/media/PTSerifCaption-Italic.ttf": "/static/media/PTSerifCaption-Italic.6b1abbaee7dfe58f7e6a.ttf",
+    "static/media/mainart.jpg": "/static/media/mainart.4cee1259958f9744d35f.jpg",
+    "static/media/PTSerifCaption-Regular.ttf": "/static/media/PTSerifCaption-Regular.5de8bc8f1489fa6e6803.ttf",
+    "static/media/PTSans-BoldItalic.ttf": "/static/media/PTSans-BoldItalic.9432b29338612af7eca9.ttf",
+    "index.html": "/index.html",
+    "main.f8cc1176.css.map": "/static/css/main.f8cc1176.css.map",
+    "main.e8254b23.js.map": "/static/js/main.e8254b23.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8cc1176.css",
+    "static/js/main.e8254b23.js"
+  ]
+}
