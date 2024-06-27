@@ -38,7 +38,7 @@ export default function PastArt({chgArtFn}) {
         modules={[Autoplay, Pagination, Navigation]}
         className="SwiperArt"
         onSlideChange={(swp)=>{
-          console.log("페이지넘김",swp.realIndex);
+          //console.log("페이지넘김",swp.realIndex);
           chgArtFn(swp.realIndex);
         }}
       >

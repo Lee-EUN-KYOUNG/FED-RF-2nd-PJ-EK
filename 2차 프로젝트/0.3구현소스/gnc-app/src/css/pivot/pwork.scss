@@ -28,7 +28,7 @@
 
 
 .past-cont {
-  border-right: 1px solid red;
+  //border-right: 1px solid red;
   max-height: 940px;
   padding-bottom: 195px;
   //overflow: hidden;
@@ -36,7 +36,8 @@
 
 .art-box {
   display: block;
-  padding-left: 1.5625vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
   padding-top: 10px;
   margin-bottom: 1.04vw;
 }
@@ -63,17 +64,53 @@
       // position: absolute;
       width: 100%;
       display: none;
-      line-height: 1.7;
+      
     }
     &>div.on{
       display: block;
     }
+    &>div>h3{
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &>div>ul>.date{
+      font-family: "Gowun Dodum", sans-serif;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+    &>div>ul>.hall{
+      font-family: "Gowun Dodum", sans-serif;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 50px;
+    }
+    &>div>ul>li>button {
+      font-family: "Gowun Dodum", sans-serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+      width: 100%;
+      margin : 0 auto;
+      border: 1px solid #eee;
+      cursor: pointer;
+    }
+    &>div>ul>.copy{
+      font-size: 1.3rem;
+    }
+    &>div>ul>.sub-text{
+      margin-top: 20px;
+      font-family: "Gowun Dodum", sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
   }
   // 세번째 오른쪽 포스터
   .right-poster{
     width: 25%;
-    outline: 1px dashed hotpink;
-    
+    //outline: 1px dashed hotpink;
     img{
       display: none;
       width: 100%;
@@ -123,7 +160,8 @@
         max-width: 100%;
         white-space: nowrap;
         display: none;
-        font-size: 20px;
+        font-size: 0.8rem;
+        text-align: center;
         font-weight: normal;
       }
       &.on {

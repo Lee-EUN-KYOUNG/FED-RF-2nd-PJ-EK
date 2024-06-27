@@ -19,10 +19,7 @@ import { Grid, Pagination } from "swiper/modules";
 import gnData from "../data/gnc_data";
 
 export default function MainGrid() {
-  function CompDetail() {
-    const loc = useLocation();
-    const comptext = loc.state.comptext;
-  }
+  
 
   /////////////////////////////////////
   return (
@@ -33,9 +30,9 @@ export default function MainGrid() {
           rows: 2,
         }}
         spaceBetween={30}
-        //pagination={{
-        //  clickable: true,
-        //}}
+        pagination={{
+          clickable: true,
+        }}
         modules={[Grid, Pagination]}
         className="myGrid"
       >
@@ -53,10 +50,9 @@ export default function MainGrid() {
                         position: "absolute",
                         left: "50%",
                         translate: "-50%",
-                        top: "-50px",
-
-                        color: "#877377",
-                        fontSize: "70px",
+                        top: "-18px",
+                        color: "rgb(225 24 65)",
+                        fontSize: "28px",
                       }}
                     />
                     <div className="comp-tit1">

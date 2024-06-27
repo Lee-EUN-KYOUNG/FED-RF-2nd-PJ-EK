@@ -90,15 +90,17 @@ footer address {
   }
 }
 
-.SNS-BOX > .fa-2xl{
+.SNS-BOX > .fa-2xl {
   position: relative;
   display: inline-block;
   top: 45px;
-  font-size: 5rem;
+  font-size: 3rem;
   margin-right: 30px;
 }
 
-.copyright{
+.copyright {
   position: absolute;
   margin: 0 auto;
+  left: 40%;
+  padding-top: 50px;
 }

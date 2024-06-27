@@ -52,7 +52,7 @@ const exData = [
   },
   {
     idx: "3",
-    mexhibi: "더현대서울 프랑스국립현대미술관전",
+    mexhibi: "프랑스국립현대미술관전",
     subexhibi: "뒤피, 행복의 멜로디 (Raoul dufy : la mélodie du bonheur)",
     exdate: "2023년 5월 17일 ~ 9월 6일",
     exhall: "더현대서울 ALT.1",

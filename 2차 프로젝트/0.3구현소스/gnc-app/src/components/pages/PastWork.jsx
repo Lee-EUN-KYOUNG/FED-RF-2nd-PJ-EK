@@ -23,7 +23,7 @@ function PastWork(props) {
   ];
 
   const chgArtFn = (seq) => {
-    console.log("아트변경!", seq);
+    //console.log("아트변경!", seq);
 
     rangeEle.forEach((v) => {
       $(v).eq(seq).addClass("on").siblings().removeClass("on");
@@ -34,9 +34,6 @@ function PastWork(props) {
     <section className="pwork">
       <div className="past-cont">
         <div className="art-box">
-          {/* <aside className="list-title">
-            <h1>과거작품리스트</h1>
-          </aside> */}
           <section className="art-main">
             <aside className="banner-area">
               <PastArt chgArtFn={chgArtFn} />
@@ -46,11 +43,19 @@ function PastWork(props) {
                 (v, i) =>
                   Number(v.idx) <= 26 && (
                     <div key={i} className={i == 0 ? "on" : ""}>
-                      <h3>{v.subexhibi}</h3>
+                      <h3>{v.mexhibi}</h3>
                       <ul>
-                        <li>전시 기간 : {v.exdate}</li>
-                        <li>전시 장소 : {v.exhall}</li>
-                        <li>{v.URL복사}</li>
+                        <li className="date">전시 기간 : {v.exdate}</li>
+                        <li className="hall">전시 장소 : {v.exhall}</li>
+                        <li>
+                          <button
+                            onClick={() => window.open(v.URL복사)}
+                            className="copy"
+                          >
+                            더보기
+                          </button>
+                        </li>
+                        <li className="sub-text">{v.exsubinfo}</li>
                       </ul>
                     </div>
                   )
