@@ -47,6 +47,7 @@ function PastWork(props) {
                       <ul>
                         <li className="date">전시 기간 : {v.exdate}</li>
                         <li className="hall">전시 장소 : {v.exhall}</li>
+                        <li className="sub-text">{v.exsubinfo}</li>
                         <li>
                           <button
                             onClick={() => window.open(v.URL복사)}
@@ -55,7 +56,6 @@ function PastWork(props) {
                             더보기
                           </button>
                         </li>
-                        <li className="sub-text">{v.exsubinfo}</li>
                       </ul>
                     </div>
                   )
