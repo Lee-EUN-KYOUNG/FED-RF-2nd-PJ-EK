@@ -2,7 +2,6 @@ import React from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link, useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";

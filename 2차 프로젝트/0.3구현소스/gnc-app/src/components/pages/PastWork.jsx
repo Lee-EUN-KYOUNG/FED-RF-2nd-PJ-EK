@@ -42,7 +42,7 @@ function PastWork(props) {
               {eData.map(
                 (v, i) =>
                   Number(v.idx) <= 26 && (
-                    <div key={i} className={i == 0 ? "on" : ""}>
+                    <div key={i} className={i === 0 ? "on" : ""}>
                       <h3>{v.mexhibi}</h3>
                       <ul>
                         <li className="date">전시 기간 : {v.exdate}</li>
@@ -67,7 +67,7 @@ function PastWork(props) {
                   key={i}
                   src={"/img/" + v.poster}
                   alt={v.전시회}
-                  className={i == 0 ? "on" : ""}
+                  className={i === 0 ? "on" : ""}
                 />
               ))}
             </aside>
@@ -77,7 +77,7 @@ function PastWork(props) {
               {exData.map(
                 (v, i) =>
                   Number(v.idx) <= 26 && (
-                    <li key={i} className={i == 0 ? "on" : ""}>
+                    <li key={i} className={i === 0 ? "on" : ""}>
                       <h2>{v.mexhibi}</h2>
                     </li>
                   )
