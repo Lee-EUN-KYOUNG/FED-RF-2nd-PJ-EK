@@ -55,7 +55,7 @@ export default function MainGrid() {
                       }}
                     />
                     <div className="comp-tit1">
-                      <img src={v.compimg} alt={v.compname} />
+                      <img src={process.env.PUBLIC_URL+v.compimg} alt={v.compname} />
                     </div>
                     <div className="comp-tit2">
                       <h1>{v.compname}</h1>

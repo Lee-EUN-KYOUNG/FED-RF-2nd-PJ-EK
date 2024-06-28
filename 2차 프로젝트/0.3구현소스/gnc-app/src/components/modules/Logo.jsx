@@ -10,7 +10,7 @@ export default function Logo({ logoStyle }) {
   // 코드 리턴 구역
   return (
     <h1>
-      <img src={isrc.logo} alt="GNC Logo" />
+      <img src={process.env.PUBLIC_URL+isrc.logo} alt="GNC Logo" />
     </h1>
   ); /////////////// return //////////////////////
 } /////////////// Logo //////////////////////

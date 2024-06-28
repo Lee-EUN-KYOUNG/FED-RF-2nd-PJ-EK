@@ -47,7 +47,7 @@ export default function PastArt({chgArtFn}) {
             Number(v.idx) <= 26 && (
               <SwiperSlide key={i}>
                 <div className="art-tit1">
-                  <img src={v.subimg} alt={v.mexhibi} />
+                  <img src={process.env.PUBLIC_URL+v.subimg} alt={v.mexhibi} />
                 </div>
               </SwiperSlide>
             )
