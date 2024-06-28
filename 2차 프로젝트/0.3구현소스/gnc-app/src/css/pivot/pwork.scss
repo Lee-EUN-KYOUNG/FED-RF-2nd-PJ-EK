@@ -178,6 +178,14 @@
 
 @media screen and (max-width: 1500px) {
 
+  .art-main .banner-area {
+    width: 45%;
+}
+.art-main .right-poster {
+  width: 30%;
+  margin-left: 40px;
+}
+
   .art-main .list-area > div > h3 {
     font-size: 1.3rem;
     text-align: center;
