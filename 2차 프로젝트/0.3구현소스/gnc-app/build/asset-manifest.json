@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f8cc1176.css",
-    "main.js": "/static/js/main.aa735b14.js",
+    "main.js": "/static/js/main.aa268c83.js",
     "static/media/GowunDodum-Regular.ttf": "/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
     "static/media/now_poster.jpg": "/static/media/now_poster.df89e9157233e3fd8503.jpg",
     "static/media/PTSans-Bold.ttf": "/static/media/PTSans-Bold.610bc32a7e32c292ce59.ttf",
@@ -13,10 +13,10 @@
     "static/media/PTSans-BoldItalic.ttf": "/static/media/PTSans-BoldItalic.9432b29338612af7eca9.ttf",
     "index.html": "/index.html",
     "main.f8cc1176.css.map": "/static/css/main.f8cc1176.css.map",
-    "main.aa735b14.js.map": "/static/js/main.aa735b14.js.map"
+    "main.aa268c83.js.map": "/static/js/main.aa268c83.js.map"
   },
   "entrypoints": [
     "static/css/main.f8cc1176.css",
-    "static/js/main.aa735b14.js"
+    "static/js/main.aa268c83.js"
   ]
 }
