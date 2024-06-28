@@ -107,6 +107,23 @@ footer address {
 
 //////////////////////// 미디어 쿼리
 
+@media screen and (max-width: 1500px) {
+  .c-tit > .ct-box {
+    height: 15vh;
+  }
+  .c-tit > li > h1 {
+    font-size: 5.5rem;
+    line-height: 1.5;
+  }
+  .c-tit > .SNS-BOX {
+    margin-left: 4%;
+  }
+  .copyright {
+    left: 40%;
+  }
+}
+
+
 @media screen and (max-width: 1250px) {
   .c-tit > .ct-box {
     height: 12vh;
