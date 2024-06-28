@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/css/main.5dcf1719.css",
-    "main.js": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/js/main.a29ae6cb.js",
+    "main.js": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/js/main.fa1dc9d2.js",
     "static/media/GowunDodum-Regular.ttf": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
     "static/media/now_poster.jpg": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/media/now_poster.df89e9157233e3fd8503.jpg",
     "static/media/PTSans-Bold.ttf": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/media/PTSans-Bold.610bc32a7e32c292ce59.ttf",
@@ -13,10 +13,10 @@
     "static/media/PTSans-BoldItalic.ttf": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/media/PTSans-BoldItalic.9432b29338612af7eca9.ttf",
     "index.html": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/index.html",
     "main.5dcf1719.css.map": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/css/main.5dcf1719.css.map",
-    "main.a29ae6cb.js.map": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/js/main.a29ae6cb.js.map"
+    "main.fa1dc9d2.js.map": "/FED-RF-2nd-PJ-EK/2%EC%B0%A8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/0.3%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/gnc-app/build/static/js/main.fa1dc9d2.js.map"
   },
   "entrypoints": [
     "static/css/main.5dcf1719.css",
-    "static/js/main.a29ae6cb.js"
+    "static/js/main.fa1dc9d2.js"
   ]
 }
