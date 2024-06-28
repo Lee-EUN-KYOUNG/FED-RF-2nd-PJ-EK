@@ -175,13 +175,38 @@
 }
 
 /////////////////////////////////////// 미디어 쿼리
-/// 
+
+@media screen and (max-width: 1500px) {
+
+  .art-main .list-area > div > h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.art-main .list-area > div > ul > .date {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.art-main .list-area > div > ul > .hall {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+  .art-main .list-area > div > ul > .sub-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 18px;
+}
+
+}
+
+
 @media screen and (max-width: 1250px) {
 
 
   .art-main .list-area > div > ul > .date {
-    font-family: "Gowun Dodum", sans-serif;
-    font-weight: bold;
     font-size: 1rem;
     margin-bottom: 10px;
 }
@@ -201,8 +226,5 @@
     font-size: 1rem;
     line-height: 1.2;
 
-}
-.art-main .list-area > div > ul > .hall {
-  margin-bottom: 20px;
 }
 }
