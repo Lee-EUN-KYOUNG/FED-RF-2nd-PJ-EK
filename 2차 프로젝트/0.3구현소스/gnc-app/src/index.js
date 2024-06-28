@@ -17,7 +17,6 @@ export default function MainComponent() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
           {/* <Route path="movies" element={<Movies />} /> */}
-          {/* <Route path="movies/series" element={<Series />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
