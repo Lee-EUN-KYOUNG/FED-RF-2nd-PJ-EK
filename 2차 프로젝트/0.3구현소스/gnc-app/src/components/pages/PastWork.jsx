@@ -65,7 +65,7 @@ function PastWork(props) {
               {posData.map((v, i) => (
                 <img
                   key={i}
-                  src={"/img/" + v.poster}
+                  src={"/img/" + process.env.PUBLIC_URL+v.poster}
                   alt={v.전시회}
                   className={i === 0 ? "on" : ""}
                 />
