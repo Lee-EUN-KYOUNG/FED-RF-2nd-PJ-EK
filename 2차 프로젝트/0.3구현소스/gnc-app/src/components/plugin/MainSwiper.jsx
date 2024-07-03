@@ -28,7 +28,7 @@ export default function MainSwiper() {
       >
         {imgArr.map((v, i) => (
           <SwiperSlide key={i}
-          src={process.env.PUBLIC_URL+"./img/" + v + ".jpg"}
+          src={process.env.PUBLIC_URL+ v + ".jpg"}
           alt="Intro image"
           >
           </SwiperSlide>
