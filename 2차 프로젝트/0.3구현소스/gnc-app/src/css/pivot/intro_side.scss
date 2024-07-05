@@ -60,9 +60,24 @@
     float: right;
     color: rgb(212, 4, 59);
     margin-right: 25px;
-    margin: 2.5px;
   }
 }
+
+////////////////////////////////////////////
+/// 
+@media screen and (max-width: 1300px) {
+  .GNB-CT {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .GNB-BAR > li.on::after {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+}
+
+
 
 @media screen and (max-width: 1250px) {
 
@@ -72,6 +87,6 @@
 }
 
   .GNB-CT {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 }

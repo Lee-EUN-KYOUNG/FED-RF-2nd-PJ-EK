@@ -61,22 +61,31 @@ input:focus {
 ////////////////////////////// 미디어 쿼리 //////////////
 
 
-
-
-
-
-
-@media screen and (max-width: 930px) {
-  .searchbox {
-  padding: 0;
+@media screen and (max-width: 1300px) {
+  .gnb02{
+    width: 40px;
+    height: 40px;
+    &.on{
+      width: 135px;
+    }
   }
+  ul.gnb03 {
+    margin-top: -4px;
+}
+
   .searchbox .search-track {
     display: flex;
     flex-direction: column;
   }
-
-
-
+  .searching input {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 0.62rem;
+  }
+  .fa-2xs {
+    font-size: 0.6em;
+  }
 
 
 
