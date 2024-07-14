@@ -1,0 +1,86 @@
+.now-work {
+  position: relative;
+  height: 83.5vh;
+  top: -60px;
+  border: 2px solid #8d5f5f;
+  z-index: 222;
+}
+
+.nwork {
+  background-image: url(../../../public/img/mainart.jpg);
+  //aspect-ratio: 1/1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.ntit01 {
+  position: absolute;
+  font-size: 2.2rem;
+  font-weight: 700;
+  top: calc(50% + 38px);
+  left: 45px;
+  color: #fff;
+}
+
+.ntit02 {
+  position: absolute;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  top: calc(50% + 80px);
+  left: 90px;
+  color: #fff;
+  line-height: 2;
+}
+
+.ntit03 {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 700;
+  top: calc(50% + 110px);
+  left: 100px;
+  color: #fff;
+  line-height: 2.5;
+}
+
+.ntit04 {
+  position: absolute;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  top: calc(50% + 235px);
+  left: 100px;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 0.5em 1em;
+  min-width: 9em;
+  &:hover{
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.ntit05 {
+    position: absolute;
+    font-family: "PT Sans", sans-serif;
+    top: calc(50% + 315px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}

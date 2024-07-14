@@ -138,31 +138,23 @@ function loadFn() {
 
 
 
-
-
 ///////////// 베스트 상품 이미지 구현 코드 랩핑 구역 시작 /////
-
 // 1. 대상 : .wrap
 const wrap = document.querySelector(".wrap");
-//console.log(wrap);
+
 
 // 2. 이벤트 설정 : 로딩 후 바로 실행
 makeList();
 
-/****************************************************************************************************** 
-                함수명 : makeList
-                기능 : 구조화된 html 코드에 객체 데이터를 매칭하여 반복 코드를 생성한 후 화면에 보여준다!
-        ******************************************************************************************************/
-function makeList() {
-  console.log("리스트만들어");
 
+function makeList() {
+ 
   // 1. 문구 처리 함수 만들기
   const wrapping = (x) => {
-    // 전달받은 문자(x)를 for of로 잘라서 span태그로 싼 후 리턴한다
-    // 결과값 변수 res;
+
     let res = "";
     for (let y of x) {
-      // 스페이스바일 경우 공백특수문자 넣기
+      
       if (y === " ") {
         res += "&nbsp;&nbsp;";
       } ////////////// if ////////
@@ -170,29 +162,18 @@ function makeList() {
         res += `<span>${y}</span>`;
       } //////////// else
     } //////////////// for of 함수 //////////////////////
-
-    // &nbsp; -> 줄바꿈없는 공백 특수문자처리 (no break space의 줄임말)
-
     return res;
   }; /////////////////////// wrapping 함수 (할당형) ///////////////////////////////
 
   // 2. 객체 데이터 순회하기
-  // for in문 사용!!
-  // for(변수 in 객체){코드}
-  // for of문이나 for Each메서드는 배열/유사배열만 사용 가능하기 때문에
-  // 객체의 순회는 for in문을 사용함
-
   // 대상 객체 : mgoods
   // 코드를 담을 변수 : hcode
   let hcode = ""; // string 리터럴
 
   for (let x in dkbData.mgoods) {
-    // x는 객체의 속성명. 객체의 값은 객체[속성명]으로 가져옴!
 
-    // 선택 객체값 변수에 담기
     let data = dkbData.mgoods[x];
 
-    // 변수에 데이터 대입 연산자로 템플릿 리터럴을 사용하여 코드를 구성한다
     hcode += `
             <section class="goods-box">
               <div class="minfo">
@@ -232,8 +213,9 @@ function makeList() {
   // .wrap에 출력하기
   wrap.innerHTML = hcode;
 } //////////////////////// makeList 함수 /////////////
-
 /////////////// 베스트 상품 이미지 코드 랩핑 구역 종료
+
+
 
 ///////////// 무료배송클럽 구현 코드 랩핑 구역 시작 /////
 (() => {
@@ -259,11 +241,10 @@ function makeList() {
 
   hcode += `</ul>`;
 
-  // console.log(hcode);
-
   // 화면 출력하기
   freeBox.innerHTML = hcode;
 })(); /////////////// 무료배송클럽 코드 랩핑 구역 종료
+
 
 ///////////// 비즈니스 배송클럽 구현 코드 랩핑 구역 시작 /////
 (() => {
@@ -275,9 +256,8 @@ function makeList() {
   // html 변수
   let hcode = "<ul>";
 
-  // li 구성을 hcode 변수에 대입 연산자로 할당함
+ 
   // bData 배열은 총 4개. 모두 돌기를 셋팅
-
   boData.forEach((v) => {
     hcode += `
     <li>
@@ -289,11 +269,11 @@ function makeList() {
 
   hcode += `</ul>`;
 
-  // console.log(hcode);
 
   // 화면 출력하기
   bouBox.innerHTML = hcode;
 })(); /////////////// 비즈니스 배송 코드 랩핑 구역 종료
+
 
 ///////////// 유의 사항 구현 코드 랩핑 구역 시작 /////
 (() => {
@@ -321,6 +301,7 @@ function makeList() {
   // 화면 출력하기
   cinfoBox.innerHTML = hcode;
 })(); /////////////// 유의 사항 구현 코드 랩핑 구역 종료
+
 
 ///////////// 제품 후기 구현 코드 랩핑 구역 시작 /////
 (() => {
@@ -350,6 +331,7 @@ function makeList() {
   // 화면 출력하기
   reviewBox.innerHTML = hcode;
 })(); /////////////// 제품 후기 구현 코드 랩핑 구역 종료
+
 
 /*  ///////////// 하단 영역 구현 코드 랩핑 구역 시작 /////
   export default function setElement() {

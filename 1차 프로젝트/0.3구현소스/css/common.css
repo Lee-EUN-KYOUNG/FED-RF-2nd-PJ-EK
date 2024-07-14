@@ -8,6 +8,7 @@
   margin-top: 18px;
 }
 
+
 /* Top 메뉴 아이콘 사이즈 */
 .top-menu ul > li > a {
   font-size: 2.5rem;
@@ -19,7 +20,6 @@
 }
 
 /* 검색 아이콘 클릭시 서치박스 등장 */
-
 .search-box {
   position: absolute;
   margin-top: 7px;
@@ -38,6 +38,7 @@
   width: 235px;
   opacity: 1;
 }
+
 
 /* Top 메뉴 */
 .top-menu ul {
@@ -66,7 +67,6 @@
 .gnb ul a {
   display: block;
   padding: 0 13px;
-
   font-size: 1.7rem;
   line-height: 60px;
   font-weight: bold;
@@ -84,11 +84,13 @@
                                                 1. 상단 영역 시작
 ************************************************************************************************************************/
 
+
+
+
 /* 가상 요소로 아래쪽 화살표 넣기 */
 .gnb ul > li:nth-child(-n + 3) > a span::after {
   content: "∨";
   display: inline-block;
-  /* 트랜스폼은 인라인에서는 적용안됨 */
   font-size: 7px;
   margin-left: 2px;
   vertical-align: 2px;
@@ -365,16 +367,13 @@ ol {
 
 .minfo {
   display: flex;
-  /* 자식요소 박스 옆으로 흐르게! */
   width: 500px;
   margin: 5px;
 }
 
 .wrap {
-  /* 플렉스박스 */
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  /* flex-wrap: wrap; */
   justify-content: center;
   padding: 12px;
 }
@@ -445,7 +444,7 @@ ol {
   font-family: "S-CoreDream-3Light";
   text-align: center;
   margin-top: -45px;
-  margin-left: 410px;
+  margin-left: 379px;
   background: url(../images/review_icon.png) no-repeat center/cover;
   border: 2px solid #fff;
   border-radius: 5px;
@@ -759,10 +758,10 @@ margin-left: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 0 50px;
-  margin-left: 400px;
+  /* margin-left: 400px; */
   text-align: center;
   padding-bottom: 5px;
-  
+  justify-content: center;
 }
 
 .info-link a{
@@ -807,13 +806,25 @@ margin-left: 20px;
 }
 
 /* 결제 이미지 영역 */
+.pay-wrap{
+  float: right;
+  box-sizing: border-box;
+  padding-right: 50px;
+}
 .pay-area{
-  margin-top: -30px;
-  margin-left: 630px;
+  margin-top: -100px;
   width: 103px;
   height: 56px;
+  text-align: right;
 }
 
 .pay-brand{
   padding-bottom: 30px;
 }
+
+
+/* 
+    드래그 선택영역 안접히게 하기
+    -webkit-user-drag: none;
+    user-select: none;
+*/

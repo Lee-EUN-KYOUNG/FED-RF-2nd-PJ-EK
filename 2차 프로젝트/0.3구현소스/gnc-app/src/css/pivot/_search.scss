@@ -1,0 +1,100 @@
+// 서치 박스 csss
+
+.searchbox {
+  position: relative;
+  padding: 0 min(6px, 2vw);
+  white-space: nowrap;
+}
+
+.searchbox .search-track {
+  display: flex;
+  gap: 0 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+// 입력창 ul
+.gnb02 {
+  padding: 0 0px;
+  width: 50px;
+  height: 50px;
+  margin-left: 0px;
+  transition: 0.4s;
+  //display: none;
+
+  // 클래스 on줄 경우
+  &.on {
+    background-color: #efefef;
+    border-radius: 18px;
+    box-sizing: border-box;
+    width: 200px;
+    //margin-left: -50px;
+  }
+  &.on .searching > input {
+    display: block;
+  }
+}
+// 입력창 li
+.searching {
+  position: relative;
+  // 입력창
+  input {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    bottom: 5px;
+    right: 5px;
+    font-family: "PT Serif Caption", serif;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.8;
+    background-color: transparent;
+    border: none;
+    display: none;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+////////////////////////////// 미디어 쿼리 //////////////
+
+
+@media screen and (max-width: 1300px) {
+  .gnb02{
+    width: 40px;
+    height: 40px;
+    &.on{
+      width: 135px;
+    }
+  }
+  ul.gnb03 {
+    margin-top: -4px;
+}
+
+  .searchbox .search-track {
+    display: flex;
+    flex-direction: column;
+  }
+  .searching input {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 0.62rem;
+  }
+  .fa-2xs {
+    font-size: 0.6em;
+  }
+
+
+
+
+
+
+
+
+
+
+
+}

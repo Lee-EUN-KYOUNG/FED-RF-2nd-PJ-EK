@@ -1,0 +1,92 @@
+// 인트로영역 사이드쪽
+
+///////// 공통 ////////
+.intro_side {
+  position: relative;
+  flex-grow: 1;
+}
+
+//////////// 사이드 포스터 영역
+.new-poster {
+  aspect-ratio: 1/1.4;
+  border: 0.5rem solid #ffff;
+  background-image: url("../../../public/img/now_poster.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+
+.new-poster>img{
+  width: 150%;
+}
+
+//////////////////////////// GNB 메뉴 ///////////////////////
+
+.Gnb-Menu {
+  line-height: 1.8vw;
+}
+
+.GNB-CT {
+  border: 0.111rem solid #00000058;
+  font-family: "PT Serif Caption", serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* .GNB-CT > p {
+  padding: 8px;
+} */
+
+.GNB-BAR {
+  font-family: "PT Serif Caption", serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 0;
+  text-align: left;
+  list-style: none;
+}
+.GNB-BAR > li {
+  padding-left: 30px;
+  border: 0.13rem ridge #f7e3e3a9;
+  line-height: 1.7vw;
+  &.on::after {
+    content: 'NEW!';
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    float: right;
+    color: rgb(212, 4, 59);
+    margin-right: 25px;
+  }
+}
+
+////////////////////////////////////////////
+/// 
+@media screen and (max-width: 1300px) {
+  .GNB-CT {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .GNB-BAR > li.on::after {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+}
+
+
+
+@media screen and (max-width: 1250px) {
+
+  .GNB-BAR > li.on::after {
+    font-size: 1rem;
+    margin: 3.5px;
+}
+
+  .GNB-CT {
+    font-size: 1.2rem;
+}
+}

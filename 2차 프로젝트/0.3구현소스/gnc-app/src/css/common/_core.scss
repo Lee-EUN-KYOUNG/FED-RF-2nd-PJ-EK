@@ -1,0 +1,25 @@
+/******** 웹폰트 **********/
+
+
+/* PT Sans체 */
+@font-face {
+    font-family: "PT Sans", sans-serif;
+    src: url(../../static/fonts/PTSans-Regular.ttf) format("ttf");
+    src: url(../../static/fonts/PTSans-Bold.ttf) format("ttf");
+    src: url(../../static/fonts/PTSans-BoldItalic.ttf) format("ttf");
+    src: url(../../static/fonts/PTSans-Italic.ttf) format("ttf");
+  }
+
+
+  /* Gowun Dodum체 */
+  @font-face {
+    font-family: "Gowun Dodum", sans-serif;
+    src: url(../../static/fonts/GowunDodum-Regular.ttf) format("ttf");
+  }
+
+  /* PT Serif Caption체 */
+  @font-face {
+    font-family: "PT Serif Caption", serif;
+    src: url(../../static/fonts/PTSerifCaption-Regular.ttf) format("ttf");
+    src: url(../../static/fonts/PTSerifCaption-Italic.ttf) format("ttf");
+  }
