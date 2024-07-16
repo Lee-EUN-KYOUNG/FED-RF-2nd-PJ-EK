@@ -119,14 +119,64 @@ input:focus {
     font-size: 0.6em;
   }
 
-
-
-
-
-
-
-
-
-
-
 }
+
+@media screen and (max-width: 1245px) {
+
+  .searchbox {
+    position: relative;
+    padding: 0 min(3px, 2vw);
+    white-space: nowrap;
+}
+.searchbox .search-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0 6px;
+}
+  .gnb02{
+    width: 35px;
+    height: 40px;
+    &.on{
+      width: 128px;
+    }
+  }
+  .gnb03{
+      width: 30px;
+      height: 30px;
+ 
+}
+.searching input {
+  font-size: 0.59rem;
+}
+}
+@media screen and (max-width: 1050px) {
+
+.gnb02 {
+      width: 20px;
+      height: 32px;
+    &.on{
+      width: 126px;
+    }
+}
+.gnb03 {
+  width: 18px;
+  height: 30px;
+}
+
+.fa-2xs {
+  font-size: 0.7em;
+}
+.searchbox .search-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0 10px;
+}
+
+.searching input {
+  left: 20px;
+  right: 2px;
+  font-size: 0.6rem;
+  line-height: 1.5;
+}
+}
+

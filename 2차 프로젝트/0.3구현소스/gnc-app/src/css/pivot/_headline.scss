@@ -37,10 +37,9 @@
   }
 }
 
-//////// 미디어쿼리
-/* @media (hover: hover) and (min-width: 700px) {
-  .headbox .content {
-    -webkit-transform: translateY(calc(100% - 8rem));
-    transform: translateY(calc(100% - 8rem));
-  }
-} */
+/////////////////////////////////////// 미디어쿼리
+@media screen and (max-width: 1050px) {
+  .headbox {
+    width: 77vw;
+}
+}

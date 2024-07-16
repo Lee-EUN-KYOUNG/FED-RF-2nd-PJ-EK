@@ -26,7 +26,6 @@
 
 ///////////////////////////////////////////// 리스트 영역
 
-
 .past-cont {
   //border-right: 1px solid red;
   max-height: 940px;
@@ -43,16 +42,15 @@
 }
 
 // 아트박스 상단 메인박스 ////
-.art-main{
+.art-main {
   // 내부 3개의  박스 옆으로 흐르게
   display: flex;
   height: 40vw;
 
   // 첫번째 배너 영역
-  .banner-area{
+  .banner-area {
     position: relative;
     width: 50%;
-  
   }
   // 두번째 리스트 영역
   .list-area {
@@ -60,33 +58,32 @@
     padding: 20px;
     box-sizing: border-box;
 
-    &>div{
+    & > div {
       // position: absolute;
       width: 100%;
       display: none;
-      
     }
-    &>div.on{
+    & > div.on {
       display: block;
     }
-    &>div>h3{
+    & > div > h3 {
       font-size: 1.8rem;
       text-align: center;
       margin-bottom: 20px;
     }
-    &>div>ul>.date{
+    & > div > ul > .date {
       font-family: "Gowun Dodum", sans-serif;
       font-weight: bold;
       font-size: 1.3rem;
       margin-bottom: 20px;
     }
-    &>div>ul>.hall{
+    & > div > ul > .hall {
       font-family: "Gowun Dodum", sans-serif;
       font-weight: bold;
       font-size: 1.3rem;
       margin-bottom: 50px;
     }
-    &>div>ul>li>button {
+    & > div > ul > li > button {
       font-family: "Gowun Dodum", sans-serif;
       font-size: 1.3rem;
       font-weight: bold;
@@ -95,29 +92,28 @@
       border: 1px solid #eee;
       cursor: pointer;
     }
-    &>div>ul>.copy{
+    & > div > ul > .copy {
       font-size: 1.3rem;
     }
-    &>div>ul>.sub-text{
+    & > div > ul > .sub-text {
       margin-top: 20px;
       font-family: "Gowun Dodum", sans-serif;
       font-size: 1.4rem;
       line-height: 1.6;
       text-align: left;
     }
-
   }
   // 세번째 오른쪽 포스터
-  .right-poster{
+  .right-poster {
     width: 25%;
     //outline: 1px dashed hotpink;
-    img{
+    img {
       display: none;
       width: 100%;
       height: 100%;
       object-fit: cover;
 
-      &.on{
+      &.on {
         display: block;
       }
     }
@@ -140,8 +136,8 @@
       border-top: 1px solid #e5e5e5;
       border-right: 1px solid transparent;
 
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         display: block;
         position: absolute;
         top: -3px;
@@ -163,11 +159,12 @@
         font-size: 0.8rem;
         text-align: center;
         font-weight: normal;
+        font-family: "Gowun Dodum", sans-serif;
       }
       &.on {
         border-right-color: brown;
       }
-      &.on h2{
+      &.on h2 {
         display: block;
       }
     }
@@ -177,99 +174,134 @@
 /////////////////////////////////////// 미디어 쿼리
 
 @media screen and (max-width: 1500px) {
-
   .art-main .banner-area {
     width: 45%;
-}
-.art-main .right-poster {
-  width: 30%;
-  margin-left: 40px;
-}
+  }
+  .art-main .right-poster {
+    width: 30%;
+    margin-left: 40px;
+  }
 
   .art-main .list-area > div > h3 {
     font-size: 1.3rem;
     text-align: center;
     margin-bottom: 12px;
-}
+  }
 
-.art-main .list-area > div > ul > .date {
-  font-size: 1rem;
-  margin-bottom: 12px;
-}
+  .art-main .list-area > div > ul > .date {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
 
-.art-main .list-area > div > ul > .hall {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
+  .art-main .list-area > div > ul > .hall {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
 
   .art-main .list-area > div > ul > .sub-text {
     font-size: 1.15rem;
     line-height: 1.5;
     margin-top: 18px;
-}
-
+  }
 }
 
 @media screen and (max-width: 1490px) {
-
   .art-box {
     padding-top: 2px;
   }
 
   .art-main {
-    gap : 0 13px;
+    gap: 0 13px;
   }
   .art-main .list-area > div > ul > .hall {
     font-size: 1rem;
     margin-bottom: 5px;
-}
+  }
 
   .art-main .list-area {
     width: 30%;
     padding: 15px;
     box-sizing: border-box;
-    padding-top : 1px
+    padding-top: 1px;
+  }
+
+  .art-main .list-area > div > ul > li > button {
+    margin-top: 20px;
+  }
+
+  .art-main .right-poster {
+    width: 35%;
+    margin-left: 20px;
+  }
+  .underline-area ul li {
+    margin-top: 5.5vh;
+  }
 }
-
-.art-main .list-area > div > ul > li > button {
-
-  margin-top: 20px;
-
-}
-
-.art-main .right-poster {
-  width: 35%;
-  margin-left: 20px;
-}
-.underline-area ul li{
-  margin-top: 5.5vh;
-}
-}
-
-
 
 @media screen and (max-width: 1250px) {
-
-
   .art-main .list-area > div > ul > .date {
     font-size: 0.8rem;
     margin-bottom: 10px;
-}
+  }
 
   .art-main .list-area > div > h3 {
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 12px;
-}
+  }
 
-.art-main .list-area > div > ul > .hall {
-  font-size: 0.8rem;
-  margin-bottom: 20px;
-}
+  .art-main .list-area > div > ul > .hall {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
 
   .art-main .list-area > div > ul > .sub-text {
     font-size: 1rem;
     line-height: 1.2;
+  }
+}
 
+@media screen and (max-width: 1050px) {
+
+   
+  .art-box {
+    margin-top: -20px;
+}
+  .art-main .list-area > div > h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 800;
+  }
+
+  .art-main .list-area > div > ul > .date {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.art-main .list-area > div > ul > .hall {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+  .art-main .right-poster {
+    width: 30%;
+    margin-left: 1px;
+}
+.art-main .list-area > div > ul > .sub-text {
+  font-size: 1.15rem;
+  line-height: 1.1;
+  margin-top: 12px;
+}
+.art-main .list-area > div > ul > li > button {
+  margin-top: 13.5px;
+}
+
+.underline-area {
+
+  margin: 0 auto;
+}
+
+.underline-area ul li {
+  margin-top: 7.5vh;
 }
 }

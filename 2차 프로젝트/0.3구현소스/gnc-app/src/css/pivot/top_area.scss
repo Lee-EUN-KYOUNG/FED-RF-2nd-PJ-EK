@@ -43,6 +43,17 @@
   
 }
 
+@media screen and (max-width: 1050px) {
+  .gnb01 > ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    gap: 0 8px;
+    box-sizing: border-box;
+}
+}
+
 
 
   
