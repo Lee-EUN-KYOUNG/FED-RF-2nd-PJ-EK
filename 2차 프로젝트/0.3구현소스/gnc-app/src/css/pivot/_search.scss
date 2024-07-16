@@ -60,6 +60,38 @@ input:focus {
 
 ////////////////////////////// 미디어 쿼리 //////////////
 
+@media screen and (max-width: 1490px) {
+  .searchbox .search-track {
+    display: flex;
+    gap: 0 8px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+  .gnb02{
+    width: 30px;
+    height: 40px;
+    &.on{
+      width: 138px;
+    }
+  }
+  .gnb03{
+      width: 25px;
+      height: 30px;
+ 
+}
+  .searching input {
+    left: 20px;
+    right: 5px;
+    font-family: "PT Serif Caption", serif;
+    font-weight: normal;
+    font-size: 0.6rem;
+    line-height: 1.5;
+}
+
+}
+
 
 @media screen and (max-width: 1300px) {
   .gnb02{

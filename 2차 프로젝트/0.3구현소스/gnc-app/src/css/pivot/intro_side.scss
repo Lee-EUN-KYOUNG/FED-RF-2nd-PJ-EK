@@ -63,8 +63,18 @@
   }
 }
 
-////////////////////////////////////////////
-/// 
+////////////////////////////// 미디어 쿼리 //////////////
+
+@media screen and (max-width: 1490px) {
+  .GNB-CT {
+    font-family: "PT Serif Caption", serif;
+    font-size: 1.55rem;
+    font-weight: bold;
+    text-align: center;
+}
+}
+
+
 @media screen and (max-width: 1300px) {
   .GNB-CT {
     font-size: 1.3rem;
