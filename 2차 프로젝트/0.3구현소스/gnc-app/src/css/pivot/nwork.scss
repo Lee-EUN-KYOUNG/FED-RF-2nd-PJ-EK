@@ -84,3 +84,12 @@
     transform: translateX(-50%);
     color: #fff;
 }
+
+///////////////////////////////// 미디어 쿼리 //////////////////////
+
+@media screen and (max-width: 1050px) {
+  .now-work {
+    position: relative;
+    top: 6.5vh;
+}
+}

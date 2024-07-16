@@ -262,7 +262,10 @@
 }
 
 @media screen and (max-width: 1050px) {
-
+  .past-work{
+    position: relative;
+    top: 15vh;
+}
    
   .art-box {
     margin-top: -20px;

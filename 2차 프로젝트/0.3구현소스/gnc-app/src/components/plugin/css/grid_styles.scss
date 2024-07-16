@@ -129,3 +129,13 @@
 }
 
 }
+
+@media screen and (max-width: 1050px) {
+
+  .gncom-box {
+    margin-top: -40px;
+}
+  .swiper-slide:nth-child(2) .gncom-box {
+    margin-top: 60px;
+}
+}
