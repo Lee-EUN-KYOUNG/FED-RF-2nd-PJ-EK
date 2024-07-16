@@ -198,17 +198,54 @@
 }
 
 .art-main .list-area > div > ul > .hall {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
   .art-main .list-area > div > ul > .sub-text {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 1.5;
     margin-top: 18px;
 }
 
 }
+
+@media screen and (max-width: 1490px) {
+
+  .art-box {
+    padding-top: 2px;
+  }
+
+  .art-main {
+    gap : 0 13px;
+  }
+  .art-main .list-area > div > ul > .hall {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+  .art-main .list-area {
+    width: 30%;
+    padding: 15px;
+    box-sizing: border-box;
+    padding-top : 1px
+}
+
+.art-main .list-area > div > ul > li > button {
+
+  margin-top: 20px;
+
+}
+
+.art-main .right-poster {
+  width: 35%;
+  margin-left: 20px;
+}
+.underline-area ul li{
+  margin-top: 5.5vh;
+}
+}
+
 
 
 @media screen and (max-width: 1250px) {

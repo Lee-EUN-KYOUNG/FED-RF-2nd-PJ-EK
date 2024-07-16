@@ -113,6 +113,12 @@
 
 /////////////////////////// 미디어 쿼리 ////////////////////////
 
+@media screen and (max-width: 1490px) {
+  .swiper-slide:nth-child(2) .gncom-box {
+    margin-top: -75px;
+}
+}
+
 @media screen and (max-width: 1250px) {
   .gncom-box {
     margin-top: 30px;
