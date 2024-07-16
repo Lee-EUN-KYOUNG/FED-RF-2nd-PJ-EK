@@ -299,12 +299,22 @@
   margin-top: 13.5px;
 }
 
+.art-main .right-poster img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .underline-area {
-
   margin: 0 auto;
 }
 
-.underline-area ul li {
-  margin-top: 7.5vh;
+.underline-area ul {
+  margin-top: 5.5vh;
 }
+
+/* .underline-area ul li>h2 :last-child {
+  text-align: right;
+} */
+
 }
