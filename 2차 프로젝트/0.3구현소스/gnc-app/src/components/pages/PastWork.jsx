@@ -74,7 +74,7 @@ function PastWork(props) {
           </section>
           <div className="underline-area">
             <ul>
-              {exData.map(
+              {eData.map(
                 (v, i) =>
                   Number(v.idx) <= 26 && (
                     <li key={i} className={i === 0 ? "on" : ""}>
