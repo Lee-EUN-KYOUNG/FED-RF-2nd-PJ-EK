@@ -64,23 +64,22 @@ input:focus {
   .searchbox .search-track {
     display: flex;
     gap: 0 8px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
 }
 
-  .gnb02{
+  .gnb02 {
     width: 30px;
     height: 40px;
-    &.on{
+    &.on {
       width: 138px;
     }
   }
-  .gnb03{
-      width: 25px;
-      height: 30px;
- 
-}
+  .gnb03 {
+    width: 25px;
+    height: 30px;
+  }
   .searching input {
     left: 20px;
     right: 5px;
@@ -88,22 +87,20 @@ input:focus {
     font-weight: normal;
     font-size: 0.6rem;
     line-height: 1.5;
+  }
 }
-
-}
-
 
 @media screen and (max-width: 1300px) {
-  .gnb02{
+  .gnb02 {
     width: 40px;
     height: 40px;
-    &.on{
+    &.on {
       width: 135px;
     }
   }
   ul.gnb03 {
     margin-top: -4px;
-}
+  }
 
   .searchbox .search-track {
     display: flex;
@@ -118,65 +115,60 @@ input:focus {
   .fa-2xs {
     font-size: 0.6em;
   }
-
 }
 
 @media screen and (max-width: 1245px) {
-
   .searchbox {
     position: relative;
     padding: 0 min(3px, 2vw);
     white-space: nowrap;
-}
-.searchbox .search-track {
-  display: flex;
-  flex-direction: column;
-  gap: 0 6px;
-}
-  .gnb02{
+  }
+  .searchbox .search-track {
+    display: flex;
+    flex-direction: column;
+    gap: 0 6px;
+  }
+  .gnb02 {
     width: 35px;
     height: 40px;
-    &.on{
+    &.on {
       width: 128px;
     }
   }
-  .gnb03{
-      width: 30px;
-      height: 30px;
- 
-}
-.searching input {
-  font-size: 0.59rem;
-}
+  .gnb03 {
+    width: 30px;
+    height: 30px;
+  }
+  .searching input {
+    font-size: 0.59rem;
+  }
 }
 @media screen and (max-width: 1050px) {
-
-.gnb02 {
-      width: 20px;
-      height: 32px;
-    &.on{
+  .gnb02 {
+    width: 20px;
+    height: 32px;
+    &.on {
       width: 126px;
     }
-}
-.gnb03 {
-  width: 18px;
-  height: 30px;
-}
+  }
+  .gnb03 {
+    width: 18px;
+    height: 30px;
+  }
 
-.fa-2xs {
-  font-size: 0.7em;
-}
-.searchbox .search-track {
-  display: flex;
-  flex-direction: column;
-  gap: 0 10px;
-}
+  .fa-2xs {
+    font-size: 0.7em;
+  }
+  .searchbox .search-track {
+    display: flex;
+    flex-direction: column;
+    gap: 0 10px;
+  }
 
-.searching input {
-  left: 20px;
-  right: 2px;
-  font-size: 0.6rem;
-  line-height: 1.5;
+  .searching input {
+    left: 20px;
+    right: 2px;
+    font-size: 0.6rem;
+    line-height: 1.5;
+  }
 }
-}
-

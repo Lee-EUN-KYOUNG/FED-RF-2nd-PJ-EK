@@ -174,83 +174,71 @@
 
 /////////////////////////////////////// 미디어 쿼리
 @media screen and (max-width: 1560px) {
-
   .headbox {
-      width: 78vw;
+    width: 78vw;
   }
-  
+
   .gnb01 > ul {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      list-style: none;
-      gap: 0 10px;
-      box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    gap: 0 10px;
+    box-sizing: border-box;
   }
-  
+
   .searchbox {
     position: relative;
     padding: 0 min(3px, 2vw);
     white-space: nowrap;
-}
+  }
   .gnb02 {
-      padding: 0 0px;
-      width: 30px;
-      height: 50px;
-      margin-left: 0px;
-      transition: 0.4s;
-    }
-    .gnb02.on {
-     background-color: #efefef;
-     border-radius: 25px;
-     box-sizing: border-box;
-     width: 170px;
- }
+    padding: 0 0px;
+    width: 30px;
+    height: 50px;
+    margin-left: 0px;
+    transition: 0.4s;
+  }
+  .gnb02.on {
+    background-color: #efefef;
+    border-radius: 25px;
+    box-sizing: border-box;
+    width: 170px;
+  }
   .searching input {
-      position: absolute;
-      top: 10px;
-      left: 23px;
-      bottom: 5px;
-      right: 5px;
-      font-family: "PT Serif Caption", serif;
-      font-weight: normal;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      background-color: transparent;
-      border: none;
-      display: none;
+    position: absolute;
+    top: 10px;
+    left: 23px;
+    bottom: 5px;
+    right: 5px;
+    font-family: "PT Serif Caption", serif;
+    font-weight: normal;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    background-color: transparent;
+    border: none;
+    display: none;
   }
   .art-main .banner-area {
-      position: relative;
-      width: 45%;
+    position: relative;
+    width: 45%;
   }
   .art-main .list-area {
-      width: 35%;
-      padding: 20px;
-      box-sizing: border-box;
+    width: 35%;
+    padding: 20px;
+    box-sizing: border-box;
   }
   .underline-area ul li h2 {
-  font-size: 1.15rem;
-  font-weight: bold;
-  }
-  
-  .c-tit > .ct-box {
-      display: inline-block;
-      border: 2px solid #000;
-      width: 40vw;
-      height: 15vh;
-      border-radius: 10px 100px / 120px;
-      margin: 0 auto;
-      background-color: #fff;
-  }
-  .c-tit > li > h1 {
-      font-size: 5.5rem;
-      line-height: 1.5;
-  }
+    font-size: 1.15rem;
+    font-weight: bold;
   }
 
+}
 
 @media screen and (max-width: 1500px) {
+  .headbox {
+    width: 77vw;
+  }
   .art-main .banner-area {
     width: 45%;
   }
@@ -315,7 +303,55 @@
   }
 }
 
+@media screen and (max-width: 1450px) {
+  .underline-area ul li {
+    left: 30px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .underline-area ul li {
+    left: 25.5px;
+  }
+}
+
 @media screen and (max-width: 1250px) {
+  .searchbox .search-track {
+    display: flex;
+    gap: 0 8px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .underline-area ul li {
+    left: 30px;
+  }
+
+  .headbox {
+    width: 74vw;
+  }
+  .gnb01 > ul > li:nth-child(3) {
+    width: 33%;
+    font-size: min(30px, 2vw);
+  }
+  .gnb02 {
+    padding: 0 0px;
+    width: 30px;
+    height: 40px;
+    margin-left: 0px;
+    transition: 0.4s;
+  }
+
+  .gnb02.on {
+    background-color: #efefef;
+    border-radius: 34px;
+    box-sizing: border-box;
+    width: 166px;
+  }
+  .gnb03 {
+    margin-top: 0px;
+  }
   .art-main .list-area > div > ul > .date {
     font-size: 0.8rem;
     margin-bottom: 10px;
@@ -336,17 +372,69 @@
     font-size: 1rem;
     line-height: 1.2;
   }
+  .underline-area ul li {
+    left: 28px;
+  }
+  .underline-area ul li h2 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
 }
 
 @media screen and (max-width: 1050px) {
-  .past-work{
+  .headbox {
+    width: 73vw;
+  }
+
+  .gnb01 > ul > li:nth-child(3) {
+    width: 25%;
+    font-size: min(20px, 2vw);
+  }
+  .gnb02 {
+    padding: 0 0px;
+    width: 30px;
+    height: 35px;
+    margin-left: 0px;
+    transition: 0.4s;
+  }
+
+  .gnb02.on {
+    background-color: #efefef;
+    border-radius: 52px;
+    box-sizing: border-box;
+    width: 145px;
+  }
+  .searching input {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    bottom: 5px;
+    right: 5px;
+    font-family: "PT Serif Caption", serif;
+    font-weight: normal;
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+  .gnb03 {
+    margin-top: 1px;
+  }
+
+  .notice-bar {
+    gap: 0 15px;
+  }
+
+  .notice-text > p {
+    margin-left: 20px;
+  }
+
+  .past-work {
     position: relative;
     top: 15vh;
-}
-   
+  }
+
   .art-box {
     margin-top: -20px;
-}
+  }
   .art-main .list-area > div > h3 {
     font-size: 1rem;
     text-align: center;
@@ -357,41 +445,45 @@
   .art-main .list-area > div > ul > .date {
     font-size: 0.9rem;
     margin-bottom: 5px;
-}
-.art-main .list-area > div > ul > .hall {
-  font-size: 0.9rem;
-  margin-bottom: 4px;
-}
+  }
+  .art-main .list-area > div > ul > .hall {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
 
   .art-main .right-poster {
     width: 30%;
     margin-left: 1px;
-}
-.art-main .list-area > div > ul > .sub-text {
-  font-size: 1.15rem;
-  line-height: 1.1;
-  margin-top: 12px;
-}
-.art-main .list-area > div > ul > li > button {
-  margin-top: 13.5px;
-}
+  }
+  .art-main .list-area > div > ul > .sub-text {
+    font-size: 1.15rem;
+    line-height: 1.1;
+    margin-top: 12px;
+  }
+  .art-main .list-area > div > ul > li > button {
+    margin-top: 13.5px;
+  }
 
-.art-main .right-poster img {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.underline-area {
-  margin: 0 auto;
-}
+  .art-main .right-poster img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .underline-area {
+    margin: 0 auto;
+  }
 
-.underline-area ul {
-  margin-top: 5.5vh;
-}
+  .underline-area ul {
+    margin-top: 5.5vh;
+  }
 
-/* .underline-area ul li>h2 :last-child {
-  text-align: right;
-} */
+  .underline-area ul li {
+    left: 25px;
+  }
 
+  .underline-area ul li h2 {
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
 }
