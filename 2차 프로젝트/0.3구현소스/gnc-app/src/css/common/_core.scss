@@ -23,3 +23,10 @@
     src: url(../../static/fonts/PTSerifCaption-Regular.ttf) format("ttf");
     src: url(../../static/fonts/PTSerifCaption-Italic.ttf) format("ttf");
   }
+
+
+  /* Black Han Sans체 */
+  @font-face {
+    font-family: "Black Han Sans", sans-serif;
+    src: url(../../static/fonts/BlackHanSans-Regular) format("ttf");
+  }
