@@ -28,9 +28,10 @@ export default function Exhibition() {
     >
       <Link to="/"
       style={{
-        fontFamily: "Black Han Sans",
         textDecoration: "none", 
         color:"darkpurple",
+        fontFamily: "Noto Sans KR",
+        fontWeight: "700",
         fontSize: "1.2rem",
       }}
       >뒤로가기
