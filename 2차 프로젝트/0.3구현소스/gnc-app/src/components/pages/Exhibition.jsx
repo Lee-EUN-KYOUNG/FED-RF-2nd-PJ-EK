@@ -14,7 +14,7 @@ export default function Exhibition() {
   return (
     <>
     <button 
-    lassName='go-mbtn'
+    className='go-mbtn'
     style={{
       width: "100%",
       height: "1vh",
@@ -34,7 +34,7 @@ export default function Exhibition() {
         fontWeight: "700",
         fontSize: "1.2rem",
       }}
-      >뒤로가기
+      >← 뒤로가기
       </Link>
     </button>
     <div id="art-showbx" ref={artgridRef}></div>

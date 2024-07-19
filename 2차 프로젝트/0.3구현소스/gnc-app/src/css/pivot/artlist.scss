@@ -2,8 +2,8 @@
 #art-showbx {
     display: grid;
     max-width: 1900px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: min(4.5vw, 50px) min(2vw, 20px);
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: min(3.5vw, 70px) min(2vw, 15px);
     margin: 0 auto;
     padding-top: 30px;
     margin-bottom: 10px;
@@ -19,11 +19,14 @@
       vertical-align: middle;
     }
 }
-.art-tit>h3{
-  font-size: 1.5rem;
-  font-family: "Gowun Dodum", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 2px;
-  padding-bottom: 4px;
+.art-tit {
+    & h3{
+        font-size: 1.2rem;
+        font-family: "Gowun Dodum", sans-serif;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 4px;
+
+    }
 }
