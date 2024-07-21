@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Main from "./components/pages/Main";
 import Exhibition from "./components/pages/Exhibition";
+import ExhibiDetail from "./components/pages/ExhibiDetail";
 
 // 전체 공통 CSS 불러오기
 import "./css/pivot/index.scss";
@@ -19,6 +20,7 @@ export default function MainComponent() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
           <Route path="EXHIBITION" element={<Exhibition />} />
+          <Route path="ExhibiDetail" element={<ExhibiDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

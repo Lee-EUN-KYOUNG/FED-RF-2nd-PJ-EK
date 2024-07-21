@@ -36,7 +36,6 @@ export default function Exhibition() {
       >← 뒤로가기
       </Link>
     </button>
-
     <Link to="/ExhibiDetail">
     <div id="art-showbx" ref={artgridRef}></div>
     </Link>

@@ -1,9 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 // 데이터 불러오기
 import exData from '../data/exhibition_data';
 import ArtList from '../modules/ArtList';
+import { Link } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+
+// CSS 불러오기
+import "../../css/pivot/exhibi_detail.scss";
+
+
 
 function ExhibiDetail() {
 
@@ -15,16 +24,22 @@ function ExhibiDetail() {
 
 
     ////////////// 코드 리턴 구역
+  
     return (
       <>
+      <Swiper 
+        className="Sub-Swiper"
+        //spaceBetween={20}
+        navigation={true}
+        modules={[Navigation]}
+        >
       {/* 1. 상세 정보 박스 */}
         {/* 1-1. 전시회 제목박스 */}
-        <div className="adesc-box">
           {exData.map(
-          (v, i) =>
+            (v, i) =>
             Number(v.idx) <= 26 && (
-              <div className="detail" key={i}>
-                <Link to="/ExhibiDetail">
+              <SwiperSlide key={i} className="subcont-slide">
+                <div className="ExhibiDetail">
                   <section className="exdesc-box">
                     {/* 전시회 제목박스 영역 */}
                     <div className="ex-mtit">
@@ -41,16 +56,6 @@ function ExhibiDetail() {
                     <div className="exdesc-sub">
                       <h2>{v.exsubinfo}</h2>
                     </div>
-                    {/* 전시회 즐겨찾기 */}
-
-                    {/* 전시회 URL 복사 */}
-                    <button className="ex-linkbx">
-                      {v.URL복사}
-                    </button>
-                    {/* 전시회 목록 */}
-                    <Link to="/Exhibition">
-                    <button className="ex-btn">전시 목록</button>
-                    </Link>
                   </section>
                   {/* 전시회 서브 메인 영역 */}
                   <section className="main-exdesc">
@@ -66,14 +71,34 @@ function ExhibiDetail() {
                     <div className="main-subtit">
                       <h3>{v.subtext}</h3>
                     </div>
+                    {/* <div className="main-excomp">
+                      {exData.excomposition.split("^").map((v, i) => (
+                        <h4 key={i}>{v}</h4>
+                      ))}
+                    </div> */}
                   </section>
-                </Link>
-              </div>
+                    {/* 첫번째 박스 */}
+                    <div className="exhibi-box">
+                    {/* 전시회 즐겨찾기 */}
+                    <button className="ex-bookmark">
+                      즐겨찾기
+                    </button>
+                    {/* 전시회 URL 복사 */}
+                    <button className="ex-linkbx">
+                      <a href={v.URL복사} target="_blank">URL 복사</a>
+                    </button>
+                    {/* 전시회 목록 */}
+                    <button className="ex-btn">
+                    <Link to="/EXHIBITION">
+                    전시 목록
+                    </Link>
+                    </button>
+                    </div>
+                </div>
+              </SwiperSlide>
             )
         )}
-
-
-        </div>
+        </Swiper>
         </>
     );
 }

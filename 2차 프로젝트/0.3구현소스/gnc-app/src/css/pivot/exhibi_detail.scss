@@ -1,0 +1,155 @@
+.Sub-Swiper{
+  width: 1350px !important;
+}
+
+.subcont-slide{
+  border: none;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+///////////////////////////////
+
+.ExhibiDetail{
+  position: relative;
+  //max-width: 1800px;
+  border: none;
+  background-color: #fff;
+}
+
+////////// 왼쪽 영역 //////////////////
+
+.exdesc-box{
+  //position: relative;
+  margin-top: 10px;
+  //margin-bottom: 27vh;
+}
+.ex-mtit{
+  //position: absolute;
+  float: left;
+  /* width: 444px; */
+  //margin-left: 10px;
+  //padding-right: 100px;
+  //text-align: center;
+  & h2{
+    font-size: 1.5rem;
+    font-family: "Gowun Dodum", sans-serif;
+    //margin-bottom: 20px;
+    line-height: 1.8;
+    }
+    & h3{
+      font-size: 1rem;
+      font-family: "Gowun Dodum", sans-serif;
+      //margin-bottom: 10px;
+      line-height: 1.8;
+    }
+}
+
+.exdesc-sub{
+  //position: absolute;
+  margin-top: 0px;
+  & h2{
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-family: "Gowun Dodum", sans-serif;
+    width: 22vw;
+    /* margin-right: 145px; */
+    margin-left: -8px;
+    text-align: left;
+  }
+}
+
+
+//////////// 오른쪽 영역 //////////////////
+
+.main-exdesc{
+  position: relative;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 50vh; */
+  top: -50vh;
+}
+.main-eximg1 {
+  //position: absolute;
+    float: right;
+    width: calc(100% - 413px - 40px);
+    & img{
+    display: block;
+    text-decoration: none;
+    aspect-ratio: 0/1.12;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    }
+}
+.sub-title{
+  //position: absolute;
+  float: right;
+    width: calc(100% - 460px - 5px);
+    & h2{
+      font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 15px;
+    }
+}
+.main-subtit{
+  float: right;
+    width: calc(100% - 430px - 33px);
+  & h3{
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: -webkit-auto;
+  }
+}
+.main-excomp{
+  float: right;
+    width: calc(100% - 380px - 30px);
+  & h3{
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: -webkit-auto;
+  }
+}
+
+
+///// 하단 박스들
+.exhibi-box{
+  display: flex;
+  margin-left: 10%;
+  gap: 0 38px;
+  //margin-top: 10px;
+  //margin-bottom: 10px;
+}
+
+.ex-bookmark {
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.ex-linkbx {
+  font-size: 1.2rem;
+  border: none;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.ex-btn{
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #fff;
+  float: left;
+  margin-left: 20px;
+  padding-right: 100px;
+  text-decoration: none;
+}
