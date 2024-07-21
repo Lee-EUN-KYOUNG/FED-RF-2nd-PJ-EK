@@ -87,6 +87,71 @@
 
 ///////////////////////////////// 미디어 쿼리 //////////////////////
 
+@media screen and (max-width: 1390px) {
+  .now-work {
+      position: relative;
+      height: 90vh;
+      top: 26px;
+      border: 2px solid #8d5f5f;
+      z-index: 222;
+  }
+  
+  .ntit01 {
+    position: absolute;
+    font-size: 2.2rem;
+    font-weight: 700;
+    top: calc(50% + 38px);
+    left: 30px;
+    color: #fff;
+}
+
+.ntit02 {
+    position: absolute;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    top: calc(50% + 80px);
+    left: 55px;
+    color: #fff;
+    line-height: 2;
+}
+
+.ntit03 {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 700;
+    top: calc(50% + 110px);
+    left: 75px;
+    color: #fff;
+    line-height: 2.5;
+}
+
+.ntit04 {
+    position: absolute;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    top: calc(50% + 185px);
+    left: 85px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 0.5em 1em;
+    min-width: 9em;
+}
+.ntit05 {
+    position: absolute;
+    font-family: "PT Sans", sans-serif;
+    top: calc(50% + 225px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+
+  }
+
+
 @media screen and (max-width: 1050px) {
   .now-work {
     position: relative;

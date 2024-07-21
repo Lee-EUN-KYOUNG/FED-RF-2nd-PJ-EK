@@ -303,11 +303,26 @@
   }
 }
 
+
 @media screen and (max-width: 1450px) {
   .underline-area ul li {
     left: 30px;
   }
 }
+
+
+@media screen and (max-width: 1390px) {
+  .art-box {
+          padding-top: 65px;
+      }
+      .underline-area ul li {
+        left: 20px;
+    }
+.underline-area ul li h2 {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+  }
 
 @media screen and (max-width: 1360px) {
   .underline-area ul li {

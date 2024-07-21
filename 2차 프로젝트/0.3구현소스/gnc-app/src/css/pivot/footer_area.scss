@@ -130,6 +130,14 @@ footer address {
   }
 }
 
+@media screen and (max-width: 1390px) {
+
+  .c-tit > li > h1 {
+      font-size: 4rem;
+      line-height: 1.5;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .c-tit > .ct-box {
     height: 12vh;

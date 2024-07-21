@@ -99,3 +99,16 @@
   bottom: 1.5vw;
   z-index: 2;
 }
+
+//////////////////////// 미디어 쿼리 영역 ///////////////////
+@media screen and (max-width: 1390px) {
+
+  .notice-main > h2 {
+     width: 7vw;
+     font-family: "PT Sans", sans-serif;
+     font-style: italic;
+     color: rgb(181, 29, 29);
+     font-size: 1.6rem;
+     text-align: center;
+ }
+ }
