@@ -1,63 +1,79 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+
 
 // 데이터 불러오기
 import exData from '../data/exhibition_data';
-
+import ArtList from '../modules/ArtList';
 
 function ExhibiDetail() {
 
-    const loc = useLocation();
-    const aname = loc.state.aname;
-    const adesc = loc.state.adesc;
-    const asbtit = loc.state.asbtit;
-    
+  
+  
     ///////// 화면 렌더링 실행 구역
     useEffect(()=>{window.scrollTo(0,0);});
 
 
 
-
-
-
     ////////////// 코드 리턴 구역
     return (
-        <>
-                  {/* 2. 상세 정보 박스 */}
-      <div className="detail">
-        {/* 2-1. 캐릭터 설명 박스 */}
+      <>
+      {/* 1. 상세 정보 박스 */}
+        {/* 1-1. 전시회 제목박스 */}
         <div className="adesc-box">
-          {/* 캐릭터명 */}
-          <h2>{aname}</h2>
-          {/* 캐릭터 소개 */}
-          <div className="art-des">
-            {
-              // 문자 데이터중 "^"로 잘라서 배열로 만들고 각각 p태그로 랩핑한다
-              adesc.split("^").map((v, i) => (
-                <p key={i}>{v}</p>
-              ))
-            }
-          </div>
+          {exData.map(
+          (v, i) =>
+            Number(v.idx) <= 26 && (
+              <div className="detail" key={i}>
+                <Link to="/ExhibiDetail">
+                  <section className="exdesc-box">
+                    {/* 전시회 제목박스 영역 */}
+                    <div className="ex-mtit">
+                    {/* 전시회명 */}
+                    <h2>{v.mexhibi}</h2>
+                    {/* 전시회 서브명 */}
+                    <h3>{v.subexhibi}</h3>
+                    {/* 전시회 날짜명 */}
+                    <h3>{v.exdate}</h3>
+                    {/* 전시회 날짜명 */}
+                    <h3>{v.exhall}</h3>
+                    </div>
+                    {/* 전시회 설명박스 영역 */}
+                    <div className="exdesc-sub">
+                      <h2>{v.exsubinfo}</h2>
+                    </div>
+                    {/* 전시회 즐겨찾기 */}
+
+                    {/* 전시회 URL 복사 */}
+                    <button className="ex-linkbx">
+                      {v.URL복사}
+                    </button>
+                    {/* 전시회 목록 */}
+                    <Link to="/Exhibition">
+                    <button className="ex-btn">전시 목록</button>
+                    </Link>
+                  </section>
+                  {/* 전시회 서브 메인 영역 */}
+                  <section className="main-exdesc">
+                    {/* 이미지 파트 */}
+                    <div className="main-eximg1">
+                        <img src={process.env.PUBLIC_URL+v.subimg} alt="" />
+                    </div>
+                    {/* 슬로건 파트 */}
+                    <div className="sub-title">
+                      <h2>{v.subtitle}</h2>
+                    </div>
+                    {/* 메인 서브 텍스트 파트 */}
+                    <div className="main-subtit">
+                      <h3>{v.subtext}</h3>
+                    </div>
+                  </section>
+                </Link>
+              </div>
+            )
+        )}
+
+
         </div>
-        {/* 2-2. 캐릭터 명세 */}
-        <div className="asb-tit">
-          <div>
-            <h3>EXHIBITION</h3>
-            {/* 테이블로 명세 배열만큼 tr을 만들어준다 */}
-            <table>
-              <tbody>
-                {asbtit.split("^").map((v, i) => (
-                  <tr key={i}>
-                    {v.split(":").map((v, i) => (
-                      <td key={i}>{v}{i==0&&":"}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
         </>
     );
 }

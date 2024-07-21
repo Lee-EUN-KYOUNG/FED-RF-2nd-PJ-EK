@@ -7,9 +7,9 @@ import "../../css/pivot/artlist.scss";
 
 export default function ArtList(ref) {
     const agrid = ref.current;
-
+<>
+</>
 // 이미지 넣기
-
 if (agrid) {
     for (let i = 1; i <= 26; i++) {
       agrid.innerHTML += `
