@@ -13,9 +13,11 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 //CSS 불러오기
 import "../../css/pivot/_search.scss";
+import { useNavigate } from "react-router-dom";
 
 //////////////////////////// 컴포넌트 구역
-export const Search = memo(({ goPage }) => {
+export const Search = memo(() => {
+  const goPage = useNavigate();
   
   const addOn = (e) => {
     document.querySelector(".gnb02").classList.add("on");
@@ -53,7 +55,7 @@ export const Search = memo(({ goPage }) => {
       // 빈값이 아니면 검색함수 호출(검색어전달!)
       if (txt != "") {
         // 입력창 비우고 부모박스 닫기
-        $(e.target).val("").parent().hide();
+        // $(e.target).val("").parent().hide();
         // 검색 보내기
         goSearch(txt);
         console.log("검색내보내기",goSearch);
