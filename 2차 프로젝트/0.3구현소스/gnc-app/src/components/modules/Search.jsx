@@ -56,6 +56,7 @@ export const Search = memo(({ goPage }) => {
         $(e.target).val("").parent().hide();
         // 검색 보내기
         goSearch(txt);
+        console.log("검색내보내기",goSearch);
       } /// if ///
     } //// if ////
   }; //////// enterkey 함수
