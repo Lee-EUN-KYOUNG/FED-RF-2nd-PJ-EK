@@ -8,7 +8,7 @@ import Main from "./components/pages/Main";
 import Exhibition from "./components/pages/Exhibition";
 import ExhibiDetail from "./components/pages/ExhibiDetail";
 import SearchPage from "./components/pages/SearchPage";
-import MainNotice from "./components/Pages/MainNotice";
+import MainNotice from "./components/pages/MainNotice";
 
 // 전체 공통 CSS 불러오기
 import "./css/pivot/index.scss";
