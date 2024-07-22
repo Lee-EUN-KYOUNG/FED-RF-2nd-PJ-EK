@@ -37,7 +37,7 @@ export default function Exhibition() {
       </Link>
     </button>
 
-    <Link to="/ExhibiDetail">
+    <Link to="/ExhibiDetail" style={{textDecoration: "none"}}>
     <div id="art-showbx" ref={artgridRef}></div>
     </Link>
     </>

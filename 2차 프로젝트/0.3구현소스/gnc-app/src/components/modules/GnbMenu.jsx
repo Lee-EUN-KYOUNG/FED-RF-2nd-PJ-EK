@@ -11,7 +11,12 @@ function GnbMenu(props) {
         <ul className="GNB-BAR">
           <li>ABOUT</li>
           <li>
-            <Link to="EXHIBITION">EXHIBITION</Link>
+            <Link to="EXHIBITION" 
+            style={{
+              textDecoration: "none",
+              color:"#000",
+
+              }}>EXHIBITION</Link>
           </li>
           <li className="on">NOTICE</li>
           <li>CONTACT</li>

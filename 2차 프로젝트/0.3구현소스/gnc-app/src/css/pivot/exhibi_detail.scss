@@ -1,8 +1,8 @@
-.Sub-Swiper{
+.Sub-Swiper {
   width: 1800px !important;
 }
 
-.subcont-slide{
+.subcont-slide {
   border: none;
   background: #fff;
   display: flex;
@@ -10,68 +10,61 @@
   align-items: center;
 }
 
-
-
 ///////////////////////////////
 
-.ExhibiDetail{
+.ExhibiDetail {
   position: relative;
   width: 1700px;
   border: none;
   background-color: #fff;
-
 }
 
 ////////// 왼쪽 영역 //////////////////
 
-.exdesc-box{
+.exdesc-box {
   position: relative;
   //margin-top: 10px;
   //width: 60vw;
 }
 
-.ex-mtit{
+.ex-mtit {
   //position: absolute;
   float: left;
   width: 25vw;
   border-bottom: 1px solid #e2e2e2;
   //margin-top: 2.14em;
-  & h2{
+  & h2 {
     font-size: 1.8rem;
     font-family: "Gowun Dodum", sans-serif;
     //margin-bottom: 20px;
     line-height: 1.8;
-    }
-    & h3{
-      font-size: 1rem;
-      font-family: "Gowun Dodum", sans-serif;
-      //margin-bottom: 10px;
-      line-height: 1.8;
-      
-    }
+  }
+  & h3 {
+    font-size: 1rem;
+    font-family: "Gowun Dodum", sans-serif;
+    //margin-bottom: 10px;
+    line-height: 1.8;
+  }
 }
 
-.exdesc-sub{
+.exdesc-sub {
   //position: absolute;
   //margin-top: 0px;
   //max-width: 40vw;
-  
- 
 }
 
-.exdesc-sub>h2{
+.exdesc-sub > h2 {
   font-size: 1rem;
   line-height: 1.9;
   font-family: "Gowun Dodum", sans-serif;
   width: 25vw;
   margin-left: 10px;
   text-align: left;
-  
 }
 
 //////////// 오른쪽 영역 //////////////////
 
-.main-exdesc{
+.main-exdesc {
   position: relative;
   max-width: 1120px;
   margin-left: auto;
@@ -81,9 +74,9 @@
 }
 .main-eximg1 {
   //position: absolute;
-    float: right;
-    width: calc(100% - 413px - 40px);
-    & img{
+  float: right;
+  width: calc(100% - 413px - 40px);
+  & img {
     display: block;
     text-decoration: none;
     aspect-ratio: 0/1.12;
@@ -91,50 +84,49 @@
     background-repeat: no-repeat;
     background-size: contain;
     box-sizing: border-box;
-    }
+  }
 }
-.sub-title{
+.sub-title {
   //position: absolute;
   float: right;
-    width: calc(100% - 460px - 5px);
-    & h2{
-      font-size: 1.4rem;
+  width: calc(100% - 460px - 5px);
+  & h2 {
+    font-size: 1.4rem;
     line-height: 1.2;
     text-align: center;
     margin-bottom: 15px;
-    }
+  }
 }
-.main-subtit{
+.main-subtit {
   float: right;
-    width: calc(100% - 430px - 33px);
-  & h3{
+  width: calc(100% - 430px - 33px);
+  & h3 {
     font-size: 1rem;
     line-height: 1.6;
     text-align: -webkit-auto;
   }
 }
-.main-excomp{
+.main-excomp {
   float: right;
-    width: calc(100% - 380px - 30px);
-  & h3{
+  width: calc(100% - 380px - 30px);
+  & h3 {
     font-size: 1rem;
     line-height: 1.6;
     text-align: -webkit-auto;
   }
 }
-
 
 ///// 하단 박스들
-.exhibi-box{
+.exhibi-box {
   display: flex;
-    margin-left: 3%;
-    gap: 0 20px;
-    margin-top: 90px;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 20vw;
+  margin-left: 3%;
+  gap: 0 20px;
+  margin-top: 90px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
 }
 
 .ex-bookmark {
@@ -148,26 +140,25 @@
   font-size: 1.3rem;
   border: none;
   background-color: #fff;
-  & a{
+  & a {
     text-decoration: none;
     color: #000;
-    &:hover{
+    &:hover {
       color: darkorange;
       font-weight: 600;
     }
   }
 }
 
-.ex-btn{
-  text-decoration: none;
+.ex-btn {
   font-size: 1.3rem;
   border: none;
   background-color: #fff;
   float: left;
-  & a{
+  & a {
     text-decoration: none;
     color: #000;
-    &:hover{
+    &:hover {
       color: darkcyan;
       font-weight: 600;
     }
