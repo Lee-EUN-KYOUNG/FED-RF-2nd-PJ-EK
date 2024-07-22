@@ -8,6 +8,7 @@ import Main from "./components/pages/Main";
 import Exhibition from "./components/pages/Exhibition";
 import ExhibiDetail from "./components/pages/ExhibiDetail";
 import SearchPage from "./components/pages/SearchPage";
+import MainNotice from "./components/Pages/MainNotice";
 
 // 전체 공통 CSS 불러오기
 import "./css/pivot/index.scss";
@@ -21,6 +22,7 @@ export default function MainComponent() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
           <Route path="EXHIBITION" element={<Exhibition />} />
+          <Route path="NOTICE" element={<MainNotice />} />
           <Route path="ExhibiDetail" element={<ExhibiDetail />} />
           <Route path="search" element={<SearchPage />} />
         </Route>
