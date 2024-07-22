@@ -8,7 +8,6 @@ function Company(props) {
   return (
     <>
       <MainGrid />
-
     </>
   );
 }

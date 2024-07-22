@@ -9,7 +9,17 @@ function GnbMenu(props) {
           <p>CONTENT</p>
         </ul>
         <ul className="GNB-BAR">
-          <li>ABOUT</li>
+          <li>
+            <Link
+              to="ABOUT"
+              style={{
+                textDecoration: "none",
+                color: "#000",
+              }}
+            >
+              ABOUT
+            </Link>
+          </li>
           <li>
             <Link
               to="EXHIBITION"
@@ -32,7 +42,17 @@ function GnbMenu(props) {
               NOTICE
             </Link>
           </li>
-          <li>CONTACT</li>
+          <li>
+            <Link
+              to="CONTACT"
+              style={{
+                textDecoration: "none",
+                color: "#000",
+              }}
+            >
+              CONTACT
+            </Link>
+          </li>
         </ul>
       </aside>
     </>
