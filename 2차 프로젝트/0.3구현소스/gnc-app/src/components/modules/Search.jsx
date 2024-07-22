@@ -1,7 +1,7 @@
 //
 import React from "react";
 import { memo } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 // 제이쿼리
 import $ from "jquery";
@@ -45,7 +45,7 @@ export const Search = memo(({ goPage }) => {
   // 2. 검색창에 엔터키 누르면 검색함수 호출
   const enterKey = (e) => {
     // e.keyCode는 숫자, e.key문자로 리턴함
-    // console.log(e.key,e.keyCode);
+    console.log(e.key,e.keyCode);
     if (e.key == "Enter") {
       // 입력창의 입력값 읽어오기 : val()사용
       let txt = $(e.target).val().trim();
@@ -62,7 +62,7 @@ export const Search = memo(({ goPage }) => {
 
   // 3. 검색 페이지로 검색어와 함께 이동하기 함수
   const goSearch = (txt) => {
-    console.log("검색하기");
+    console.log("검색하기:");
     /// 라우터 이동 함수로 이동하기
     // 네비게이트 메서드 (라우터 주소, {state:{보낼 객체}})
     goPage("search", { state: { keyword: txt } });
