@@ -319,7 +319,7 @@ export default function MainNotice() {
   /////////////////////////////////// 코드 리턴구역 /////////////////////
   return (
     <main className="cont">
-      <h1 className="tit" style={{ marginLeft: "50%", fontSize: "1.8rem" }}>
+      <h1 className="tit" style={{ textAlign: "center", fontSize: "2rem" }}>
         전시회 후기
       </h1>
       {

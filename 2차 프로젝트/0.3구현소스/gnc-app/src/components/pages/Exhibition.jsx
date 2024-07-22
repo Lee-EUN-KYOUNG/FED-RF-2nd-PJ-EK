@@ -12,6 +12,9 @@ export default function Exhibition() {
 
   return (
     <>
+    <div className="exhibiton-mbx">
+        <h1>EXHIBITION</h1>
+      </div>
     <button 
     className='go-mbtn'
     style={{
