@@ -1,5 +1,4 @@
-
-.exhibiton-mbx{
+.exhibiton-mbx {
   font-size: 2rem;
   text-align: center;
 }
@@ -19,18 +18,24 @@
 ///////////////////////////////
 
 .ExhibiDetail {
-  position: relative;
-  width: 1700px;
+  //position: relative;
+  width: 1660px;
   border: none;
   background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: stretch;
 }
 
 ////////// 왼쪽 영역 //////////////////
 
 .exdesc-box {
-  position: relative;
-  //margin-top: 10px;
-  //width: 60vw;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
 }
 
 .ex-mtit {
@@ -38,15 +43,15 @@
   float: left;
   width: 25vw;
   border-bottom: 1px solid #e2e2e2;
-  //margin-top: 2.14em;
+  padding-bottom: 10px;
   & h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: "Gowun Dodum", sans-serif;
     //margin-bottom: 20px;
     line-height: 1.8;
   }
   & h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: "Gowun Dodum", sans-serif;
     //margin-bottom: 10px;
     line-height: 1.8;
@@ -54,34 +59,34 @@
 }
 
 .exdesc-sub {
-  //position: absolute;
-  //margin-top: 0px;
-  //max-width: 40vw;
+  margin-top: 30px;
 }
 
 .exdesc-sub > h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.9;
   font-family: "Gowun Dodum", sans-serif;
   width: 25vw;
   margin-left: 10px;
   text-align: left;
+  font-weight: 500;
 }
 
 //////////// 오른쪽 영역 //////////////////
 
 .main-exdesc {
-  position: relative;
-  max-width: 1120px;
+  display: flex;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  /* height: 50vh; */
-  top: -20vh;
+  /* height: 39vh; */
+  align-items: center;
+  flex-direction: column;
 }
 .main-eximg1 {
   //position: absolute;
-  float: right;
-  width: calc(100% - 413px - 40px);
+  //float: right;
+  width: 30vw;
   & img {
     display: block;
     text-decoration: none;
@@ -94,22 +99,27 @@
 }
 .sub-title {
   //position: absolute;
-  float: right;
-  width: calc(100% - 460px - 5px);
+  //float: right;
+  width: 30vw;
   & h2 {
-    font-size: 1.4rem;
-    line-height: 1.2;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
   }
 }
 .main-subtit {
   float: right;
-  width: calc(100% - 430px - 33px);
+  width: 42vw;
   & h3 {
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: -webkit-auto;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: 300;
   }
 }
 .main-excomp {
@@ -127,12 +137,11 @@
   display: flex;
   margin-left: 3%;
   gap: 0 20px;
-  margin-top: 90px;
-  flex-wrap: nowrap;
+  margin-top: 2.5vh;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 20vw;
+  /* width: 20vw; */
+  flex-wrap: nowrap;
+  /* align-content: center; */
 }
 
 .ex-bookmark {
