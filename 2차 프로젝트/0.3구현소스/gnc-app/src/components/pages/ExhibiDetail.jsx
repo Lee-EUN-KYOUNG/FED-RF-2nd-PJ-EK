@@ -16,7 +16,9 @@ import "../../css/pivot/exhibi_detail.scss";
 
 function ExhibiDetail() {
 
-  
+  // 도착페이지 파라미터 받기
+  const {state} = useLocation();
+  console.log(state.page);
   
     ///////// 화면 렌더링 실행 구역
     useEffect(()=>{window.scrollTo(0,0);});
@@ -33,6 +35,14 @@ function ExhibiDetail() {
         navigation={true}
         modules={[Navigation]}
         loop={true}
+        // onInit() 메서드는 스와이퍼 로딩시 실행되는 메서드
+        onInit={(swp)=>{ // swp 스와이퍼객체 자신
+          swp.slideTo(state.page,0);
+          // slideTo(이동할 페이지 순번, 이동시간)
+          // 실제로 슬라이드 해당 순번으로 이동함!
+          // 이동시간을 0주면 이동 애니메이션이 안보임
+          
+        }}
         >
       {/* 1. 상세 정보 박스 */}
         {/* 1-1. 전시회 제목박스 */}
