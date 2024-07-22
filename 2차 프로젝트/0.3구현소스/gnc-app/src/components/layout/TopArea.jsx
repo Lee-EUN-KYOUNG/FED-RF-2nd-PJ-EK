@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import Logo from "../modules/Logo";
 import TextBanner from "../modules/HeadLine";
-import Search from "../modules/Search";
+import {Search} from "../modules/Search";
 
 
 

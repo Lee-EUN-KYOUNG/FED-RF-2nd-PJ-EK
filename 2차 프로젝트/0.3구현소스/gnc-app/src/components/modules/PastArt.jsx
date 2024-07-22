@@ -32,7 +32,7 @@ export default function PastArt({chgArtFn}) {
         }}
         loop={true}
         pagination={{
-          clickable: true,
+          clickable: true
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
