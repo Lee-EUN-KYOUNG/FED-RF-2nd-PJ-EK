@@ -32,6 +32,7 @@ function ExhibiDetail() {
         //spaceBetween={20}
         navigation={true}
         modules={[Navigation]}
+        loop={true}
         >
       {/* 1. 상세 정보 박스 */}
         {/* 1-1. 전시회 제목박스 */}

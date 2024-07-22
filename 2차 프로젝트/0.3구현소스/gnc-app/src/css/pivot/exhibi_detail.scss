@@ -1,5 +1,5 @@
 .Sub-Swiper{
-  width: 1350px !important;
+  width: 1800px !important;
 }
 
 .subcont-slide{
@@ -16,27 +16,28 @@
 
 .ExhibiDetail{
   position: relative;
-  //max-width: 1800px;
+  width: 1700px;
   border: none;
   background-color: #fff;
+
 }
 
 ////////// 왼쪽 영역 //////////////////
 
 .exdesc-box{
-  //position: relative;
-  margin-top: 10px;
-  //margin-bottom: 27vh;
+  position: relative;
+  //margin-top: 10px;
+  //width: 60vw;
 }
+
 .ex-mtit{
   //position: absolute;
   float: left;
-  /* width: 444px; */
-  //margin-left: 10px;
-  //padding-right: 100px;
-  //text-align: center;
+  width: 25vw;
+  border-bottom: 1px solid #e2e2e2;
+  //margin-top: 2.14em;
   & h2{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: "Gowun Dodum", sans-serif;
     //margin-bottom: 20px;
     line-height: 1.8;
@@ -46,33 +47,37 @@
       font-family: "Gowun Dodum", sans-serif;
       //margin-bottom: 10px;
       line-height: 1.8;
+      
     }
 }
 
 .exdesc-sub{
   //position: absolute;
-  margin-top: 0px;
-  & h2{
-    font-size: 0.8rem;
-    line-height: 1.5;
-    font-family: "Gowun Dodum", sans-serif;
-    width: 22vw;
-    /* margin-right: 145px; */
-    margin-left: -8px;
-    text-align: left;
-  }
+  //margin-top: 0px;
+  //max-width: 40vw;
+  
+ 
 }
 
+.exdesc-sub>h2{
+  font-size: 1rem;
+  line-height: 1.9;
+  font-family: "Gowun Dodum", sans-serif;
+  width: 25vw;
+  margin-left: 10px;
+  text-align: left;
+  
+}
 
 //////////// 오른쪽 영역 //////////////////
 
 .main-exdesc{
   position: relative;
-  max-width: 1100px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
   /* height: 50vh; */
-  top: -50vh;
+  top: -20vh;
 }
 .main-eximg1 {
   //position: absolute;
@@ -122,34 +127,49 @@
 ///// 하단 박스들
 .exhibi-box{
   display: flex;
-  margin-left: 10%;
-  gap: 0 38px;
-  //margin-top: 10px;
-  //margin-bottom: 10px;
+    margin-left: 3%;
+    gap: 0 20px;
+    margin-top: 90px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
 }
 
 .ex-bookmark {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border: none;
   background-color: #fff;
-  text-decoration: none;
 }
 
 .ex-linkbx {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border: none;
   background-color: #fff;
-  text-decoration: none;
+  & a{
+    text-decoration: none;
+    color: #000;
+    &:hover{
+      color: darkorange;
+      font-weight: 600;
+    }
+  }
 }
 
 .ex-btn{
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border: none;
   background-color: #fff;
   float: left;
-  margin-left: 20px;
-  padding-right: 100px;
-  text-decoration: none;
+  & a{
+    text-decoration: none;
+    color: #000;
+    &:hover{
+      color: darkcyan;
+      font-weight: 600;
+    }
+  }
 }
