@@ -5,23 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 // CSS 불러오기
-import "../../css/searching.scss";
+import "../../css/pivot/searching.scss";
 
 
 /// 데이터 불러오기
-import { catListData } from "../data/swiper_cat";
+import { exData } from "../data/exhibition_data_sub.js";
 // 캐릭터 리스트 결과 컴포넌트
-import SearchingCat from "./SearchingCat";
+import SearchingArt from "../modules/SearchingArt";
 
 
 /////////////////////////////////////////////
 function Searching({ kword }) {
   console.log("kword:", kword);
-  console.log("data:", catListData);
+  console.log("data:", exData);
 
-  // 키워드에 따라 검색 결과가 달라지므로
-  // 핵심데이터인 검색어를  상태 관리 변수로 만든다
-  // 초기값으로 전달 받은 검색어 변수를 넣어준다
 
   /// 상태 관리 변수
   // kword = 전달 받은 키워드
@@ -43,8 +40,7 @@ function Searching({ kword }) {
 
  console.log("참조변수 객체:", beforeKword);
  
- // 창조변수는 객체이다 그래서 하위 속성중 current 속성으로 값을 읽거나 업데이트한다
- //만약 조금전 저장된 검색어와 지금 검색어가 다르다면 검색어 상태 변수를 업데이트 한다
+
  if (beforeKword.current != kword) {
     console.log(beforeKword.current,"==?",kword);
     // 컴포넌트 리랜더링 (검색결과 변경)
@@ -56,20 +52,19 @@ function Searching({ kword }) {
   }
 
 
-
   // 값 : 오름차순 asc , 내림차순 desc
 
   // 검색어가 있는 데이터 필터하기
   // 변수 = 배열.filter(v=>{if(v.속성명.indexOf(검색어)!=-1)return true})
   //  ---> 결과는 검색어가 있는 경우 변수에 모아서 담아준다 (결과값도 배열, 결과가 없어도 빈 배열)
   // filte() 검색 결과는 항상 배열로 나옴
-  const newList = catListData.filter((v) => {
+  const newList = exData.filter((v) => {
     // 속성중 캐릭터 이름 중 검색 (v.cname)
     // 검색어는 모두 영어일 경우 소문자처리함
     // 문자열.indexOf(문자) 문자열 위치 번호 리턴함! -> 결과가 없으면 -1을 리턴함
     // -1이 아닐경우 true를 리턴하면 filter에서 변수에 저장할 배열로 수집된다
 
-    let newVal = v.cname.toLocaleLowerCase();
+    let newVal = v.mexhibi.toLocaleLowerCase();
 
     // 전달받은 키워드도 소문자처리
     // 상태 변수인 kw로 대체한다
@@ -248,7 +243,7 @@ function Searching({ kword }) {
           </aside>
           {/* 2-3. 캐릭터 리스트 컴포넌트 : 
             데이터 상태변수 중 첫번째값만 보냄 */}
-          <SearchingCat dt={newList} />
+          <SearchingArt  dt={newList} />
         </div>
       </section>
     </>
