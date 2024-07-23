@@ -16,9 +16,11 @@ import "../../css/pivot/board_file.scss";
 export default function MainNotice() {
  // 컨텍스트 사용하기
  const myCon = useContext(dCon);
+ 
  // 전역 로그인 상태 변수 확인하기
- const sts = myCon.loginSts;
- //console.log("로그인상태:", sts);
+ const sts = myCon.loginSts?myCon.loginSts:'';
+ 
+ console.log("로그인상태:", sts);
 
  // 로컬 스토리지 게시판 데이터 정보 확인
  initBoardData();
@@ -166,7 +168,7 @@ export default function MainNotice() {
  // 삭제 처리 함수
  const deleteFn = () => {
    // 삭제 여부 확인
-   if (window.confirm("Are you sure you want to delete?")) {
+   if (window.confirm("지우시겠습니까?")) {
      // 해당 항목 idx 담기
      let currIdx = selRecord.current.idx;
 

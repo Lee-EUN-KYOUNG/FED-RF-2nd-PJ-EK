@@ -1,9 +1,10 @@
 //
 import React, { useState } from "react";
 import { memo } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BookMark from "./BookMark";
 import { exData } from '../data/exhibition_data_sub';
+import { posterData } from "../data/poster_data_sub";
 // 제이쿼리
 import $ from "jquery";
 
@@ -20,14 +21,14 @@ import { dCon } from "./dCon";
 import "../../css/pivot/_search.scss";
 
 //////////////////////////// 컴포넌트 구역
-export const Search = memo(() => {
+export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
 
 
-  const [tot, setTot] = useState(exData[0]);
+  const [tot, setTot] = useState(posterData[0]);
 
 
 
-  const goPage = useNavigate();
+  //const goPage = useNavigate();
 
   const addOn = (e) => {
     document.querySelector(".gnb02").classList.add("on");
@@ -118,6 +119,8 @@ export const Search = memo(() => {
   // 코드리턴구역 //////////////
   return (
     <>
+        {/* 로그인 환영메시지 박스 */}
+      <div className="logmsg">{loginMsg}</div>
       <div className="searchbox">
         <section className="search-track">
           <ul className="gnb02">
@@ -176,7 +179,7 @@ export const Search = memo(() => {
                     // 전시회 토탈 정보
                     tot={tot}
                     // dt 전체 데이터 (한줄 리스트 때문)
-                    dt={exData}
+                    dt={posterData}
                     // 한줄 리스트 클릭시 변경
                     setTot={setTot}
                   />
@@ -186,6 +189,39 @@ export const Search = memo(() => {
           </dCon.Provider>
           {/* 검색 기능 링크 - 클릭시 검색창 보이기 */}
           <a href="#" onClick={showSearch}></a>
+          {
+        /* 회원가입, 로그인 버튼 - 로그인 상태가 null일때 나옴 */
+        loginSts === null && (
+          <>
+            <li>
+              <Link to="/member">회원가입</Link>
+            </li>
+            <li>
+              <Link to="/login">로그인</Link>
+            </li>
+          </>
+        )
+      }
+      {
+        /* 로그인 상태이면 로그아웃 버튼 나옴 */
+        loginSts !== null && (
+          <>
+            <li>
+              <a
+                href="#"
+                onClick={(e) => {
+                  // 기본 이동 막끼
+                  e.preventDefault();
+                  // 로그아웃 처리 함수 호출
+                  logoutFn();
+                }}
+              >
+                로그아웃
+              </a>
+            </li>
+          </>
+        )
+      }
         </section>
       </div>
     </>

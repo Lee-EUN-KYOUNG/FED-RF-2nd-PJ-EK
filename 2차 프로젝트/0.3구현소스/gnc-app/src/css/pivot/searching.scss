@@ -1,5 +1,11 @@
 /* Search 모듈용 CSS - searching.css  */
 
+
+h1.tit{
+  font-size: 2rem;
+  text-align: center;
+}
+
 /* 검색입력창 박스 */
 .searching {
   //width: 250px;
@@ -27,7 +33,7 @@ input:focus {
 }
 
 .restit {
-  font-size: min(35px, 4vw);
+  font-size: min(30px, 4vw);
   margin: 10px;
 }
 

@@ -1,15 +1,15 @@
 // 상단영역 컴포넌트 ///
 
 // GNB 데이터 불러오기
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { menu } from "../data/gnb";
+//import LogPage from "../modules/LogPage";
 
 import Logo from "../modules/Logo";
 import TextBanner from "../modules/HeadLine";
 import {Search} from "../modules/Search";
-import { useContext } from "react";
-import { dCon } from "../modules/dCon";
-import LogPage from "../modules/LogPage";
+
+
 
 
 
@@ -19,7 +19,11 @@ import "../../css/pivot/top_area.scss";
 /// 컴포넌트 코딩구역
 export default function TopArea() {
 
-  const myCon = useContext(dCon);
+  //const logpage = useCallback(()=>{
+  //  loginMsg, loginSts, logoutFn, goPage
+  //});
+
+  const goPage = useNavigate();
 
   //// 코드 리턴구역 //////////////
   return (
@@ -31,9 +35,20 @@ export default function TopArea() {
           <ul>
             {/* 1. 로고 컴포넌트 */}
             <li>
-              <Link to="/">
+            <a
+                href="#"
+                onClick={(e) => {
+                  // 기본 이동 막기
+                  e.preventDefault();
+                  // 라우터 이동 메서드 호출
+                  goPage("/");
+                }}
+              >
                 <Logo logoStyle="top" />
-              </Link>
+              </a>
+              {/* <Link to="/">
+                <Logo logoStyle="top" />
+              </Link> */}
             </li>
             {/* 2. 헤드라인 영역 */}
             <li>
@@ -43,7 +58,6 @@ export default function TopArea() {
             <li>
               <Search />
             </li>
-            <LogPage/>
           </ul>
         </nav>
       </header>
