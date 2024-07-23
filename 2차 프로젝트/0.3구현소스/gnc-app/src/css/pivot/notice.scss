@@ -34,6 +34,7 @@
 .notice-main {
   //position: relative;
   display: flex;
+  
 }
 
 .notice-main > h2 {
@@ -49,14 +50,19 @@
   display: flex;
   list-style: none;
   align-items: center;
+
 }
 
-.notice-text > p {
+
+
+.notice-text > a {
   //max-width: 63.3vw;
   font-size: 1.5rem;
   text-align: left;
   font-family: "Gowun Dodum", sans-serif;
   font-weight: bold;
+  text-decoration: none;
+  color: #000;
 }
 
 ///////////////// 인트로 이미지 영역 //////////////////////

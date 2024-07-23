@@ -329,7 +329,7 @@ export default function MainNotice() {
  /////////////////////////////////// 코드 리턴구역 /////////////////////
  return (
    <main className="cont">
-     <h1 className="tit">OPINION</h1>
+     <h1 className="tit">OPINION & NOTICE</h1>
      {
        // 1. 리스트 모드일 경우 리스트 출력하기
        mode == "L" && (
@@ -557,7 +557,7 @@ const ReadMode = ({ selRecord, sts }) => {
  return (
    <>
      <table className="dtblview readone">
-       <caption>OPINION : Read</caption>
+       <caption>OPINION & NOTICE : Read</caption>
        <tbody>
          <tr>
            <td>Name</td>
@@ -616,7 +616,7 @@ const WriteMode = ({ sts }) => {
  return (
    <>
      <table className="dtblview readone">
-       <caption>OPINION : Write</caption>
+       <caption>OPINION & NOTICE : Write</caption>
        <tbody>
          <tr>
            <td>Name</td>
@@ -680,7 +680,7 @@ const ModifyMode = ({ selRecord }) => {
  return (
    <>
      <table className="dtblview readone">
-       <caption>OPINION : Modify</caption>
+       <caption>OPINION & NOTICE : Modify</caption>
        <tbody>
          <tr>
            <td>Name</td>

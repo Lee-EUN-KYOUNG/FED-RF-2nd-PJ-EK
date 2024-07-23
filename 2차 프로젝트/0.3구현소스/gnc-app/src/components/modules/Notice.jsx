@@ -4,6 +4,7 @@ import IntroPage from "../modules/IntroPage";
 
 // CSS 연결
 import "../../css/pivot/notice.scss";
+import { Link } from "react-router-dom";
 
 //////////// 코드구역
 function Notice(props) {
@@ -16,7 +17,9 @@ function Notice(props) {
           <div className="notice-main">
             <h2>NEW!</h2>
             <div className="notice-text">
+            <Link to="NOTICE">
               <p>GNC 미디어 에이전시 홈페이지 리뉴얼!</p>
+            </Link>
             </div>
           </div>
         </div>
