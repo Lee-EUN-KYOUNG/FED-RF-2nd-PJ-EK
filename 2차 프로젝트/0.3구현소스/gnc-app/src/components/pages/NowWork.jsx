@@ -2,6 +2,7 @@ import React from 'react';
 
 // CSS 불러오기
 import "../../css/pivot/nwork.scss";
+import { Link } from 'react-router-dom';
 
 
 //////////////
@@ -11,7 +12,9 @@ function NowWork(props) {
             <h1 className='ntit01'>헬로키티 50주년 특별전</h1>
             <h2 className='ntit02'>HELLO KITTY 50th Exhibition</h2>
             <h2 className='ntit03'>2024.04.13 - 2024.08.13</h2>
+            <Link to="EXHIBITION">
             <h3 className='ntit04'>Go to Exhibiton</h3>
+            </Link>
             <h4 className='ntit05'>© 2024 GNC Media. All rights reserved.</h4>
         </div>
     );

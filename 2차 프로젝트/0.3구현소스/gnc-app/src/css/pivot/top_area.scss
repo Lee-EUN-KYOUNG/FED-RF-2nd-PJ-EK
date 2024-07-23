@@ -41,11 +41,11 @@
 }
 
 /* 로그인 환영메시지 박스 */
-.logmsg {
+/* .logmsg {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 // 로그인, 로그아웃 CSS
 
@@ -65,6 +65,54 @@
   margin-bottom: 10px;
 }
 
+/* 회원가입 */
+
+.join-tit{
+  border-radius: 25px;
+  padding: 4px 18px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.join-tit a{
+  text-decoration: none;
+  color: #000;
+  
+}
+
+.join-tit a:hover {
+  color: #007aff;
+  font-weight: bold;
+}
+
+/* 로그인 */
+
+.login-tit{
+  border-radius: 25px;
+  padding: 4px 18px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #000;
+  margin-right : 15px;
+}
+
+.login-tit a{
+  text-decoration: none;
+  color: #000;
+}
+
+
+.login-tit a:hover {
+  color: #007aff;
+  font-weight: bold;
+}
+
+/* 로그아웃 */
 .out-bxtit{
   list-style: none;
   display: flex;
@@ -82,23 +130,14 @@
   margin-right : 15px;
 }
 
-.join-tit a{
-  text-decoration: none;
-
-}
-
-.login-tit a{
-  text-decoration: none;
-}
-
-.join-tit a:hover {
-  color: #007aff;
+.logout-tit{
+  border-radius: 25px;
+  padding: 4px 18px;
+  background-color: #fff;
+  color: #000;
   font-weight: bold;
-}
-
-.login-tit a:hover {
-  color: #007aff;
-  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #000;
 }
 
 .logout-tit a {

@@ -115,6 +115,16 @@
   
   /////////////////////////// 미디어 쿼리 ////////////////////////
   
+  @media screen and (max-width: 1650px) {
+    .gcom-box {
+      margin-top: 10vh;
+    }
+
+
+  }
+
+
+
   @media screen and (max-width: 1490px) {
     .swiper-slide:nth-child(2) .gcom-box {
       margin-top: -75px;
@@ -127,7 +137,7 @@
       position: relative;
       margin-left: 10px;
       margin-right: 20px;
-      margin-top: -165px;
+      //margin-top: -165px;
       border: 0.13rem ridge rgba(247, 227, 227, 0.662745098);
   }
     .swiper-slide:nth-child(2) .gcom-box {
