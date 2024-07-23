@@ -161,14 +161,17 @@
 
 
 @media screen and (max-width: 360px) {
-  .gncom-box {
-    margin-top: 20vh;
-}
+  
+    
 
-.myGrid {
+.gncom-box {
   margin-left: 1px;
   margin-right: 1px;
   margin-top: 1px;
+  margin-top: 1vh;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+grid-gap: min(3.5vw, 20px) min(2vw, 15px);
 }
 
 .swiper-slide:nth-child(1) .gncom-box img {
@@ -202,6 +205,34 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.style attribute {
+  font-size: 24px;
+}
+
+.comp-tit1 {
+  margin-top: -1px;
+}
+
+.comp-tit2 {
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 0.5rem;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.comp-tit3 {
+  padding: 1px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
