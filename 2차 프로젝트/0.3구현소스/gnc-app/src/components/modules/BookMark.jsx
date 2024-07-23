@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { addComma } from "../func/common_fn";
-import "../data/poster_data";
+
+
+import {posData} from "../data/poster_data";
 
 //컨텍스트 API 불러오기
 import { dCon } from "./dCon";
@@ -84,7 +86,6 @@ function BookMark(props) {
           onClick={(e) => {
             e.preventDefault();
             $("#marklist").hide();
-
             // 오른쪽으로 이동하여 사라지게
             $("#marklist").animate({ right: "-60vw" }, 400);
           }}
@@ -302,6 +303,8 @@ function BookMark(props) {
           </tfoot>
         </table>
       </section>
+      {/* 카트 상품 개수 출력박스 */}
+      <div className="cntBx">{dataCnt}</div>
     </>
   );
 }

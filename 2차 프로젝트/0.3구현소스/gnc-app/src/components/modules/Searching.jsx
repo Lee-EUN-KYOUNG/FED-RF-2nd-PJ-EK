@@ -10,6 +10,8 @@ import "../../css/pivot/searching.scss";
 
 /// 데이터 불러오기
 import { exData } from "../data/exhibition_data_sub.js";
+import { posterData} from "../data/poster_data_sub.js";
+
 // 캐릭터 리스트 결과 컴포넌트
 import SearchingArt from "../modules/SearchingArt";
 
@@ -17,7 +19,7 @@ import SearchingArt from "../modules/SearchingArt";
 /////////////////////////////////////////////
 function Searching({ kword }) {
   console.log("kword:", kword);
-  console.log("data:", exData);
+  console.log("data:", posterData);
 
 
   /// 상태 관리 변수
@@ -58,13 +60,13 @@ function Searching({ kword }) {
   // 변수 = 배열.filter(v=>{if(v.속성명.indexOf(검색어)!=-1)return true})
   //  ---> 결과는 검색어가 있는 경우 변수에 모아서 담아준다 (결과값도 배열, 결과가 없어도 빈 배열)
   // filte() 검색 결과는 항상 배열로 나옴
-  const newList = exData.filter((v) => {
+  const newList = posterData.filter((v) => {
     // 속성중 캐릭터 이름 중 검색 (v.cname)
     // 검색어는 모두 영어일 경우 소문자처리함
     // 문자열.indexOf(문자) 문자열 위치 번호 리턴함! -> 결과가 없으면 -1을 리턴함
     // -1이 아닐경우 true를 리턴하면 filter에서 변수에 저장할 배열로 수집된다
 
-    let newVal = v.mexhibi.toLocaleLowerCase();
+    let newVal = v.Type.toLocaleLowerCase();
 
     // 전달받은 키워드도 소문자처리
     // 상태 변수인 kw로 대체한다
@@ -80,9 +82,9 @@ function Searching({ kword }) {
       // 묶어서 논리연산자(&&,||,!)와의 충돌을 막아줘야함!
       // OR문의 결과가 false이려면 모두 false여야함!
       // 체크박스 모두 불체크시 false로 처리!
-      ((chk[0] ? v.alignment == "hero" : false) ||
-        (chk[1] ? v.alignment == "comp" : false) ||
-        (chk[2] ? v.alignment == "villain" : false))
+      ((chk[0] ? v.Type == "Animation" : false) ||
+        (chk[1] ? v.Type == "Painting" : false) ||
+        (chk[2] ? v.Type == "Design" : false))
       //true && (true||false||false)
       // -> &&문은 모두 true여야 true
       // -> ||문은 하나만 true면 true
@@ -94,19 +96,22 @@ function Searching({ kword }) {
     // filter에서 변수에 저장할 배열로 수집된다!
   }); //////////////// filter ///////////////////
 
+
+
+
   // [ 결과내 재검색 : 데이터 항목중 alignment값으로 검색함! ]
 
   // [ 정렬기능 추가하기 ] /////////
   // (1) 오름차순일 경우
   if (sort == "asc") {
     newList.sort((a, b) =>
-      a.cname > b.cname ? 1 : a.cname < b.cname ? -1 : 0
+      a.전시회 > b.전시회 ? 1 : a.전시회 < b.전시회 ? -1 : 0
     );
   } /// if ///////////////////////
   // (2) 내림차순일 경우
   else if (sort == "desc") {
     newList.sort((a, b) =>
-      a.cname > b.cname ? -1 : a.cname < b.cname ? 1 : 0
+      a.전시회 > b.전시회 ? -1 : a.전시회 < b.전시회 ? 1 : 0
     );
   } /// else if ///////////////////
 
@@ -161,17 +166,17 @@ function Searching({ kword }) {
               <li>
                 {/* 타이틀 */}
                 <h2>
-                  ALIGNMENT
+                  Type
                   <span className="spbtn">＋</span>
                 </h2>
                 {/* 체크박스리스트 */}
                 <ol>
                   <li>
-                    Heroes
+                    Animation
                     {/* 숨긴 체크박스 */}
                     <input
                       type="checkbox"
-                      id="hero"
+                      id="Animation"
                       className="chkhdn"
                       // 체크 변경시 change 이벤트 발생
                       onChange={(e) => {
@@ -183,21 +188,21 @@ function Searching({ kword }) {
                       }}
                     />
                     {/* 디자인노출 라벨 */}
-                    <label htmlFor="hero" className="chklb"></label>
+                    <label htmlFor="Animation" className="chklb"></label>
                   </li>
                   <li>
-                    It's Complicated
+                    Painting
                     {/* 숨긴 체크박스 */}
-                    <input type="checkbox" id="comp" className="chkhdn" />
+                    <input type="checkbox" id="Painting" className="chkhdn" />
                     {/* 디자인노출 라벨 */}
-                    <label htmlFor="comp" className="chklb"></label>
+                    <label htmlFor="Painting" className="chklb"></label>
                   </li>
                   <li>
-                    Villains
+                  Design
                     {/* 숨긴 체크박스 */}
                     <input
                       type="checkbox"
-                      id="villain"
+                      id="Design"
                       className="chkhdn"
                       // 체크박스 체크속성값을 훅연결!
                       checked={chk[2]}
@@ -211,7 +216,7 @@ function Searching({ kword }) {
                       }}
                     />
                     {/* 디자인노출 라벨 */}
-                    <label htmlFor="villain" className="chklb"></label>
+                    <label htmlFor="Design" className="chklb"></label>
                   </li>
                 </ol>
               </li>
@@ -222,7 +227,7 @@ function Searching({ kword }) {
         <div className="listbx">
           {/* 2-1. 결과 타이틀 */}
           <h2 className="restit">
-          BROWSE CHARACTERS ({newList.length})
+          검색 결과 ({newList.length})
           </h2>
           {/* 2-2. 정렬선택박스 */}
           <aside className="sortbx">
