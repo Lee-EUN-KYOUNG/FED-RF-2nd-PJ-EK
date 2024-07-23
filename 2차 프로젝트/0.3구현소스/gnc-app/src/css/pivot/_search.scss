@@ -59,21 +59,66 @@ input:focus {
 }
 
 ////////////////////////////// 미디어 쿼리 //////////////
+@media screen and (max-width: 1560px) {
+  .searchbox .search-track {
+    display: flex;
+    gap: 0 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+  .gnb01 > ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    gap: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .searchbox {
+    position: relative;
+    padding: 0 min(3px, 2vw);
+    white-space: nowrap;
+  }
+  .gnb02 {
+    width: 30px;
+    height: 50px;
+    &.on{
+      width: 260px;
+    }
+  }
+
+  .searching input {
+    position: absolute;
+    //top: 10px;
+    left: 30px;
+    bottom: 5px;
+    right: 5px;
+    font-family: "PT Serif Caption", serif;
+    font-weight: normal;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    background-color: transparent;
+    border: none;
+    display: none;
+  }}
 
 @media screen and (max-width: 1490px) {
   .searchbox .search-track {
     display: flex;
-    gap: 0 8px;
+    gap: 0 7px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
 }
 
   .gnb02 {
-    width: 30px;
+    width: 50px;
     height: 40px;
     &.on {
-      width: 138px;
+      width: 200px;
     }
   }
   .gnb03 {
@@ -81,12 +126,12 @@ input:focus {
     height: 30px;
   }
   .searching input {
-    left: 20px;
+    left: 30px;
     right: 5px;
     font-family: "PT Serif Caption", serif;
     font-weight: normal;
-    font-size: 0.6rem;
-    line-height: 1.5;
+    font-size: 0.68rem;
+    line-height: 1.4;
   }
 }
 
