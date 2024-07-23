@@ -7,6 +7,7 @@ import "../../css/pivot/member.scss";
 // 로컬 스토리지 셋팅 함수 호출!
 import { initData } from "../func/mem_fn.js";
 import { dCon } from "../modules/dCon";
+import { Link } from "react-router-dom";
 
 
 
@@ -35,14 +36,14 @@ function Login(props) {
 
   // [ 아이디관련 메시지 프리셋 ] ////
   const msgId = [
-    "This is a required entry", //필수입력
-    "ID does not exist", //아이디가 존재하지 않습니다
+    "아이디 입력은 필수입니다!", //필수입력
+    "존재하지 않는 아이디입니다.", //아이디가 존재하지 않습니다
   ];
   // [ 비밀번호관련 메시지 프리셋 ] ////
   const msgPwd = [
     // 비밀번호
-    "This is a required entry", //필수입력
-    "Password doesn't match", //비밀번호가 일치하지 않습니다
+    "비밀번호 입력은 필수입니다!", //필수입력
+    "비밀번호가 일치하지 않습니다.", //비밀번호가 일치하지 않습니다
   ];
 
   // [3] 에러메시지 상태변수 : 초기값 msgId[0]
@@ -176,7 +177,7 @@ function Login(props) {
 
             // 4. 로그인 성공 메시지 버튼에 출력하기
             document.querySelector(".sbtn").innerText =
-            "Logined!";
+            "로그인되었습니다!";
 
             // 5.  라우팅 페이지 이동
             // 1초후 메인 페이지로 이동
@@ -223,8 +224,20 @@ function Login(props) {
   // 코드 리턴구역 ////////////////////////
   return (
     <div className="outbx">
+      <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "darkpurple",
+            fontFamily: "Noto Sans KR",
+            fontWeight: "700",
+            fontSize: "1.2rem",
+          }}
+        >
+          ← 뒤로가기
+        </Link>
       <section className="membx" style={{ minHeight: "300px" }}>
-        <h2>LOG IN</h2>
+        <h2>로그인</h2>
         <form method="post" action="process.php">
           <ul>
             <li>
@@ -233,7 +246,7 @@ function Login(props) {
                 id="user-id"
                 type="text"
                 maxLength="20"
-                placeholder="Please enter your ID"
+                placeholder="아이디를 입력하세요!"
                 value={userId}
                 onChange={changeUserId}
               />
@@ -261,7 +274,7 @@ function Login(props) {
               <input
                 type="password"
                 maxLength="20"
-                placeholder="Please enter your Password"
+                placeholder="비밀 번호를 입력하세요!"
                 value={pwd}
                 onChange={changePwd}
               />
@@ -285,7 +298,7 @@ function Login(props) {
             </li>
             <li style={{ overflow: "hidden" }}>
               <button className="sbtn" onClick={onSubmit}>
-                Submit
+                로그인
               </button>
             </li>
           </ul>

@@ -62,23 +62,23 @@ function Member() {
   // [ 아이디관련 메시지 프리셋 ] ////
   const msgId = [
     // 1. 최소 5글자 이상 입력할것
-    "User ID must contain a minimum of 5 characters",
+    "최소 5글자 이상 입력하세요!",
     // 2. 이미 사용중인 아이디임
-    "This ID is already in use!",
+    "이미 사용 중인 아이디입니다!",
     // 3. 훌륭한 아이디!
-    "That's a great ID!",
+    "훌륭한 아이디입니다!",
   ];
 
   // [ 기타 메시지 프리셋 ]
   const msgEtc = {
     // 비밀번호
-    pwd: "5 to 15 digits in the form of special characters, characters, and numbers",
+    pwd: "5 이상 15 이하 영문, 숫자, 특수 기호 조합으로 입력하세요!",
     // 비밀번호확인
-    confPwd: "Password verification does not match",
+    confPwd: "비밀 번호가 일치하지 않습니다. 다시 확인하세요!",
     // 필수입력
-    req: "This is a required entry",
+    req: "빈 칸을 입력하세요!",
     // 이메일
-    email: "Please enter a valid email format",
+    email: "이메일 형식이 맞지 않습니다. 다시 확인하세요!",
   }; ///// msgEtc ///////
 
   // [3] 에러메시지 상태변수 : 초기값 msgId[0]
@@ -342,7 +342,7 @@ function Member() {
       // 7. 회원가입 환영메시지 + 로그인 페이지 이동
       // 버튼 텍스트에 환영메시지
       document.querySelector(".sbtn").innerText = 
-      "Thank you for joining us!";
+      "회원 가입을 축하합니다!";
       // 1초후 페이지 이동 : 라우터 Navigate로 이동함
       setTimeout(()=>{
         goNav("/login");
@@ -372,8 +372,20 @@ function Member() {
   // 코드리턴 구역 //////////////////
   return (
     <div className="outbx">
+      <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "darkpurple",
+            fontFamily: "Noto Sans KR",
+            fontWeight: "700",
+            fontSize: "1.2rem",
+          }}
+        >
+          ← 뒤로가기
+        </Link>
       <section className="membx">
-        <h2>Join Us</h2>
+        <h2>회원 가입</h2>
         <form action="process.php" method="post">
           <ul>
             <li>
@@ -382,7 +394,7 @@ function Member() {
               <input
                 type="text"
                 maxLength="20"
-                placeholder="Please enter your ID"
+                placeholder="아이디를 입력하세요"
                 // defaultValue="ㅎㅎㅎ"
                 value={userId}
                 onChange={changeUserId}
@@ -428,7 +440,7 @@ function Member() {
               <input
                 type="password"
                 maxLength="20"
-                placeholder="Please enter your Password"
+                placeholder="비밀번호를 입력하세요"
                 value={pwd}
                 onChange={changePwd}
                 onBlur={changePwd}
@@ -455,7 +467,7 @@ function Member() {
               <input
                 type="password"
                 maxLength="20"
-                placeholder="Please enter your Confirm Password"
+                placeholder="입력한 비밀번호를 다시 입력하세요"
                 value={chkPwd}
                 onChange={changeChkPwd}
                 onBlur={changeChkPwd}
@@ -482,7 +494,7 @@ function Member() {
               <input
                 type="text"
                 maxLength="20"
-                placeholder="Please enter your Name"
+                placeholder="이름을 입력하세요"
                 value={userName}
                 onChange={changeUserName}
                 onBlur={changeUserName}
@@ -534,7 +546,7 @@ function Member() {
               <input
                 type="text"
                 maxLength="50"
-                placeholder="Please enter your Email"
+                placeholder="이메일 주소를 입력하세요"
                 value={email}
                 onChange={changeEmail}
                 onBlur={changeEmail}
@@ -558,12 +570,12 @@ function Member() {
             </li>
             <li style={{ overflow: "hidden" }}>
               <button className="sbtn" onClick={onSubmit}>
-                Submit
+                회원 가입
               </button>
             </li>
             <li>
-              Are you already a Member?
-              <Link to="/login">Log In</Link>
+              이미 회원이신가요??
+              <Link to="/login">로그인하기</Link>
             </li>
           </ul>
         </form>

@@ -120,7 +120,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
   return (
     <>
         {/* 로그인 환영메시지 박스 */}
-      <div className="logmsg">{loginMsg}</div>
+      {/* <div className="logmsg">{loginMsg}</div> */}
       <div className="searchbox">
         <section className="search-track">
           <ul className="gnb02">
