@@ -5,13 +5,14 @@
 }
 
 .myGridbx {
+
     margin-left: 5px;
     //margin-right: 20px;
     margin-top: 0;
     //border: 1rem solid red;
   }
   
-  
+ 
   
   .swiper-slide {
     margin-top: 0;
@@ -116,10 +117,71 @@
   /////////////////////////// 미디어 쿼리 ////////////////////////
   
   @media screen and (max-width: 1650px) {
+
     .gcom-box {
       margin-top: 10vh;
+      margin-left: 23px;
+      margin-right: 10px;
     }
 
+  .swiper-slide:nth-child(1) .gcom-box {
+    width: 18vw;
+  }
+
+  .swiper-slide:nth-child(2) .gcom-box {
+    width: 18vw;
+  } 
+
+  .swiper-slide:nth-child(3) .gcom-box {
+    width: 18vw;
+} 
+    .swiper-slide:nth-child(4) .gcom-box {
+      margin-top: 85px;
+      width: 18vw;
+  }
+    .swiper-slide:nth-child(5) .gcom-box {
+      width: 16vw;
+  }
+
+
+  .abcomp-tit1 {
+    margin-top: 20px;
+}
+
+.swiper-slide:nth-child(1) .gcom-box img {
+    width: 80%;
+}
+
+.abcomp-tit2 {
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 0.6rem;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.abcomp-tit3 > p {
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 0.8rem;
+    text-align: left;
+    line-height: 1.55;
+}
+
+.abcomp-tit4 {
+    margin-top: 2px;
+    font-size: 0.5rem;
+}
+
+.abcomp-tit5 > h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: Bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
 
   }
 
@@ -127,45 +189,51 @@
 
   @media screen and (max-width: 1490px) {
     .swiper-slide:nth-child(2) .gcom-box {
-      margin-top: -75px;
+      //margin-top: -75px;
   }
   }
   
   @media screen and (max-width: 1390px) {
   
     .gcom-box {
-      position: relative;
-      margin-left: 10px;
-      margin-right: 20px;
+      //position: relative;
+      //margin-left: 10px;
+      //margin-right: 20px;
       //margin-top: -165px;
-      border: 0.13rem ridge rgba(247, 227, 227, 0.662745098);
+      //border: 0.13rem ridge rgba(247, 227, 227, 0.662745098);
   }
     .swiper-slide:nth-child(2) .gcom-box {
-            margin-top: 25vh;
+            //margin-top: 25vh;
         }
   
         .swiper-slide:nth-child(4) .gcom-box {
-          margin-top: -55px;
+          //margin-top: -55px;
       }
     }
   
   @media screen and (max-width: 1250px) {
     .gcom-box {
-      margin-top: 30px;
+      //margin-top: 30px;
     }
   
     .swiper-slide:nth-child(2) .gcom-box {
-      margin-top: -60px;
+      //margin-top: -60px;
   }
   
   }
   
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1098px) {
   
+    .about-bx {
+      font-size: 1.5rem;
+      text-align: center;
+  }
     .gcom-box {
-      margin-top: -40px;
+      margin-top: 10vh;
+      margin-left: 1vw;
+      margin-right: -4vw;
   }
     .swiper-slide:nth-child(2) .gcom-box {
-      margin-top: 60px;
+      //margin-top: 60px;
   }
   }
