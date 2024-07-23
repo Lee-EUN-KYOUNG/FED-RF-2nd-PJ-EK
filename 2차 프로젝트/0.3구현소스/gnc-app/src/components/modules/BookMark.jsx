@@ -84,6 +84,7 @@ function BookMark(props) {
           onClick={(e) => {
             e.preventDefault();
             $("#marklist").hide();
+
             // 오른쪽으로 이동하여 사라지게
             $("#marklist").animate({ right: "-60vw" }, 400);
           }}
