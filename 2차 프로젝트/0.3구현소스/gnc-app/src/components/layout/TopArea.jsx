@@ -7,17 +7,19 @@ import { Link } from "react-router-dom";
 import Logo from "../modules/Logo";
 import TextBanner from "../modules/HeadLine";
 import {Search} from "../modules/Search";
+import { useContext } from "react";
+import { dCon } from "../modules/dCon";
 
 
 
 // 상단 영역 CSS 불러오기`
 import "../../css/pivot/top_area.scss";
-import { useContext } from "react";
-import { dCon } from "../modules/dCon";
 
 /// 컴포넌트 코딩구역
 export default function TopArea() {
+
   const myCon = useContext(dCon);
+
   //// 코드 리턴구역 //////////////
   return (
     <>

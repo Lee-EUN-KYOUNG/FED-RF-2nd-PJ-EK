@@ -1,6 +1,8 @@
 //
-import React from "react";
+import React, { useState } from "react";
 import { memo } from "react";
+import { useNavigate } from "react-router-dom";
+import BookMark from "./BookMark";
 
 
 // 제이쿼리
@@ -11,9 +13,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
+//컨텍스트 API 불러오기
+import { dCon } from "./dCon";
+
 //CSS 불러오기
 import "../../css/pivot/_search.scss";
-import { useNavigate } from "react-router-dom";
+
+
 
 //////////////////////////// 컴포넌트 구역
 export const Search = memo(() => {
@@ -71,6 +77,46 @@ export const Search = memo(() => {
     goPage("search", { state: { keyword: txt } });
   }; ///////// goSearch ///////////
 
+
+  // 로컬스 북마크 존재여부 변수
+  let markTemp = false;
+
+  // 로컬스 카트 데이터 상태변수
+  const [localsMark,setLocalsMark] = 
+  useState(localStorage.getItem("exData"));
+
+  //로컬스 북마크 데이터 존재 여부에 따라 상태값 변경
+  if(localsMark){
+
+    // 데이터가 있으면 markTemp값 true로 업데이트
+    // 데이터 개수가 0이 아니어야함
+    let markCnt = JSON.parse(localsMark).length;
+    console.log("북마크 데이터수:",markCnt);
+    if(markCnt > 0) markTemp = true;
+  }
+
+
+  // 상태 관리 변수 셋팅
+  // 1. 페이지 변경 상태 변수
+  const [pgName, setPgName] = useState("gnb03");
+
+  // 2. 카트 리스트 사용 여부 = true일때 사용
+  const [markSts, setMarkSts] = useState(markTemp);
+
+
+   /******************************************************************** 
+  
+                    [컨텍스트 API 공개 변수들]
+    1. setPgName :  페이지 이름 셋팅
+    2. setMarkSts : 카트 사용 여부 셋팅
+    3. setLocalsMark : 로컬스 카트 데이터 변경 함수
+    4. localsMark : 로컬스 카트 데이터 변수
+
+  ********************************************************************/
+
+
+
+
   // 코드리턴구역 //////////////
   return (
     <>
@@ -110,16 +156,25 @@ export const Search = memo(() => {
               />
             </li>
           </ul>
+
+              {/* 북마크 버튼 */}
+          <dCon.Provider value={{setPgName, setMarkSts, setLocalsMark, localsMark}}>    
           <ul className="gnb03">
             <li>
-              {/* 북마크 버튼 */}
               <FontAwesomeIcon
                 icon={faBookmark}
                 size="2xs"
                 style={{ color: "#023388" }}
+                onClick={(e) => {
+                  // 기본 이동 막기
+                  e.preventDefault();
+                  $("#marklist").show();
+                }}
               />
+              <BookMark/>
             </li>
           </ul>
+          </dCon.Provider>     
           {/* 검색 기능 링크 - 클릭시 검색창 보이기 */}
           <a href="#" onClick={showSearch}>
           </a>

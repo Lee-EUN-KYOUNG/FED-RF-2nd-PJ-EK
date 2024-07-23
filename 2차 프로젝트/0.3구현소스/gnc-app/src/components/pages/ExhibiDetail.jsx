@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 
 // 데이터 불러오기
@@ -8,13 +8,39 @@ import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { dCon } from '../modules/dCon';
 
 // CSS 불러오기
 import "../../css/pivot/exhibi_detail.scss";
 
+// 제이쿼리 불러오기
+import $ from "jquery";
+
+function ExhibiDetail({ dt, setTot, tot }) {
 
 
-function ExhibiDetail() {
+  // 컨텍스트 사용
+  const myCon = useContext(dCon);
+
+  /* 
+  [포스터 데이터 연동 파트]
+  [데이터 구조정의]
+  1. idx : 전시회고유번호
+  2. poster : 전시회 포스터
+  3. 전시회 : 전시회 이름
+  4. 전시기간 : 전시회기간
+  5. 슬로건 : 서브 타이틀
+  6. cnt : 전시회 북마크 횟수 합계
+  
+  */
+
+  // 전시회 정보 개별 셋업
+  //let gpos = tot.poster;
+  let ginfo = tot.전시회;
+  let gtime = tot.전시기간;
+  let gtit = tot.슬로건;
+  let gIdx = tot.idx;
+
 
   // 도착페이지 파라미터 받기
   const {state} = useLocation();
@@ -22,6 +48,18 @@ function ExhibiDetail() {
   
     ///////// 화면 렌더링 실행 구역
     useEffect(()=>{window.scrollTo(0,0);});
+
+
+    useEffect(()=>{
+      // 1. 대상 출력
+          // 숫자 출력 input
+          const sum = $("#sum");
+      // 총합계 요소
+          const total = $("#total");
+
+    },[]);
+
+
 
 
 
@@ -90,8 +128,79 @@ function ExhibiDetail() {
                   </section>
                     {/* 첫번째 박스 */}
                     <div className="exhibi-box">
+
                     {/* 전시회 즐겨찾기 */}
-                    <button className="ex-bookmark">
+                    <button className="ex-bookmark"
+                    onClick={()=>{
+
+                      // 1. 로컬스 전시회 데이터에 넣기
+                      if(!localStorage.getItem("posData")){
+                        // 로컬스없으면 만들기
+                        localStorage.setItem("posData","[]");
+                      } ////////////// if
+      
+                      /// 2. 로컬스 읽어와서 파싱하기;
+                      let locals = localStorage.getItem("posData");
+                      locals = JSON.parse(locals);
+      
+                      // 3. 기존 데이터 중 동일 데이터 거르기
+      
+                      // [방법 2]
+                      // 배열.includes(비교값)
+                      // 주의사항: 배열값이 단일값이어야 비교가 됨
+                      // 예) let aa= [11, 22, 33]
+                      // aa.includes(22) -> 있으면 결과가 true
+      
+                      // idx값만 모아서 다른 배열 만들기
+                      let newLocals = locals.map(v=>v.idx);
+                      console.log("idx 새배열:",newLocals);
+      
+                        // include 비교
+                        let retSts = newLocals.includes(gIdx);
+
+
+
+                        console.log("중복상태:",retSts);
+
+                        if(retSts){
+                          alert("중복 선택입니다!")
+                          return;
+                        }/////if
+      
+
+
+                      // 4. 로칼스에 객체 데이터 추가하기
+                      locals.push({
+                        idx: gIdx,
+                        info: ginfo,
+                        time: gtime,
+                        tit : gtit,
+                        //poster : gpos,
+                      });
+      
+                      // let res = dt.find(v=>{
+                      //   if(
+                      //     v.gpos==gpos)
+                      //     return true;
+                      // }); /////////// find
+                      // 상품 상세 모듈 전달 상태 변수 변경하기
+                      // setTot(res);
+
+
+
+                      // 로컬스에 문자화하여 입력하기
+                      localStorage.setItem("posData", JSON.stringify(locals));
+      
+                      // 로컬스 카트 데이터 상태값 변경
+                      myCon.setLocalsMark(localStorage.getItem("posData"));
+                      // 카트 리스트 생성 상태값 변경
+                      myCon.setMarkSts(true);
+
+
+
+
+                      }}
+                    >
                       즐겨찾기
                     </button>
                     {/* 전시회 URL 복사 */}
