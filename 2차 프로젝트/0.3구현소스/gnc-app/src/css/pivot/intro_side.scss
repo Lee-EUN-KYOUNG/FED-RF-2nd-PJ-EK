@@ -111,3 +111,45 @@
 }
 
 }
+
+@media screen and (max-width: 360px) {
+
+  .new-poster {
+    aspect-ratio: 1 / 1.1;
+    border: 0.5rem solid white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+.Gnb-Menu {
+  line-height: 4vw;
+}
+.GNB-CT {
+  font-size: 0.8rem;
+}
+
+.GNB-BAR {
+  font-size: 0.6rem;
+}
+
+.GNB-BAR > li {
+  padding-left: 9px;
+  border: 0.2rem ridge rgb(248 248 248 / 66%);
+  line-height: 4vw;
+}
+.GNB-BAR > li.on::after {
+  font-size: 0.8rem;
+  margin: 1.5px;
+}
+
+
+
+
+
+
+
+
+
+}

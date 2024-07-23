@@ -158,3 +158,54 @@
     margin-top: 60px;
 }
 }
+
+
+@media screen and (max-width: 360px) {
+  .gncom-box {
+    margin-top: 20vh;
+}
+
+.myGrid {
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 1px;
+}
+
+.swiper-slide:nth-child(1) .gncom-box img {
+  width: 40%;
+}
+
+
+.comp-tit2 h1 {
+  font-size: 0.8rem;
+}
+
+.comp-tit3 > p {
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 0.5rem;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.comp-tit4 {
+  margin-top: 1px;
+  font-size: 0.5rem;
+}
+
+.comp-tit5 > h3 {
+  margin-top: 1px;
+  margin-bottom: 7px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.5rem;
+  text-align: center;
+  font-weight: Bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+
+
+
+}

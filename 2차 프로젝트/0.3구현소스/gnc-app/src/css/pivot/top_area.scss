@@ -155,7 +155,8 @@
 }
 
 
-
+////////////////////// 미디어 쿼리
+/// 
 @media screen and (max-width: 1050px) {
   .gnb01 > ul {
     display: flex;
@@ -165,4 +166,63 @@
     gap: 0 8px;
     box-sizing: border-box;
   }
+}
+
+
+@media screen and (max-width: 360px) {
+
+
+  .gnb01 > ul > li:nth-child(1) {
+    width: 10%;
+}
+
+.gnb01 > ul {
+  display: flex;
+        width: 100%;
+        align-items: center;
+        list-style: none;
+        gap: 0 8px;
+        box-sizing: border-box;
+        flex-direction: row;
+
+}
+
+.out-bxtit {
+  margin-top: -20px;
+}
+.logout-tit{
+  padding: 2px 10px;
+}
+
+.logout-tit a {
+  font-size: 0.85em
+};
+
+
+.join-tit{
+  margin-top: -20px;
+  padding: 2px 10px;
+}
+.join-tit a{
+  font-size: 0.85em
+}
+.login-tit{
+  padding: 2px 10px;
+}
+.login-tit a{
+  font-size: 0.85em
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
