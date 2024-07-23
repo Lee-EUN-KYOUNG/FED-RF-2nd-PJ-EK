@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { addComma } from "../func/common_fn";
 
 
-import {posData} from "../data/poster_data";
+import {posterData} from "../data/poster_data_sub.js";
 
 //컨텍스트 API 불러오기
 import { dCon } from "./dCon";
@@ -21,7 +21,7 @@ function BookMark(props) {
     2. setMarkSts : 카트 사용 여부 셋팅
     3. setLocalsMark : 로컬스 카트 데이터 변경 함수
     4. localsMark : 로컬스 카트 데이터 변수
-    5. posData = poster 전시회 데이터 posData
+    5. posterData = poster 전시회 데이터 posterData
 
   ********************************************************************/
 
@@ -36,11 +36,14 @@ function BookMark(props) {
   const myCon = useContext(dCon);
 
   // 로컬스 데이터 가져오기
-  const posData = JSON.parse(myCon.localsMark);
+  const posterData = JSON.parse(myCon.localsMark);
 
   // 전체 데이터 갯수
-  const dataCnt = posData.length;
+  const dataCnt = posterData.length;
+  
   console.log("데이터수:", dataCnt);
+
+  console.log("로컬스:", posterData);
 
   // 총합계 함수
   const totalFn = () => {
@@ -49,6 +52,7 @@ function BookMark(props) {
     // 합계 금액은 모든 합계 히든 필드 값을 더한다
     // 제이쿼리 forEach는 each((순번,요소)=>{})메서드다
     $(".sum-num2").each((idx, ele) => {
+      
       console.log("값:", $(ele).val());
 
       // 숫자로 변환후 기존값에 더하기함
@@ -144,7 +148,7 @@ function BookMark(props) {
                         5. 슬로건 : 서브 타이틀
                         6. cnt : 전시회 북마크 횟수 합계
                         */}
-                      {posData.map((v, i) => (
+                      {posterData.map((v, i) => (
                         <tr key={i}>
                           {/* 일련번호 */}
                           <td>{i + 1}</td>
@@ -252,22 +256,22 @@ function BookMark(props) {
                                 // confirm()의 "확인" 클릭시 true
                                 if (window.confirm("지우시겠습니까?")) {
                                   console.log("삭제");
-                                  console.log("현재객체", posData);
+                                  console.log("현재객체", posterData);
                                   console.log("지울순번", i);
                                   // splice 자체를 찍으면 지워진 요소가 찍힘
-                                  //console.log("지움",posData.splice(i,1));
+                                  //console.log("지움",posterData.splice(i,1));
 
                                   // 지울 배열 순번은 map()에서 i로 들어옴
-                                  // 지울 배열은 posData임
+                                  // 지울 배열은 posterData임
 
                                   // 데이터 지우기
-                                  posData.splice(i, 1);
+                                  posterData.splice(i, 1);
 
                                   // 데이터 문자화하기 : 변경된 원본을 문자화
-                                  let res = JSON.stringify(posData);
+                                  let res = JSON.stringify(posterData);
 
-                                  // 로컬쓰 "posData"에 반영하기
-                                  localStorage.setItem("posData", res);
+                                  // 로컬쓰 "posterData"에 반영하기
+                                  localStorage.setItem("posterData", res);
 
                                   // 즐겨찾기 리스트 전역 상태 변수 변경
                                   myCon.setLocalsMark(res);
@@ -275,7 +279,7 @@ function BookMark(props) {
                                   // 데이터 갯수가 0이면 즐겨찾기 리스트 상태변수를 flase로 변경하여
                                   // 즐겨찾기 리스트 출력을 없앤다
 
-                                  if (posData.length == 0)
+                                  if (posterData.length == 0)
                                     myCon.setMarkSts(false);
 
                                 } ////// if
