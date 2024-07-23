@@ -79,7 +79,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
     console.log("검색하기:");
     /// 라우터 이동 함수로 이동하기
     // 네비게이트 메서드 (라우터 주소, {state:{보낼 객체}})
-    goPage("search", { state: { keyword: txt } });
+    goPage("searchingArt", { state: { keyword: txt } });
   }; ///////// goSearch ///////////
 
   // 로컬스 북마크 존재여부 변수
@@ -189,39 +189,6 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
           </dCon.Provider>
           {/* 검색 기능 링크 - 클릭시 검색창 보이기 */}
           <a href="#" onClick={showSearch}></a>
-          {
-        /* 회원가입, 로그인 버튼 - 로그인 상태가 null일때 나옴 */
-        loginSts === null && (
-          <>
-            <li>
-              <Link to="/member">회원가입</Link>
-            </li>
-            <li>
-              <Link to="/login">로그인</Link>
-            </li>
-          </>
-        )
-      }
-      {
-        /* 로그인 상태이면 로그아웃 버튼 나옴 */
-        loginSts !== null && (
-          <>
-            <li>
-              <a
-                href="#"
-                onClick={(e) => {
-                  // 기본 이동 막끼
-                  e.preventDefault();
-                  // 로그아웃 처리 함수 호출
-                  logoutFn();
-                }}
-              >
-                로그아웃
-              </a>
-            </li>
-          </>
-        )
-      }
         </section>
       </div>
     </>

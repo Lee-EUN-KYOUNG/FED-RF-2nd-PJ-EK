@@ -4,8 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import FooterArea from "./FooterArea";
 import MainArea from "./MainArea";
 import TopArea from "./TopArea";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 
 //컨텍스트 API 불러오기
 import { dCon } from "../modules/dCon";
@@ -13,11 +12,12 @@ import { dCon } from "../modules/dCon";
 // 제이쿼리
 import $ from "jquery";
 
+// CSS 불러오기
+import "../../css/pivot/top_area.scss";
 
-export default function Layout(){
 
-
-// 상태 관리 변수
+export default function Layout() {
+  // 상태 관리 변수
   // 1. 로그인 상태 관리 변수
   // -> 초기값으로 세션 스토리지 "minfo"를 할당함
   const [loginSts, setLoginSts] = useState(sessionStorage.getItem("minfo"));
@@ -32,7 +32,7 @@ export default function Layout(){
   const [loginMsg, setLoginMsg] = useState(null);
   //console.log(loginMsg);
 
-    // [공통함수]
+  // [공통함수]
   // 1. 라우팅 이동 함수 : 라우터 이동 후크인 useNavigate는 다른 useCallback() 후크로 처리할 수 없다
   // 별도의 함수를 만들고 이것을 콜백 처리해준다
   const goNav = useNavigate();
@@ -69,32 +69,27 @@ export default function Layout(){
     setLoginMsg(null);
     // 4. 메인 페이지로 돌아가기
     goPage("/");
-    //5. 
-  }, []); //////// logoutFn 함수 /////////  
+    //5.
+  }, []); //////// logoutFn 함수 /////////
 
-    //////////// 화면 랜더링 구역 -> 로그인 상태 체크 ///////////
-    useEffect(() => {
-        // 세션스(minfo)의 값이 있으면 null이 아니면 로그인 상태 변수 업데이트
-        // null이 아니면 조건문이 true
-        if (sessionStorage.getItem("minfo")) {
-          // 세션스 변수 할당
-          let ss = sessionStorage.getItem("minfo");
-          // 로그인 상태값
-          setLoginSts(ss);
-          // 로그인 메시지 업데이트 : 세션스값의 unm(이름값)을 보내준다
-          makeMsg(JSON.parse(ss).unm);
-        } ///// if ///////
-        //$.cookie("aa","bb",{expires: 2});
-      }, []);
+  //////////// 화면 랜더링 구역 -> 로그인 상태 체크 ///////////
+  useEffect(() => {
+    // 세션스(minfo)의 값이 있으면 null이 아니면 로그인 상태 변수 업데이트
+    // null이 아니면 조건문이 true
+    if (sessionStorage.getItem("minfo")) {
+      // 세션스 변수 할당
+      let ss = sessionStorage.getItem("minfo");
+      // 로그인 상태값
+      setLoginSts(ss);
+      // 로그인 메시지 업데이트 : 세션스값의 unm(이름값)을 보내준다
+      makeMsg(JSON.parse(ss).unm);
+    } ///// if ///////
+    //$.cookie("aa","bb",{expires: 2});
+  }, []);
 
-
-
-
-
-
-    //// 코드 리턴구역 //////////////
-    return(
-        <dCon.Provider
+  //// 코드 리턴구역 //////////////
+  return (
+    <dCon.Provider
       value={{
         loginSts,
         setLoginSts,
@@ -105,18 +100,50 @@ export default function Layout(){
         loginMsg,
       }}
     >
-           {/* 1.상단영역 */}
-           <TopArea 
-           loginMsg={loginMsg}
-           loginSts={loginSts}
-           logoutFn={logoutFn}
-           goPage={goPage}
-           />
-           {/* 2.메인영역 */}
-           <MainArea />
-           {/* 3.하단영역 */}
-           <FooterArea />
+      {/* 1.상단영역 */}
+      <TopArea
+        loginMsg={loginMsg}
+        loginSts={loginSts}
+        logoutFn={logoutFn}
+        goPage={goPage}
+      />
+      {
+        /* 회원가입, 로그인 버튼 - 로그인 상태가 null일때 나옴 */
+        loginSts === null && (
+          <ul className="log-bxtit">
+            <li className="join-tit">
+              <Link to="/member">회원가입</Link>
+            </li>
+            <li className="login-tit">
+              <Link to="/login">로그인</Link>
+            </li>
+          </ul>
+        )
+      }
+      {
+        /* 로그인 상태이면 로그아웃 버튼 나옴 */
+        loginSts !== null && (
+          <ul className="out-bxtit">
+            <li className="logout-tit">
+              <a
+                href="#"
+                onClick={(e) => {
+                  // 기본 이동 막기
+                  e.preventDefault();
+                  // 로그아웃 처리 함수 호출
+                  logoutFn();
+                }}
+              >
+                로그아웃
+              </a>
+            </li>
+          </ul>
+        )
+      }
+      {/* 2.메인영역 */}
+      <MainArea />
+      {/* 3.하단영역 */}
+      <FooterArea />
     </dCon.Provider>
-    );
-
+  );
 } /////////// Layout /////////////////////

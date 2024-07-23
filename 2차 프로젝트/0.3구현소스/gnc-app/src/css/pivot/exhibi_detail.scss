@@ -149,6 +149,10 @@
   font-size: 1.3rem;
   border: none;
   background-color: #fff;
+  &:hover {
+    color: darkslateblue;
+    font-weight: 600;
+  }
 }
 
 .ex-linkbx {

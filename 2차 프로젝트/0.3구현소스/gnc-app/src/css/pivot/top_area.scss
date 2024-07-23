@@ -1,21 +1,19 @@
-
 .top-area {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    //height: 58px;
-    z-index: 9999;
-    background-color: #fff;
-    text-decoration: none;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  //height: 58px;
+  z-index: 9999;
+  background-color: #fff;
+  text-decoration: none;
+}
 
 .gnb01 {
   // max-width: 1320px;
   //min-width: 800px;
-
 }
-.gnb01>ul {
+.gnb01 > ul {
   display: flex;
   width: 100%;
   align-items: center;
@@ -29,8 +27,8 @@
 
   &:nth-child(1) {
     width: 5%;
-    img{
-      width: min(70px,max(4vw,40px));
+    img {
+      width: min(70px, max(4vw, 40px));
     }
   }
   &:nth-child(2) {
@@ -38,10 +36,86 @@
   }
   &:nth-child(3) {
     width: 15%;
-    font-size: min(30px,2vw);
+    font-size: min(30px, 2vw);
   }
-  
 }
+
+/* 로그인 환영메시지 박스 */
+.logmsg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 로그인, 로그아웃 CSS
+
+.log-bxtit {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 15px;
+  flex-wrap: nowrap;
+  font-size: 1rem;
+  font-family: "PT Serif Caption", serif;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.out-bxtit{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 15px;
+  flex-wrap: nowrap;
+  font-size: 1rem;
+  font-family: "PT Serif Caption", serif;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  margin-right : 15px;
+}
+
+.join-tit a{
+  text-decoration: none;
+
+}
+
+.login-tit a{
+  text-decoration: none;
+}
+
+.join-tit a:hover {
+  color: #007aff;
+  font-weight: bold;
+}
+
+.login-tit a:hover {
+  color: #007aff;
+  font-weight: bold;
+}
+
+.logout-tit a {
+  font-size: 1rem;
+  font-family: "PT Serif Caption", serif;
+  text-decoration: none;
+  color: #000;
+  list-style: none;
+  transition: 0.3s;
+}
+
+.logout-tit a:hover {
+  color: #007aff;
+  font-weight: bold;
+}
+
+
 
 @media screen and (max-width: 1050px) {
   .gnb01 > ul {
@@ -51,9 +125,5 @@
     list-style: none;
     gap: 0 8px;
     box-sizing: border-box;
+  }
 }
-}
-
-
-
-  
