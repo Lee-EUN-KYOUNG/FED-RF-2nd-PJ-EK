@@ -37,9 +37,7 @@ function BookMark(props) {
   const posData = JSON.parse(myCon.localsMark);
 
   // 전체 데이터 갯수
-
   const dataCnt = posData.length;
-  
   console.log("데이터수:", dataCnt);
 
   // 총합계 함수
