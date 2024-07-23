@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 
 // 데이터 불러오기
-import {exData} from '../data/exhibition_data';
+import exData from '../data/exhibition_data';
 import ArtList from '../modules/ArtList';
 import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
@@ -156,16 +156,16 @@ function ExhibiDetail({ dt, setTot, tot }) {
                       console.log("idx 새배열:",newLocals);
       
                         // include 비교
-                        // let retSts = newLocals.includes(gIdx);
+                        //let retSts = newLocals.includes(gIdx);
 
 
-                        
-                        // console.log("중복상태:",retSts);
 
-                        // if(retSts){
-                        //   alert("중복 선택입니다!")
-                        //   return;
-                        // }/////if
+                        //console.log("중복상태:",retSts);
+
+                        //if(retSts){
+                        //  alert("중복 선택입니다!")
+                        //  return;
+                        //}/////if
       
 
 
