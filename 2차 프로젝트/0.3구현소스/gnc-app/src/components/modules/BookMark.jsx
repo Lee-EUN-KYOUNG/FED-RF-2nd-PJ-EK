@@ -25,14 +25,6 @@ function BookMark(props) {
 
   ********************************************************************/
 
-  //let gpos = tot.poster;
-  //let ginfo = tot.전시회;
-  //let gtime = tot.전시기간;
-  //let gtit = tot.슬로건;
-  //let gIdx = tot.idx;
-
-
-
   // 강제 리랜더링을 위한 상태 변수
   // 불린값을 넣어놓고 강제 리랜더링이 필요한경우
   // setForce(!force); 기존 불린값을 반대로 넣어준다
