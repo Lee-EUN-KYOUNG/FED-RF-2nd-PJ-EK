@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 // 데이터 불러오기
 import exData from '../data/exhibition_data';
+import { posterData } from '../data/poster_data_sub';
 import ArtList from '../modules/ArtList';
 import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
@@ -134,13 +135,13 @@ function ExhibiDetail({ dt, setTot, tot }) {
                     onClick={()=>{
 
                       // 1. 로컬스 전시회 데이터에 넣기
-                      if(!localStorage.getItem("exData")){
+                      if(!localStorage.getItem("posterData")){
                         // 로컬스없으면 만들기
-                        localStorage.setItem("exData","[]");
+                        localStorage.setItem("posterData","[]");
                       } ////////////// if
       
                       /// 2. 로컬스 읽어와서 파싱하기;
-                      let locals = localStorage.getItem("exData");
+                      let locals = localStorage.getItem("posterData");
                       locals = JSON.parse(locals);
       
                       // 3. 기존 데이터 중 동일 데이터 거르기
@@ -185,10 +186,10 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
 
                       // 로컬스에 문자화하여 입력하기
-                      localStorage.setItem("exData", JSON.stringify(locals));
+                      localStorage.setItem("posterData", JSON.stringify(locals));
       
                       // 로컬스 즐겨찾기 데이터 상태값 변경
-                      myCon.setLocalsMark(localStorage.getItem("exData"));
+                      myCon.setLocalsMark(localStorage.getItem("posterData"));
                       // 즐겨찾기 리스트 생성 상태값 변경
                       myCon.setMarkSts(true);
                       }}

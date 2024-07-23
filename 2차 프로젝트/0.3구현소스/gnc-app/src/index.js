@@ -11,6 +11,9 @@ import SearchPage from "./components/pages/SearchPage";
 import MainNotice from "./components/pages/MainNotice";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
+import Member from "./components/pages/Member";
+import Login from "./components/pages/Login";
+
 
 // 전체 공통 CSS 불러오기
 import "./css/pivot/index.scss";
@@ -29,6 +32,8 @@ export default function MainComponent() {
           <Route path="CONTACT" element={<Contact />} />
           <Route path="ExhibiDetail" element={<ExhibiDetail />} />
           <Route path="search" element={<SearchPage />} />
+          <Route path="member" element={<Member />} />                                                     
+          <Route path="login" element={<Login />} /> 
         </Route>
       </Routes>
     </BrowserRouter>

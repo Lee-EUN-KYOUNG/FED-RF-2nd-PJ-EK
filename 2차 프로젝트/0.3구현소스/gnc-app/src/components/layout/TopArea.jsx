@@ -9,6 +9,7 @@ import TextBanner from "../modules/HeadLine";
 import {Search} from "../modules/Search";
 import { useContext } from "react";
 import { dCon } from "../modules/dCon";
+import LogPage from "../modules/LogPage";
 
 
 
@@ -42,6 +43,7 @@ export default function TopArea() {
             <li>
               <Search />
             </li>
+            <LogPage/>
           </ul>
         </nav>
       </header>

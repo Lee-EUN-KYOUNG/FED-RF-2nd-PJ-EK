@@ -13,7 +13,8 @@ export const posterData = [
       "전 세계인의 사랑을 받는 캐릭터, 헬로키티의 탄생 50주년을 기념하는 국내 최대 규모의 특별전",
     공식SNS: "@hellokitty50th_ddp",
     poster: "/poster/poster01.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg01.jpg",
+    Type: "Animation",
     URL정보: "http://www.gncmedia.com/ko/exhibition/헬로키티-50주년-특별전",
   },
   {
@@ -28,7 +29,8 @@ export const posterData = [
       "워너브라더스와 공식 협업을 통해 탄생한 100주년 기념 대규모 특별전 - <워너브라더스 100주년 특별전>",
     공식SNS: "@100th_ddp",
     poster: "/poster/poster02.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg02.jpg",
+    Type: "Animation",
     URL정보:
       "http://www.gncmedia.com/ko/exhibition/워너브라더스-100주년-특별전",
   },
@@ -44,7 +46,8 @@ export const posterData = [
       "“더현대서울”과 “퐁피두센터”의 첫 번째 프로젝트! ‘클래식’과 ‘트렌디’의 힙한 만남!",
     공식SNS: "@pompidou_thehyundai_seoul",
     poster: "/poster/poster03.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg03.jpg",
+    Type: "Painting",
     URL정보:
       "http://www.gncmedia.com/ko/exhibition/더현대서울-프랑스국립현대미술관전",
   },
@@ -59,7 +62,8 @@ export const posterData = [
     서브제목: "전 세계적으로 사랑 받고 있는 그래픽 아티스트 '장 줄리앙'",
     공식SNS: "@jeanjullien_ddp",
     poster: "/poster/poster04.jpg",
-    Type : "Design",
+    subimg: "/subimg/subimg04.jpg",
+    Type: "Design",
     URL정보: "http://www.gncmedia.com/ko/exhibition/장-줄리앙",
   },
   {
@@ -74,7 +78,8 @@ export const posterData = [
       "몽환적인 이야기와 기괴한 캐릭터로 세계적인 사랑을 받은 영화 감독 '팀 버튼'",
     공식SNS: "@timburton_ddp",
     poster: "/poster/poster05.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg05.jpg",
+    Type: "Animation",
     URL정보: "http://www.gncmedia.com/ko/exhibition/팀-버튼",
   },
   {
@@ -89,7 +94,8 @@ export const posterData = [
       "살바도르 달리 재단과 7년여간의 공식 협업을 통해 탄생한 국내 최초 대규모 단독 회고전",
     공식SNS: "@dali_ddp",
     poster: "/poster/poster06.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg06.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/살바도르-달리",
   },
   {
@@ -104,7 +110,8 @@ export const posterData = [
       "국내 최대 규모를 자랑하는 한화 아쿠아플라넷 제주의 미니언즈 특별전",
     공식SNS: " ",
     poster: "/poster/poster07.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg07.jpg",
+    Type: "Animation",
 
     URL정보: "http://www.gncmedia.com/ko/exhibition/미니언즈-제주-특별전",
   },
@@ -120,7 +127,8 @@ export const posterData = [
       "르네 마그리트 Rene Magritte - 20세기 최고의 화가, 초현실주의 거장",
     공식SNS: " ",
     poster: "/poster/poster08.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg08.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/르네-마그리트-특별전",
   },
   {
@@ -135,7 +143,8 @@ export const posterData = [
       "인사센트럴뮤지엄 개관전: 국내 최초 사상 최대 규모의 <미니언즈 특별전>",
     공식SNS: " ",
     poster: "/poster/poster09.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg09.jpg",
+    Type: "Animation",
     URL정보: "http://www.gncmedia.com/ko/exhibition/미니언즈-특별전",
   },
   {
@@ -150,7 +159,8 @@ export const posterData = [
       "미키 마우스와 겨울왕국까지 온 가족, 모든 세대가 즐길 수 있는 디즈니 아트 전시!",
     공식SNS: " ",
     poster: "/poster/poster10.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg10.jpg",
+    Type: "Animation",
     URL정보: "http://www.gncmedia.com/ko/exhibition/디즈니-애니메이션-특별전",
   },
   {
@@ -164,7 +174,8 @@ export const posterData = [
     서브제목: "키스 해링(Keith Haring) - 예술은 삶, 삶은 곧 예술이다.",
     공식SNS: " ",
     poster: "/poster/poster11.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg11.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/키스해링",
   },
   {
@@ -177,7 +188,8 @@ export const posterData = [
     서브제목: "세계적인 팝 아티스트 카우스(KAWS) 첫 플로팅 프로젝트 ",
     공식SNS: " ",
     poster: "/poster/poster12.jpg",
-    Type : "Design",
+    subimg: "/subimg/subimg12.jpg",
+    Type: "Design",
     URL정보: "http://www.gncmedia.com/ko/exhibition/카우스",
   },
   {
@@ -192,7 +204,8 @@ export const posterData = [
       "예술은 과학 기술의 발전을 이끌고, 과학 기술은 예술에 영감을 불어넣는다.",
     공식SNS: " ",
     poster: "/poster/poster13.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg13.jpg",
+    Type: "Animation",
     URL정보: "http://www.gncmedia.com/ko/exhibition/픽사-애니메이션",
   },
   {
@@ -207,7 +220,8 @@ export const posterData = [
       "한불수교 130주년 기념 - 프랑스 국립 오르세미술관 : 밀레의 꿈, 고흐의 열정",
     공식SNS: " ",
     poster: "/poster/poster14.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg14.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/오르세미술관-2",
   },
   {
@@ -221,7 +235,8 @@ export const posterData = [
     서브제목: "드림웍스 애니메이션 특별전",
     공식SNS: " ",
     poster: "/poster/poster15.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg15.jpg",
+    Type: "Animation",
     URL정보: "http://www.gncmedia.com/ko/exhibition/드림웍스-애니메이션-특별전",
   },
   {
@@ -234,7 +249,8 @@ export const posterData = [
     서브제목: "삶의 행복을 찾아 세계를 여행하는 월리 WALLY,  서울에 도착하다.",
     공식SNS: " ",
     poster: "/poster/poster16.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg16.jpg",
+    Type: "Animation",
     URL정보: "http://www.gncmedia.com/ko/exhibition/월리를-찾아라",
   },
   {
@@ -248,7 +264,8 @@ export const posterData = [
     서브제목: "독창적인 작품세계를 완성시킨 완벽주의자 : 스탠리 큐브릭",
     공식SNS: " ",
     poster: "/poster/poster17.jpg",
-    Type : "Design",
+    subimg: "/subimg/subimg17.jpg",
+    Type: "Design",
     URL정보:
       "http://www.gncmedia.com/ko/exhibition/스탠리-큐브릭-stanley-kubrick",
   },
@@ -264,7 +281,8 @@ export const posterData = [
       "근대 도시 파리의 삶과 예술 : 화가들의 숨결과 동시대 예술의 수도, 근대 도시 파리",
     공식SNS: " ",
     poster: "/poster/poster18.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg18.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/오르세미술관-1",
   },
   {
@@ -278,7 +296,8 @@ export const posterData = [
     서브제목: "놀이처럼 예술을 즐기는 아트플레이어, 마리스칼 (Mariscal)",
     공식SNS: " ",
     poster: "/poster/poster19.jpg",
-    Type : "Design",
+    subimg: "/subimg/subimg19.jpg",
+    Type: "Design",
     URL정보: "http://www.gncmedia.com/ko/exhibition/마리스칼-mariscal",
   },
   {
@@ -293,7 +312,8 @@ export const posterData = [
       "상단표기'뉴욕현대미술관 MoMA' 과 글로벌 파트너십으로 탄생한 아시아 최초 프로젝트 ",
     공식SNS: " ",
     poster: "/poster/poster20.jpg",
-    Type : "Animation",
+    subimg: "/subimg/subimg20.jpg",
+    Type: "Animation",
     URL정보: "http://www.gncmedia.com/ko/exhibition/팀-버튼-tim-burton",
   },
   {
@@ -308,7 +328,8 @@ export const posterData = [
       "대형 조각과 회화 및 기원전 10세기경 고대 유물을 통해 만나는 루브르의 신화",
     공식SNS: " ",
     poster: "/poster/poster21.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg21.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/루브르박물관",
   },
   {
@@ -321,7 +342,8 @@ export const posterData = [
     서브제목: "전세계 사람들이 가장 사랑하는 서양미술사의 시대와 만나다!",
     공식SNS: " ",
     poster: "/poster/poster22.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg22.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/오르세미술관",
   },
   {
@@ -334,7 +356,8 @@ export const posterData = [
     서브제목: "아시아 최초 프랑스 왕실의 국보급 회화 작품 및 유물 전시",
     공식SNS: " ",
     poster: "/poster/poster23.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg23.jpg",
+    Type: "Painting",
     URL정보:
       "http://www.gncmedia.com/ko/exhibition/프랑스-국립-베르사이유-특별전",
   },
@@ -348,7 +371,8 @@ export const posterData = [
     서브제목: "국내 최초로 소개되는 18~19세기 영국 낭만주의 회화",
     공식SNS: " ",
     poster: "/poster/poster24.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg24.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/영국-근대-회화전",
   },
   {
@@ -362,7 +386,8 @@ export const posterData = [
       "세계 최고의 현대미술관, 프랑스 국립 퐁피두센터 국내 최초 전시 개최",
     공식SNS: " ",
     poster: "/poster/poster25.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg25.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/퐁피두센터-특별전",
   },
   {
@@ -375,7 +400,8 @@ export const posterData = [
     서브제목: "한·불 수교 120주년 기념 국내 최초 루브르박물관 전시 개최",
     공식SNS: " ",
     poster: "/poster/poster26.jpg",
-    Type : "Painting",
+    subimg: "/subimg/subimg26.jpg",
+    Type: "Painting",
     URL정보: "http://www.gncmedia.com/ko/exhibition/루브르박물관전",
   },
 ];

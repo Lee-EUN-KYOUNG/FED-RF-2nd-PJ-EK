@@ -7,11 +7,15 @@ import "../../css/pivot/searching_art.scss";
 // 데이터 불러오기
 import { Link } from "react-router-dom";
 
+import {posterData} from "../data/poster_data_sub.js";
 
 
 
-function SearchingArt({ dt}) {
+
+function SearchingArt() {
     /// dt -  검색된 배열 데이터, total - 검색된 배열 데이터 개수
+
+  const dt = posterData.length;
 
   const total = dt.length;
   console.log("데이터수:",total);
@@ -25,8 +29,8 @@ function SearchingArt({ dt}) {
             {dt.map((v, i) => (
               <li key={i}>
                 <Link to="/EXHIBITION">
-                  <img src={process.env.PUBLIC_URL+v.subimg} alt={v.mexhibi} />
-                  <h3>{v.mexhibi}</h3>
+                  <img src={process.env.PUBLIC_URL+v.subimg} alt={v.전시회} />
+                  <h3>{v.전시회}</h3>
                 </Link>
               </li>
             ))}
@@ -38,8 +42,7 @@ function SearchingArt({ dt}) {
         total == 0 && (
           // 데이터 없으면 출력할 코드
           <h2 style={{ textAlign: "center" }}>
-            Sorry, we don't have any matches for that. But there's plenty more
-            to see on DC!
+            해당 전시회가 없습니다. 다시 검색해주세요!
           </h2>
         )
       }
