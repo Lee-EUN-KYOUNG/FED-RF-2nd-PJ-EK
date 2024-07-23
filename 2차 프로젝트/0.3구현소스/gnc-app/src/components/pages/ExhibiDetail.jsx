@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 
 // 데이터 불러오기
-import exData from '../data/exhibition_data';
+import {exData} from '../data/exhibition_data';
 import ArtList from '../modules/ArtList';
 import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
@@ -36,10 +36,10 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
   // 전시회 정보 개별 셋업
   //let gpos = tot.poster;
-  let ginfo = tot.전시회;
-  let gtime = tot.전시기간;
-  let gtit = tot.슬로건;
-  let gIdx = tot.idx;
+  // let ginfo = tot.전시회;
+  // let gtime = tot.전시기간;
+  // let gtit = tot.슬로건;
+  // let gIdx = tot.idx;
 
 
   // 도착페이지 파라미터 받기
@@ -134,13 +134,13 @@ function ExhibiDetail({ dt, setTot, tot }) {
                     onClick={()=>{
 
                       // 1. 로컬스 전시회 데이터에 넣기
-                      if(!localStorage.getItem("posData")){
+                      if(!localStorage.getItem("exData")){
                         // 로컬스없으면 만들기
-                        localStorage.setItem("posData","[]");
+                        localStorage.setItem("exData","[]");
                       } ////////////// if
       
                       /// 2. 로컬스 읽어와서 파싱하기;
-                      let locals = localStorage.getItem("posData");
+                      let locals = localStorage.getItem("exData");
                       locals = JSON.parse(locals);
       
                       // 3. 기존 데이터 중 동일 데이터 거르기
@@ -156,49 +156,41 @@ function ExhibiDetail({ dt, setTot, tot }) {
                       console.log("idx 새배열:",newLocals);
       
                         // include 비교
-                        let retSts = newLocals.includes(gIdx);
+                        // let retSts = newLocals.includes(gIdx);
 
 
+                        
+                        // console.log("중복상태:",retSts);
 
-                        console.log("중복상태:",retSts);
-
-                        if(retSts){
-                          alert("중복 선택입니다!")
-                          return;
-                        }/////if
+                        // if(retSts){
+                        //   alert("중복 선택입니다!")
+                        //   return;
+                        // }/////if
       
 
 
                       // 4. 로칼스에 객체 데이터 추가하기
-                      locals.push({
-                        idx: gIdx,
-                        info: ginfo,
-                        time: gtime,
-                        tit : gtit,
-                        //poster : gpos,
-                      });
+                      //locals.push({
+                      //  idx: gIdx,
+                      //  info: ginfo,
+                      //  time: gtime,
+                      //  tit : gtit,
+                      //  poster : gpos,
+                      //});
       
-                      // let res = dt.find(v=>{
-                      //   if(
-                      //     v.gpos==gpos)
-                      //     return true;
-                      // }); /////////// find
-                      // 상품 상세 모듈 전달 상태 변수 변경하기
-                      // setTot(res);
+
+
+                       
 
 
 
                       // 로컬스에 문자화하여 입력하기
-                      localStorage.setItem("posData", JSON.stringify(locals));
+                      localStorage.setItem("exData", JSON.stringify(locals));
       
-                      // 로컬스 카트 데이터 상태값 변경
-                      myCon.setLocalsMark(localStorage.getItem("posData"));
-                      // 카트 리스트 생성 상태값 변경
+                      // 로컬스 즐겨찾기 데이터 상태값 변경
+                      myCon.setLocalsMark(localStorage.getItem("exData"));
+                      // 즐겨찾기 리스트 생성 상태값 변경
                       myCon.setMarkSts(true);
-
-
-
-
                       }}
                     >
                       즐겨찾기

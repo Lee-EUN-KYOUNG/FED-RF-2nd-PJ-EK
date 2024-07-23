@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import { memo } from "react";
 import { useNavigate } from "react-router-dom";
 import BookMark from "./BookMark";
-
-
+import { exData } from '../data/exhibition_data_sub';
 // 제이쿼리
 import $ from "jquery";
 
@@ -13,18 +12,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
+
 //컨텍스트 API 불러오기
 import { dCon } from "./dCon";
 
 //CSS 불러오기
 import "../../css/pivot/_search.scss";
 
-
-
 //////////////////////////// 컴포넌트 구역
 export const Search = memo(() => {
+
+
+  const [tot, setTot] = useState(exData[0]);
+
+
+
   const goPage = useNavigate();
-  
+
   const addOn = (e) => {
     document.querySelector(".gnb02").classList.add("on");
     document.querySelector(".gnb02 input").focus();
@@ -53,7 +57,7 @@ export const Search = memo(() => {
   // 2. 검색창에 엔터키 누르면 검색함수 호출
   const enterKey = (e) => {
     // e.keyCode는 숫자, e.key문자로 리턴함
-    console.log(e.key,e.keyCode);
+    console.log(e.key, e.keyCode);
     if (e.key == "Enter") {
       // 입력창의 입력값 읽어오기 : val()사용
       let txt = $(e.target).val().trim();
@@ -64,7 +68,7 @@ export const Search = memo(() => {
         // $(e.target).val("").parent().hide();
         // 검색 보내기
         goSearch(txt);
-        console.log("검색내보내기",goSearch);
+        console.log("검색내보내기", goSearch);
       } /// if ///
     } //// if ////
   }; //////// enterkey 함수
@@ -77,24 +81,22 @@ export const Search = memo(() => {
     goPage("search", { state: { keyword: txt } });
   }; ///////// goSearch ///////////
 
-
   // 로컬스 북마크 존재여부 변수
   let markTemp = false;
 
   // 로컬스 카트 데이터 상태변수
-  const [localsMark,setLocalsMark] = 
-  useState(localStorage.getItem("exData"));
+  const [localsMark, setLocalsMark] = useState(
+    localStorage.getItem("posterData")
+  );
 
   //로컬스 북마크 데이터 존재 여부에 따라 상태값 변경
-  if(localsMark){
-
+  if (localsMark) {
     // 데이터가 있으면 markTemp값 true로 업데이트
     // 데이터 개수가 0이 아니어야함
     let markCnt = JSON.parse(localsMark).length;
-    console.log("북마크 데이터수:",markCnt);
-    if(markCnt > 0) markTemp = true;
+    console.log("북마크 데이터수:", markCnt);
+    if (markCnt > 0) markTemp = true;
   }
-
 
   // 상태 관리 변수 셋팅
   // 1. 페이지 변경 상태 변수
@@ -103,8 +105,7 @@ export const Search = memo(() => {
   // 2. 카트 리스트 사용 여부 = true일때 사용
   const [markSts, setMarkSts] = useState(markTemp);
 
-
-   /******************************************************************** 
+  /******************************************************************** 
   
                     [컨텍스트 API 공개 변수들]
     1. setPgName :  페이지 이름 셋팅
@@ -113,9 +114,6 @@ export const Search = memo(() => {
     4. localsMark : 로컬스 카트 데이터 변수
 
   ********************************************************************/
-
-
-
 
   // 코드리턴구역 //////////////
   return (
@@ -138,7 +136,7 @@ export const Search = memo(() => {
                   if (stxt.trim() != "") {
                     // 검색하기
                     goSearch(stxt);
-                  } 
+                  }
                   //else {
                   //  // 검색어 비었을때 메시지
                   //  alert("Please enter a search term!");
@@ -157,27 +155,37 @@ export const Search = memo(() => {
             </li>
           </ul>
 
-              {/* 북마크 버튼 */}
-          <dCon.Provider value={{setPgName, setMarkSts, setLocalsMark, localsMark}}>    
-          <ul className="gnb03">
-            <li>
-              <FontAwesomeIcon
-                icon={faBookmark}
-                size="2xs"
-                style={{ color: "#023388" }}
-                onClick={(e) => {
-                  // 기본 이동 막기
-                  e.preventDefault();
-                  $("#marklist").show();
-                }}
-              />
-              <BookMark/>
-            </li>
-          </ul>
-          </dCon.Provider>     
+          {/* 북마크 버튼 */}
+          <dCon.Provider
+            value={{ setPgName, setMarkSts, setLocalsMark, localsMark }}
+          >
+            <ul className="gnb03">
+              <li>
+                <FontAwesomeIcon
+                  icon={faBookmark}
+                  size="2xs"
+                  style={{ color: "#023388" }}
+                  onClick={(e) => {
+                    // 기본 이동 막기
+                    e.preventDefault();
+                    $("#marklist").show();
+                  }}
+                />
+                {markSts && (
+                  <BookMark
+                    // 전시회 토탈 정보
+                    tot={tot}
+                    // dt 전체 데이터 (한줄 리스트 때문)
+                    dt={exData}
+                    // 한줄 리스트 클릭시 변경
+                    setTot={setTot}
+                  />
+                )}
+              </li>
+            </ul>
+          </dCon.Provider>
           {/* 검색 기능 링크 - 클릭시 검색창 보이기 */}
-          <a href="#" onClick={showSearch}>
-          </a>
+          <a href="#" onClick={showSearch}></a>
         </section>
       </div>
     </>
