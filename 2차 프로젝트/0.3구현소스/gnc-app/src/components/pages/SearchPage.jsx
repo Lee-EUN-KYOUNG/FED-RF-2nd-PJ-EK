@@ -4,7 +4,7 @@ import Searching from '../modules/Searching';
 
 
 /// 라우터 전달 변수값을 받기 위해 useLocation을 불러옴
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 function SearchPage() {
@@ -20,8 +20,21 @@ function SearchPage() {
     return (
         <>
             <h1 className='tit'>
-                Search Result
+                전시회 리스트 (Search Result)
             </h1>
+            <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "darkpurple",
+            fontFamily: "Noto Sans KR",
+            fontWeight: "700",
+            fontSize: "1.2rem",
+            marginLeft: "25px",
+          }}
+        >
+          ← 뒤로가기
+        </Link>
             <Searching kword={keyword}/>
         </>
     );

@@ -4,6 +4,7 @@
 h1.tit{
   font-size: 2rem;
   text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 검색입력창 박스 */
@@ -16,12 +17,13 @@ h1.tit{
 
 .restit {
   font-size: min(30px, 4vw);
-  margin: 10px;
+  margin: 22px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 검색박스 */
 .schbx {
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "PT Sans", sans-serif;
   display: flex;
   max-width: 1320px;
   min-height: 600px;
