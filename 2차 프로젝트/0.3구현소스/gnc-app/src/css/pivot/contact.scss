@@ -30,17 +30,17 @@
 }
 
 .compa-info > h2 {
-    font-size: 1.3rem;
-    margin-top: 35px;
-    margin-left: 20%;
-    line-height: 2;
-    &::after {
-        content: "";
-        display: block;
-        height: 1px;
-        margin-top: 20px;
-        background-color: #e2e2e2;
-      }
+  font-size: 1.3rem;
+  margin-top: 35px;
+  margin-left: 20%;
+  line-height: 2;
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: 20px;
+    background-color: #e2e2e2;
+  }
 }
 
 .compa-info > h3 {
@@ -51,10 +51,10 @@
 }
 
 .compa-info > h4 {
-font-size: 1.4rem;
-float: right;
-margin-right: 10%;
-&::before {
+  font-size: 1.4rem;
+  float: right;
+  margin-right: 10%;
+  &::before {
     content: "";
     display: block;
     height: 1px;

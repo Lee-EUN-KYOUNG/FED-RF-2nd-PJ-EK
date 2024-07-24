@@ -22,7 +22,6 @@
   text-align: center;
 }
 
-
 .notice-bar > h1 {
   display: flex;
   margin-left: 10px;
@@ -34,7 +33,6 @@
 .notice-main {
   //position: relative;
   display: flex;
-  
 }
 
 .notice-main > h2 {
@@ -50,10 +48,7 @@
   display: flex;
   list-style: none;
   align-items: center;
-
 }
-
-
 
 .notice-text > a {
   //max-width: 63.3vw;
@@ -89,7 +84,7 @@
   box-sizing: border-box;
 } */
 
-.intro-imgtbox> h1 {
+.intro-imgtbox > h1 {
   position: absolute;
   border: 0.2rem solid lightcoral;
   border-radius: 100%;
@@ -97,7 +92,7 @@
   //border-width: 100%;
   font-family: "Gowun Dodum", sans-serif;
   font-size: 1.8rem;
-  text-shadow: 1px 1px 1px  #000000;
+  text-shadow: 1px 1px 1px #000000;
   color: #ffff;
   text-align: center;
   left: 50%;
@@ -108,33 +103,30 @@
 
 //////////////////////// 미디어 쿼리 영역 ///////////////////
 @media screen and (max-width: 1390px) {
-
   .notice-main > h2 {
-     width: 7vw;
-     font-family: "PT Sans", sans-serif;
-     font-style: italic;
-     color: rgb(181, 29, 29);
-     font-size: 1.6rem;
-     text-align: center;
- }
- }
+    width: 7vw;
+    font-family: "PT Sans", sans-serif;
+    font-style: italic;
+    color: rgb(181, 29, 29);
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
 
-
- @media screen and (max-width: 360px) {
-
+@media screen and (max-width: 360px) {
   .notice-box {
     position: relative;
     width: 60.5%;
     list-style: none;
     border: 0.1rem solid #000000;
-}
+  }
 
-.notice-main {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-}
+  .notice-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 
   notice-main > h2 {
     width: 1vw;
@@ -143,63 +135,55 @@
     color: rgb(181, 29, 29);
     font-size: 1.1rem;
     text-align: center;
+  }
+
+  .notice-bar > h1 {
+    display: flex;
+    margin-left: 10px;
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-size: 0.8rem;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .notice-main > h2 {
+    width: 17vw;
+    font-family: "PT Sans", sans-serif;
+    font-style: italic;
+    color: rgb(181, 29, 29);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .notice-text > a {
+    font-size: 0.7rem;
+    text-align: left;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+  }
+  .intro-page {
+    position: relative;
+    top: 55px;
+    height: calc(100% - 40px);
+  }
+
+  .intro-imgtbox > h1 {
+    position: absolute;
+    border: 0.2rem solid lightcoral;
+    border-radius: 100%;
+    box-sizing: content-box;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 1rem;
+    text-shadow: 1px 1px 1px #000000;
+    color: white;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    bottom: 7.5vw;
+  }
 }
-
-
-.notice-bar > h1 {
-  display: flex;
-  margin-left: 10px;
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-size: 0.8rem;
-  flex-direction: row;
-  text-align: center;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
-.notice-main > h2 {
-  width: 17vw;
-  font-family: "PT Sans", sans-serif;
-  font-style: italic;
-  color: rgb(181, 29, 29);
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.notice-text > a {
-  font-size: 0.7rem;
-  text-align: left;
-  font-family: "Gowun Dodum", sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000;
-}
-.intro-page {
-  position: relative;
-  top: 55px;
-  height: calc(100% - 40px);
-}
-
-
-.intro-imgtbox > h1 {
-  position: absolute;
-  border: 0.2rem solid lightcoral;
-  border-radius: 100%;
-  box-sizing: content-box;
-  font-family: "Gowun Dodum", sans-serif;
-  font-size: 1rem;
-  text-shadow: 1px 1px 1px #000000;
-  color: white;
-  text-align: center;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  bottom: 7.5vw;
-
-}
-
-
-
-
-
- }

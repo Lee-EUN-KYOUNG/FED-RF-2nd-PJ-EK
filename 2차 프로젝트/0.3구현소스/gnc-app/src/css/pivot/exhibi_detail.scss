@@ -186,7 +186,6 @@
 
 /////////////////////////////// 미디어 쿼리 ///////////////////
 @media screen and (max-width: 1650px) {
-
   .Sub-Swiper {
     width: 1300px;
   }
@@ -201,106 +200,100 @@
     align-items: flex-start;
     justify-content: flex-start;
     align-content: stretch;
-}  
+  }
   .ex-mtit h2 {
     font-size: 1.5rem;
     font-family: "Gowun Dodum", sans-serif;
     line-height: 1.8;
-}
+  }
 
-.ex-mtit h3 {
+  .ex-mtit h3 {
     font-size: 1rem;
     font-family: "Gowun Dodum", sans-serif;
     line-height: 1.6;
-}
-.exdesc-sub > h2 {
-  font-size: 1rem;
-  line-height: 1.5;
-  font-family: "Gowun Dodum", sans-serif;
-  width: 25vw;
-  margin-left: 10px;
-  text-align: left;
-  font-weight: 500;
-}
-.sub-title h2 {
-  font-family: "Gowun Dodum", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  font-weight: 600;
-}
+  }
+  .exdesc-sub > h2 {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Gowun Dodum", sans-serif;
+    width: 25vw;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: 500;
+  }
+  .sub-title h2 {
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+  }
 
-.main-subtit h3 {
-  font-family: "Gowun Dodum", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: left;
-  font-weight: 300;
-}
-.main-exdesc {
-  display: flex;
-  max-width: 345px;
-  margin-left: auto;
-  margin-right: auto;
-  /* height: 39vh; */
-  align-content: flex-end;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.main-subtit {
-  float: right;
-  width: 30vw;
-}
+  .main-subtit h3 {
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: 300;
+  }
+  .main-exdesc {
+    display: flex;
+    max-width: 345px;
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 39vh; */
+    align-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .main-subtit {
+    float: right;
+    width: 30vw;
+  }
 
-.exhibi-box {
-  display: flex;
-  margin-left: 1%;
-  gap: 0 7px;
-  margin-top: 0.5vh;
-  flex-direction: row;
+  .exhibi-box {
+    display: flex;
+    margin-left: 1%;
+    gap: 0 7px;
+    margin-top: 0.5vh;
+    flex-direction: row;
+  }
 }
-
-}
-
 
 @media screen and (max-width: 1098px) {
-
-
-
   .Sub-Swiper {
     width: 1050px !important;
   }
 
   .sub-title {
     width: 25vw;
-}
-    .main-subtit h3 {
-        font-family: "Gowun Dodum", sans-serif;
-        font-size: 0.85rem;
-        line-height: 1.7;
-        text-align: left;
-        font-weight: 300;
-    }
-    .main-subtit h3 {
-      font-family: "Gowun Dodum", sans-serif;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      text-align: left;
-      font-weight: 300;
+  }
+  .main-subtit h3 {
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    text-align: left;
+    font-weight: 300;
+  }
+  .main-subtit h3 {
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: 300;
   }
 
-.exdesc-sub > h2 {
-      font-size: 0.9rem;
-      line-height: 1.5;
-      font-family: "Gowun Dodum", sans-serif;
-      width: 25vw;
-      margin-left: 10px;
-      text-align: left;
-      font-weight: 500;
+  .exdesc-sub > h2 {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-family: "Gowun Dodum", sans-serif;
+    width: 25vw;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: 500;
   }
- 
-}  
+}

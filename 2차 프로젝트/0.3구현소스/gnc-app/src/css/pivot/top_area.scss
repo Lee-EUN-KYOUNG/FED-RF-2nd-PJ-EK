@@ -67,7 +67,7 @@
 
 /* 회원가입 */
 
-.join-tit{
+.join-tit {
   border-radius: 25px;
   padding: 4px 18px;
   background-color: #fff;
@@ -77,10 +77,9 @@
   border: 1px solid #000;
 }
 
-.join-tit a{
+.join-tit a {
   text-decoration: none;
   color: #000;
-  
 }
 
 .join-tit a:hover {
@@ -90,7 +89,7 @@
 
 /* 로그인 */
 
-.login-tit{
+.login-tit {
   border-radius: 25px;
   padding: 4px 18px;
   background-color: #fff;
@@ -98,14 +97,13 @@
   font-weight: 100;
   cursor: pointer;
   border: 1px solid #000;
-  margin-right : 15px;
+  margin-right: 15px;
 }
 
-.login-tit a{
+.login-tit a {
   text-decoration: none;
   color: #000;
 }
-
 
 .login-tit a:hover {
   color: #007aff;
@@ -113,7 +111,7 @@
 }
 
 /* 로그아웃 */
-.out-bxtit{
+.out-bxtit {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -127,10 +125,10 @@
   color: #000;
   transition: 0.3s;
   margin-bottom: 10px;
-  margin-right : 15px;
+  margin-right: 15px;
 }
 
-.logout-tit{
+.logout-tit {
   border-radius: 25px;
   padding: 4px 18px;
   background-color: #fff;
@@ -154,9 +152,8 @@
   font-weight: bold;
 }
 
-
 ////////////////////// 미디어 쿼리
-/// 
+///
 @media screen and (max-width: 1050px) {
   .gnb01 > ul {
     display: flex;
@@ -168,61 +165,43 @@
   }
 }
 
-
 @media screen and (max-width: 360px) {
-
-
   .gnb01 > ul > li:nth-child(1) {
     width: 10%;
-}
+  }
 
-.gnb01 > ul {
-  display: flex;
-        width: 100%;
-        align-items: center;
-        list-style: none;
-        gap: 0 8px;
-        box-sizing: border-box;
-        flex-direction: row;
+  .gnb01 > ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    gap: 0 8px;
+    box-sizing: border-box;
+    flex-direction: row;
+  }
 
-}
+  .out-bxtit {
+    margin-top: -20px;
+  }
+  .logout-tit {
+    padding: 2px 10px;
+  }
 
-.out-bxtit {
-  margin-top: -20px;
-}
-.logout-tit{
-  padding: 2px 10px;
-}
+  .logout-tit a {
+    font-size: 0.85em;
+  }
 
-.logout-tit a {
-  font-size: 0.85em
-};
-
-
-.join-tit{
-  margin-top: -20px;
-  padding: 2px 10px;
-}
-.join-tit a{
-  font-size: 0.85em
-}
-.login-tit{
-  padding: 2px 10px;
-}
-.login-tit a{
-  font-size: 0.85em
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .join-tit {
+    margin-top: -20px;
+    padding: 2px 10px;
+  }
+  .join-tit a {
+    font-size: 0.85em;
+  }
+  .login-tit {
+    padding: 2px 10px;
+  }
+  .login-tit a {
+    font-size: 0.85em;
+  }
 }

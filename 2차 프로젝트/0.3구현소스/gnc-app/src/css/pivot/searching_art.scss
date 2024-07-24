@@ -4,29 +4,29 @@
   gap: 0px 13px;
   flex-wrap: wrap;
   flex-direction: column;
-  }
-  .clist li {
-    width: 24%;
-    aspect-ratio: 1/2;
-    text-align: center;
-  }
-  /* 캐릭터 이미지 */
-  .clist li img {
-      width: 50vw;
-      height: 30vh;
-      object-fit: contain;
-  }
+}
+.clist li {
+  width: 24%;
+  aspect-ratio: 1/2;
+  text-align: center;
+}
+/* 캐릭터 이미지 */
+.clist li img {
+  width: 50vw;
+  height: 30vh;
+  object-fit: contain;
+}
 
-  .clist li a {
-    text-decoration: none;
-    color: #000;
-  }
+.clist li a {
+  text-decoration: none;
+  color: #000;
+}
 
-  /* 캐릭터 이름 */
-  .clist li h3 {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: min(30px, 2.7vw);
-    white-space: nowrap;
-    padding: 17px;
-    margin-left : 20vw;
+/* 캐릭터 이름 */
+.clist li h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: min(30px, 2.7vw);
+  white-space: nowrap;
+  padding: 17px;
+  margin-left: 20vw;
 }

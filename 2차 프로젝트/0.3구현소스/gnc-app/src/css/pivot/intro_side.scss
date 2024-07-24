@@ -17,8 +17,7 @@
   box-sizing: border-box;
 }
 
-
-.new-poster>img{
+.new-poster > img {
   width: 150%;
 }
 
@@ -53,7 +52,7 @@
   border: 0.13rem ridge #f7e3e3a9;
   line-height: 1.7vw;
   &.on::after {
-    content: 'NEW!';
+    content: "NEW!";
     font-family: "PT Sans", sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
@@ -71,9 +70,8 @@
     font-size: 1.55rem;
     font-weight: bold;
     text-align: center;
+  }
 }
-}
-
 
 @media screen and (max-width: 1300px) {
   .GNB-CT {
@@ -87,33 +85,28 @@
   }
 }
 
-
-
 @media screen and (max-width: 1250px) {
-
   .GNB-BAR > li.on::after {
     font-size: 1rem;
     margin: 3.5px;
-}
+  }
 
   .GNB-CT {
     font-size: 1.2rem;
-}
+  }
 }
 
 @media screen and (max-width: 1050px) {
   .GNB-CT {
     font-size: 1rem;
-}
+  }
 
-.GNB-BAR {
-  font-size: 1.2rem;
-}
-
+  .GNB-BAR {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 360px) {
-
   .new-poster {
     aspect-ratio: 1 / 1.1;
     border: 0.5rem solid white;
@@ -121,35 +114,26 @@
     background-repeat: no-repeat;
     background-size: contain;
     box-sizing: border-box;
-}
+  }
 
-.Gnb-Menu {
-  line-height: 4vw;
-}
-.GNB-CT {
-  font-size: 0.8rem;
-}
+  .Gnb-Menu {
+    line-height: 4vw;
+  }
+  .GNB-CT {
+    font-size: 0.8rem;
+  }
 
-.GNB-BAR {
-  font-size: 0.6rem;
-}
+  .GNB-BAR {
+    font-size: 0.6rem;
+  }
 
-.GNB-BAR > li {
-  padding-left: 9px;
-  border: 0.2rem ridge rgb(248 248 248 / 66%);
-  line-height: 4vw;
-}
-.GNB-BAR > li.on::after {
-  font-size: 0.8rem;
-  margin: 1.5px;
-}
-
-
-
-
-
-
-
-
-
+  .GNB-BAR > li {
+    padding-left: 9px;
+    border: 0.2rem ridge rgb(248 248 248 / 66%);
+    line-height: 4vw;
+  }
+  .GNB-BAR > li.on::after {
+    font-size: 0.8rem;
+    margin: 1.5px;
+  }
 }

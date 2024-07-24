@@ -174,7 +174,6 @@
 
 /////////////////////////////////////// 미디어 쿼리
 @media screen and (max-width: 1560px) {
-
   .art-main .banner-area {
     position: relative;
     width: 45%;
@@ -188,11 +187,9 @@
     font-size: 1.15rem;
     font-weight: bold;
   }
-
 }
 
 @media screen and (max-width: 1500px) {
-  
   .art-main .banner-area {
     width: 45%;
   }
@@ -257,26 +254,24 @@
   }
 }
 
-
 @media screen and (max-width: 1450px) {
   .underline-area ul li {
     left: 30px;
   }
 }
 
-
 @media screen and (max-width: 1390px) {
   .art-box {
-          padding-top: 180px;
-      }
-      .underline-area ul li {
-        left: 20px;
-    }
-.underline-area ul li h2 {
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
+    padding-top: 180px;
   }
+  .underline-area ul li {
+    left: 20px;
+  }
+  .underline-area ul li h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}
 
 @media screen and (max-width: 1360px) {
   .underline-area ul li {
@@ -457,82 +452,63 @@
   }
 }
 
-
 @media screen and (max-width: 360px) {
   .headbox {
     width: 45vw;
-}
+  }
 
-.headbox .text-track {
-  position: absolute;
-  top: 45%;
-  left: 91%;
-  white-space: nowrap;
-  will-change: transform;
-  animation: marquee 20s linear infinite;
-}
+  .headbox .text-track {
+    position: absolute;
+    top: 45%;
+    left: 91%;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 20s linear infinite;
+  }
 
-.content {
-  font-family: "Gowun Dodum", sans-serif;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #000;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-  margin: -10px 0;
-  text-align: center;
-}
+  .content {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    margin: -10px 0;
+    text-align: center;
+  }
 
-.gnb01 > ul > li:nth-child(2) {
-  width: 45%;
-}
+  .gnb01 > ul > li:nth-child(2) {
+    width: 45%;
+  }
 
-.gnb01 > ul > li:nth-child(3) {
-  width: 20%;
-  font-size: min(21px, 20vw);
-}
-.searchbox .search-track {
-  display: flex;
-  gap: 0 18px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
+  .gnb01 > ul > li:nth-child(3) {
+    width: 20%;
+    font-size: min(21px, 20vw);
+  }
+  .searchbox .search-track {
+    display: flex;
+    gap: 0 18px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 
-.gnb01 > ul > li:nth-child(3) {
-  overflow: hidden;
-}
+  .gnb01 > ul > li:nth-child(3) {
+    overflow: hidden;
+  }
 
-.notice-bar {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  flex-wrap: nowrap;
-  list-style: none;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 55px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .notice-bar {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    flex-wrap: nowrap;
+    list-style: none;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+  }
 }
