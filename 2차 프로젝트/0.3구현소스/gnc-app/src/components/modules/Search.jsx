@@ -79,7 +79,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
     console.log("검색하기:");
     /// 라우터 이동 함수로 이동하기
     // 네비게이트 메서드 (라우터 주소, {state:{보낼 객체}})
-    goPage("searchingArt", { state: { keyword: txt } });
+    goPage("search", { state: { keyword: txt } });
   }; ///////// goSearch ///////////
 
   // 로컬스 북마크 존재여부 변수
