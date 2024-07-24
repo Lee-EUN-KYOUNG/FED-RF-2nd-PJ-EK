@@ -56,7 +56,7 @@ export default function TopArea() {
             </li>
             {/* 3. 서치 박스 및 북마크 영역 */}
             <li>
-              <Search />
+              <Search goPage={goPage} />
             </li>
           </ul>
         </nav>

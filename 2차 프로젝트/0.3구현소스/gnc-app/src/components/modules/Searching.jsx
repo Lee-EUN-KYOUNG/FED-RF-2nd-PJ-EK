@@ -41,6 +41,7 @@ function Searching({ kword }) {
  const beforeKword = useRef(kword);
 
  console.log("참조변수 객체:", beforeKword);
+
  
 
  if (beforeKword.current != kword) {
@@ -66,25 +67,26 @@ function Searching({ kword }) {
     // 문자열.indexOf(문자) 문자열 위치 번호 리턴함! -> 결과가 없으면 -1을 리턴함
     // -1이 아닐경우 true를 리턴하면 filter에서 변수에 저장할 배열로 수집된다
 
-    let newVal = v.Type.toLocaleLowerCase();
+    let newVal = v["전시회"];
 
     // 전달받은 키워드도 소문자처리
     // 상태 변수인 kw로 대체한다
     // ((중요!!!)) 상태변수인 kw로 대체한다!!!
-    let key = kw.toLocaleLowerCase();
+    let key = kw;//.toLocaleLowerCase();
     // 문자열이 있는 값만 배열로 재수집!
     if (
       // 1과 2의 조건이 모두 true여야함!
       // 1.검색어 조건 (cname속성)
-      newVal.indexOf(key) !== -1 &&
+      newVal.indexOf(key) !== -1 
+      // &&
       // 2. 체크박스항목 조건 (alignment속성)
       // 주의: 조건문 내의 삼항연산자는 반드시 소괄호로
       // 묶어서 논리연산자(&&,||,!)와의 충돌을 막아줘야함!
       // OR문의 결과가 false이려면 모두 false여야함!
       // 체크박스 모두 불체크시 false로 처리!
-      ((chk[0] ? v.Type == "Animation" : false) ||
-        (chk[1] ? v.Type == "Painting" : false) ||
-        (chk[2] ? v.Type == "Design" : false))
+      // ((chk[0] ? v.Type == "Animation" : false) ||
+      //   (chk[1] ? v.Type == "Painting" : false) ||
+      //   (chk[2] ? v.Type == "Design" : false))
       //true && (true||false||false)
       // -> &&문은 모두 true여야 true
       // -> ||문은 하나만 true면 true
@@ -97,6 +99,7 @@ function Searching({ kword }) {
   }); //////////////// filter ///////////////////
 
 
+  console.log("검색결과:", newList);
 
 
   // [ 결과내 재검색 : 데이터 항목중 alignment값으로 검색함! ]
@@ -248,7 +251,7 @@ function Searching({ kword }) {
           </aside>
           {/* 2-3. 캐릭터 리스트 컴포넌트 : 
             데이터 상태변수 중 첫번째값만 보냄 */}
-          <SearchingArt  dt={newList} />
+          <SearchingArt  newList={newList} />
         </div>
       </section>
     </>

@@ -12,10 +12,12 @@ import {posterData} from "../data/poster_data_sub.js";
 
 
 
-function SearchingArt() {
+function SearchingArt(newList) {
     /// dt -  검색된 배열 데이터, total - 검색된 배열 데이터 개수
+    console.log(newList, Array.isArray(newList));
 
-  const dt = posterData.length;
+
+  const dt = newList["newList"];
 
   const total = dt.length;
   console.log("데이터수:",total);
@@ -29,7 +31,7 @@ function SearchingArt() {
             {dt.map((v, i) => (
               <li key={i}>
                 <Link to="/EXHIBITION">
-                  <img src={process.env.PUBLIC_URL+v.subimg} alt={v.전시회} />
+                  <img src={process.env.PUBLIC_URL+"/img/"+v.subimg} alt={v.전시회} />
                   <h3>{v.전시회}</h3>
                 </Link>
               </li>
