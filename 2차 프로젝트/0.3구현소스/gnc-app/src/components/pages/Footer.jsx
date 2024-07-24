@@ -59,7 +59,7 @@ function Footer(props) {
           </li>
           <li className="SNS-BOX">
             <span>
-              <a href="https://www.instagram.com/hellokitty50th_ddp" target="_blank"
+              <a href="https://www.facebook.com/Gncmedia.Group" target="_blank"
             >
             <FontAwesomeIcon 
             icon={faSquareFacebook} 
@@ -68,7 +68,7 @@ function Footer(props) {
             </a>
             </span>
             <span>
-              <a href="https://www.facebook.com/Gncmedia.Group" target="_blank">
+              <a href="https://www.instagram.com/hellokitty50th_ddp" target="_blank">
             <FontAwesomeIcon 
             icon={faSquareInstagram} 
             size="2xl" 
