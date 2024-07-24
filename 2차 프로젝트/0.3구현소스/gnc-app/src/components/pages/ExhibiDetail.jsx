@@ -132,17 +132,17 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
                     {/* 전시회 즐겨찾기 */}
                     <button className="ex-bookmark"
-                    onClick={()=>{
+                    //onClick={()=>{
 
                       // 1. 로컬스 전시회 데이터에 넣기
-                      if(!localStorage.getItem("posterData")){
-                        // 로컬스없으면 만들기
-                        localStorage.setItem("posterData","[]");
-                      } ////////////// if
+                      //if(!localStorage.getItem("posterData")){
+                      //  // 로컬스없으면 만들기
+                      //  localStorage.setItem("posterData","[]");
+                      //} ////////////// if
       
                       /// 2. 로컬스 읽어와서 파싱하기;
-                      let locals = localStorage.getItem("posterData");
-                      locals = JSON.parse(locals);
+                      //let locals = localStorage.getItem("posterData");
+                      //locals = JSON.parse(locals);
       
                       // 3. 기존 데이터 중 동일 데이터 거르기
       
@@ -153,8 +153,8 @@ function ExhibiDetail({ dt, setTot, tot }) {
                       // aa.includes(22) -> 있으면 결과가 true
       
                       // idx값만 모아서 다른 배열 만들기
-                      let newLocals = locals.map(v=>v.idx);
-                      console.log("idx 새배열:",newLocals);
+                      //let newLocals = locals.map(v=>v.idx);
+                      //console.log("idx 새배열:",newLocals);
       
                         // include 비교
                         //let retSts = newLocals.includes(gIdx);
@@ -186,13 +186,13 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
 
                       // 로컬스에 문자화하여 입력하기
-                      localStorage.setItem("posterData", JSON.stringify(locals));
+                      //localStorage.setItem("posterData", JSON.stringify(locals));
       
                       // 로컬스 즐겨찾기 데이터 상태값 변경
-                      myCon.setLocalsMark(localStorage.getItem("posterData"));
+                      //myCon.setLocalsMark(localStorage.getItem("posterData"));
                       // 즐겨찾기 리스트 생성 상태값 변경
-                      myCon.setMarkSts(true);
-                      }}
+                      //myCon.setMarkSts(true);
+                      //}}
                     >
                       즐겨찾기
                     </button>
