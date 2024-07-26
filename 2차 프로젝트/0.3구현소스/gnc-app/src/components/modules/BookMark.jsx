@@ -207,11 +207,11 @@ function BookMark(props) {
                                       );
                                     } /////////// else if
                                     // 클릭시 반영버튼 나타나기
-                                    //$(e.currentTarget)
-                                    //  .siblings(".btn-insert")
-                                    //  .show()
-                                    //  .next()
-                                    //  .show();
+                                    $(e.currentTarget)
+                                      .siblings(".btn-insert")
+                                      .show()
+                                      .next()
+                                      .show();
                                   }}
                                 >
                                   {/* <img
@@ -241,11 +241,11 @@ function BookMark(props) {
                           계산된 합계 금액 숫자만 히든 필드에 넣고
                           총합계 계산에 사용함
                           */}
-                            {/* <input
+                            {<input
                               className="sum-num2"
                               type="hidden"
                               defaultValue={v.ginfo[3] * v.cnt}
-                            /> */}
+                            />}
                           </td>
                           <td>
                             {/* 데이터 삭제 기능 버튼 */}
