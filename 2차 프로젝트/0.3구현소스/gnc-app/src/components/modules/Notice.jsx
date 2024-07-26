@@ -4,10 +4,17 @@ import IntroPage from "../modules/IntroPage";
 
 // CSS 연결
 import "../../css/pivot/notice.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 //////////// 코드구역
 function Notice(props) {
+
+  const goNav = useNavigate();
+  const goPage = (seq) => {
+  goNav("/NOTICE",{state:{page:seq}})
+  }
+
+
   return (
     <>
       <section className="notice-box">
@@ -16,10 +23,12 @@ function Notice(props) {
           <h1>NOITCE</h1>
           <div className="notice-main">
             <h2>NEW!</h2>
-            <div className="notice-text">
-            <Link to="NOTICE">
+            <div className="notice-text"
+            onClick={() => goPage(13)}
+            >
+           {/*  <Link to="NOTICE"> */}
               <p>GNC 미디어 에이전시 홈페이지 리뉴얼!</p>
-            </Link>
+            {/* </Link> */}
             </div>
           </div>
         </div>

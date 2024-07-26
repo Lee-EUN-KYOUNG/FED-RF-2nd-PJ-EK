@@ -11,10 +11,16 @@ import $ from "jquery";
 // 게시판용 CSS 불러오기
 import "../../css/pivot/board.scss";
 import "../../css/pivot/board_file.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 ///////////////////////////////////////////////////////
 export default function MainNotice() {
+
+  const goNav = useNavigate();
+  const goPage = (seq) => {
+  goNav("/NOTICE",{state:{page:seq}})
+  }
+
 
     // 컨텍스트 사용하기
     const myCon = useContext(dCon);
@@ -101,6 +107,14 @@ export default function MainNotice() {
       console.log("여기:", selData.length);
       if (selData.length == 0) setPageNum(pageNum - 1);
   
+
+      
+     
+
+
+
+
+
       return selData.map((v, i) => (
         <tr key={i}>
           {/* 시작번호를 더하여 페이지별 순번을 변경 */}
@@ -114,6 +128,7 @@ export default function MainNotice() {
                 setMode("R");
                 // 해당 데이터 저장하기
                 selRecord.current = v;
+                goPage(i);
               }}
             >
               {v.tit}
@@ -580,6 +595,9 @@ export default function MainNotice() {
       localStorage.setItem("board-data", JSON.stringify(bdData));
     } /// if : (!isRec) ///
   
+
+
+
     /////// 코드리턴 구역 ///////////
     return (
       <>
