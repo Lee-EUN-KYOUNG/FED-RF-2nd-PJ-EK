@@ -193,11 +193,16 @@ export default function MainNotice() {
   
     // 서브밋 처리함수 //////////////
     const submitFn = () => {
+
+      // 입력과 수정구분하기
+      let clsName = mode=="W"? "writeone":"modifyone"
+
       // 제목입력항목
-      let title = $(".subject").val().trim();
+      let title = $(`.${clsName} .subject`).val().trim();
       // 내용입력항목
-      let cont = $(".content").val().trim();
+      let cont = $(`.${clsName} .content`).val().trim();
       // trim()으로 앞뒤공백 제거후 검사!
+      console.log("98989898",title,cont);
   
       // 1. 공통 유효성검사
       // 제목,내용 모두 비었으면 리턴!
@@ -637,7 +642,7 @@ export default function MainNotice() {
   
     return (
       <>
-        <table className="dtblview readone">
+        <table className="dtblview writeone">
           <caption>OPINION & NOTICE : Write</caption>
           <tbody>
             <tr>
@@ -701,7 +706,7 @@ export default function MainNotice() {
   
     return (
       <>
-        <table className="dtblview readone">
+        <table className="dtblview modifyone">
           <caption>OPINION & NOTICE : Modify</caption>
           <tbody>
             <tr>
