@@ -282,7 +282,7 @@
 @media screen and (max-width: 1250px) {
   .searchbox .search-track {
     display: flex;
-    gap: 0 8px;
+    gap: 0 10px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
@@ -297,11 +297,11 @@
   }
   .gnb01 > ul > li:nth-child(3) {
     width: 33%;
-    font-size: min(30px, 2vw);
+    font-size: min(28px, 5vw);
   }
   .gnb02 {
     padding: 0 0px;
-    width: 30px;
+    width: 40px;
     height: 40px;
     margin-left: 0px;
     transition: 0.4s;
@@ -311,11 +311,19 @@
     background-color: #efefef;
     border-radius: 34px;
     box-sizing: border-box;
-    width: 166px;
+    width: 155px;
   }
-  .gnb03 {
-    margin-top: 0px;
+  ul.gnb03 {
+    margin-top: 1px;
   }
+
+  .searching input {
+    position: absolute;
+    top: 13px;
+    left: 30px;
+    font-size: 0.7rem;
+}
+
   .art-main .list-area > div > ul > .date {
     font-size: 0.8rem;
     margin-bottom: 10px;

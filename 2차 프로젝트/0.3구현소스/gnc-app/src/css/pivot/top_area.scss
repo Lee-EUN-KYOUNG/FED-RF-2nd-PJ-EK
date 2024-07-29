@@ -153,7 +153,17 @@
 }
 
 ////////////////////// 미디어 쿼리
-///
+
+@media screen and (max-width: 1250px) {
+  .gnb01 > ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    gap: 0 6px;
+    box-sizing: border-box;
+}
+}
 @media screen and (max-width: 1050px) {
   .gnb01 > ul {
     display: flex;
