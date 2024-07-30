@@ -36,11 +36,12 @@ function ExhibiDetail({ dt, setTot, tot }) {
   */
 
   // 전시회 정보 개별 셋업
-  //let gpos = tot.poster;
-  // let ginfo = tot.전시회;
-  // let gtime = tot.전시기간;
-  // let gtit = tot.슬로건;
-  // let gIdx = tot.idx;
+  console.log(tot);
+  let gpos = tot.poster;
+  let ginfo = tot.전시회;
+  let gtime = tot.전시기간;
+  let gtit = tot.슬로건;
+  let gIdx = tot.idx;
 
 
   // 도착페이지 파라미터 받기
@@ -143,7 +144,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
                       /// 2. 로컬스 읽어와서 파싱하기;
                       let locals = localStorage.getItem("posterData");
                       locals = JSON.parse(locals);
-      
+                      
                       // 3. 기존 데이터 중 동일 데이터 거르기
       
                       // [방법 2]
@@ -154,30 +155,30 @@ function ExhibiDetail({ dt, setTot, tot }) {
       
                       // idx값만 모아서 다른 배열 만들기
                       let newLocals = locals.map(v=>v.idx);
-                      //console.log("idx 새배열:",newLocals);
+                      console.log("idx 새배열:",newLocals);
       
                         // include 비교
-                        //let retSts = newLocals.includes(gIdx);
+                      //   let retSts = newLocals.includes(gIdx);
 
 
 
-                        //console.log("중복상태:",retSts);
+                      //   console.log("중복상태:",retSts);
 
-                      //if(retSts){
+                      // if(retSts){
                       //  alert("중복 선택입니다!")
                       // return;
-                      //}/////if
+                      // }/////if
       
 
 
                       // 4. 로칼스에 객체 데이터 추가하기
-                    //locals.push({
-                    //   idx: gIdx,
-                    //    info: ginfo,
-                    //    time: gtime,
-                    //    tit : gtit,
-                    //    poster : gpos,
-                    //});
+                    locals.push({
+                      idx: gIdx,
+                       info: ginfo,
+                       time: gtime,
+                       tit : gtit,
+                       poster : gpos,
+                    });
       
 
 
@@ -187,11 +188,11 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
                       // 로컬스에 문자화하여 입력하기
                       localStorage.setItem("posterData", JSON.stringify(locals));
-      
+      console.log(localStorage.getItem("posterData"));
                       // 로컬스 즐겨찾기 데이터 상태값 변경
-                      myCon.setLocalsMark(localStorage.getItem("posterData"));
-                      // 즐겨찾기 리스트 생성 상태값 변경
-                      myCon.setMarkSts(true);
+                      // myCon.setLocalsMark(localStorage.getItem("posterData"));
+                      // // 즐겨찾기 리스트 생성 상태값 변경
+                      // myCon.setMarkSts(true);
                     }}
                     >
                       즐겨찾기

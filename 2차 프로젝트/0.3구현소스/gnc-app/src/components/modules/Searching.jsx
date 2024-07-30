@@ -84,7 +84,7 @@ function Searching({ kword }) {
       // 1.검색어 조건 (cname속성)
       newVal.indexOf(key) !== -1 &&
       // 
-      // 2. 체크박스항목 조건 (alignment속성)
+      // 2. 체크박스항목 조건 (Type 속성)
       // 주의: 조건문 내의 삼항연산자는 반드시 소괄호로
       // 묶어서 논리연산자(&&,||,!)와의 충돌을 막아줘야함!
       // OR문의 결과가 false이려면 모두 false여야함!

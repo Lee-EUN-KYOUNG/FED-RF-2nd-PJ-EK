@@ -244,7 +244,8 @@ function BookMark(props) {
                             {<input
                               className="sum-num2"
                               type="hidden"
-                              defaultValue={v.ginfo[3] * v.cnt}
+                              // defaultValue={v.ginfo[3] * v.cnt}
+                              defaultValue=""
                             />}
                           </td>
                           <td>
