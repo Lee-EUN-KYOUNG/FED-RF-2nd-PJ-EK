@@ -152,7 +152,7 @@ function Searching({ kword }) {
             <input
               id="schin"
               type="text"
-              placeholder="Filter by Keyword"
+              placeholder="전시회 이름을 검색하세요!"
               defaultValue={kword}
               // 엔터키를 눌렀을때 검색실행
               // 검색어 상태변수만 업데이트하면 끝
