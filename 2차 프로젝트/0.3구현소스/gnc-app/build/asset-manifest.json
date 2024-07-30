@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3daa715c.css",
+    "main.js": "/static/js/main.5ae29c0d.js",
+    "static/media/NotoSansKR-VariableFont_wght.ttf": "/static/media/NotoSansKR-VariableFont_wght.33752a94ca5252213de8.ttf",
+    "static/media/GowunDodum-Regular.ttf": "/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
+    "static/media/NotoSansKR-Thin.ttf": "/static/media/NotoSansKR-Thin.3c76aeeeb0d5302e0042.ttf",
+    "static/media/NotoSansKR-ExtraLight.ttf": "/static/media/NotoSansKR-ExtraLight.a8d29999646a399fbca4.ttf",
+    "static/media/NotoSansKR-Light.ttf": "/static/media/NotoSansKR-Light.eef1c4b85baf52cc28a7.ttf",
+    "static/media/NotoSansKR-Regular.ttf": "/static/media/NotoSansKR-Regular.9bc92a36ed81392f698b.ttf",
+    "static/media/NotoSansKR-Bold.ttf": "/static/media/NotoSansKR-Bold.f064e139058bfd9df2fb.ttf",
+    "static/media/NotoSansKR-Medium.ttf": "/static/media/NotoSansKR-Medium.b9d6e1b3e7a3d63546cc.ttf",
+    "static/media/NotoSansKR-ExtraBold.ttf": "/static/media/NotoSansKR-ExtraBold.a30f1f0b3b461fff07a7.ttf",
+    "static/media/NotoSansKR-SemiBold.ttf": "/static/media/NotoSansKR-SemiBold.cffe4dcd89082d2d3f3b.ttf",
+    "static/media/NotoSansKR-Black.ttf": "/static/media/NotoSansKR-Black.3a04960e264ac5544a85.ttf",
+    "static/media/now_poster.jpg": "/static/media/now_poster.df89e9157233e3fd8503.jpg",
+    "static/media/BlackHanSans-Regular.ttf": "/static/media/BlackHanSans-Regular.f4f89062321390018f92.ttf",
+    "static/media/PTSans-Bold.ttf": "/static/media/PTSans-Bold.610bc32a7e32c292ce59.ttf",
+    "static/media/PTSans-Regular.ttf": "/static/media/PTSans-Regular.77e92507394e2309d837.ttf",
+    "static/media/PTSans-Italic.ttf": "/static/media/PTSans-Italic.4faac24b7809d950b77e.ttf",
+    "static/media/PTSerifCaption-Italic.ttf": "/static/media/PTSerifCaption-Italic.6b1abbaee7dfe58f7e6a.ttf",
+    "static/media/mainart.jpg": "/static/media/mainart.4cee1259958f9744d35f.jpg",
+    "static/media/PTSerifCaption-Regular.ttf": "/static/media/PTSerifCaption-Regular.5de8bc8f1489fa6e6803.ttf",
+    "static/media/PTSans-BoldItalic.ttf": "/static/media/PTSans-BoldItalic.9432b29338612af7eca9.ttf",
+    "static/media/mv_btns.png": "/static/media/mv_btns.1eef2593b6cbc9dcfce2.png",
+    "index.html": "/index.html",
+    "main.3daa715c.css.map": "/static/css/main.3daa715c.css.map",
+    "main.5ae29c0d.js.map": "/static/js/main.5ae29c0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3daa715c.css",
+    "static/js/main.5ae29c0d.js"
+  ]
+}
