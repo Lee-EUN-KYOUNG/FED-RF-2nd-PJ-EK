@@ -13,6 +13,8 @@ import {posterData} from "../data/poster_data_sub.js";
 
 
 function SearchingArt(newList) {
+
+
     /// dt -  검색된 배열 데이터, total - 검색된 배열 데이터 개수
     console.log(newList, Array.isArray(newList));
 
@@ -20,6 +22,7 @@ function SearchingArt(newList) {
   const dt = newList["newList"];
 
   const total = dt.length;
+  
   console.log("데이터수:",total);
   
   return (
