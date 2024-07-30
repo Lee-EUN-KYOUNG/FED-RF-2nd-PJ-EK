@@ -186,6 +186,8 @@ function Searching({ kword }) {
                       type="checkbox"
                       id="Animation"
                       className="chkhdn"
+                      // 체크박스 체크속성값을 훅연결!
+                      checked={chk[0]}
                       // 체크 변경시 change 이벤트 발생
                       onChange={(e) => {
                         // 체크박스의 checked속성은
@@ -204,12 +206,14 @@ function Searching({ kword }) {
                     <input type="checkbox"
                     id="Painting"
                     className="chkhdn"
+                    // 체크박스 체크속성값을 훅연결!
+                    checked={chk[1]}
                     onChange={(e) => {
                       // 체크박스의 checked속성은
                       // 체크시 true, 불체크시 false리턴
                       console.log(e.target.checked);
                       // 훅값 업데이트
-                      setChk([e.target.checked, chk[0], chk[2]]);
+                      setChk([chk[0], chk[2], e.target.checked]);
                     }}
                     />
                     {/* 디자인노출 라벨 */}
@@ -230,7 +234,7 @@ function Searching({ kword }) {
                         // 체크시 true, 불체크시 false리턴
                         console.log(e.target.checked);
                         // 훅값 업데이트
-                        setChk(e.target.checked,[chk[0], chk[1]]);
+                        setChk([chk[0], chk[1],e.target.checked]);
                       }}
                     />
                     {/* 디자인노출 라벨 */}
