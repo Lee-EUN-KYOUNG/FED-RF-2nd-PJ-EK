@@ -36,12 +36,12 @@ function ExhibiDetail({ dt, setTot, tot }) {
   */
 
   // 전시회 정보 개별 셋업
-  console.log(tot);
-  let gpos = tot.poster;
-  let ginfo = tot.전시회;
-  let gtime = tot.전시기간;
-  let gtit = tot.슬로건;
-  let gIdx = tot.idx;
+  //console.log(tot);
+  //let gpos = tot.poster;
+  //let ginfo = tot.전시회;
+  //let gtime = tot.전시기간;
+  //let gtit = tot.슬로건;
+  //let gIdx = tot.idx;
 
 
   // 도착페이지 파라미터 받기
@@ -172,13 +172,13 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
 
                       // 4. 로칼스에 객체 데이터 추가하기
-                    locals.push({
-                      idx: gIdx,
-                       info: ginfo,
-                       time: gtime,
-                       tit : gtit,
-                       poster : gpos,
-                    });
+                    //locals.push({
+                    //  idx: gIdx,
+                    //   info: ginfo,
+                    //   time: gtime,
+                    //   tit : gtit,
+                    //   poster : gpos,
+                    //});
       
 
 

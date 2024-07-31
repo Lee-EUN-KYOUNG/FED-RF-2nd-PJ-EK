@@ -5,7 +5,7 @@ import React from 'react';
 import "../../css/pivot/searching_art.scss";
 
 // 데이터 불러오기
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {posterData} from "../data/poster_data_sub.js";
 
@@ -25,6 +25,11 @@ function SearchingArt(newList) {
   
   console.log("데이터수:",total);
   
+  //const goNav = useNavigate();
+  //const goPage = (seq) => {
+  //goNav("/ExhibiDetail",{state:{page:seq}})
+  //}
+
   return (
     <>
       {
@@ -32,7 +37,9 @@ function SearchingArt(newList) {
         total > 0 && (
           <ul className="clist">
             {dt.map((v, i) => (
-              <li key={i}>
+              <li key={i}
+              /* onClick={() => goPage(i)} */
+              >
                 <Link to="/EXHIBITION">
                   <img src={process.env.PUBLIC_URL+"/img/"+v.subimg} alt={v.전시회} />
                   <h3>{v.전시회}</h3>
