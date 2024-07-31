@@ -150,7 +150,7 @@ function Searching({ kword }) {
             />
             {/* 입력창 */}
             <input
-              id="schin"
+              id="sching"
               type="text"
               placeholder="전시회 이름을 검색하세요!"
               defaultValue={kword}

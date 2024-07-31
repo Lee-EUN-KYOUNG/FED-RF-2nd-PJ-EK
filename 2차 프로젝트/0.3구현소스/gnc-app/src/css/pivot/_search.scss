@@ -40,19 +40,33 @@
   // 입력창
   input {
     position: absolute;
-    top: 5px;
+    top: 15px;
     left: 40px;
     bottom: 5px;
     right: 5px;
     font-family: "PT Serif Caption", serif;
     font-weight: bold;
-    font-size: 1rem;
-    color: hotpink;
+    font-size: 0.8rem;
+    color: rgb(64, 63, 64);
     line-height: 1;
     background-color: transparent;
     border: none;
 
   }
+}
+
+#sching{
+  top: 10px;
+  left: 40px;
+  bottom: 5px;
+  right: 5px;
+  font-family: "PT Serif Caption", serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: hotpink;
+  border: none;
+  height: 15px;
+  width: 210px;
 }
 
 input:focus {
