@@ -15,6 +15,7 @@ import $ from "jquery";
 
 // CSS 불러오기
 import "../../css/pivot/top_area.scss";
+import { Search } from "../modules/Search";
 
 
 export default function Layout() {
@@ -131,6 +132,7 @@ export default function Layout() {
         setMarkSts,
         setLocalsMark,
         localsMark,
+        markSts,
       }}
     >
       {/* 1.상단영역 */}
@@ -139,6 +141,7 @@ export default function Layout() {
         loginSts={loginSts}
         logoutFn={logoutFn}
         goPage={goPage}
+        markSts={markSts}
       />
       {
         /* 회원가입, 로그인 버튼 - 로그인 상태가 null일때 나옴 */
@@ -174,7 +177,7 @@ export default function Layout() {
         )
       }
       {/* 북마크 리스트 : 북마크 상태값 true 출력 */}
-      {markSts && <BookMark />}
+      {markSts && <Search />}
       {/* 2.메인영역 */}
       <MainArea />
       {/* 3.하단영역 */}

@@ -37,12 +37,10 @@ function ExhibiDetail({ dt, setTot, tot }) {
   // 전시회 정보 개별 셋업
   let gpos = tot.poster;
   let gexhi = tot.전시회;
-  let gtime = tot.전시기간;
-  let gtit = tot.슬로건;
   let gIdx = tot.idx;
   let ginfo = tot.ginfo;
 
-  console.log(gpos, gexhi, gtime, gtit, gIdx, ginfo);
+  console.log(gpos, gexhi, gIdx, ginfo);
 
   // 컨텍스트 사용
   const myCon = useContext(dCon);
@@ -139,17 +137,17 @@ function ExhibiDetail({ dt, setTot, tot }) {
                     {/* 전시회 제목박스 영역 */}
                     <div className="ex-mtit">
                       {/* 전시회명 */}
-                      <h2>{v.mexhibi}</h2>
+                      <h2>{v.전시회}</h2>
                       {/* 전시회 서브명 */}
-                      <h3>{v.subexhibi}</h3>
+                      <h3>{v.슬로건}</h3>
                       {/* 전시회 날짜명 */}
-                      <h3>{v.exdate}</h3>
-                      {/* 전시회 날짜명 */}
-                      <h3>{v.exhall}</h3>
+                      <h3>{v.전시기간}</h3>
+                      {/* 전시회 장소 */}
+                      <h3>{v.전시장소}</h3>
                     </div>
                     {/* 전시회 설명박스 영역 */}
                     <div className="exdesc-sub">
-                      <h2>{v.exsubinfo}</h2>
+                      <h2>{v.서브제목}</h2>
                     </div>
                   </section>
                   {/* 전시회 서브 메인 영역 */}
@@ -160,11 +158,11 @@ function ExhibiDetail({ dt, setTot, tot }) {
                     </div>
                     {/* 슬로건 파트 */}
                     <div className="sub-title">
-                      <h2>{v.subtitle}</h2>
+                      <h2>{v.서브제목}</h2>
                     </div>
                     {/* 메인 서브 텍스트 파트 */}
                     <div className="main-subtit">
-                      <h3>{v.subtext}</h3>
+                      <h3>{v.관람시간}</h3>
                     </div>
                     {/* <div className="main-excomp">
                       {exData.excomposition.split("^").map((v, i) => (
@@ -181,6 +179,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
                       onClick={(e) => {
                         // 기본이동막기
                         e.preventDefault();
+                        
                         // 창닫기
                         $(".bgbx").hide();
                         // 창닫을때 초기화하기!
@@ -189,6 +188,9 @@ function ExhibiDetail({ dt, setTot, tot }) {
                         // 총합계 초기화
                         $("#total").text(addComma(ginfo[0]) + "개");
 
+                      // 전시회 상세보기
+                      $(".exhibi-detail").show();
+                       if(setTot){
                         return (
                           <a
                             href="#"
@@ -197,9 +199,9 @@ function ExhibiDetail({ dt, setTot, tot }) {
                               // 기본이동막기
                               e.preventDefault();
                               // 선택 데이터 찾기
-                              // -> cat항목값 + ginfo[0]항목
+                              // -> gexhi항목값 + ginfo[0]항목
                               let res = dt.find((v) => {
-                                if (v.cat == cat && v.ginfo[0] == "m" + num)
+                                if (v.gexhi == gexhi && v.ginfo[0] == "m")
                                   return true;
                               }); //// find /////
                               console.log(res);
@@ -209,18 +211,9 @@ function ExhibiDetail({ dt, setTot, tot }) {
                               setTot(res);
                             }}
                           >
-                            <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                `/images/goods/${cat}/m${num}.png`
-                              }
-                              alt="썸네일 이미지"
-                            />
                           </a>
                         );
-
-
-
+                       }
 
 
 
@@ -236,34 +229,27 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
                         // 3. 기존 데이터 중 동일 데이터 거르기
 
-                        // [방법 2]
-                        // 배열.includes(비교값)
-                        // 주의사항: 배열값이 단일값이어야 비교가 됨
-                        // 예) let aa= [11, 22, 33]
-                        // aa.includes(22) -> 있으면 결과가 true
-
-                        // idx값만 모아서 다른 배열 만들기
-                        let newLocals = locals.map((v) => v.idx);
+                        // poster값만 모아서 다른 배열 만들기
+                        let newLocals = locals.map((v) => v.poster);
                         console.log("idx 새배열:", newLocals);
 
                         // include 비교
-                        //   let retSts = newLocals.includes(gIdx);
+                        let retSts = newLocals.includes(gpos);
 
-                        //   console.log("중복상태:",retSts);
+                        console.log("중복상태:",retSts);
 
-                        // if(retSts){
-                        //  alert("중복 선택입니다!")
-                        // return;
-                        // }/////if
+                        if(retSts){
+                        alert("중복 선택입니다!")
+                        return;
+                        }/////if
 
                         // 4. 로칼스에 객체 데이터 추가하기
-                        //locals.push({
-                        //  idx: gIdx,
-                        //   info: ginfo,
-                        //   time: gtime,
-                        //   tit : gtit,
-                        //   poster : gpos,
-                        //});
+                        locals.push({
+                          idx: gIdx,
+                          poster : gpos,
+                          ginfo: ginfo,
+                          cnt: $("#sum").val()
+                        });
 
                         // 로컬스에 문자화하여 입력하기
                         localStorage.setItem(
@@ -272,10 +258,11 @@ function ExhibiDetail({ dt, setTot, tot }) {
                         );
                         console.log(localStorage.getItem("posterData"));
                         // 로컬스 즐겨찾기 데이터 상태값 변경
-                        // myCon.setLocalsMark(localStorage.getItem("posterData"));
+                        myCon.setLocalsMark(localStorage.getItem("posterData"));
                         // // 즐겨찾기 리스트 생성 상태값 변경
                         // myCon.setMarkSts(true);
                       }}
+
                     >
                       즐겨찾기
                     </button>
