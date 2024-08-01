@@ -178,7 +178,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
               />
             </li>
           </ul>
-
+          {/* <BookMark/> */}
           {/* 북마크 버튼 */}
           <section id="marklist">
             <ul className="gnb03">

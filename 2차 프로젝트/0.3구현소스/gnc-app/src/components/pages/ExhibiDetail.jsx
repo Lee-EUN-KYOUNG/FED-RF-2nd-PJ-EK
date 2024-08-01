@@ -18,6 +18,11 @@ import $ from "jquery";
 import { addComma } from "../func/common_fn";
 
 function ExhibiDetail({ dt, setTot, tot }) {
+
+
+
+  console.log("tot 확인:",tot);
+
   // tot - 상품토탈정보
   // setTot - 상품토탈정보 업데이트함수
   // dt - 상품데이터
@@ -35,12 +40,14 @@ function ExhibiDetail({ dt, setTot, tot }) {
   */
 
   // 전시회 정보 개별 셋업
-  let gpos = tot.poster;
+  let gtype = tot.Type;
   let gexhi = tot.전시회;
   let gIdx = tot.idx;
   let ginfo = tot.ginfo;
 
-  console.log(gpos, gexhi, gIdx, ginfo);
+
+
+  console.log(gtype, gexhi, gIdx, ginfo);
 
   // 컨텍스트 사용
   const myCon = useContext(dCon);
@@ -199,9 +206,9 @@ function ExhibiDetail({ dt, setTot, tot }) {
                               // 기본이동막기
                               e.preventDefault();
                               // 선택 데이터 찾기
-                              // -> gexhi항목값 + ginfo[0]항목
+                              // -> gtype항목값 + ginfo[0]항목
                               let res = dt.find((v) => {
-                                if (v.gexhi == gexhi && v.ginfo[0] == "m")
+                                if (v.gtype == gtype && v.ginfo[0] == "m")
                                   return true;
                               }); //// find /////
                               console.log(res);
@@ -234,7 +241,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
                         console.log("idx 새배열:", newLocals);
 
                         // include 비교
-                        let retSts = newLocals.includes(gpos);
+                        let retSts = newLocals.includes(gtype);
 
                         console.log("중복상태:",retSts);
 
@@ -246,7 +253,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
                         // 4. 로칼스에 객체 데이터 추가하기
                         locals.push({
                           idx: gIdx,
-                          poster : gpos,
+                          Type : gtype,
                           ginfo: ginfo,
                           cnt: $("#sum").val()
                         });

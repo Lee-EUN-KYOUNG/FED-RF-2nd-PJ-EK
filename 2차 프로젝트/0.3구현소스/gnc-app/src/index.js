@@ -13,6 +13,7 @@ import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Member from "./components/pages/Member";
 import Login from "./components/pages/Login";
+import BookMark from "./components/modules/BookMark";
 
 
 
@@ -35,6 +36,7 @@ export default function MainComponent() {
           <Route path="search" element={<SearchPage />} />
           <Route path="member" element={<Member />} />                                                     
           <Route path="login" element={<Login />} /> 
+          <Route path="bookmark" element={<BookMark />} /> 
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import ArtList from "../modules/ArtList";
 import { Link, useNavigate } from "react-router-dom";
 
-import exData from "../data/exhibition_data";
+import {posterData} from "../data/poster_data_sub.js";
 
 
 // CSS 불러오기
@@ -14,9 +14,12 @@ export default function Exhibition() {
 
   const goNav = useNavigate();
   const goPage = (seq) => {
-    goNav("/ExhibiDetail",{state:{page:seq}})
+    //goNav("/ExhibiDetail",{state:{page:seq}})
+    goNav("/ExhibiDetail")
   };
   
+  console.log("페이지이동:", goNav);
+
   useEffect(() => {
     // ArtList(artgridRef);
   }, []);
@@ -74,7 +77,7 @@ export default function Exhibition() {
               alt="item image"
             />
             <div className="art-tit">
-              <h3>{exData[i].mexhibi}</h3>
+              <h3>{posterData[i].전시회}</h3>
             </div>
           </div>
         ))}
