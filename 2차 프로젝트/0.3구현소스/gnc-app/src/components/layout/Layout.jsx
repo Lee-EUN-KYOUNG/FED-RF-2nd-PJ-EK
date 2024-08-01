@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 //컨텍스트 API 불러오기
 import { dCon } from "../modules/dCon";
+import BookMark from "../modules/BookMark";
 
 // 제이쿼리
 import $ from "jquery";
@@ -87,6 +88,35 @@ export default function Layout() {
     //$.cookie("aa","bb",{expires: 2});
   }, []);
 
+
+  // 로컬스 북마크 존재여부변수
+  let MarkTemp = false;
+
+  // [ 로컬스 북마크 데이터 상태변수 ] ///
+  const [localsMark, setLocalsMark] = 
+  useState(localStorage.getItem("posterData"));
+
+  // 로컬스 북마크 데이터 존재여부에 따라 상태값 변경
+  if(localsMark){
+    // 데이터가 있으면 MarkTemp값 true로 변경
+    // 데이터 개수가 0이 아니어야함!
+    let markCnt = JSON.parse(localsMark).length;
+    console.log("북마크 데이터수:",markCnt);
+    if(markCnt > 0) MarkTemp = true;
+  } //////////// 북마크존재여부 if ////////
+
+  // 북마크 사용여부 : true 일때 사용
+  const [markSts,setMarkSts] = useState(MarkTemp);
+
+  /* 
+        [컨텍스트 API 공개 변수들]
+    1. setMarkSts : 카트 사용 여부 셋팅
+    2. setLocalsMark : 로컬스 카트 데이터 변경 함수
+    3. localsMark : 로컬스 카트 데이터 변수
+    4. posterData = poster 전시회 데이터 posterData
+  
+  */
+
   //// 코드 리턴구역 //////////////
   return (
     <dCon.Provider
@@ -98,6 +128,9 @@ export default function Layout() {
         makeMsg,
         logoutFn,
         loginMsg,
+        setMarkSts,
+        setLocalsMark,
+        localsMark,
       }}
     >
       {/* 1.상단영역 */}
@@ -140,6 +173,8 @@ export default function Layout() {
           </ul>
         )
       }
+      {/* 북마크 리스트 : 북마크 상태값 true 출력 */}
+      {markSts && <BookMark />}
       {/* 2.메인영역 */}
       <MainArea />
       {/* 3.하단영역 */}

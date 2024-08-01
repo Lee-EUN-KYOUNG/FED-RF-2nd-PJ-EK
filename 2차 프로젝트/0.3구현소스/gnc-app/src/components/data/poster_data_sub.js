@@ -15,6 +15,7 @@ export const posterData = [
     poster: "/poster/poster01.jpg",
     subimg: "/subimg/subimg01.jpg",
     Type: "Animation",
+    ginfo: ["1","m2"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/헬로키티-50주년-특별전",
   },
   {
@@ -31,6 +32,7 @@ export const posterData = [
     poster: "/poster/poster02.jpg",
     subimg: "/subimg/subimg02.jpg",
     Type: "Animation",
+    ginfo: ["1","m1"],
     URL정보:
       "http://www.gncmedia.com/ko/exhibition/워너브라더스-100주년-특별전",
   },
@@ -48,6 +50,7 @@ export const posterData = [
     poster: "/poster/poster03.jpg",
     subimg: "/subimg/subimg03.jpg",
     Type: "Painting",
+    ginfo: ["1","m4"],
     URL정보:
       "http://www.gncmedia.com/ko/exhibition/더현대서울-프랑스국립현대미술관전",
   },
@@ -64,6 +67,7 @@ export const posterData = [
     poster: "/poster/poster04.jpg",
     subimg: "/subimg/subimg04.jpg",
     Type: "Design",
+    ginfo: ["1","m2"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/장-줄리앙",
   },
   {
@@ -80,6 +84,7 @@ export const posterData = [
     poster: "/poster/poster05.jpg",
     subimg: "/subimg/subimg05.jpg",
     Type: "Animation",
+    ginfo: ["1","m3"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/팀-버튼",
   },
   {
@@ -96,6 +101,7 @@ export const posterData = [
     poster: "/poster/poster06.jpg",
     subimg: "/subimg/subimg06.jpg",
     Type: "Painting",
+    ginfo: ["1","m5"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/살바도르-달리",
   },
   {
@@ -112,7 +118,7 @@ export const posterData = [
     poster: "/poster/poster07.jpg",
     subimg: "/subimg/subimg07.jpg",
     Type: "Animation",
-
+    ginfo: ["1","m7"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/미니언즈-제주-특별전",
   },
   {
@@ -129,6 +135,7 @@ export const posterData = [
     poster: "/poster/poster08.jpg",
     subimg: "/subimg/subimg08.jpg",
     Type: "Painting",
+    ginfo: ["1","m8"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/르네-마그리트-특별전",
   },
   {
@@ -145,6 +152,7 @@ export const posterData = [
     poster: "/poster/poster09.jpg",
     subimg: "/subimg/subimg09.jpg",
     Type: "Animation",
+    ginfo: ["1","m9"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/미니언즈-특별전",
   },
   {
@@ -161,6 +169,7 @@ export const posterData = [
     poster: "/poster/poster10.jpg",
     subimg: "/subimg/subimg10.jpg",
     Type: "Animation",
+    ginfo: ["1","m5"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/디즈니-애니메이션-특별전",
   },
   {
@@ -176,6 +185,7 @@ export const posterData = [
     poster: "/poster/poster11.jpg",
     subimg: "/subimg/subimg11.jpg",
     Type: "Painting",
+    ginfo: ["1","m4"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/키스해링",
   },
   {
@@ -190,6 +200,7 @@ export const posterData = [
     poster: "/poster/poster12.jpg",
     subimg: "/subimg/subimg12.jpg",
     Type: "Design",
+    ginfo: ["1","m6"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/카우스",
   },
   {
@@ -206,6 +217,7 @@ export const posterData = [
     poster: "/poster/poster13.jpg",
     subimg: "/subimg/subimg13.jpg",
     Type: "Animation",
+    ginfo: ["1","m7"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/픽사-애니메이션",
   },
   {
@@ -222,6 +234,7 @@ export const posterData = [
     poster: "/poster/poster14.jpg",
     subimg: "/subimg/subimg14.jpg",
     Type: "Painting",
+    ginfo: ["1","m9"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/오르세미술관-2",
   },
   {
@@ -237,6 +250,7 @@ export const posterData = [
     poster: "/poster/poster15.jpg",
     subimg: "/subimg/subimg15.jpg",
     Type: "Animation",
+    ginfo: ["1","m5"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/드림웍스-애니메이션-특별전",
   },
   {
@@ -251,6 +265,7 @@ export const posterData = [
     poster: "/poster/poster16.jpg",
     subimg: "/subimg/subimg16.jpg",
     Type: "Animation",
+    ginfo: ["1","m7"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/월리를-찾아라",
   },
   {
@@ -266,6 +281,7 @@ export const posterData = [
     poster: "/poster/poster17.jpg",
     subimg: "/subimg/subimg17.jpg",
     Type: "Design",
+    ginfo: ["1","m8"],
     URL정보:
       "http://www.gncmedia.com/ko/exhibition/스탠리-큐브릭-stanley-kubrick",
   },
@@ -283,6 +299,7 @@ export const posterData = [
     poster: "/poster/poster18.jpg",
     subimg: "/subimg/subimg18.jpg",
     Type: "Painting",
+    ginfo: ["1","m2"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/오르세미술관-1",
   },
   {
@@ -298,6 +315,7 @@ export const posterData = [
     poster: "/poster/poster19.jpg",
     subimg: "/subimg/subimg19.jpg",
     Type: "Design",
+    ginfo: ["1","m1"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/마리스칼-mariscal",
   },
   {
@@ -314,6 +332,7 @@ export const posterData = [
     poster: "/poster/poster20.jpg",
     subimg: "/subimg/subimg20.jpg",
     Type: "Animation",
+    ginfo: ["1","m6"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/팀-버튼-tim-burton",
   },
   {
@@ -330,6 +349,7 @@ export const posterData = [
     poster: "/poster/poster21.jpg",
     subimg: "/subimg/subimg21.jpg",
     Type: "Painting",
+    ginfo: ["1","m9"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/루브르박물관",
   },
   {
@@ -344,6 +364,7 @@ export const posterData = [
     poster: "/poster/poster22.jpg",
     subimg: "/subimg/subimg22.jpg",
     Type: "Painting",
+    ginfo: ["1","m1"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/오르세미술관",
   },
   {
@@ -358,6 +379,7 @@ export const posterData = [
     poster: "/poster/poster23.jpg",
     subimg: "/subimg/subimg23.jpg",
     Type: "Painting",
+    ginfo: ["1","m7"],
     URL정보:
       "http://www.gncmedia.com/ko/exhibition/프랑스-국립-베르사이유-특별전",
   },
@@ -373,6 +395,7 @@ export const posterData = [
     poster: "/poster/poster24.jpg",
     subimg: "/subimg/subimg24.jpg",
     Type: "Painting",
+    ginfo: ["1","m8"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/영국-근대-회화전",
   },
   {
@@ -388,6 +411,7 @@ export const posterData = [
     poster: "/poster/poster25.jpg",
     subimg: "/subimg/subimg25.jpg",
     Type: "Painting",
+    ginfo: ["1","m3"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/퐁피두센터-특별전",
   },
   {
@@ -402,6 +426,7 @@ export const posterData = [
     poster: "/poster/poster26.jpg",
     subimg: "/subimg/subimg26.jpg",
     Type: "Painting",
+    ginfo: ["1","m2"],
     URL정보: "http://www.gncmedia.com/ko/exhibition/루브르박물관전",
   },
 ];

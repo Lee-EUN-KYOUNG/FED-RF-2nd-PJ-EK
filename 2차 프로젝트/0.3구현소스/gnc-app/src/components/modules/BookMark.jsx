@@ -25,48 +25,46 @@ function BookMark(props) {
 
   ********************************************************************/
 
-  // 강제 리랜더링을 위한 상태 변수
-  // 불린값을 넣어놓고 강제 리랜더링이 필요한경우
-  // setForce(!force); 기존 불린값을 반대로 넣어준다
-  const [force, setForce] = useState(false);
-
-  // sestForce(Math.randow()) 랜덤수 넣어준다
+  // 강제 리랜더링을 위한 상태변수
+  const [force,setForce] = useState(false);
+  // -> 불린값을 넣어놓고 강제 리랜더링이 필요한 경우
+  // setForce(!force) -> 기존 불린값을 반대로 넣어준다!
 
   // 컨텍스트 사용
   const myCon = useContext(dCon);
 
-  // 로컬스 데이터 가져오기
-  const posterData = JSON.parse(myCon.localsMark);
+   // 로컬스 데이터 가져오기
+   const posterData = JSON.parse(myCon.localsMark);
+   console.log("로컬스:", posterData);
+ 
+   // 전체 데이터 개수
+   const dataCnt = posterData.length;
+   console.log("데이터수:", dataCnt);
 
-  // 전체 데이터 갯수
-  const dataCnt = posterData.length;
-  
-  console.log("데이터수:", dataCnt);
-
-  console.log("로컬스:", posterData);
-
-  // 총합계 함수
+  // 총합계함수 /////////////
   const totalFn = () => {
+    // 합계금액은 모든 합계 히든필드 값을 더한다!
+    // 제이쿼리 forEach는 each((순번,요소)=>{}) 메서드다!
+
     let result = 0;
 
-    // 합계 금액은 모든 합계 히든 필드 값을 더한다
-    // 제이쿼리 forEach는 each((순번,요소)=>{})메서드다
     $(".sum-num2").each((idx, ele) => {
-      
       console.log("값:", $(ele).val());
-
-      // 숫자로 변환후 기존값에 더하기함
+      // 숫자로 변환후 기존값에 더하기함!
       result += Number($(ele).val());
     });
 
-    // 호출한 곳에 합계 리턴
+    // 호출한 곳에 합계리턴
     return result;
-  };
+  }; ////////// totalFn ///////////
+
+
+
 
   /// 화면 랜더링 구역 : dataCnt, force의존성
   useEffect(() => {
     // 카트 버튼 나타나기
-
+    console.log("dataCnt,force의존성");
     $("#mymark")
       .removeClass("on")
       .delay(500) // 애니메이션 지연시간
@@ -210,33 +208,33 @@ function BookMark(props) {
                                     $(e.currentTarget)
                                       .siblings(".btn-insert")
                                       .show()
-                                      .next()
+                                      .next() // 취소버튼
                                       .show();
                                   }}
                                 >
-                                  {/* <img
+                                  <img
                                     src={
                                       process.env.PUBLIC_URL +
-                                      "/images/cnt_up.png"
+                                      "/img/cnt_up.png"
                                     }
                                     alt="증가"
-                                  /> */}
-                                  {/* <img
+                                  />
+                                  <img
                                     src={
                                       process.env.PUBLIC_URL +
-                                      "/images/cnt_down.png"
+                                      "/img/cnt_down.png"
                                     }
                                     alt="감소"
-                                  /> */}
+                                  />
                                 </b>
                               </span>
                             </div>
                           </td>
                           <td>
-                            {/* <span className="sum-num1">
-                              {addComma(v.ginfo[3] * v.cnt)}
+                            <span className="sum-num1">
+                              {addComma(v.ginfo[0] * v.cnt)}
                             </span>
-                            원 */}
+                            개
                             {/*
                           계산된 합계 금액 숫자만 히든 필드에 넣고
                           총합계 계산에 사용함
@@ -244,8 +242,7 @@ function BookMark(props) {
                             {<input
                               className="sum-num2"
                               type="hidden"
-                              // defaultValue={v.ginfo[3] * v.cnt}
-                              defaultValue=""
+                              defaultValue={v.ginfo[0] * v.cnt}
                             />}
                           </td>
                           <td>
