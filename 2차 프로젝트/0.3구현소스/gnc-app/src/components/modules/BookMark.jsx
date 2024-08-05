@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import { posterData } from "../data/poster_data_sub.js";
-import ExhibiDetail from "../pages/ExhibiDetail.jsx";
 
+import ExhibiDetail from "../pages/ExhibiDetail.jsx";
+import { bdata } from "../data/bookmark_data";
 
 
 // CSS 불러오기
@@ -13,9 +13,9 @@ import "../../css/pivot/bookmark.scss";
 function BookMark(props) {
   // 상태변수 만들기 //////
   // 상품토탈정보
-  const [tot, setTot] = useState(posterData);
+  const [tot, setTot] = useState(bdata);
 
-  console.log("포스터데이터 확인:",posterData);
+  console.log("포스터데이터 확인:",bdata);
 
   /////////////코드 리턴 ////////////////////
   return (
@@ -24,14 +24,14 @@ function BookMark(props) {
           cat - 카테고리, ginfo - 상품정보, 
           dt - 상품데이터, setGinfo - ginfo값 변경메서드
         */}
-    {/*   <ExhibiDetail
+    {  <ExhibiDetail
         // 상품토탈정보
         tot={tot}
         // dt 전체데이터(한줄리스트때문)
-        dt={posterData}
+        dt={bdata}
         // setTot - 한줄리스트 클릭시 변경
         setTot={setTot}
-      /> */}
+      />}
     </>
   );
 }

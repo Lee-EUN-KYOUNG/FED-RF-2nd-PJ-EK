@@ -4,7 +4,8 @@ import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import BookMark from "./BookMark";
 import { exData } from "../data/exhibition_data_sub";
-import { posterData } from "../data/poster_data_sub";
+import { bdata } from "../data/bookmark_data";
+
 // 제이쿼리
 import $ from "jquery";
 
@@ -83,7 +84,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
     2. setMarkSts : 카트 사용 여부 셋팅
     3. setLocalsMark : 로컬스 카트 데이터 변경 함수
     4. localsMark : 로컬스 카트 데이터 변수
-    5. posterData = poster 전시회 데이터 posterData
+    5. bdata = 전시회 데이터
 
   ********************************************************************/
 
@@ -96,11 +97,11 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
   const myCon = useContext(dCon);
 
   // 로컬스 데이터 가져오기
-  const posterData = JSON.parse(myCon.localsMark);
-  console.log("로컬스:", posterData);
+  const bxdata = JSON.parse(myCon.localsMark);
+  console.log("로컬스:", bxdata);
 
   // 전체 데이터 개수
-  const dataCnt = posterData.length;
+  const dataCnt = bdata.length;
   console.log("데이터수:", dataCnt);
 
   // 총합계함수 /////////////
@@ -248,7 +249,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                         5. 슬로건 : 서브 타이틀
                         6. cnt : 전시회 북마크 횟수 합계
                         */}
-                              {posterData.map((v, i) => (
+                              {bdata.map((v, i) => (
                                 <tr key={i}>
                                   {/* 일련번호 */}
                                   <td>{i + 1}</td>
@@ -283,17 +284,17 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                   className="btn-insert"
                                   onClick={(e) => {
                                     /// 1. 클릭시 실제 데이터 수량변경 반영하기
-                                    // 대상: posterData -> 배열변환데이터
+                                    // 대상: bdata -> 배열변환데이터
                                     // i는 배열순번임!(map 돌때 i가 들어옴)
-                                    posterData[i].cnt = $(e.currentTarget)
+                                    bdata[i].cnt = $(e.currentTarget)
                                       .siblings(".item-cnt")
                                       .val();
-                                    console.log("수량업데이트:", posterData);
+                                    console.log("수량업데이트:", bdata);
                                     // 2. 데이터 문자화하기 : 변경된 원본을 문자화
-                                    let res = JSON.stringify(posterData);
+                                    let res = JSON.stringify(bdata);
 
                                     // 3.로컬스 "cart-data"반영하기
-                                    localStorage.setItem("posterData", res);
+                                    localStorage.setItem("bdata", res);
 
                                     // 4. 카트리스트 전역상태변수 변경
                                     myCon.setLocalsMark(res);
@@ -422,23 +423,23 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                         // confirm()의 "확인" 클릭시 true
                                         if (window.confirm("지우시겠습니까?")) {
                                           console.log("삭제");
-                                          console.log("현재객체", posterData);
+                                          console.log("현재객체", bdata);
                                           console.log("지울순번", i);
                                           // splice 자체를 찍으면 지워진 요소가 찍힘
-                                          //console.log("지움",posterData.splice(i,1));
+                                          //console.log("지움",bdata.splice(i,1));
 
                                           // 지울 배열 순번은 map()에서 i로 들어옴
-                                          // 지울 배열은 posterData임
+                                          // 지울 배열은 bdata임
 
                                           // 데이터 지우기
-                                          posterData.splice(i, 1);
+                                          bdata.splice(i, 1);
 
                                           // 데이터 문자화하기 : 변경된 원본을 문자화
-                                          let res = JSON.stringify(posterData);
+                                          let res = JSON.stringify(bdata);
 
-                                          // 로컬쓰 "posterData"에 반영하기
+                                          // 로컬쓰 "bdata"에 반영하기
                                           localStorage.setItem(
-                                            "posterData",
+                                            "bdata",
                                             res
                                           );
 
@@ -448,7 +449,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                           // 데이터 갯수가 0이면 즐겨찾기 리스트 상태변수를 flase로 변경하여
                                           // 즐겨찾기 리스트 출력을 없앤다
 
-                                          if (posterData.length == 0)
+                                          if (bdata.length == 0)
                                             myCon.setMarkSts(false);
                                         } ////// if
                                       }}

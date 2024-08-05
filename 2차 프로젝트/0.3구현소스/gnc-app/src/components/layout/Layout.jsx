@@ -95,7 +95,7 @@ export default function Layout() {
 
   // [ 로컬스 북마크 데이터 상태변수 ] ///
   const [localsMark, setLocalsMark] = 
-  useState(localStorage.getItem("posterData"));
+  useState(localStorage.getItem("bdata"));
 
   // 로컬스 북마크 데이터 존재여부에 따라 상태값 변경
   if(localsMark){
@@ -114,7 +114,7 @@ export default function Layout() {
     1. setMarkSts : 카트 사용 여부 셋팅
     2. setLocalsMark : 로컬스 카트 데이터 변경 함수
     3. localsMark : 로컬스 카트 데이터 변수
-    4. posterData = poster 전시회 데이터 posterData
+    4. bdata = 전시회 데이터
   
   */
 

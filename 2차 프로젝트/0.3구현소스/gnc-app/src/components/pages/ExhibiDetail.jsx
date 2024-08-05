@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 
 // 데이터 불러오기
 import exData from "../data/exhibition_data";
-import { posterData } from "../data/poster_data_sub";
+import { bdata } from "../data/bookmark_data";
 import ArtList from "../modules/ArtList";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -31,28 +31,27 @@ function ExhibiDetail({ dt, setTot, tot }) {
   [포스터 데이터 연동 파트]
   [데이터 구조정의]
   1. idx : 전시회고유번호
-  2. poster : 전시회 포스터
-  3. 전시회 : 전시회 이름
-  4. 전시기간 : 전시회기간
-  5. 슬로건 : 서브 타이틀
+  2. type : 전시회 장르
+  3. mexhibi : 전시회 이름
+  4. exdate : 전시회기간
+  5. subexhibi : 서브 타이틀
   6. cnt : 전시회 북마크 횟수 합계
   
   */
 
   // 전시회 정보 개별 셋업
-  let gtype = tot.Type;
-  let gexhi = tot.전시회;
-  let gIdx = tot.idx;
-  let ginfo = tot.ginfo;
+  const gtype = tot.Type;
+  const gIdx = tot.idx;
+  const ginfo = tot.ginfo;
 
 
-
-  console.log(gtype, gexhi, gIdx, ginfo);
+  // console.log(gtype, gexhi, gIdx, ginfo);
 
   // 컨텍스트 사용
   const myCon = useContext(dCon);
 
   // 제이쿼리 이벤트함수에 전달할 ginfo값 참조변수
+  
   const getGinfo = useRef(ginfo);
   if (getGinfo.current != ginfo) getGinfo.current = ginfo;
 
@@ -89,6 +88,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
       // seq가0이냐?그럼 증가:아니면 (num이 1이냐)
       // 그럼1 아니면 감소 -> num이 1이하면 안되니까!
       // 증감기호가 변수 앞에 있어야 먼저증감하고 할당함!
+
       console.log("ginfo 전달변수확인:", ginfo);
       console.log("getGinfo 참조변수확인:", getGinfo.current);
 
@@ -135,7 +135,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
       >
         {/* 1. 상세 정보 박스 */}
         {/* 1-1. 전시회 제목박스 */}
-        {posterData.map(
+        {bdata.map(
           (v, i) =>
             Number(v.idx) <= 26 && (
               <SwiperSlide key={i} className="subcont-slide">
@@ -144,17 +144,17 @@ function ExhibiDetail({ dt, setTot, tot }) {
                     {/* 전시회 제목박스 영역 */}
                     <div className="ex-mtit">
                       {/* 전시회명 */}
-                      <h2>{v.전시회}</h2>
+                      <h2>{v.mexhibi}</h2>
                       {/* 전시회 서브명 */}
-                      <h3>{v.슬로건}</h3>
+                      <h3>{v.subexhibi}</h3>
                       {/* 전시회 날짜명 */}
-                      <h3>{v.전시기간}</h3>
+                      <h3>{v.exdate}</h3>
                       {/* 전시회 장소 */}
-                      <h3>{v.전시장소}</h3>
+                      <h3>{v.exhall}</h3>
                     </div>
                     {/* 전시회 설명박스 영역 */}
                     <div className="exdesc-sub">
-                      <h2>{v.서브제목}</h2>
+                      <h2>{v.exsubinfo}</h2>
                     </div>
                   </section>
                   {/* 전시회 서브 메인 영역 */}
@@ -165,11 +165,11 @@ function ExhibiDetail({ dt, setTot, tot }) {
                     </div>
                     {/* 슬로건 파트 */}
                     <div className="sub-title">
-                      <h2>{v.서브제목}</h2>
+                      <h2>{v.subtitle}</h2>
                     </div>
                     {/* 메인 서브 텍스트 파트 */}
                     <div className="main-subtit">
-                      <h3>{v.관람시간}</h3>
+                      <h3>{v.exsubinfo}</h3>
                     </div>
                     {/* <div className="main-excomp">
                       {exData.excomposition.split("^").map((v, i) => (
@@ -196,7 +196,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
                         $("#total").text(addComma(ginfo[0]) + "개");
 
                       // 전시회 상세보기
-                      $(".exhibi-detail").show();
+                      $(".ExhibiDetail").show();
                        if(setTot){
                         return (
                           <a
@@ -208,7 +208,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
                               // 선택 데이터 찾기
                               // -> gtype항목값 + ginfo[0]항목
                               let res = dt.find((v) => {
-                                if (v.gtype == gtype && v.ginfo[0] == "m")
+                                if (v.gtype == gtype && v.ginfo[1] == "m")
                                   return true;
                               }); //// find /////
                               console.log(res);
@@ -225,13 +225,13 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
 
                         // 1. 로컬스 전시회 데이터에 넣기
-                        if (!localStorage.getItem("posterData")) {
+                        if (!localStorage.getItem("bdata")) {
                           // 로컬스없으면 만들기
-                          localStorage.setItem("posterData", "[]");
+                          localStorage.setItem("bdata", "[]");
                         } ////////////// if
 
                         /// 2. 로컬스 읽어와서 파싱하기;
-                        let locals = localStorage.getItem("posterData");
+                        let locals = localStorage.getItem("bdata");
                         locals = JSON.parse(locals);
 
                         // 3. 기존 데이터 중 동일 데이터 거르기
@@ -260,12 +260,12 @@ function ExhibiDetail({ dt, setTot, tot }) {
 
                         // 로컬스에 문자화하여 입력하기
                         localStorage.setItem(
-                          "posterData",
+                          "bdata",
                           JSON.stringify(locals)
                         );
-                        console.log(localStorage.getItem("posterData"));
+                        console.log(localStorage.getItem("bdata"));
                         // 로컬스 즐겨찾기 데이터 상태값 변경
-                        myCon.setLocalsMark(localStorage.getItem("posterData"));
+                        myCon.setLocalsMark(localStorage.getItem("bdata"));
                         // // 즐겨찾기 리스트 생성 상태값 변경
                         // myCon.setMarkSts(true);
                       }}
