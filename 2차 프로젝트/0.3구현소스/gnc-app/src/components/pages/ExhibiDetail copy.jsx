@@ -2,14 +2,13 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 
 // 데이터 불러오기
 //import exData from "../data/exhibition_data";
-
+import bdata from "../data/bookmark_data";
 import ArtList from "../modules/ArtList";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { dCon } from "../modules/dCon";
-import { bdata } from "../data/bookmark_data";
 
 // CSS 불러오기
 import "../../css/pivot/exhibi_detail.scss";
@@ -18,7 +17,12 @@ import "../../css/pivot/exhibi_detail.scss";
 import $ from "jquery";
 import { addComma } from "../func/common_fn";
 
-function ExhibiDetail({ tot, setTot, dt }) {
+function ExhibiDetail({ dt, setTot, tot }) {
+
+
+
+  console.log("tot 확인:",tot);
+
   // tot - 상품토탈정보
   // setTot - 상품토탈정보 업데이트함수
   // dt - 상품데이터
@@ -37,21 +41,22 @@ function ExhibiDetail({ tot, setTot, dt }) {
 
   const loc = useLocation();
   const page = loc.state.page;
+  console.log("페이지확인:",page);
 
-  let ginfo = loc.state.ginfo;
-  let type = loc.state.type;
+  // 전시회 정보 개별 셋업
+  const gtype = tot.Type;
+  const gIdx = tot.idx;
+  const ginfo = tot.ginfo;
 
-  console.log("페이지확인:", page);
-  const bxdata = bdata[page];
 
-  // console.log(bxdata.ginfo[1], bxdata.Type, bxdata.mexhibi);
+  // console.log(gtype, gexhi, gIdx, ginfo);
 
   // 컨텍스트 사용
   const myCon = useContext(dCon);
 
   // 제이쿼리 이벤트함수에 전달할 ginfo값 참조변수
-
-  const getGinfo = useRef(bxdata.ginfo);
+  
+  const getGinfo = useRef(ginfo[0]);
   if (getGinfo.current != ginfo) getGinfo.current = ginfo;
 
   ///////// 화면 렌더링 실행 구역
@@ -100,6 +105,7 @@ function ExhibiDetail({ tot, setTot, dt }) {
       // 원가격은 컴포넌트 전달변수 ginfo[0] -> 갱신안됨!
       // 원가격은 참조변수 getGinfo 사용 -> 매번 업데이트됨!
       total.text(addComma(getGinfo.current[0] * num) + "개");
+      
     }); //////// click ////////
 
     // 참고) 제거용 -> numBtn.off("click");
@@ -110,10 +116,11 @@ function ExhibiDetail({ tot, setTot, dt }) {
     // 매번 리랜더링 될때마다 수량초기화!
     $("#sum").val(1);
     // 총합계 초기화
-    // $("#total").text(addComma(ginfo[0]) + "개");
+    $("#total").text(addComma(ginfo[0]) + "개");
   }); ////////// useEffect //////
 
   ////////////// 코드 리턴 구역
+
 
   return (
     <>
@@ -126,7 +133,7 @@ function ExhibiDetail({ tot, setTot, dt }) {
         // onInit() 메서드는 스와이퍼 로딩시 실행되는 메서드
         onInit={(swp) => {
           // swp 스와이퍼객체 자신
-          swp.slideTo(page, 0);
+          swp.slideTo(this.state.page, 0);
           // slideTo(이동할 페이지 순번, 이동시간)
           // 실제로 슬라이드 해당 순번으로 이동함!
           // 이동시간을 0주면 이동 애니메이션이 안보임
@@ -185,40 +192,44 @@ function ExhibiDetail({ tot, setTot, dt }) {
                       onClick={(e) => {
                         // 기본이동막기
                         e.preventDefault();
-
+                        
                         // 창닫기
                         $(".bgbx").hide();
                         // 창닫을때 초기화하기!
                         // 수량초기화!
                         $("#sum").val(1);
                         // 총합계 초기화
-                        // $("#total").text(addComma(ginfo[0]) + "개");
+                        $("#total").text(addComma(ginfo[0]) + "개");
 
-                        // 전시회 상세보기
-                        $(".ExhibiDetail").show();
-                        if (setTot) {
-                          return (
-                            <a
-                              href="#"
-                              key={i}
-                              onClick={(e) => {
-                                // 기본이동막기
-                                e.preventDefault();
-                                // 선택 데이터 찾기
-                                // -> gtype항목값 + ginfo[0]항목
-                                let res = dt.find((v) => {
-                                  if (bxdata.Type == type && bxdata.ginfo[1] == "m")
-                                    return true;
-                                }); //// find /////
-                                console.log(res);
-                                // 상품상세모듈 전달 상태변수 변경
-                                // find에서 받은값은 객체값
-                                // 상품토탈정보로 모든 객체값을 업데이트함
-                                setTot(res);
-                              }}
-                            ></a>
-                          );
-                        }
+                      // 전시회 상세보기
+                      $(".ExhibiDetail").show();
+                       if(setTot){
+                        return (
+                          <a
+                            href="#"
+                            key={i}
+                            onClick={(e) => {
+                              // 기본이동막기
+                              e.preventDefault();
+                              // 선택 데이터 찾기
+                              // -> gtype항목값 + ginfo[0]항목
+                              let res = dt.find((v) => {
+                                if (v.gtype == gtype && v.ginfo[1] == "m")
+                                  return true;
+                              }); //// find /////
+                              console.log(res);
+                              // 상품상세모듈 전달 상태변수 변경
+                              // find에서 받은값은 객체값
+                              // 상품토탈정보로 모든 객체값을 업데이트함
+                              setTot(res);
+                              
+                            }}
+                          >
+                          </a>
+                        );
+                       }
+
+
 
                         // 1. 로컬스 전시회 데이터에 넣기
                         if (!localStorage.getItem("bdata")) {
@@ -237,30 +248,35 @@ function ExhibiDetail({ tot, setTot, dt }) {
                         console.log("idx 새배열:", newLocals);
 
                         // include 비교
-                        let retSts = newLocals.includes(type);
+                        let retSts = newLocals.includes(gtype);
 
-                        console.log("중복상태:", retSts);
+                        console.log("중복상태:",retSts);
 
-                        if (retSts) {
-                          alert("중복 선택입니다!");
-                          return;
-                        } /////if
+                        if(retSts){
+                        alert("중복 선택입니다!")
+                        return;
+                        }/////if
 
                         // 4. 로칼스에 객체 데이터 추가하기
                         locals.push({
-                          Type: type,
+                          idx: gIdx,
+                          Type : gtype,
                           ginfo: ginfo,
-                          cnt: $("#sum").val(),
+                          cnt: $("#sum").val()
                         });
 
                         // 로컬스에 문자화하여 입력하기
-                        localStorage.setItem("bdata", JSON.stringify(locals));
+                        localStorage.setItem(
+                          "bdata",
+                          JSON.stringify(locals)
+                        );
                         console.log(localStorage.getItem("bdata"));
                         // 로컬스 즐겨찾기 데이터 상태값 변경
                         myCon.setLocalsMark(localStorage.getItem("bdata"));
                         // // 즐겨찾기 리스트 생성 상태값 변경
                         // myCon.setMarkSts(true);
                       }}
+ 
                     >
                       즐겨찾기
                     </button>

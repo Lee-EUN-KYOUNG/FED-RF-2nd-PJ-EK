@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 //컨텍스트 API 불러오기
 import { dCon } from "../modules/dCon";
 import BookMark from "../modules/BookMark";
-import bdata from "../data/bookmark_data";
+import {bdata} from "../data/bookmark_data";
 import { Search } from "../modules/Search";
 
 // 제이쿼리
@@ -136,7 +136,7 @@ export default function Layout() {
         localsMark,
         markSts,
         tot,
-        
+        //dt,
         setTot,
       }}
     >
@@ -150,7 +150,7 @@ export default function Layout() {
         // 상품토탈정보
         tot={tot}
         // dt 전체데이터(한줄리스트때문)
-        // dt={bdata}
+        dt={bdata}
         // setTot - 한줄리스트 클릭시 변경
         setTot={setTot}
       />

@@ -1,6 +1,6 @@
 // [전시회 데이터]
 
-const bdata = [
+export const bdata = [
   {
     idx: "1",
     mexhibi: "헬로키티 50주년 특별전",
@@ -24,7 +24,7 @@ const bdata = [
     ],
     mwork: "01_kitty",
     Type: "Animation",
-    ginfo: ["1", "m2"],
+    ginfo: ["10000", "m2",],
     URL복사: "http://www.gncmedia.com/ko/exhibition/헬로키티-50주년-특별전",
   },
   {
@@ -52,7 +52,7 @@ const bdata = [
     ],
     mwork: "02_warners",
     Type: "Animation",
-    ginfo: ["1", "m1"],
+    ginfo: ["10000", "m1"],
     URL복사:
       "http://www.gncmedia.com/ko/exhibition/워너브라더스-100주년-특별전",
   },
@@ -101,7 +101,7 @@ const bdata = [
     ],
     mwork: "03_dufy",
     Type: "Painting",
-    ginfo: ["1", "m4"],
+    ginfo: ["10000", "m4"],
     URL복사:
       "http://www.gncmedia.com/ko/exhibition/더현대서울-프랑스국립현대미술관전",
   },
@@ -133,7 +133,7 @@ const bdata = [
     ],
     mwork: "04_jean",
     Type: "Design",
-    ginfo: ["1", "m2"],
+    ginfo: ["10000", "m2"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/장-줄리앙",
   },
   {
@@ -173,7 +173,7 @@ const bdata = [
     ],
     mwork: "05_tim",
     Type: "Animation",
-    ginfo: ["1", "m3"],
+    ginfo: ["10000", "m3"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/팀-버튼",
   },
   {
@@ -201,7 +201,7 @@ const bdata = [
     ],
     mwork: "06_dali",
     Type: "Painting",
-    ginfo: ["1", "m5"],
+    ginfo: ["10000", "m5"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/살바도르-달리",
   },
   {
@@ -231,7 +231,7 @@ const bdata = [
     ],
     mwork: "07_jejumini",
     Type: "Animation",
-    ginfo: ["1", "m7"],
+    ginfo: ["10000", "m7"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/미니언즈-제주-특별전",
   },
   {
@@ -263,7 +263,7 @@ const bdata = [
     ],
     mwork: "08_rene",
     Type: "Painting",
-    ginfo: ["1", "m8"],
+    ginfo: ["10000", "m8"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/르네-마그리트-특별전",
   },
   {
@@ -293,7 +293,7 @@ const bdata = [
     ],
     mwork: "09_minions",
     Type: "Animation",
-    ginfo: ["1","m9"],
+    ginfo: ["10000","m9"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/미니언즈-특별전",
   },
   {
@@ -325,7 +325,7 @@ const bdata = [
     ],
     mwork: "10_disnep",
     Type: "Animation",
-    ginfo: ["1","m5"],
+    ginfo: ["10000","m5"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/디즈니-애니메이션-특별전",
   },
   {
@@ -362,7 +362,7 @@ const bdata = [
     ],
     mwork: "11_keith",
     Type: "Painting",
-    ginfo: ["1","m4"],
+    ginfo: ["10000","m4"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/키스해링",
   },
   {
@@ -385,7 +385,7 @@ const bdata = [
     ],
     mwork: "12_kaws",
     Type: "Design",
-    ginfo: ["1","m6"],
+    ginfo: ["10000","m6"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/카우스",
   },
   {
@@ -413,7 +413,7 @@ const bdata = [
     ],
     mwork: "13_pixar",
     Type: "Animation",
-    ginfo: ["1","m7"],
+    ginfo: ["10000","m7"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/픽사-애니메이션",
   },
   {
@@ -445,7 +445,7 @@ const bdata = [
     ],
     mwork: "14_millet",
     Type: "Painting",
-    ginfo: ["1","m9"],
+    ginfo: ["10000","m9"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/오르세미술관-2",
   },
   {
@@ -472,7 +472,7 @@ const bdata = [
     ],
     mwork: "15_dreamworks",
     Type: "Animation",
-    ginfo: ["1","m5"],
+    ginfo: ["10000","m5"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/드림웍스-애니메이션-특별전",
   },
   {
@@ -495,7 +495,7 @@ const bdata = [
     ],
     mwork: "16_wally",
     Type: "Animation",
-    ginfo: ["1","m7"],
+    ginfo: ["10000","m7"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/월리를-찾아라",
   },
   {
@@ -522,7 +522,7 @@ const bdata = [
     ],
     mwork: "17_stanley",
     Type: "Design",
-    ginfo: ["1","m8"],
+    ginfo: ["10000","m8"],
     URL복사:
       "http://www.gncmedia.com/ko/exhibition/스탠리-큐브릭-stanley-kubrick",
   },
@@ -563,7 +563,7 @@ const bdata = [
     ],
     mwork: "18_orsay",
     Type: "Painting",
-    ginfo: ["1","m2"],
+    ginfo: ["10000","m2"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/오르세미술관-1",
   },
   {
@@ -590,7 +590,7 @@ const bdata = [
     ],
     mwork: "19_mariscal",
     Type: "Design",
-    ginfo: ["1","m1"],
+    ginfo: ["10000","m1"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/마리스칼-mariscal",
   },
   {
@@ -618,7 +618,7 @@ const bdata = [
     ],
     mwork: "20_burton",
     Type: "Animation",
-    ginfo: ["1","m6"],
+    ginfo: ["10000","m6"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/팀-버튼-tim-burton",
   },
   {
@@ -650,7 +650,7 @@ const bdata = [
     ],
     mwork: "21_louvremyth",
     Type: "Painting",
-    ginfo: ["1","m9"],
+    ginfo: ["10000","m9"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/루브르박물관",
   },
   {
@@ -679,7 +679,7 @@ const bdata = [
     ],
     mwork: "22_gogh",
     Type: "Painting",
-    ginfo: ["1","m1"],
+    ginfo: ["10000","m1"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/오르세미술관",
   },
   {
@@ -706,7 +706,7 @@ const bdata = [
     ],
     mwork: "23_versailles",
     Type: "Painting",
-    ginfo: ["1","m7"],
+    ginfo: ["10000","m7"],
     URL복사:
       "http://www.gncmedia.com/ko/exhibition/프랑스-국립-베르사이유-특별전",
   },
@@ -740,7 +740,7 @@ const bdata = [
     ],
     mwork: "24_turner",
     Type: "Painting",
-    ginfo: ["1","m8"],
+    ginfo: ["10000","m8"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/영국-근대-회화전",
   },
   {
@@ -782,7 +782,7 @@ const bdata = [
     ],
     mwork: "25_pompidou",
     Type: "Painting",
-    ginfo: ["1","m3"],
+    ginfo: ["10000","m3"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/퐁피두센터-특별전",
   },
   {
@@ -819,8 +819,7 @@ const bdata = [
     ],
     mwork: "26_louvre",
     Type: "Painting",
-    ginfo: ["1","m2"],
+    ginfo: ["10000","m2"],
     URL복사: "http://www.gncmedia.com/ko/exhibition/루브르박물관전",
   },
 ];
-export default bdata;

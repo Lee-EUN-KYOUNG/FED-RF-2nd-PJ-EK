@@ -14,13 +14,16 @@ export default function Exhibition() {
 
   const goNav = useNavigate();
   const goPage = (seq) => {
-    //goNav("/ExhibiDetail",{state:{page:seq}})
-   goNav("/ExhibiDetail")
-
+   goNav("/ExhibiDetail",{state:{page:seq}})
+   //goNav("/ExhibiDetail")
+   
   };
   
   console.log("페이지이동:", goNav);
 
+
+
+  
   useEffect(() => {
     // ArtList(artgridRef);
   }, []);

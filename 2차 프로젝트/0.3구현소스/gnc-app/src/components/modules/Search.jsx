@@ -4,7 +4,7 @@ import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import BookMark from "./BookMark";
 import { exData } from "../data/exhibition_data_sub";
-import bdata from "../data/bookmark_data";
+import {bdata} from "../data/bookmark_data";
 
 // 제이쿼리
 import $ from "jquery";
@@ -101,7 +101,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
   console.log("로컬스:", bxdata);
 
   // 전체 데이터 개수
-  const dataCnt = bdata.length;
+  const dataCnt = bxdata.length;
   console.log("데이터수:", dataCnt);
 
   // 총합계함수 /////////////
@@ -192,8 +192,8 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                     onClick={(e) => {
                       // 기본 이동 막기
                       e.preventDefault();
-                      $("#mymark").hide();
-                      $("#mymark").animate({ right: "-60vw" }, 400);
+                      // $("#marklist").hide();
+                      $("#marklist").animate({ right: "-60vw" }, 400);
                     }}
                   />
                 </a>
@@ -216,7 +216,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                   <thead>
                     <tr>
                       <th>번호</th>
-                      <th>포스터</th>
+                      <th>전시이미지</th>
                       <th>전시회명</th>
                       <th>전시기간</th>
                       <th>슬로건</th>
@@ -249,7 +249,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                         5. 슬로건 : 서브 타이틀
                         6. cnt : 전시회 북마크 횟수 합계
                         */}
-                              {bdata.map((v, i) => (
+                              {bxdata.map((v, i) => (
                                 <tr key={i}>
                                   {/* 일련번호 */}
                                   <td>{i + 1}</td>
@@ -258,7 +258,8 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                     <img
                                       src={
                                         process.env.PUBLIC_URL +
-                                        `${v.subimg}.jpg`
+                                        `/img/subimg/${v.subimg}.jpg`
+                                        
                                       }
                                       alt="item"
                                     />
@@ -266,6 +267,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                   <td>{v.mexhibi}</td>
                                   <td>{v.exdate}</td>
                                   <td>{v.subexhibi}</td>
+                                  {/* <td>{addComma(v.ginfo[0])}개</td> */}
                                   <td className="cnt-mpart">
                                     <div>
                                       <span>
@@ -286,14 +288,14 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                     /// 1. 클릭시 실제 데이터 수량변경 반영하기
                                     // 대상: bdata -> 배열변환데이터
                                     // i는 배열순번임!(map 돌때 i가 들어옴)
-                                    bdata[i].cnt = $(e.currentTarget)
+                                    bxdata[i].cnt = $(e.currentTarget)
                                       .siblings(".item-cnt")
                                       .val();
-                                    console.log("수량업데이트:", bdata);
+                                    console.log("수량업데이트:", bxdata);
                                     // 2. 데이터 문자화하기 : 변경된 원본을 문자화
-                                    let res = JSON.stringify(bdata);
+                                    let res = JSON.stringify(bxdata);
 
-                                    // 3.로컬스 "cart-data"반영하기
+                                    // 3.로컬스 "bdata"반영하기
                                     localStorage.setItem("bdata", res);
 
                                     // 4. 카트리스트 전역상태변수 변경
@@ -315,7 +317,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                     setForce(!force);
                                     
                                     // 6. 전체 총합계 계산 다시하기
-                                    $(".total-num").text(addComma(totalFn()));
+                                    //$(".total-num").text(addComma(totalFn()));
                                   }}
                                 >
                                   반영
@@ -398,21 +400,21 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                     </div>
                                   </td>
                                   <td>
-                                    <span className="sum-num1">
+                                    {/* <span className="sum-num1">
                                       {addComma(v.ginfo[0] * v.cnt)}
                                     </span>
-                                    개
+                                    개 */}
                                     {/*
                           계산된 합계 금액 숫자만 히든 필드에 넣고
                           총합계 계산에 사용함
                           */}
-                                    {
+                                    {/* {
                                       <input
                                         className="sum-num2"
                                         type="hidden"
                                         defaultValue={v.ginfo[0] * v.cnt}
                                       />
-                                    }
+                                    } */}
                                   </td>
                                   <td>
                                     {/* 데이터 삭제 기능 버튼 */}
@@ -432,10 +434,10 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                           // 지울 배열은 bdata임
 
                                           // 데이터 지우기
-                                          bdata.splice(i, 1);
+                                          bxdata.splice(i, 1);
 
                                           // 데이터 문자화하기 : 변경된 원본을 문자화
-                                          let res = JSON.stringify(bdata);
+                                          let res = JSON.stringify(bxdata);
 
                                           // 로컬쓰 "bdata"에 반영하기
                                           localStorage.setItem(
@@ -449,7 +451,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                           // 데이터 갯수가 0이면 즐겨찾기 리스트 상태변수를 flase로 변경하여
                                           // 즐겨찾기 리스트 출력을 없앤다
 
-                                          if (bdata.length == 0)
+                                          if (bxdata.length == 0)
                                             myCon.setMarkSts(false);
                                         } ////// if
                                       }}
