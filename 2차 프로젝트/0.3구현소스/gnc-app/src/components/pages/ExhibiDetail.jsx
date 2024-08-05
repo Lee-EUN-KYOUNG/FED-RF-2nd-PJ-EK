@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
 // 데이터 불러오기
-import exData from "../data/exhibition_data";
-import { bdata } from "../data/bookmark_data";
+// import exData from "../data/exhibition_data";
+import bdata from "../data/bookmark_data";
 import ArtList from "../modules/ArtList";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -101,6 +101,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
       // 원가격은 컴포넌트 전달변수 ginfo[0] -> 갱신안됨!
       // 원가격은 참조변수 getGinfo 사용 -> 매번 업데이트됨!
       total.text(addComma(getGinfo.current[0] * num) + "개");
+      
     }); //////// click ////////
 
     // 참고) 제거용 -> numBtn.off("click");
@@ -216,6 +217,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
                               // find에서 받은값은 객체값
                               // 상품토탈정보로 모든 객체값을 업데이트함
                               setTot(res);
+                              
                             }}
                           >
                           </a>
@@ -269,7 +271,7 @@ function ExhibiDetail({ dt, setTot, tot }) {
                         // // 즐겨찾기 리스트 생성 상태값 변경
                         // myCon.setMarkSts(true);
                       }}
-
+ 
                     >
                       즐겨찾기
                     </button>

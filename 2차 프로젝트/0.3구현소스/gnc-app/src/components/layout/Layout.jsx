@@ -9,13 +9,14 @@ import { Link, useNavigate } from "react-router-dom";
 //컨텍스트 API 불러오기
 import { dCon } from "../modules/dCon";
 import BookMark from "../modules/BookMark";
+import bdata from "../data/bookmark_data";
+import { Search } from "../modules/Search";
 
 // 제이쿼리
 import $ from "jquery";
 
 // CSS 불러오기
 import "../../css/pivot/top_area.scss";
-import { Search } from "../modules/Search";
 
 
 export default function Layout() {
@@ -109,6 +110,7 @@ export default function Layout() {
   // 북마크 사용여부 : true 일때 사용
   const [markSts,setMarkSts] = useState(MarkTemp);
 
+  const [tot, setTot] = useState(bdata);
   /* 
         [컨텍스트 API 공개 변수들]
     1. setMarkSts : 카트 사용 여부 셋팅
@@ -133,6 +135,9 @@ export default function Layout() {
         setLocalsMark,
         localsMark,
         markSts,
+        tot,
+        
+        setTot,
       }}
     >
       {/* 1.상단영역 */}
@@ -142,6 +147,12 @@ export default function Layout() {
         logoutFn={logoutFn}
         goPage={goPage}
         markSts={markSts}
+        // 상품토탈정보
+        tot={tot}
+        // dt 전체데이터(한줄리스트때문)
+        // dt={bdata}
+        // setTot - 한줄리스트 클릭시 변경
+        setTot={setTot}
       />
       {
         /* 회원가입, 로그인 버튼 - 로그인 상태가 null일때 나옴 */

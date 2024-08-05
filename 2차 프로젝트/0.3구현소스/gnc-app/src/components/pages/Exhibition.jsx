@@ -15,7 +15,8 @@ export default function Exhibition() {
   const goNav = useNavigate();
   const goPage = (seq) => {
     //goNav("/ExhibiDetail",{state:{page:seq}})
-    goNav("/ExhibiDetail")
+   goNav("/ExhibiDetail")
+
   };
   
   console.log("페이지이동:", goNav);
@@ -79,6 +80,7 @@ export default function Exhibition() {
             <div className="art-tit">
               <h3>{posterData[i].전시회}</h3>
             </div>
+            
           </div>
         ))}
 

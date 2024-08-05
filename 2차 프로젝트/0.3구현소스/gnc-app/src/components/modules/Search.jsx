@@ -4,7 +4,7 @@ import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import BookMark from "./BookMark";
 import { exData } from "../data/exhibition_data_sub";
-import { bdata } from "../data/bookmark_data";
+import bdata from "../data/bookmark_data";
 
 // 제이쿼리
 import $ from "jquery";
@@ -192,8 +192,8 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                     onClick={(e) => {
                       // 기본 이동 막기
                       e.preventDefault();
-                      $("#marklist").hide();
-                      $("#marklist").animate({ right: "-60vw" }, 400);
+                      $("#mymark").hide();
+                      $("#mymark").animate({ right: "-60vw" }, 400);
                     }}
                   />
                 </a>
@@ -258,14 +258,14 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                     <img
                                       src={
                                         process.env.PUBLIC_URL +
-                                        `${v.poster}.png`
+                                        `${v.subimg}.jpg`
                                       }
                                       alt="item"
                                     />
                                   </td>
-                                  <td>{v.전시회}</td>
-                                  <td>{v.전시기간}</td>
-                                  <td>{v.슬로건}</td>
+                                  <td>{v.mexhibi}</td>
+                                  <td>{v.exdate}</td>
+                                  <td>{v.subexhibi}</td>
                                   <td className="cnt-mpart">
                                     <div>
                                       <span>
@@ -315,7 +315,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                     setForce(!force);
                                     
                                     // 6. 전체 총합계 계산 다시하기
-                                    // $(".total-num").text(addComma(totalFn()));
+                                    $(".total-num").text(addComma(totalFn()));
                                   }}
                                 >
                                   반영

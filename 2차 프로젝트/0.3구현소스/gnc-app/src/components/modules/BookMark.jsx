@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 
 import ExhibiDetail from "../pages/ExhibiDetail.jsx";
-import { bdata } from "../data/bookmark_data";
+import bdata from "../data/bookmark_data";
 
 
 // CSS 불러오기
@@ -15,7 +15,7 @@ function BookMark(props) {
   // 상품토탈정보
   const [tot, setTot] = useState(bdata);
 
-  console.log("포스터데이터 확인:",bdata);
+  console.log("데이터 확인:",bdata);
 
   /////////////코드 리턴 ////////////////////
   return (
@@ -28,10 +28,11 @@ function BookMark(props) {
         // 상품토탈정보
         tot={tot}
         // dt 전체데이터(한줄리스트때문)
-        dt={bdata}
+        //dt={bdata}
         // setTot - 한줄리스트 클릭시 변경
         setTot={setTot}
       />}
+
     </>
   );
 }
