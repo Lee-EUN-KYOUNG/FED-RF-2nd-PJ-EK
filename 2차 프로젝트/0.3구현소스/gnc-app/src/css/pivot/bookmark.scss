@@ -40,7 +40,7 @@
   transition: transform 0.3s;
 }
 #mymark .cbtn span {
-  display: none;
+  //display: none;
 }
 
 #mymark table {
@@ -78,7 +78,7 @@
   transform: translate(-50%, -50%);
   z-index: 9999999;
   cursor: pointer;
-  display: none;
+  //display: none;
 }
 
 /* 카트박스 사이드 이동상태 */

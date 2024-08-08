@@ -91,6 +91,9 @@ export default function Layout() {
   }, []);
 
 
+
+
+
   // 로컬스 북마크 존재여부변수
   let MarkTemp = false;
 
@@ -119,6 +122,9 @@ export default function Layout() {
     4. bdata = 전시회 데이터
   
   */
+
+
+
 
   //// 코드 리턴구역 //////////////
   return (

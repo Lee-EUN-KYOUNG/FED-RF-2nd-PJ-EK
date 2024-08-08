@@ -113,6 +113,17 @@ function ExhibiDetail({ tot, setTot, dt }) {
     // $("#total").text(addComma(ginfo[0]) + "개");
   }); ////////// useEffect //////
 
+
+
+
+
+
+
+
+
+
+
+
   ////////////// 코드 리턴 구역
 
   return (
