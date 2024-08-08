@@ -257,9 +257,7 @@ export const Search = memo(({ loginMsg, loginSts, logoutFn, goPage }) => {
                                   <td>
                                     <img
                                       src={
-                                        process.env.PUBLIC_URL +
-                                        `/img/subimg/${v.subimg}.jpg`
-                                        
+                                        process.env.PUBLIC_URL+"{v.subimg}+.jpg"
                                       }
                                       alt="item"
                                     />
