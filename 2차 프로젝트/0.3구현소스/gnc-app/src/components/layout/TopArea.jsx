@@ -13,6 +13,7 @@ import {Search} from "../modules/Search";
 
 // 상단 영역 CSS 불러오기`
 import "../../css/pivot/top_area.scss";
+import { useCallback } from "react";
 
 /// 컴포넌트 코딩구역
 export default function TopArea() {
@@ -22,6 +23,7 @@ export default function TopArea() {
   //});
 
   const goPage = useNavigate();
+  console.log("여기");
 
   //// 코드 리턴구역 //////////////
   return (

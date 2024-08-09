@@ -88,10 +88,17 @@ export default function Layout() {
       makeMsg(JSON.parse(ss).unm);
     } ///// if ///////
     //$.cookie("aa","bb",{expires: 2});
+
   }, []);
 
 
 
+
+    // 1. 로컬스 전시회 데이터에 넣기
+    if (!localStorage.getItem("bdata")) {
+      // 로컬스없으면 만들기
+      localStorage.setItem("bdata", "[]");
+    } ////////////// if
 
 
   // 로컬스 북마크 존재여부변수
@@ -193,8 +200,6 @@ export default function Layout() {
           </ul>
         )
       }
-      {/* 북마크 리스트 : 북마크 상태값 true 출력 */}
-      {markSts && <Search />}
       {/* 2.메인영역 */}
       <MainArea />
       {/* 3.하단영역 */}

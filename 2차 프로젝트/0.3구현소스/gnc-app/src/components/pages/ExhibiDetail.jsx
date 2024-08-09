@@ -44,7 +44,7 @@ function ExhibiDetail({ tot, setTot, dt }) {
   console.log("페이지확인:", page);
   const bxdata = bdata[page];
 
-  // console.log(bxdata.ginfo[1], bxdata.Type, bxdata.mexhibi);
+  console.log(bxdata.ginfo[1], bxdata.Type, bxdata.mexhibi);
 
   // 컨텍스트 사용
   const myCon = useContext(dCon);
@@ -112,17 +112,6 @@ function ExhibiDetail({ tot, setTot, dt }) {
     // 총합계 초기화
     // $("#total").text(addComma(ginfo[0]) + "개");
   }); ////////// useEffect //////
-
-
-
-
-
-
-
-
-
-
-
 
   ////////////// 코드 리턴 구역
 
@@ -218,7 +207,10 @@ function ExhibiDetail({ tot, setTot, dt }) {
                                 // 선택 데이터 찾기
                                 // -> gtype항목값 + ginfo[0]항목
                                 let res = dt.find((v) => {
-                                  if (bxdata.Type == type && bxdata.ginfo[1] == "m")
+                                  if (
+                                    bxdata.Type == type &&
+                                    bxdata.ginfo[1] == "m"
+                                  )
                                     return true;
                                 }); //// find /////
                                 console.log(res);
@@ -244,24 +236,29 @@ function ExhibiDetail({ tot, setTot, dt }) {
                         // 3. 기존 데이터 중 동일 데이터 거르기
 
                         // poster값만 모아서 다른 배열 만들기
-                        let newLocals = locals.map((v) => v.poster);
-                        console.log("idx 새배열:", newLocals);
+                        let newLocals = locals.map((v) => v.Type+"-"+v.ginfo[1]);
+                        console.log("idx 새배열:", newLocals, locals.length);
 
-                        // include 비교
-                        let retSts = newLocals.includes(type);
+                        if (locals.length > 0) {
+                          // include 비교
+                          let retSts = newLocals.includes(v.Type+"-"+v.ginfo[1]);
 
-                        console.log("중복상태:", retSts);
+                          console.log("비교값:", v.Type+"-"+v.ginfo[1]);
+                          console.log("중복상태:", retSts);
+                          if (retSts) {
+                            alert("중복 선택입니다!");
+                            return;
+                          } /////if
+                        }
 
-                        if (retSts) {
-                          alert("중복 선택입니다!");
-                          return;
-                        } /////if
+                        console.log("넣을값들:",bxdata.type,bxdata.ginfo,$("#sum").val());
 
                         // 4. 로칼스에 객체 데이터 추가하기
                         locals.push({
-                          Type: type,
-                          ginfo: ginfo,
-                          cnt: $("#sum").val(),
+                          Type: v.Type,
+                          ginfo: v.ginfo,
+                          subimg: v.subimg,
+                          cnt: 1,
                         });
 
                         // 로컬스에 문자화하여 입력하기
