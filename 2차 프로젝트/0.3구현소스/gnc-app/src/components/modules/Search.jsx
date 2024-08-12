@@ -24,7 +24,7 @@ import "../../css/pivot/_search.scss";
 //////////////////////////// 컴포넌트 구역
 export const Search = memo(({ goPage }) => {
   console.log("써치들어옴!");
-  //function Search({ loginMsg, loginSts, logoutFn, goPage }) => {  
+  //function Search({ loginMsg, loginSts, logoutFn, goPage }) => {
 
   // 컨텍스트 사용
   const myCon = useContext(dCon);
@@ -131,13 +131,13 @@ export const Search = memo(({ goPage }) => {
 
   const [localsMark, setLocalsMark] = useState(localStorage.getItem("bdata"));
   // 로컬스 북마크 데이터 존재여부에 따라 상태값 변경
-  //if(localsMark){
-  //  // 데이터가 있으면 MarkTemp값 true로 변경
-  //  // 데이터 개수가 0이 아니어야함!
-  //  let markCnt = JSON.parse(localsMark).length;
-  //  console.log("북마크 데이터수:",markCnt);
-  //  if(markCnt > 0) MarkTemp = true;
-  //} //////////// 북마크존재여부 if ////////
+  if(localsMark){
+    // 데이터가 있으면 MarkTemp값 true로 변경
+    // 데이터 개수가 0이 아니어야함!
+    let markCnt = JSON.parse(localsMark).length;
+    console.log("북마크 데이터수:",markCnt);
+    if(markCnt > 0) MarkTemp = true;
+  } //////////// 북마크존재여부 if ////////
 
   // const MyCont = () => {
   //   const [data, setData] = useState([]);
@@ -146,7 +146,7 @@ export const Search = memo(({ goPage }) => {
   //     // 컴포넌트가 마운트될 때 로컬스토리지에서 데이터 불러오기
   //     const bdata = JSON.parse(myCon.localsMark);
   //     setData(bdata);
-  //   }, []);
+  //   }, [])};
 
   console.log("조사조사조사!");
 
@@ -247,7 +247,16 @@ export const Search = memo(({ goPage }) => {
                     }}
                   />
                 </a>
-                <table id="xxx" style={{position: "fixed", display:'none', left:"0",zIndex:"999",backgroundColor:"white"}}>
+                <table
+                  id="xxx"
+                  style={{
+                    position: "fixed",
+                    display: "none",
+                    left: "0",
+                    zIndex: "999",
+                    backgroundColor: "white",
+                  }}
+                >
                   {/* 항목별 세로 비율 설정 */}
                   <colgroup>
                     <col span="1" style={{ width: "8%" }} />
@@ -316,7 +325,7 @@ export const Search = memo(({ goPage }) => {
                                   <td>{v.mexhibi}</td>
                                   <td>{v.exdate}</td>
                                   {/* <td>{v.ginfo[1]} </td> */}
-                                  {/* <td>{addComma(v.ginfo[0])}개</td> */}
+                                  <td>{addComma(v.ginfo[0])}개</td>
                                   <td className="cnt-mpart">
                                     <div>
                                       <span>
@@ -347,7 +356,7 @@ export const Search = memo(({ goPage }) => {
                                             // 3.로컬스 "bdata"반영하기
                                             localStorage.setItem("bdata", res);
 
-                                            // 4. 카트리스트 전역상태변수 변경
+                                            // 4. 즐겨찾기 전역상태변수 변경
                                             myCon.setLocalsMark(res);
 
                                             // 5. 반영버튼 숨기기
@@ -457,7 +466,7 @@ export const Search = memo(({ goPage }) => {
                           계산된 합계 금액 숫자만 히든 필드에 넣고
                           총합계 계산에 사용함
                           */}
-                                    {
+                                      {
                                       <input
                                         className="sum-num2"
                                         type="hidden"

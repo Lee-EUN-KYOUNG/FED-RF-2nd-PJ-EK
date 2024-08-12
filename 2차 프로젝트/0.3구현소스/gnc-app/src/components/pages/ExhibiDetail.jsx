@@ -99,7 +99,7 @@ function ExhibiDetail({ tot, setTot, dt }) {
       // (4) 총합계 반영하기
       // 원가격은 컴포넌트 전달변수 ginfo[0] -> 갱신안됨!
       // 원가격은 참조변수 getGinfo 사용 -> 매번 업데이트됨!
-      total.text(addComma(getGinfo.current[0] * num) + "개");
+      total.text(addComma(getGinfo.current[1] * num) + "개");
     }); //////// click ////////
 
     // 참고) 제거용 -> numBtn.off("click");
@@ -235,15 +235,15 @@ function ExhibiDetail({ tot, setTot, dt }) {
 
                         // 3. 기존 데이터 중 동일 데이터 거르기
 
-                        // poster값만 모아서 다른 배열 만들기
-                        let newLocals = locals.map((v) => v.Type+"-"+v.ginfo[1]);
+                        // Type값만 모아서 다른 배열 만들기
+                        let newLocals = locals.map((v) => bxdata.Type+"-"+bxdata.ginfo[1]);
                         console.log("idx 새배열:", newLocals, locals.length);
 
                         if (locals.length > 0) {
                           // include 비교
-                          let retSts = newLocals.includes(v.Type+"-"+v.ginfo[1]);
+                          let retSts = newLocals.includes(bxdata.Type+"-"+bxdata.ginfo[1]);
 
-                          console.log("비교값:", v.Type+"-"+v.ginfo[1]);
+                          console.log("비교값:", bxdata.Type+"-"+bxdata.ginfo[1]);
                           console.log("중복상태:", retSts);
                           if (retSts) {
                             alert("중복 선택입니다!");
@@ -251,7 +251,7 @@ function ExhibiDetail({ tot, setTot, dt }) {
                           } /////if
                         }
 
-                        console.log("넣을값들:",bxdata.type,bxdata.ginfo,$("#sum").val());
+                        console.log("넣을값들:",bxdata.Type,bxdata.ginfo,$("#sum").val());
 
                         // 4. 로칼스에 객체 데이터 추가하기
                         locals.push({
