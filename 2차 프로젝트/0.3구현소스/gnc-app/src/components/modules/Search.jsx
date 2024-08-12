@@ -222,7 +222,8 @@ export const Search = memo(({ goPage }) => {
               <input
                 id="schin"
                 type="text"
-                placeholder="Search for Exhibition"
+                placeholder="전시회 찾기"
+                style={{color: "hotpink"}}
                 autoComplete="off"
                 onBlur={removeOn}
                 onKeyUp={enterKey}
@@ -242,13 +243,13 @@ export const Search = memo(({ goPage }) => {
                     onClick={(e) => {
                       // 기본 이동 막기
                       e.preventDefault();
-                      $("#xxx").animate({ right: "-60vw" }, 400);
-                      $("#xxx").toggle();
+                      $("#bookmark").animate({ right: "-60vw" }, 400);
+                      $("#bookmark").toggle();
                     }}
                   />
                 </a>
                 <table
-                  id="xxx"
+                  id="bookmark"
                   style={{
                     position: "fixed",
                     display: "none",

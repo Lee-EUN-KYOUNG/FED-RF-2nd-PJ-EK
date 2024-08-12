@@ -246,8 +246,8 @@ function ExhibiDetail({ tot, setTot, dt }) {
                           console.log("비교값:", bxdata.Type+"-"+bxdata.ginfo[1]);
                           console.log("중복상태:", retSts);
                           if (retSts) {
-                            alert("중복 선택입니다!");
-                            return;
+                            //alert("중복 선택입니다!");
+                            // return;
                           } /////if
                         }
 
@@ -259,6 +259,7 @@ function ExhibiDetail({ tot, setTot, dt }) {
                           ginfo: v.ginfo,
                           subimg: v.subimg,
                           mexhibi: v.mexhibi,
+                          exdate: v.exdate,
                           cnt: 1,
                         });
 
