@@ -258,6 +258,7 @@ function ExhibiDetail({ tot, setTot, dt }) {
                           Type: v.Type,
                           ginfo: v.ginfo,
                           subimg: v.subimg,
+                          mexhibi: v.mexhibi,
                           cnt: 1,
                         });
 
