@@ -260,16 +260,20 @@ export const Search = memo(({ goPage }) => {
                 >
                   {/* 항목별 세로 비율 설정 */}
                   <colgroup>
-                    <col span="1" style={{ width: "8%" }} />
                     <col span="1" style={{ width: "5%" }} />
-                    <col span="1" style={{ width: "38%" }} />
-                    <col span="1" style={{ width: "15%" }} />
-                    <col span="1" style={{ width: "20%" }} />
-                    <col span="1" style={{ width: "8%" }} />
+                    <col span="1" style={{ width: "50%" }} />
+                    <col span="1" style={{ width: "12.5%" }} />
+                    <col span="1" style={{ width: "10%" }} />
                     <col span="1" style={{ width: "5%" }} />
+                    <col span="1" style={{ width: "5%" }} />
+                    <col span="1" style={{ width: "12.5%"}} />
                   </colgroup>
                   {/* 테이블 제목 */}
-                  <caption>
+                  <caption
+                  style={{
+                    backgroundColor: "white",
+                  }}
+                  >
                     <h1> 즐겨찾기 리스트 ({dataCnt})</h1>
                   </caption>
                   {/* 테이블 상단영역 : 분류 항목 출력 */}
@@ -279,19 +283,21 @@ export const Search = memo(({ goPage }) => {
                       <th>전시이미지</th>
                       <th>전시회명</th>
                       <th>전시기간</th>
+                      <th>갯수</th>
+                      <th>반영</th>
                       <th>삭제</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td colSpan={8}>
+                      <td colSpan={12.5}>
                         <div
                           className="scbar"
                           style={{
                             display: "block",
                             overflowY: "auto",
-                            height: "40vh",
-                            width: "98vw",
+                            height: "45vh",
+                            width: "97vw",
                           }}
                         >
                           {/* 내부용 스크롤되는 테이블 */}
@@ -317,8 +323,8 @@ export const Search = memo(({ goPage }) => {
                                       src={process.env.PUBLIC_URL + v.subimg}
                                       alt="item"
                                       style={{
-                                        width: "50%",
-                                        height: "50%",
+                                        width: "100%",
+                                        height: "1000%",
                                       }}
                                     />
                                   </td>
@@ -525,10 +531,16 @@ export const Search = memo(({ goPage }) => {
                   <tfoot>
                     <tr>
                       <td colSpan="6">즐겨찾기 총 횟수 :</td>
-                      <td>
-                        <span className="total-num"></span>개
-                      </td>
-                      <td></td>
+                        <span
+                        className="total-num"
+                        style={{
+                          fontSize:"2rem",
+                      }}
+                        >
+                        </span>
+                        <a style={{
+                          fontSize:"1.8rem",
+                          }}>개</a>
                     </tr>
                   </tfoot>
                 </table>
