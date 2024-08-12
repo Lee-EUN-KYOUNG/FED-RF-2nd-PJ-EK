@@ -11,11 +11,13 @@
     box-sizing: border-box;
 }
 
-.compa-box{
-    max-width: 1850px;
-    height: 118vh;
-    margin-top: 2.5vh;
+.compa-box {
+    //max-width: 1850px;
+    display: grid;
+    height: 60vh;
+    margin-top: 1vh;
     margin-right: 30px;
+    margin-bottom: 8vh;
 }
 
 ////////////////////////////// 미디어 쿼리 //////////////
