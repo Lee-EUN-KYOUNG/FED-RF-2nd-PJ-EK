@@ -24,14 +24,15 @@ export default function MainGrid() {
   return (
     <>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
         grid={{
-          rows: 2,
+          rows: 1,
         }}
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
+        loop={true}
         modules={[Grid, Pagination]}
         className="myGrid"
       >
@@ -41,7 +42,7 @@ export default function MainGrid() {
               <SwiperSlide key={i}>
                 <div>
                   <section className="gncom-box">
-                    <FontAwesomeIcon
+                    {/* <FontAwesomeIcon
                       icon={faPaperclip}
                       rotation={180}
                       size="2xs"
@@ -53,7 +54,7 @@ export default function MainGrid() {
                         color: "rgb(225 24 65)",
                         fontSize: "28px",
                       }}
-                    />
+                    /> */}
                     <div className="comp-tit1">
                       <img src={process.env.PUBLIC_URL+v.compimg} alt={v.compname} />
                     </div>
@@ -61,9 +62,11 @@ export default function MainGrid() {
                       <h1>{v.compname}</h1>
                     </div>
                     <div className="comp-tit3">
-                      {v.comptext.split("^").map((v, i) => (
+                    {/*   {v.comptext.split("^").map((v, i) => (
                         <p key={i}>{v}</p>
-                      ))}
+                      ))} */}
+                      {v.comptext}
+
                     </div>
                     <div className="comp-tit4">
                       <h2>
