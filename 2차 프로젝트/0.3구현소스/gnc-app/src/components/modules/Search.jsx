@@ -278,7 +278,6 @@ export const Search = memo(({ goPage }) => {
                       <th>전시이미지</th>
                       <th>전시회명</th>
                       <th>전시기간</th>
-                      <th>합계</th>
                       <th>삭제</th>
                     </tr>
                   </thead>
@@ -291,7 +290,7 @@ export const Search = memo(({ goPage }) => {
                             display: "block",
                             overflowY: "auto",
                             height: "40vh",
-                            width: "60vw",
+                            width: "98vw",
                           }}
                         >
                           {/* 내부용 스크롤되는 테이블 */}
@@ -317,8 +316,8 @@ export const Search = memo(({ goPage }) => {
                                       src={process.env.PUBLIC_URL + v.subimg}
                                       alt="item"
                                       style={{
-                                        width: "100%",
-                                        height: "100%",
+                                        width: "50%",
+                                        height: "50%",
                                       }}
                                     />
                                   </td>
