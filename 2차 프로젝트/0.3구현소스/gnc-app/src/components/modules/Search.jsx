@@ -253,6 +253,7 @@ export const Search = memo(({ goPage }) => {
                   style={{
                     position: "fixed",
                     display: "none",
+                    top: "0p",
                     left: "0",
                     zIndex: "999",
                     backgroundColor: "white",
@@ -296,7 +297,7 @@ export const Search = memo(({ goPage }) => {
                           style={{
                             display: "block",
                             overflowY: "auto",
-                            height: "45vh",
+                            height: "65vh",
                             width: "97vw",
                           }}
                         >
@@ -345,6 +346,7 @@ export const Search = memo(({ goPage }) => {
                                           }}
                                           //onChange={() => {}}
                                         />
+                                        
                                         {/* 반영버튼 */}
                                         <button
                                           className="btn-insert"
@@ -530,16 +532,21 @@ export const Search = memo(({ goPage }) => {
                   </tbody>
                   <tfoot>
                     <tr>
-                      <td colSpan="6">즐겨찾기 총 횟수 :</td>
+                      <td colSpan="6">즐겨찾기 추가 총 횟수 :</td>
                         <span
                         className="total-num"
                         style={{
-                          fontSize:"2rem",
+                          fontSize:"1.4rem",
+                          fontWeight:"bold",
+                          marginLeft: "-10vw",
+                          fontFamily: "Gowun Dodum",
                       }}
                         >
                         </span>
                         <a style={{
-                          fontSize:"1.8rem",
+                          fontSize:"1.4rem",
+                          fontWeight:"bold",
+                          fontFamily: "Gowun Dodum",
                           }}>개</a>
                     </tr>
                   </tfoot>
