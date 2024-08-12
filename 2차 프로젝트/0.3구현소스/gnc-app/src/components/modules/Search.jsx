@@ -262,8 +262,8 @@ export const Search = memo(({ goPage }) => {
                   {/* 항목별 세로 비율 설정 */}
                   <colgroup>
                     <col span="1" style={{ width: "5%" }} />
-                    <col span="1" style={{ width: "50%" }} />
-                    <col span="1" style={{ width: "12.5%" }} />
+                    <col span="1" style={{ width: "45%" }} />
+                    <col span="1" style={{ width: "17.5%" }} />
                     <col span="1" style={{ width: "10%" }} />
                     <col span="1" style={{ width: "5%" }} />
                     <col span="1" style={{ width: "5%" }} />
@@ -280,12 +280,12 @@ export const Search = memo(({ goPage }) => {
                   {/* 테이블 상단영역 : 분류 항목 출력 */}
                   <thead>
                     <tr>
-                      <th>번호</th>
-                      <th>전시이미지</th>
-                      <th>전시회명</th>
-                      <th>전시기간</th>
-                      <th>갯수</th>
-                      <th>반영</th>
+                      <th>순서</th>
+                      <th>전시 이미지</th>
+                      <th>전시회 이름</th>
+                      <th>전시 기간</th>
+                      <th>즐겨찾기 횟수</th>
+                      <th>반영여부</th>
                       <th>삭제</th>
                     </tr>
                   </thead>
